@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Home_landing() {
+export default function Home_landing() { 
   return (
     <div id='Home_landing'>
         {/* <img src="../assets/landing_picture.png" alt="" className="bg" /> */}

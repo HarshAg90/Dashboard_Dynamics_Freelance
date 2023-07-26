@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Home_about() {
+export default function Home_about() { 
   return (
     <div id="Home_about">
       <div className="image">

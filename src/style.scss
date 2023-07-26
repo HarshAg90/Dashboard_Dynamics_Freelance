@@ -7,6 +7,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 #nav{
     width: 100vw;
@@ -87,6 +88,112 @@
         height: 100vh;
         width: 100%;
         background-color: #C4C7D1;
+        overflow: hidden; 
+
+        .heading{
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            font-family: "monogram",sans-serif;
+            margin-top: 7vh;
+            font-size: 1.9rem;
+            font-weight: 400;
+            background: rgb(0,0,0);
+            background: linear-gradient(180deg, rgba(0,0,0,1) 37%, rgba(116,116,116,1) 91%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-gap-override: 10px;
+        }
+        .subHeading {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            justify-content: center; /* Center the content vertically */
+            align-items: center; /* Center the content horizontally */
+            margin-top: 5vh;
+          }
+          
+          .subHeading h5 {
+            text-align: center; /* Center the text horizontally */
+            font-size: 1.07rem;
+            color: transparent; /* Hide the text color */
+            background: rgb(0, 0, 0);
+            background-clip: text; /* Apply background text effect to the text */
+          }
+          
+          
+          .carSection {
+            display: grid;
+            grid-template-columns: auto 40vw; /* The first column will be as wide as the charger image, and the second column will be 40vw wide */
+            height: 100vh; /* Set the height of the grid container to the viewport height */
+            align-items: center; /* Vertically center the elements within the grid container */
+            justify-content: center; /* Horizontally center the elements within the grid container */
+            position: relative; /* Add this to make .line elements position relative to the .carSection container */
+            transform: translateX(-3%);
+          }
+          
+          .car {
+            width: 40vw;
+            transform: translateX(-23%) translateY(-35%); /* Move the car 23% to the left and 35% above */
+            /* Add any additional styling as needed */
+          }
+          
+          .charger {
+            width: 15vw;
+            transform: translateX(-40%) translateY(-35%); /* Move the charger 40% to the left and 35% above */
+            /* Add any additional styling as needed */
+          }
+          
+          .line {
+            position: absolute; /* Position the lines absolutely within the .carSection container */
+            display: flex; /* Display the line and h5 elements in a flex container */
+            align-items: center; /* Align items vertically within the flex container */
+          }
+          
+          .line img {
+            margin-right: 10px; /* Add some spacing between the line image and the h5 text */
+          }
+          
+          .line1 {
+            top: 12%; /* Place the first line 12% from the top */
+            left: 57%; /* Place the first line to the right of the car */
+          }
+          
+          .line2 {
+            top: 35%; /* Place the second line 35% from the top */
+            left: 69%; /* Place the second line to the right of the car */
+          }
+          
+          .line3 {
+            top: 51%; /* Place the third line 53% from the top */
+            left: 53%; /* Place the third line to the right of the car */
+          }
+
+          .line1 h3{
+            transform: translateY(-100%);
+          }
+
+          .line3 h3{
+            transform: translateY(40%);
+          }
+
+          
+          
+          
+          
+          
+          
+          
+          
+          
+  
+          
+          
+          
+          
+          
     }
     #Home_about{
         display: flex;

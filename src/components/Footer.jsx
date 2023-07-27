@@ -3,7 +3,7 @@ import React from "react";
 export default function Footer() {
   return (
     <div id="Footer">
-    <img className="footer_img" src="../assets/footer.png" alt="" />
+      <img className="footer_img" src="../assets/footer.png" alt="" />
       <div className="data">
         <div className="form">
           <svg
@@ -29,18 +29,19 @@ export default function Footer() {
             />
           </svg>
           <p>For latest news & updates</p>
-          <form action=""></form>
-          <input
-            type="text"
-            placeholder="Enter Your Email"
-            name="email"
-            id=""
-          />
-          <button>Subscribe</button>
+          <form action="">
+            <input
+              type="text"
+              placeholder="Enter Your Email"
+              name="email"
+              id=""
+            />
+            <button>Subscribe</button>
+          </form>
         </div>
 
         <div className="contacts">
-          <div className="logo"></div>
+          <img className="logo" src="../assets/logo.png" alt="" />
           <div className="contact">
             <a href="">Careers</a>
             <a href="">Contact with Us</a>
@@ -98,16 +99,15 @@ export default function Footer() {
             <a href="">Terms and Services</a>
           </div>
           <div className="copy">
-            <h1>
+            <h3>
               With the objective of simply park and charge, we at Dash Dynamic
               focus on creating and producing wireless electric vehicle (EV)
-              chargers... EXPLORE
-            </h1>
+              chargers... <span>EXPLORE →</span>
+            </h3>
             <p>&copy; 2023 Dash Dynamic. All Rights Reserved</p>
           </div>
         </div>
       </div>
-
     </div>
   );
 }

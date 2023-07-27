@@ -179,6 +179,27 @@
             transform: translateY(40%);
           }
 
+          .finalLine1 {
+            opacity: 0;
+            transform:
+                rotate(180deg)
+                scaleX(-1);;
+            top: 12%; /* Place the first line 12% from the top */
+            left: 57%; /* Place the first line to the right of the car */
+          }
+          
+          .finalLine2 {
+            opacity: 0;
+            top: 35%; /* Place the second line 35% from the top */
+            left: 69%; /* Place the second line to the right of the car */
+          }
+          
+          .finalLine3 {
+            opacity: 0;
+            top: 51%; /* Place the third line 53% from the top */
+            left: 53%; /* Place the third line to the right of the car */
+          }
+
           
           
           
@@ -203,6 +224,7 @@
         justify-content: center;background: rgb(211,213,222);
         background: linear-gradient(90deg, rgba(211,213,222,1) 1%, rgba(255,255,255,1) 39%);
         .image{
+          overflow: hidden;
             width: 30vw;
             padding: 10px;
             margin: 20px;

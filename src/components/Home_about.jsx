@@ -24,46 +24,75 @@ export default function Home_about() {
             }}
             transition={{
               type: "spring",
-              stiffness: 50
+              stiffness: 50,
             }}
         />
       </div>
-      <motion.div className="about"
-      whileInView={{
-        x: 0,
-        delay: stagger(0.1)
-      }}
-        initial={{
-          x: 500
-        }}
-        transition={{
-          type: "spring",
-          stiffness: 50
-        }}
-        
-      >
-        <div className="content">
+      <div className="about"     >
+        <motion.div className="content"
+          whileInView={{
+            x: 0,
+            opacity: 1
+          }}
+            initial={{
+              opacity: 0,
+              x: 500
+            }}
+            transition={{
+              type: "spring",
+              stiffness: 50,
+              delay: 0.1
+            }}
+        >
           <img src="../assets/bullet_pic.png" alt="" className="bullet"/>
           <p>
           Our wireless charging solution reduces maintenance costs by eliminating physical connectors and cables, resulting in savings on repairs and labor. It eliminates the need for manual vehicle connection, minimizing downtime between charging sessions and allowing for the accommodation of more EVs. 
 This enables operators to increase their revenue potential by serving a larger customer base without incurring additional infrastructure costs.
           </p>
-        </div>
-        <div className="content">
+        </motion.div>
+        <motion.div className="content"
+          whileInView={{
+            x: 0,
+            opacity: 1
+          }}
+            initial={{
+              opacity: 0,
+              x: 500
+            }}
+            transition={{
+              type: "spring",
+              stiffness: 40,
+              delay: 0.25
+            }}
+        >
           <img src="../assets/bullet_pic.png" alt="" className="bullet" />
           <p>
           Our wireless charging solution reduces maintenance costs by eliminating physical connectors and cables, resulting in savings on repairs and labor. It eliminates the need for manual vehicle connection, minimizing downtime between charging sessions and allowing for the accommodation of more EVs. 
 This enables operators to increase their revenue potential by serving a larger customer base without incurring additional infrastructure costs.
           </p>
-        </div>
-        <div className="content">
+        </motion.div>
+        <motion.div className="content"
+          whileInView={{
+            x: 0,
+            opacity: 1
+          }}
+            initial={{
+              opacity: 0,
+              x: 500
+            }}
+            transition={{
+              type: "spring",
+              stiffness: 30,
+              delay: 0.4
+            }}
+        >
           <img src="../assets/bullet_pic.png" alt="" className="bullet" />
           <p>
           Our wireless charging solution reduces maintenance costs by eliminating physical connectors and cables, resulting in savings on repairs and labor. It eliminates the need for manual vehicle connection, minimizing downtime between charging sessions and allowing for the accommodation of more EVs. 
 This enables operators to increase their revenue potential by serving a larger customer base without incurring additional infrastructure costs.
           </p>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </div>
   );
 }

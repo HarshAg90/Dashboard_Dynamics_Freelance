@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function Home_about() {
+export default function Charge_about() {
   return (
-    <div id="Home_about">
+    <div id="Charge_about">
       <div className="image">
         <img src="../assets/product.png" alt="" />
       </div>

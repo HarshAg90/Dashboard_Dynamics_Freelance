@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default function Home_landing() {
+export default function Charge_landing() {
   return (
-    <div id='Home_landing'>
+    <div id='Charge_landing'>
         {/* <img src="../assets/landing_picture.png" alt="" className="bg" /> */}
         <h1>ELEVATING EV CHARGING <br /> NETWORKS WITH <br /> OPERATOR-CENTRIC <br /> SOLUTIONS</h1>
         <ul id="side_nav">

@@ -1,14 +1,30 @@
-import "./style.scss"
+import "./style.scss";
 import Nav from "./components/nav";
-import Home from "./pages/Home";
 import Footer from "./components/Footer";
+import Charge from "./components/Charge";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Technology from "./pages/Technology";
+import Product from "./pages/Product";
+import UseCase from "./pages/Use_case";
+import Contacts from "./pages/Contacts";
+import NewsRoom from "./pages/News_room";
+
 function App() {
   return (
-    <div className="App">
+    <Router className="App">
       <Nav />
-      <Home/>
-      <Footer/>
-    </div>
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/Technology" element={<Technology />} />
+        <Route exact path="/Products" element={<Product />} />
+        <Route exact path="/Use_case" element={<UseCase />} />
+        <Route exact path="/Contacts" element={<Contacts />} />
+        <Route exact path="/News_room" element={<NewsRoom />} />
+        <Route exact path="/Careers" element={<Charge />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 

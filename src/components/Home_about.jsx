@@ -1,6 +1,7 @@
 import React from "react";
-import {motion} from "framer-motion";
-import {fadeIn, textVariant} from "../utils/motion"
+import {motion, useScroll, useSpring} from "framer-motion";
+import {fadeIn, textVariant, slideIn} from "../utils/motion"
+import { animate, stagger } from "framer-motion/dom"
 
 export default function Home_about() { 
   return (
@@ -13,9 +14,6 @@ export default function Home_about() {
           whileTap={{
             scale: 0.9
           }}
-          // animate={{
-          //   x: -100
-          // }}
           whileInView={{
             x: 0,
             opacity: 1
@@ -32,7 +30,8 @@ export default function Home_about() {
       </div>
       <motion.div className="about"
       whileInView={{
-        x: 0
+        x: 0,
+        delay: stagger(0.1)
       }}
         initial={{
           x: 500
@@ -41,6 +40,7 @@ export default function Home_about() {
           type: "spring",
           stiffness: 50
         }}
+        
       >
         <div className="content">
           <img src="../assets/bullet_pic.png" alt="" className="bullet"/>

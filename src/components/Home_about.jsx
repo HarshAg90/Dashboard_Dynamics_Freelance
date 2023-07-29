@@ -3,20 +3,16 @@ import {motion, useScroll, useSpring} from "framer-motion";
 import {fadeIn, textVariant, slideIn} from "../utils/motion"
 import { animate, stagger } from "framer-motion/dom"
 
-export default function Charge_about() {
-
-  const scrollControls = useScroll();
-
+export default function Home_about() { 
   return (
-    <div id="Charge_about">
+    <div id="Home_about">
       <div className="image">
-      <motion.img src="../assets/product.png" alt=""
-      animate={scrollControls}
+        <motion.img src="../assets/product.png" alt=""
           whileHover={{
-            scale: 1.2
+            scale: 1.05
           }}
           whileTap={{
-            scale: 1
+            scale: 0.9
           }}
           whileInView={{
             x: 0,
@@ -24,7 +20,6 @@ export default function Charge_about() {
           }}
             initial={{
               x: -90,
-              scale: 1.05,
               opacity: 0
             }}
             transition={{
@@ -33,8 +28,8 @@ export default function Charge_about() {
             }}
         />
       </div>
-      <div className="about">
-      <motion.div className="content"
+      <div className="about"     >
+        <motion.div className="content"
           whileInView={{
             x: 0,
             opacity: 1
@@ -51,7 +46,7 @@ export default function Charge_about() {
         >
           <img src="../assets/bullet_pic.png" alt="" className="bullet"/>
           <p>
-          Our wireless charging solution reduces maintenance costs by eliminating physical connectors and cables, resulting in savings on repairs and labor. It eliminates the need for manual vehicle connection, minimizing downtime between charging sessions and allowing for the accommodation of more EVs.<br></br> 
+          Our wireless charging solution reduces maintenance costs by eliminating physical connectors and cables, resulting in savings on repairs and labor. It eliminates the need for manual vehicle connection, minimizing downtime between charging sessions and allowing for the accommodation of more EVs. 
 This enables operators to increase their revenue potential by serving a larger customer base without incurring additional infrastructure costs.
           </p>
         </motion.div>
@@ -72,8 +67,8 @@ This enables operators to increase their revenue potential by serving a larger c
         >
           <img src="../assets/bullet_pic.png" alt="" className="bullet" />
           <p>
-          We ensure seamless integration of our system with existing charging infrastructure. We guarantee efficient and reliable power transfer. The charging infrastructure including access to real-time data on power transfer efficiency, temperature, and fault detection can be monitored remotely with features like proactive maintenance and troubleshooting.<br/> 
-The wireless charging technology is designed to be user-friendly, so it streamlines operations and reduces complexities for charge point operators for CPOs.
+          Our wireless charging solution reduces maintenance costs by eliminating physical connectors and cables, resulting in savings on repairs and labor. It eliminates the need for manual vehicle connection, minimizing downtime between charging sessions and allowing for the accommodation of more EVs. 
+This enables operators to increase their revenue potential by serving a larger customer base without incurring additional infrastructure costs.
           </p>
         </motion.div>
         <motion.div className="content"
@@ -93,7 +88,8 @@ The wireless charging technology is designed to be user-friendly, so it streamli
         >
           <img src="../assets/bullet_pic.png" alt="" className="bullet" />
           <p>
-          We provide all type of protection features that is necessary for safety. Also by eliminating the need for physical cables and connectors, the risk of accidents, such as trips, falls, or electric shock, is significantly reduced. We ensure a safe working environment for the management staff.
+          Our wireless charging solution reduces maintenance costs by eliminating physical connectors and cables, resulting in savings on repairs and labor. It eliminates the need for manual vehicle connection, minimizing downtime between charging sessions and allowing for the accommodation of more EVs. 
+This enables operators to increase their revenue potential by serving a larger customer base without incurring additional infrastructure costs.
           </p>
         </motion.div>
       </div>

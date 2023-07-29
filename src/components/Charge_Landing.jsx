@@ -1,9 +1,21 @@
-import React from 'react'
+import React, { useRef } from 'react';
+import {motion, useScroll, useTransform} from "framer-motion";
 
 export default function Charge_landing() {
+
+  const targetRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["end end", "end start"],
+  });
+
+
+  //LANDING PG ANIMATION
+  const opacity = useTransform(scrollYProgress, [0, 0.95], [1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.95], [1, 0.9]);
+
   return (
-    <div id='Charge_landing'>
-        {/* <img src="../assets/landing_picture.png" alt="" className="bg" /> */}
+    <motion.div ref={targetRef} id='Charge_landing' style={{opacity, scale}}>
         <h1>ELEVATING EV CHARGING <br /> NETWORKS WITH <br /> OPERATOR-CENTRIC <br /> SOLUTIONS</h1>
         <ul id="side_nav">
             <li><svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -24,6 +36,6 @@ export default function Charge_landing() {
             </svg>
             </li>
         </ul>
-    </div>
+    </motion.div>
   )
 }

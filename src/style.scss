@@ -10,6 +10,7 @@
     overflow-x: hidden;
 }
 #nav{
+    overflow: hidden;
     width: 100vw;
     position: fixed;
     top: 0;
@@ -47,6 +48,7 @@
 }
 
 #Charge{
+    overflow: hidden;
     #Charge_landing{
         background-image: url(../public/assets/landing_picture.png);
         min-height: 100vh;
@@ -84,166 +86,168 @@
         }
 
     }
+
+
     #Charge_page{
-        height: 100vh;
+        height: 500vh;
         width: 100%;
         background-color: #C4C7D1;
-        overflow: hidden; 
+        overflow: hidden;
+
 
         .heading{
-            display: flex;
             width: 100%;
-            flex-direction: column;
-            justify-content: space-evenly;
+            text-align: center;
             align-items: center;
             font-family: "monogram",sans-serif;
             margin-top: 7vh;
-            font-size: 1.9rem;
+            font-size: 3.5rem;
+            z-index: 2;
             font-weight: 400;
             background: rgb(0,0,0);
             background: linear-gradient(180deg, rgba(0,0,0,1) 37%, rgba(116,116,116,1) 91%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            line-gap-override: 10px;
+            
         }
-        .subHeading {
-            display: flex;
+        .subHeading{
             width: 100%;
-            flex-direction: column;
-            justify-content: center; /* Center the content vertically */
+            text-align: center;
             align-items: center; /* Center the content horizontally */
-            margin-top: 5vh;
-          }
-          
-          .subHeading h5 {
-            text-align: center; /* Center the text horizontally */
-            font-size: 1.07rem;
-            color: transparent; /* Hide the text color */
-            background: rgb(0, 0, 0);
-            background-clip: text; /* Apply background text effect to the text */
-          }
+            margin-top: 4.5vh;
+            font-weight: 400;
+            font-size: 1.2rem;
+        }
           
           
           .carSection {
-            display: grid;
-            grid-template-columns: auto 40vw; /* The first column will be as wide as the charger image, and the second column will be 40vw wide */
-            height: 100vh; /* Set the height of the grid container to the viewport height */
-            align-items: center; /* Vertically center the elements within the grid container */
-            justify-content: center; /* Horizontally center the elements within the grid container */
-            position: relative; /* Add this to make .line elements position relative to the .carSection container */
-            transform: translateX(-3%);
+            z-index: 2;
+            overflow-y: hidden ;
+            padding-top: 9vh;
+            right: 7vw;
+            width: 100vw;
+            display: flex;
+            height: 110vh;
+            position: relative; 
           }
           
+          
+
           .car {
             width: 40vw;
-            transform: translateX(-23%) translateY(-35%); /* Move the car 23% to the left and 35% above */
-            /* Add any additional styling as needed */
+            align-self: center;
+            margin: auto;
+            margin-top: 10vh; 
           }
-          
+
           .charger {
             width: 15vw;
-            transform: translateX(-40%) translateY(-35%); /* Move the charger 40% to the left and 35% above */
-            /* Add any additional styling as needed */
+            position: absolute;
+            margin-top: 10vh;
+            margin-left: 18vw;
           }
-          
-          .line {
-            position: absolute; /* Position the lines absolutely within the .carSection container */
-            display: flex; /* Display the line and h5 elements in a flex container */
-            align-items: center; /* Align items vertically within the flex container */
-          }
-          
-          .line img {
-            margin-right: 10px; /* Add some spacing between the line image and the h5 text */
+
+          .line{
+            position: absolute;
+            font-size: 1.5rem;
           }
           
           .line1 {
-            top: 12%; /* Place the first line 12% from the top */
-            left: 57%; /* Place the first line to the right of the car */
+            align-self: flex-start;
+            right: 20vw;
+            width: 350px;
           }
           
           .line2 {
-            top: 35%; /* Place the second line 35% from the top */
-            left: 69%; /* Place the second line to the right of the car */
+            width: 100px;
+            top: 43vh;
+            right: 23vw;           
           }
           
           .line3 {
-            top: 51%; /* Place the third line 53% from the top */
-            left: 53%; /* Place the third line to the right of the car */
+            width: 600px;
+            top: 58vh;
+            left: 50vw;
           }
 
-          .line1 h3{
-            transform: translateY(-100%);
+          .initText1{
+            left: 82vw;
+            top: 95px;
           }
 
-          .line3 h3{
-            transform: translateY(40%);
+          .initText2{
+            left: 79vw;
+            top: 280px;
+            text-align: left;
+            
+          }
+
+          .initText3{
+            left: 90vw;
+            top: 470px;            
           }
 
           .finalLine1 {
-            opacity: 0;
-            transform:
-                rotate(180deg)
-                scaleX(-1);;
-            top: 12%; /* Place the first line 12% from the top */
-            left: 57%; /* Place the first line to the right of the car */
+            top: 20vh; /* Place the first line 12% from the top */
+            left: 26vw; /* Place the first line to the right of the car */
           }
           
           .finalLine2 {
-            opacity: 0;
-            top: 35%; /* Place the second line 35% from the top */
-            left: 69%; /* Place the second line to the right of the car */
+            top: 50vh; /* Place the second line 35% from the top */
+            left: 34vw; /* Place the second line to the right of the car */
           }
           
           .finalLine3 {
-            opacity: 0;
-            top: 51%; /* Place the third line 53% from the top */
-            left: 53%; /* Place the third line to the right of the car */
+            top: 77vh;
+            left: 36vw; /* Place the third line to the right of the car */
           }
 
-          
-          
-          
-          
-          
-          
-          
-          
-          
-  
-          
-          
-          
-          
-          
+          .finalText1{
+            left: 60vw;
+            top: 15vh;
+          }
+
+          .finalText2{
+            left: 62vw;
+            top: 45vh;
+          }
+
+          .finalText3{
+            left: 64vw;
+            top: 72vh;
+          }
+
     }
     #Charge_about{
+        overflow: hidden;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         min-height: 100vh;
         align-items: center;
-        justify-content: center;
         background: rgb(211,213,222);
         background: linear-gradient(90deg, rgba(211,213,222,1) 1%, rgba(255,255,255,1) 39%);
         .image{
           overflow: hidden;
             width: 30vw;
-            padding: 10px;
-            margin: 20px;
+            padding: 50px;
+            margin: 10px;
             img{
                 height: 500px;
             }
         }
         .about{
-            width: 55vw;
+            width: 60vw;
             .content{
                 display: flex;
                 justify-content: center;
                 align-items: start;
                 margin: 20px 10px;
+                margin-top: 50px;
+                margin-bottom: 70px;
                 img{
                     margin: 5px 10px;
-                    width: 20px;
-                    height: auto;
+                    width: 50px;
+                    // height: auto;
                 }
                 p{
                     font-size: 1.2rem;

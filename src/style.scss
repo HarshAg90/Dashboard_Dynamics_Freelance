@@ -1041,6 +1041,7 @@
 
 }
 #Contact_page{
+    
     .Landing{
         font-family: 'monogram',sans-serif;
         background-image: url(../public/assets/Contact/contact_landing.png);
@@ -1067,6 +1068,85 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             z-index: 1;
+        }
+    }
+    .contact_inner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .contact_head{
+            height: 40vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            button{
+                padding: 10px 30px;
+                border-radius: 10px;
+                border: 1px solid black;
+                font-size: 1.2rem;
+                font-weight: 600;
+            }
+            p{
+                width: 60vw;
+                font-size: 1.1rem;
+                text-align: center;
+            }
+        }
+        .lets_Talk{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 80vw;
+            border-radius: 10px;
+            height: 60vh;
+            box-shadow: 0px 2px 4px 0px #00000040;
+            .contact{
+                h1.main{
+                    font-size: 3rem;
+                    font-weight: 600;
+                }
+                h1{
+                    font-weight: 600;
+                }
+                .c{
+                    display: flex;
+                    gap:.5em;
+                    align-items: center;
+                }
+            }
+            form.form{
+                width: 300px;
+                padding: 0px 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                h1{
+                    text-align: end;
+                    margin: 30px 0px;
+                }
+                p{
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                }
+                input{
+                    border: none;
+                    background-color: transparent;
+                    border-bottom: 1px solid black;
+                    margin: 10px 0px;
+                }
+                .share{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .socials{
+                        display: flex;
+                        gap: 1rem;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
         }
     }
 }
@@ -1099,4 +1179,100 @@
         }
     }
 
+}
+
+#UseCase{
+    .landing{
+        background-image: url(../public/assets/UseCase/Landing.png);
+            // text-align: center;
+            h1{
+                background: rgb(0,0,0);
+        background: linear-gradient(180deg, rgba(0,0,0,1) 37%, rgba(116,116,116,1) 91%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        top: 40%;
+        left: 40%;
+        font-size: 2.7rem;
+        font-weight: 400;
+        transform: translate(-50%,-50%);
+    
+        }
+    }
+
+    .userBase{
+        height: 150vh;
+        display: flex;
+        flex-direction: column;
+        gap: 10vh;
+        // justify-content: center;
+        align-items: center;
+        
+        .subHeading{
+
+            /* Our user base is omnidirectional */
+
+                width: 30vw;
+                height: auto;
+
+                font-family: 'Artifakt Element';
+                font-style: normal;
+                font-weight: 800;
+                font-size: 22px;
+                // line-height: 31px;
+                text-align: center;
+
+                color: #000000;
+                border: 1px solid #8E8787;
+                border-radius: 5px;
+
+                margin-top: 10vh;
+                padding-top: 10px;
+                padding-bottom: 10px;
+
+        }
+
+        .useCaseGrid{
+            width: 60vw;
+            height: 90vh;
+            display: grid;
+            // padding: 0;
+            padding-top: 20px;
+
+            justify-items: center;
+            justify-content: center;
+            align-items: center;
+            grid-template-rows: 37vh 37vh;
+            gap: 18px;
+            grid-template-columns: repeat(3, 18vw);
+            
+
+            img{
+                width: 20vw;
+                padding: 0;
+                z-index: 1;
+            }
+
+            // .g4{
+            //     grid-row-start: 2;
+            //     grid-row-end: 4;
+            // }
+
+            // .g5{
+            //     grid-column: 2 / span 2
+            // }
+
+            // .g6{
+            //     // max-width: 18vw;
+            //}
+
+        }
+
+        .downHeading{
+            font-family: 'Artifakt Element';
+            font-style: normal;
+            font-size: 20px;
+                // line-height: 31px;
+            text-align: center;   
+        }
+    }
 }

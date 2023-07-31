@@ -386,6 +386,46 @@
 
 }
 #Charge{
+    overflow: hidden;
+    #Charge_landing{
+        background-image: url(../public/assets/landing_picture.png);
+        min-height: 100vh;
+        position: relative;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        h1{
+            position: absolute;
+            font-family: "monogram",sans-serif;
+            top: 40%;
+            left: 40%;
+            font-size: 2.7rem;
+            font-weight: 400;
+            transform: translate(-50%,-50%);
+            background: rgb(0,0,0);
+            background: linear-gradient(180deg, rgba(0,0,0,1) 37%, rgba(116,116,116,1) 91%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-gap-override: 10px;
+        }
+        #side_nav{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            li{
+                padding: 40px 10px;
+                background-color: #fbfbfb76;
+                transition: 200ms ease-in-out;
+                &:hover{
+                    transition: 200ms ease-in-out;
+                    background-color: #FBFBFB;
+                }
+            }
+        }
+
+    }
+
+
     #Charge_page{
         height: 500vh;
         width: 100%;

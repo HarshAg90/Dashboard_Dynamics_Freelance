@@ -186,7 +186,7 @@ export default function Technology() {
           }}
           transition={{
             type: "spring",
-            stiffness: 110,
+            stiffness: 60,
           }}
         />
         <motion.img src="../assets/Technology/Grids/Grid2.png" className='g2'
@@ -198,7 +198,7 @@ export default function Technology() {
           }}
           transition={{
             type: "spring",
-            stiffness: 110,
+            stiffness: 60,
           }}/>
         <motion.img src="../assets/Technology/Grids/Grid3.png" className='g3'
         whileHover={{
@@ -209,7 +209,7 @@ export default function Technology() {
           }}
           transition={{
             type: "spring",
-            stiffness: 110,
+            stiffness: 60,
           }}/>
         <motion.img src="../assets/Technology/Grids/Grid4.png" className='g4'
             whileHover={{
@@ -220,7 +220,7 @@ export default function Technology() {
             }}
             transition={{
               type: "spring",
-              stiffness: 110,
+              stiffness: 60,
             }}
         />
         <motion.img src="../assets/Technology/Grids/Grid5.png" className='g5'
@@ -232,7 +232,7 @@ export default function Technology() {
         }}
         transition={{
           type: "spring",
-          stiffness: 110,
+          stiffness: 60,
         }}/>
         <motion.img src="../assets/Technology/Grids/Grid6.png" className='g6'whileHover={{
               scale: 1.1
@@ -242,7 +242,7 @@ export default function Technology() {
             }}
             transition={{
               type: "spring",
-              stiffness: 110,
+              stiffness: 60,
             }}/>
         <motion.img src="../assets/Technology/Grids/Grid7.png" className='g6'whileHover={{
               scale: 1.1
@@ -252,7 +252,7 @@ export default function Technology() {
             }}
             transition={{
               type: "spring",
-              stiffness: 110,
+              stiffness: 60,
             }}/>
       </div>
     </div>

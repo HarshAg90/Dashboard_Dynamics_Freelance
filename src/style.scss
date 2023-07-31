@@ -10,6 +10,7 @@
     overflow-x: hidden;
 }
 #nav{
+    overflow: hidden;
     width: 100vw;
     position: fixed;
     top: 0;
@@ -35,7 +36,8 @@
                 // background-color: rgba(164, 164, 164, 0.716);
                 transition: 200ms ease;
                 border-bottom: 1px solid black;
-            }
+                margin: 2px;
+            }   
             li{
                 img{
                     height: 50px;
@@ -82,14 +84,14 @@
             -webkit-text-fill-color: transparent;
             z-index: 1;
         }
-    }
-    img{
-        position: absolute;
-        top: 70%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        height: 70vh;
-        z-index: -0;
+        img{
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            height: 70vh;
+            z-index: -0;
+        }
     }
 
     .tech{
@@ -148,6 +150,7 @@
                 &:hover{
                     background-color: black;
                     color: white;
+                    box-shadow: 0 0 10px grey;
                     transition: 200ms ease;
                 }
                }
@@ -178,7 +181,140 @@
             }
         }
     }
+    .title{
+        margin: 30px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .title_h{
+            display: flex;
+            width: 700px;
+            .svg{
+                display: flex;
+                margin-right: 20px;
+                align-items: center;
+            }
+            h1{
+                font-size: 2rem;
+                font-weight: 300;
+                span{
+                    font-weight: 600;
+                    margin: 10px;
+                }
+            }
+        }
+        button{
+            padding: 5px 20px;
+            border: none;
+            border: 1px solid black;
+            border-radius: 10px;
+            margin-right: 30px;
+            font-weight: 500;
+            transition: 200ms ease;
+            &:hover{
+                background-color: black;
+                color: white;
+                box-shadow: 0 0 10px grey;
+                transition: 200ms ease;
+            }
+        }
+    }
+    .go_wireless{
+        min-height: 100vh;
+        display: flex;
+        background-color: #fff;
+        flex-direction: column;
+        align-items: center;
+        img{
+            display: block;
+            margin: 30px;
+            height: 90vh;
+        }
+        .end_line{
+            width: 100%;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+    }
+    .features{
+        padding: 40px;
+        .title{
+            margin: 30px 0px;
+        }
+        .content{
+            width: 100%;
+            // display: grid;
+            // grid-template-columns: repeat(auto-fit,minmax(1fr, 200px));
+            // gap: 20px;
+            display: flex;
+            justify-content: space-evenly;
+            .tiles{
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                img{
+                    height: 100px;
+                }
+                p{
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    margin: 20px;
+                }
+            }
+        }
+    }
+    .grid{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        .grid1{
+            width: 70vw;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            .ti.text{
 
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                align-items: start;
+                h1{
+                    padding: 20px;
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                }
+                p{
+                    padding: 20px;
+                    font-weight: 300;
+                }
+            }
+            .l{
+                height: 20px;
+                width: 100%;
+            }
+            .l.l2{
+                background: linear-gradient(269.99deg, #EB5136 17.96%, #B72C29 99.99%);
+            }
+            .l.l3{
+                background: linear-gradient(90.02deg, #C6E4E2 15.65%, #92C4C4 100.92%);
+            }
+            .ti.text.t1{
+                background: #DEDEDE;
+            }
+            .ti.text.t2{
+                color: white;
+                background: #B72C29;
+            }
+            .ti.text.t3{
+                background: #C3E0DE;
+            }
+        }
+    }
 }
 
 .Landing{
@@ -211,165 +347,165 @@
 }
 #Charge{
     #Charge_page{
-        height: 100vh;
+        height: 500vh;
         width: 100%;
         background-color: #C4C7D1;
-        overflow: hidden; 
+        overflow: hidden;
+
 
         .heading{
-            display: flex;
             width: 100%;
-            flex-direction: column;
-            justify-content: space-evenly;
+            text-align: center;
             align-items: center;
             font-family: "monogram",sans-serif;
             margin-top: 7vh;
-            font-size: 1.9rem;
+            font-size: 3.5rem;
+            z-index: 2;
             font-weight: 400;
             background: rgb(0,0,0);
             background: linear-gradient(180deg, rgba(0,0,0,1) 37%, rgba(116,116,116,1) 91%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            line-gap-override: 10px;
+            
         }
-        .subHeading {
-            display: flex;
+        .subHeading{
             width: 100%;
-            flex-direction: column;
-            justify-content: center; /* Center the content vertically */
+            text-align: center;
             align-items: center; /* Center the content horizontally */
-            margin-top: 5vh;
-          }
-          
-          .subHeading h5 {
-            text-align: center; /* Center the text horizontally */
-            font-size: 1.07rem;
-            color: transparent; /* Hide the text color */
-            background: rgb(0, 0, 0);
-            background-clip: text; /* Apply background text effect to the text */
-          }
+            margin-top: 4.5vh;
+            font-weight: 400;
+            font-size: 1.2rem;
+        }
           
           
           .carSection {
-            display: grid;
-            grid-template-columns: auto 40vw; /* The first column will be as wide as the charger image, and the second column will be 40vw wide */
-            height: 100vh; /* Set the height of the grid container to the viewport height */
-            align-items: center; /* Vertically center the elements within the grid container */
-            justify-content: center; /* Horizontally center the elements within the grid container */
-            position: relative; /* Add this to make .line elements position relative to the .carSection container */
-            transform: translateX(-3%);
+            z-index: 2;
+            overflow-y: hidden ;
+            padding-top: 9vh;
+            right: 7vw;
+            width: 100vw;
+            display: flex;
+            height: 110vh;
+            position: relative; 
           }
           
+          
+
           .car {
             width: 40vw;
-            transform: translateX(-23%) translateY(-35%); /* Move the car 23% to the left and 35% above */
-            /* Add any additional styling as needed */
+            align-self: center;
+            margin: auto;
+            margin-top: 10vh; 
           }
-          
+
           .charger {
             width: 15vw;
-            transform: translateX(-40%) translateY(-35%); /* Move the charger 40% to the left and 35% above */
-            /* Add any additional styling as needed */
+            position: absolute;
+            margin-top: 10vh;
+            margin-left: 18vw;
           }
-          
-          .line {
-            position: absolute; /* Position the lines absolutely within the .carSection container */
-            display: flex; /* Display the line and h5 elements in a flex container */
-            align-items: center; /* Align items vertically within the flex container */
-          }
-          
-          .line img {
-            margin-right: 10px; /* Add some spacing between the line image and the h5 text */
+
+          .line{
+            position: absolute;
+            font-size: 1.5rem;
           }
           
           .line1 {
-            top: 12%; /* Place the first line 12% from the top */
-            left: 57%; /* Place the first line to the right of the car */
+            align-self: flex-start;
+            right: 20vw;
+            width: 350px;
           }
           
           .line2 {
-            top: 35%; /* Place the second line 35% from the top */
-            left: 69%; /* Place the second line to the right of the car */
+            width: 100px;
+            top: 43vh;
+            right: 23vw;           
           }
           
           .line3 {
-            top: 51%; /* Place the third line 53% from the top */
-            left: 53%; /* Place the third line to the right of the car */
+            width: 600px;
+            top: 58vh;
+            left: 50vw;
           }
 
-          .line1 h3{
-            transform: translateY(-100%);
+          .initText1{
+            left: 82vw;
+            top: 95px;
           }
 
-          .line3 h3{
-            transform: translateY(40%);
+          .initText2{
+            left: 79vw;
+            top: 280px;
+            text-align: left;
+            
+          }
+
+          .initText3{
+            left: 90vw;
+            top: 470px;            
           }
 
           .finalLine1 {
-            opacity: 0;
-            transform:
-                rotate(180deg)
-                scaleX(-1);;
-            top: 12%; /* Place the first line 12% from the top */
-            left: 57%; /* Place the first line to the right of the car */
+            top: 20vh; /* Place the first line 12% from the top */
+            left: 26vw; /* Place the first line to the right of the car */
           }
           
           .finalLine2 {
-            opacity: 0;
-            top: 35%; /* Place the second line 35% from the top */
-            left: 69%; /* Place the second line to the right of the car */
+            top: 50vh; /* Place the second line 35% from the top */
+            left: 34vw; /* Place the second line to the right of the car */
           }
           
           .finalLine3 {
-            opacity: 0;
-            top: 51%; /* Place the third line 53% from the top */
-            left: 53%; /* Place the third line to the right of the car */
+            top: 77vh;
+            left: 36vw; /* Place the third line to the right of the car */
           }
 
-          
-          
-          
-          
-          
-          
-          
-          
-          
-  
-          
-          
-          
-          
-          
+          .finalText1{
+            left: 60vw;
+            top: 15vh;
+          }
+
+          .finalText2{
+            left: 62vw;
+            top: 45vh;
+          }
+
+          .finalText3{
+            left: 64vw;
+            top: 72vh;
+          }
+
     }
     #Charge_about{
+        overflow: hidden;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         min-height: 100vh;
         align-items: center;
-        justify-content: center;
         background: rgb(211,213,222);
         background: linear-gradient(90deg, rgba(211,213,222,1) 1%, rgba(255,255,255,1) 39%);
         .image{
           overflow: hidden;
             width: 30vw;
-            padding: 10px;
-            margin: 20px;
+            padding: 50px;
+            margin: 10px;
             img{
                 height: 500px;
             }
         }
         .about{
-            width: 55vw;
+            width: 60vw;
             .content{
                 display: flex;
                 justify-content: center;
                 align-items: start;
                 margin: 20px 10px;
+                margin-top: 50px;
+                margin-bottom: 70px;
                 img{
                     margin: 5px 10px;
-                    width: 20px;
-                    height: auto;
+                    width: 50px;
+                    // height: auto;
                 }
                 p{
                     font-size: 1.2rem;
@@ -407,15 +543,15 @@
                     border: none;
                     outline: none;
                     background-color: transparent;
-                    padding: 10px;
+                    padding: 5px 10px;
                     font-size: 1.1rem;
                 }
                 button{
                     border: none;
                     outline: none;
-                    padding: 10px;
+                    padding: 5px 10px;
                     font-size: 1.1rem;
-                    background-color: red;
+                    background-color: #B53232;
                     border-radius: 5px;
                     color: white;
                     transition: 100ms ease;

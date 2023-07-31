@@ -1,5 +1,7 @@
 import React  from "react";
+import Charge_final from "./Charge_final"
 import Landing from "./Landing";
+import Charge_landing from "./Charge_Landing";
 import Charge_page from "./Charge_page";
 import Home_about from "./Charge_about";
 

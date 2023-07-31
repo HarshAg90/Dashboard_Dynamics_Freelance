@@ -2,6 +2,11 @@
     font-family: "monogram";
     src: url("./Microgramma.ttf")
 }
+
+@font-face {
+    font-family: "artifakt";
+    src: url("./ArtifaktElement-Regular.woff.ttf");
+}
 *{
     // min-height: 100vh;
     padding: 0;
@@ -9,6 +14,41 @@
     box-sizing: border-box;
     overflow-x: hidden;
 }
+
+.basicLand{
+    min-height: 100vh;
+        position: relative;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        h1{
+            position: absolute;
+            font-family: "monogram",sans-serif;
+            font-size: 2.7rem;
+            font-weight: 400;
+            background: rgb(0,0,0);
+            background: linear-gradient(180deg, rgba(0,0,0,1) 37%, rgba(116,116,116,1) 91%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-gap-override: 10px;
+        }
+        #side_nav{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            li{
+                padding: 40px 10px;
+                background-color: #fbfbfb76;
+                transition: 200ms ease-in-out;
+                &:hover{
+                    transition: 200ms ease-in-out;
+                    background-color: #FBFBFB;
+                }
+            }
+        }
+}
+
+
 #nav{
     overflow: hidden;
     width: 100vw;
@@ -352,13 +392,33 @@
         background-color: #C4C7D1;
         overflow: hidden;
 
+        .carSection {
+            transition: transform 0.2s ease;
+            overflow: hidden !important;
+            z-index: 2;
+            overflow-y: hidden ;
+            padding-top: 4vh;
+            right: 7vw;
+            width: 100vw;
+            margin-right: 0;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            height: 100vh;
+            position: relative;
+
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+          }
+
 
         .heading{
             width: 100%;
             text-align: center;
             align-items: center;
             font-family: "monogram",sans-serif;
-            margin-top: 7vh;
+            margin-top: 2.5vh;
             font-size: 3.5rem;
             z-index: 2;
             font-weight: 400;
@@ -371,6 +431,7 @@
         .subHeading{
             width: 100%;
             text-align: center;
+            font-family: "artifakt", sans-serif;
             align-items: center; /* Center the content horizontally */
             margin-top: 4.5vh;
             font-weight: 400;
@@ -378,16 +439,6 @@
         }
           
           
-          .carSection {
-            z-index: 2;
-            overflow-y: hidden ;
-            padding-top: 9vh;
-            right: 7vw;
-            width: 100vw;
-            display: flex;
-            height: 110vh;
-            position: relative; 
-          }
           
           
 
@@ -395,84 +446,100 @@
             width: 40vw;
             align-self: center;
             margin: auto;
-            margin-top: 10vh; 
+            margin-top: 15vh; 
           }
 
           .charger {
             width: 15vw;
             position: absolute;
-            margin-top: 10vh;
+            margin-top: 45vh;
             margin-left: 18vw;
           }
 
+        //   .initLine{
+        //     position: absolute;
+        //     display: flex;
+        //   }
+
+        //   .finlaLine{
+        //     position: absolute;
+        //     display: flex;
+        //   }
+
+        // .initLine{
+        //     display: flex;
+        //     top: 500px;
+        // }
+
           .line{
             position: absolute;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
+            font-family: "artifakt", sans-serif;
           }
           
           .line1 {
-            align-self: flex-start;
             right: 20vw;
             width: 350px;
+            top: 55px + 250px;
           }
           
           .line2 {
             width: 100px;
-            top: 43vh;
+            top: 68vh;
             right: 23vw;           
           }
           
           .line3 {
             width: 600px;
-            top: 58vh;
+            top: 58vh + 28vh;
             left: 50vw;
           }
 
           .initText1{
             left: 82vw;
-            top: 95px;
+            top: 40px + 250px;
           }
 
           .initText2{
             left: 79vw;
-            top: 280px;
+            top: 480px;
             text-align: left;
             
           }
 
           .initText3{
             left: 90vw;
-            top: 470px;            
+            top: 64vh + 28vh;            
           }
 
           .finalLine1 {
-            top: 20vh; /* Place the first line 12% from the top */
-            left: 26vw; /* Place the first line to the right of the car */
+            top: 23vh + 20vh; /* Place the first line 12% from the top */
+            left: 22vw; /* Place the first line to the right of the car */
           }
           
           .finalLine2 {
-            top: 50vh; /* Place the second line 35% from the top */
-            left: 34vw; /* Place the second line to the right of the car */
+            top: 50vh + 15vh; /* Place the second line 35% from the top */
+            left: 28vw; /* Place the second line to the right of the car */
           }
           
           .finalLine3 {
-            top: 77vh;
-            left: 36vw; /* Place the third line to the right of the car */
+            top: 80vh + 10vh;
+            left: 30vw; /* Place the third line to the right of the car */
           }
 
           .finalText1{
-            left: 60vw;
-            top: 15vh;
+            left: 56vw;
+            top: 19vh + 20vh;
           }
 
           .finalText2{
-            left: 62vw;
-            top: 45vh;
+            left: 57vw;
+            top: 45vh + 16vh;
           }
 
           .finalText3{
-            left: 64vw;
-            top: 72vh;
+            left: 59vw;
+            top: 72vh + 15vh;
           }
 
     }
@@ -509,6 +576,7 @@
                 }
                 p{
                     font-size: 1.2rem;
+                    font-family: "artifakt", sans-serif;
                 }
             }
         }
@@ -630,5 +698,250 @@
         height: auto;
         z-index: -1;
     }
+
+}
+
+#Technology{
+    #TechLanding{
+        .landing{
+            // background-image: url(../public/assets/landing_picture.png);
+            background-image: url(../public/assets/Technology/LandingTeml.png);
+            text-align: center;
+            h1{
+                left: 0;
+                right: 0;
+                top: 75%;
+                margin: auto;
+                line-height: 40px;
+    
+                background: #BC0000;
+                background: linear-gradient(to right, #BC0000 0%, #BC0000 50%, #FFFFFF 51%, #FFF 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+    
+            }
+        }    
+    
+
+    }
+
+    .product{
+        height: 120vh;
+
+        .productHead{
+            margin-top: 20vh;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            
+            .heading{
+                font-size: 34px;
+                font-weight: 500;
+                font-family: "artifakt", sans-serif;
+                color: rgb(0, 0, 0);
+                padding-left: 2vh;
+            }
+            hr{
+                height:5px;
+                width:20%;
+                border: none; /* Removes the default border */
+                border-top: 5px solid #CD222A; /* Sets the top border to a solid line */   
+            }
+            .sqr{
+                height: 18px;
+                width: 20px;
+                background-color: #CD222A;
+            }
+    }
+    }
+
+    .working{
+        font-family: "artifakt", sans-serif;
+        height: 290vh;
+        .headingTop{
+            font-size: 60px;
+            font-family: "monogram",sans-serif;
+            color: black;
+            margin-left: 9.1%;
+        }
+
+        .workingHead{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-bottom: 7vh;
+            
+            .heading{
+                font-size: 60px;
+                font-family: "monogram",sans-serif;
+                align-self: baseline;
+                margin: 0;
+                margin-right: 2vw;
+                color: #CD222A;
+            }
+
+
+            hr{
+                height:5px;
+                width:70%;
+                border: none; /* Removes the default border */
+                border-top: 5px solid #CD222A; /* Sets the top border to a solid line */   
+            }
+            .sqr{
+                height: 18px;
+                width: 20px;
+                background-color: #CD222A;
+            }
+        }
+
+        .division{
+            width: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .explanation{
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 49vw 2vw 49vw;
+            grid-template-rows:  repeat(1, 250vh);
+            justify-items: center;
+            gap: 5px;
+
+            img {
+                max-width: 100%; /* Set the maximum width of the image to 100% of the container */
+                max-height: 100%; /* Set the maximum height of the image to 100% of the container */
+              }
+
+            .illustration{
+                width: 45vw;
+                height: 60vh;
+            }
+            .txt{
+                width: 40vw;
+                font-size: 1.2rem;
+                min-height: 30vh
+            }
+
+            .fstCol{
+                display: flex;
+                flex-direction: column;
+                gap: 5vh;
+            }
+
+            .scndCol{
+                // background-image: url(../public/assets/Technology/Vector89.png);
+                display: flex;
+                flex-direction: column;
+                gap: 18vh;
+                // max
+            }
+
+            .thdCol{
+                display: flex;
+                flex-direction: column;
+                gap: 5vh;
+            }
+
+            .illustration.thd{
+                width: 37vw;
+                align-self: center;
+            }
+
+            
+
+            .thd.txt{
+                align-self: baseline;
+                padding-top: 18vh;
+                padding-bottom: 2vh;
+                overflow: hidden;
+            }
+
+            .frth.txt{
+                // align-self: baseline;
+                padding-top: 18vh;
+                overflow: hidden;
+                min-height: 45vh;
+            }
+
+            .illustration.frth{
+                padding-top: 4vh;
+                overflow: hidden;
+                width: 40vw;
+                align-self: flex-start;
+               
+            }
+
+            // .scnd.txt{
+            //     margin-top: 20vh;
+            //     min-height: 30vh;
+            // }
+            // .scnd.illustration{
+            //     top: 0;
+            //     grid-column: 3 / span 1;
+            // }
+
+            
+
+        }
+    }
+
+    .why{
+        height: 150vh;
+        background-color: #F6F6F6;
+        display: flex;
+        .whyText{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-width: 30vw;
+            font-family: "monogram",sans-serif;
+            font-size: 72px;
+            width: 40px; 
+
+            h1{
+                margin: 0;
+                padding: 0;
+                line-height: 100%;
+            }
+        }
+        .picGrid{
+            padding: 0;
+            min-width: 65vw;
+            // background-color: #C2747B;
+            display: grid;
+            justify-items: stretch;
+            grid-template-rows: repeat(3, 20vw);
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            grid-row-gap: 0px;
+            margin-right: 100px;
+            align-content: space-evenly;
+            overflow-x: visible;
+
+            img{
+                padding: 0;
+                z-index: 1;
+            }
+
+            .g4{
+                grid-row-start: 2;
+                grid-row-end: 4;
+            }
+
+            .g5{
+                grid-column: 2 / span 2
+            }
+
+            .g6{
+                // max-width: 18vw;
+            }
+
+        }
+    }
+
+
 
 }

@@ -5,33 +5,37 @@ import Sticky from 'react-stickynode';
 
 export default function Charge_final (){
 
+
+  
+
  const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
     offset: ["start end", "end start"],
   });
 
-
   //CAR ANIMATION
-  const carInitialX = useTransform(scrollYProgress, [0, 0.16, 0.28, 0.37], ["80%", "0%", "0%", "-60%"]);
-  const carFinalY = useTransform(scrollYProgress, [0.28, 0.37, 0.5, 0.72 ], ["0%","70%", "70%", "170%"]);
-  const carScale = useTransform(scrollYProgress, [0.28, 0.37], [1, 1.1]);
+  const carInitialX = useTransform(scrollYProgress, [0, 0.18, 0.28, 0.37], ["80%", "0%", "0%", "-70%"]);
+  const carFinalY = useTransform(scrollYProgress, [0.28, 0.37, 0.6, 0.8 ], ["0%","45%", "45%", "170%"]);
+  const carScale = useTransform(scrollYProgress, [0.28, 0.37], [1, 0.9]);
   const carRotation = useTransform(scrollYProgress, [0.28, 0.37], [0,-90]);
-  const carFinalOpacity = useTransform(scrollYProgress, [0.5, 0.7], [1, 0]);
+  const carFinalOpacity = useTransform(scrollYProgress, [0.6, 0.8], [1, 0]);
   
   //INITIAL LINE AND CHARGER ANIMATION
-  const opacity = useTransform(scrollYProgress, [0, 0.1, 0.17, 0.23, 0.27], [0, 0, 1, 1, 0]);
-  const lineX = useTransform(scrollYProgress, [0, 0.17], ["50%", "0%"]);
-  const lineInit1 = useTransform(scrollYProgress, [0, 0.17], ["20%", "0%"]);
-  const lineInit2 = useTransform(scrollYProgress, [0, 0.17], ["-20%", "0%"]);
-  const lineInit3 = useTransform(scrollYProgress, [0, 0.17], ["-20%", "0%"]);
+  const opacity = useTransform(scrollYProgress, [0.19, 0.194, 0.2, 0.25, 0.27], [0, 0.6, 1, 1, 0]);
+  const lineX = useTransform(scrollYProgress, [0.19, 0.22], ["0%", "0%"]);
+  const lineInit1 = useTransform(scrollYProgress, [0.19, 0.2], ["20%", "0%"]);
+  const lineInit2 = useTransform(scrollYProgress, [0, 0.17], ["0%", "0%"]);
+  const lineInit3 = useTransform(scrollYProgress, [0.19, 0.2], ["-20%", "0%"]);
+  const chargerOpacity = useTransform(scrollYProgress, [0.25, 0.27], [1, 0]);
 
   //FINAL LINE ANIMATION
-  const opacityFinal = useTransform(scrollYProgress, [0, 0.37, 0.47, 0.5, 0.7], [0, 0, 1, 1, 0]);
-  const finalLineX = useTransform(scrollYProgress, [0.5, 0.72], ["0%", "50%"]);
-  const finalTextX = useTransform(scrollYProgress, [0.5, 0.72], ["0%", "100%"]);
+  const opacityFinal = useTransform(scrollYProgress, [0, 0.37, 0.47, 0.57, 0.75], [0, 0, 1, 1, 0]);
+  const finalLineX = useTransform(scrollYProgress, [0.6, 0.72], ["0%", "50%"]);
+  const finalTextX = useTransform(scrollYProgress, [0.6, 0.72], ["0%", "100%"]);
 
-  const pgScale = useTransform(scrollYProgress, [0, 0.165], [1, 1.2])
+  const pgOpacity = useTransform(scrollYProgress, [0.8, 0.95], [1, 0]);
+  const pgScale = useTransform(scrollYProgress, [0.8, 0.95], [1, 0.88]);
    
 
 
@@ -41,8 +45,16 @@ export default function Charge_final (){
     {/* //CAR ANIMATION */}
 
     
-    <motion.div ref={targetRef} id='Charge_page' scale={{scale: pgScale}}>
-      <div className="heading">
+    <motion.div ref={targetRef} id='Charge_page' >
+
+      <Sticky  Sticky enabled={true} bottomBoundary="#Charge_page" innerZ={2}>
+
+      
+
+
+            <motion.div className="carSection" style={{opacity: pgOpacity, scale: pgScale}}>
+
+            <div className="heading">
         <h1>CHARGE POINT OPERATORS</h1>
       </div>
       <div className="subHeading">
@@ -51,31 +63,46 @@ export default function Charge_final (){
         </h5>
       </div>
 
-      <Sticky  Sticky enabled={true} bottomBoundary="#Charge_page" innerZ={2}>
-            <div className="carSection">
-  <motion.img src="../assets/charge/car.png" alt="" className="car"
+
+      <motion.img src="../assets/charge/car.png" alt="" className="car"
     style={{x: carInitialX, rotate: carRotation, y: carFinalY, opacity: carFinalOpacity, scale: carScale}}
   />
-  <motion.img src="../assets/charge/charger.png" alt="" className="charger" style={{opacity, x: lineInit2}}/>
+  <motion.img src="../assets/charge/charger.png" alt="" className="charger" style={{opacity: chargerOpacity}}/>
 
-  
-  <motion.img src='../assets/charge/vector-1.svg' className='line line1' style={{opacity, y: lineInit1, x: lineX}}></motion.img>
-  <motion.h3 className='initText1 line' style={{opacity, y: lineInit1, x: lineX}}>High maintenance cost</motion.h3>
-  <motion.img src='../assets/charge/vector-2.svg' className='line line2' style={{opacity, x: lineInit2, x: lineX}}></motion.img>
-  <motion.h3 className='initText2 line' style={{opacity, y: lineInit1, x: lineX}}>Complex hardware and software challenges</motion.h3>
-  <motion.img src='../assets/charge/vector-3.svg' className='line line3' style={{opacity, y: lineInit3, x: lineX}}></motion.img>
-  <motion.h3 className='initText3 line' style={{opacity, y: lineInit1, x: lineX}}>Safety hazards</motion.h3>
 
+  <div className='initLine' >
+  <motion.img src='../assets/charge/vector-1.svg' className='line line1 aniSet' style={{opacity, y: lineInit1, x: lineX}}></motion.img>
+  <motion.h3 className='initText1 line aniSet' style={{opacity, y: lineInit1, x: lineX}}>High maintenance cost</motion.h3>
+  </div>
+
+  <div className='initLine'>
+  <motion.img src='../assets/charge/vector-2.svg' className='line line2 aniSet' style={{opacity, x: lineInit2, x: lineX}}></motion.img>
+  <motion.h3 className='initText2 line aniSet' style={{opacity, y: lineInit1, x: lineX}}>Complex hardware and <br></br> software challenges</motion.h3>
+  </div>
+
+  <div className='initLine'>
+  <motion.img src='../assets/charge/vector-3.svg' className='line line3 aniSet' style={{opacity, y: lineInit3, x: lineX}}></motion.img>
+  <motion.h3 className='initText3 line aniSet' style={{opacity, y: lineInit1, x: lineX}}>Safety hazards</motion.h3>
+  </div>
+
+
+
+  <div className='finalLine'>
   <motion.img src='../assets/charge/Vector168.png' className='line finalLine1' style={{opacity: opacityFinal, x: finalLineX}}></motion.img>
   <motion.h3 className='finalText1 line finalLine1' style={{opacity: opacityFinal, x: finalTextX}}>Cost-effective and Efficient <br/> Charging Infrastructure</motion.h3>
+  </div>
+
+  <div className='finalLine'>
   <motion.img src='../assets/charge/Vector169.png' className='line finalLine2'style={{opacity: opacityFinal, x: finalLineX}}></motion.img>
   <motion.h3 className='finalText2 line finalLine2' style={{opacity: opacityFinal, x: finalTextX}}>Seamless Integration and <br/> Simplified Operations</motion.h3>
+  </div>
+
+  <div className='finalLine'>
   <motion.img src='../assets/charge/Vector170.png' className='line finalLine3' style={{opacity: opacityFinal, x: finalLineX}}></motion.img>
   <motion.h3 className='finalText3 line finalLine3'style={{opacity: opacityFinal, x: finalTextX}}>Enhanced Safety for <br/> Management Staff</motion.h3>
+  </div>
 
-
-
-    </div>
+    </motion.div>
     </Sticky>
         </motion.div>
     

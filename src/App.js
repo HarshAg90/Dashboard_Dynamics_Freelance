@@ -9,10 +9,12 @@ import Product from "./pages/Product";
 import UseCase from "./pages/Use_case";
 import Contacts from "./pages/Contacts";
 import NewsRoom from "./pages/News_room";
+import ScrollToTop from "./ScrollToTop"; // Import the ScrollToTop component
 
 function App() {
   return (
     <Router className="App">
+      <ScrollToTop /> {/* Add the ScrollToTop component here */}
       <Nav />
       <Routes>
         <Route exact path="/" element={<Home />} />

@@ -35,16 +35,7 @@ export default function Home() {
             >
               <rect width="13" height="13" fill="black" />
             </svg>
-            <svg
-              width="491"
-              height="2"
-              viewBox="0 0 491 2"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M0 1L491 0.999957" stroke="black" />
-            </svg>
-            {/* </div> */}
+            <hr />
           </div>
           <div className="content">
             <h1>Simply Park and Charge</h1>

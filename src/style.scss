@@ -37,7 +37,7 @@
             bottom: 0;
             left: 0;
             li{
-                padding: 40px 10px;
+                padding: 60px 20px;
                 background-color: #fbfbfb76;
                 transition: 200ms ease-in-out;
                 &:hover{
@@ -164,8 +164,13 @@
                 h1{
                     margin: 20px;
                     font-size: 2rem;
-                    font-weight: 400;
-                    
+                    font-weight: 400;   
+                }
+                hr{
+                    height: 0px !important;
+                    width:60%;
+                    border: none; /* Removes the default border */
+                    border-top: 2px solid #000000; 
                 }
             }
             .content{
@@ -430,35 +435,48 @@
     }
 }
 
-.Landing{
-    height: 100vh;
+
+#Charge{
     overflow: hidden;
-    position: relative;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    h1{
-        position: absolute;
-        font-family: "monogram",sans-serif;
-        line-gap-override: 10px;
-    }
-    #side_nav{
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        li{
-            padding: 40px 10px;
-            background-color: #fbfbfb76;
-            transition: 200ms ease-in-out;
-            &:hover{
+    #Charge_landing{
+        background-image: url(../public/assets/landing_picture.png);
+        min-height: 100vh;
+        position: relative;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        h1{
+            position: absolute;
+            font-family: "monogram",sans-serif;
+            top: 40%;
+            left: 40%;
+            font-size: 2.7rem;
+            font-weight: 400;
+            transform: translate(-50%,-50%);
+            background: rgb(0,0,0);
+            background: linear-gradient(180deg, rgba(0,0,0,1) 37%, rgba(116,116,116,1) 91%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-gap-override: 10px;
+        }
+        #side_nav{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            li{
+                padding: 60px 20px;
+                background-color: #fbfbfb76;
                 transition: 200ms ease-in-out;
-                background-color: #FBFBFB;
+                &:hover{
+                    transition: 200ms ease-in-out;
+                    background-color: #FBFBFB;
+                }
             }
         }
+
     }
 
-}
-#Charge{
+
     #Charge_page{
         height: 500vh;
         width: 100%;
@@ -1020,5 +1038,65 @@
     }
 
 
+
+}
+#Contact_page{
+    .Landing{
+        font-family: 'monogram',sans-serif;
+        background-image: url(../public/assets/Contact/contact_landing.png);
+        // background: linear-gradient(180deg, #E5EAED 66.98%, rgba(217, 217, 217, 0) 100%);
+        position: relative;
+        .gradient{
+            position: absolute;
+            width: 100%;
+            height: 70vh;
+            background: rgb(88,116,143);
+            background: linear-gradient(180deg, rgba(108,144,179,0.7120098039215687) 12%, rgba(255,255,255,0) 65%);
+        }
+        h1{
+            top: 30%;
+            left: 50%;
+            font-size: 3.5rem;
+            font-weight: 400;
+            width: 80%;
+            
+            transform: translate(-50%,-50%);
+            background: rgb(180,180,182);
+            background: linear-gradient(0deg, #525050, #525050),
+                    linear-gradient(0deg, #525050, #525050);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            z-index: 1;
+        }
+    }
+}
+
+.Landing{
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    h1{
+        position: absolute;
+        font-family: "monogram",sans-serif;
+        line-gap-override: 10px;
+    }
+    #side_nav{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        li{
+            padding: 60px 20px;
+            background-color: #fbfbfb76;
+            transition: 200ms ease-in-out;
+            border-bottom: 1px rgb(85, 85, 85);
+            &:hover{
+                transition: 200ms ease-in-out;
+                background-color: #FBFBFB;
+            }
+        }
+    }
 
 }

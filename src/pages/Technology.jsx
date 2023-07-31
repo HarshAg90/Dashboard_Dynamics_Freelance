@@ -211,10 +211,49 @@ export default function Technology() {
             type: "spring",
             stiffness: 110,
           }}/>
-        <img src="../assets/Technology/Grids/Grid4.png" className='g4'/>
-        <img src="../assets/Technology/Grids/Grid5.png" className='g5'/>
-        <img src="../assets/Technology/Grids/Grid6.png" className='g6'/>
-        <img src="../assets/Technology/Grids/Grid7.png" className='g6'/>
+        <motion.img src="../assets/Technology/Grids/Grid4.png" className='g4'
+            whileHover={{
+              scale: 1.1
+            }}
+            whileTap={{
+              scale: 0.95
+            }}
+            transition={{
+              type: "spring",
+              stiffness: 110,
+            }}
+        />
+        <motion.img src="../assets/Technology/Grids/Grid5.png" className='g5'
+        whileHover={{
+          scale: 1.1
+        }}
+        whileTap={{
+          scale: 0.95
+        }}
+        transition={{
+          type: "spring",
+          stiffness: 110,
+        }}/>
+        <motion.img src="../assets/Technology/Grids/Grid6.png" className='g6'whileHover={{
+              scale: 1.1
+            }}
+            whileTap={{
+              scale: 0.95
+            }}
+            transition={{
+              type: "spring",
+              stiffness: 110,
+            }}/>
+        <motion.img src="../assets/Technology/Grids/Grid7.png" className='g6'whileHover={{
+              scale: 1.1
+            }}
+            whileTap={{
+              scale: 0.95
+            }}
+            transition={{
+              type: "spring",
+              stiffness: 110,
+            }}/>
       </div>
     </div>
 

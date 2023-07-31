@@ -7,8 +7,20 @@ export default function Home() {
     <div id="Home">
       <Landing Id="Home1">
         <h1>SIMPLY PARK AND CHARGE</h1>
-        <img src="../assets/home_1.png" alt="" />
+        <img src="../assets/Home/home_1.png" alt="" />
       </Landing>
+      <div className="line">
+        <svg width="1114" height="1" viewBox="0 0 1114 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="1114" y1="0.5" y2="0.5" stroke="url(#paint0_linear_1_156)"/>
+        <defs>
+        <linearGradient id="paint0_linear_1_156" x1="16.4491" y1="-0.0055768" x2="1114" y2="0.00160008" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#837F7F" stop-opacity="0.22"/>
+        <stop offset="0.534375"/>
+        <stop offset="1" stop-color="#837F7F" stop-opacity="0.22"/>
+        </linearGradient>
+        </defs>
+        </svg>
+      </div>
       <div className="tech">
         <div className="left">
           <div className="title">
@@ -23,16 +35,7 @@ export default function Home() {
             >
               <rect width="13" height="13" fill="black" />
             </svg>
-            <svg
-              width="491"
-              height="2"
-              viewBox="0 0 491 2"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M0 1L491 0.999957" stroke="black" />
-            </svg>
-            {/* </div> */}
+            <hr />
           </div>
           <div className="content">
             <h1>Simply Park and Charge</h1>
@@ -176,7 +179,7 @@ export default function Home() {
           </div>
           <button>Drive In</button>
         </div>
-        <img src="../assets/home_2.png" alt="" />
+        <img src="../assets/Home/home_2.png" alt="" />
         <br />
         <br />
         <div className="end_line">
@@ -241,23 +244,23 @@ export default function Home() {
         </div>
         <div className="content">
           <div className="tiles">
-            <img src="../assets/home_3_1.png" alt="" />
+            <img src="../assets/Home/home_3_1.png" alt="" />
             <p>Mobile-operated</p>
           </div>
           <div className="tiles">
-            <img src="../assets/home_3_2.png" alt="" />
+            <img src="../assets/Home/home_3_2.png" alt="" />
             <p>Range anxiety killer</p>
           </div>
           <div className="tiles">
-            <img src="../assets/home_3_3.png" alt="" />
+            <img src="../assets/Home/home_3_3.png" alt="" />
             <p>AI powered</p>
           </div>
           <div className="tiles">
-            <img src="../assets/home_3_4.png" alt="" />
+            <img src="../assets/Home/home_3_4.png" alt="" />
             <p>Agnostic charging</p>
           </div>
           <div className="tiles">
-            <img src="../assets/home_3_5.png" alt="" />
+            <img src="../assets/Home/home_3_5.png" alt="" />
             <p>Techno- economical</p>
           </div>
         </div>
@@ -296,7 +299,7 @@ export default function Home() {
         <div className="grid">
           <div className="grid1">
             <div className="ti">
-              <img src="../assets/home_usecase_1.png" alt="" />
+              <img src="../assets/Home/home_usecase_1.png" alt="" />
             </div>
             <div className="ti text t1">
               <p>
@@ -307,14 +310,14 @@ export default function Home() {
               <h1>Connectivity</h1>
             </div>
             <div className="ti">
-              <img src="../assets/home_usecase_2.png" alt="" />
+              <img src="../assets/Home/home_usecase_2.png" alt="" />
             </div>
             <div className="ti  text t2">
               <h1>Retrofitted Accessary</h1>
               <div className="l l2"></div>
             </div>
             <div className="ti">
-              <img src="../assets/home_usecase_3.png" alt="" />
+              <img src="../assets/Home/home_usecase_3.png" alt="" />
             </div>
             <div className="ti  text t3">
               <h1>Convenience</h1>
@@ -326,6 +329,66 @@ export default function Home() {
               <div className="l l3"></div>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="numbers">
+        <div className="title_last">
+          <div className="title_h">
+            <h1>
+              HOW ABOUT SOME<span>NUMBERS</span>
+            </h1>
+            <svg
+              width="13"
+              height="13"
+              viewBox="0 0 13 13"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="13" height="13" fill="black" />
+            </svg>
+            <hr />
+          </div>
+        </div>
+      </div>
+      <div className="partners">
+        <div className="title t">
+          <div className="title_h">
+            <h1>
+              WHAT ARE THE<span>USE CASES</span>
+            </h1>
+          </div>
+          <button>Learn More</button>
+        </div>
+        <div className="top_devide">
+          <hr />
+          <svg
+            width="13"
+            height="13"
+            viewBox="0 0 13 13"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="13" height="13" fill="black" />
+          </svg>
+        </div>
+        <div className="parteners_li">
+          <img src="../assets/Home/partner_1.png" alt="" />
+          <img src="../assets/Home/partner_2.png" alt="" />
+          <img src="../assets/Home/partner_3.png" alt="" />
+          <img src="../assets/Home/partner_4.png" alt="" />
+          <img src="../assets/Home/partner_5.png" alt="" />
+        </div>
+        <div className="bottom_devide">
+          <svg
+            width="13"
+            height="13"
+            viewBox="0 0 13 13"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="13" height="13" fill="black" />
+          </svg>
+          <hr />
         </div>
       </div>
     </div>

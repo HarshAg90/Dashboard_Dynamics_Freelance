@@ -46,44 +46,170 @@
     }
 }
 
-#Charge{
-    #Charge_landing{
-        background-image: url(../public/assets/landing_picture.png);
-        min-height: 100vh;
-        position: relative;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+#Charge_landing{
+    background-image: url(../public/assets/landing_picture.png);
+
+    h1{
+        background: rgb(0,0,0);
+        background: linear-gradient(180deg, rgba(0,0,0,1) 37%, rgba(116,116,116,1) 91%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        top: 40%;
+        left: 40%;
+        font-size: 2.7rem;
+        font-weight: 400;
+        transform: translate(-50%,-50%);
+    }
+}
+#Home{
+    // background-image: url(../public/assets/home_1.png);
+    position: relative;
+    background: linear-gradient(180deg, #E5EAED 66.98%, rgba(217, 217, 217, 0) 100%);
+    border-top: 1px solid black;
+    .Landing{
         h1{
-            position: absolute;
-            font-family: "monogram",sans-serif;
-            top: 40%;
-            left: 40%;
-            font-size: 2.7rem;
+            top: 30%;
+            left: 50%;
+            font-size: 6rem;
             font-weight: 400;
+            width: 80%;
+            text-align: center;
             transform: translate(-50%,-50%);
-            background: rgb(0,0,0);
-            background: linear-gradient(180deg, rgba(0,0,0,1) 37%, rgba(116,116,116,1) 91%);
+            background: rgb(180,180,182);
+            background: linear-gradient(128.22deg, #525050 26.13%, rgba(82, 80, 80, 0) 48.21%, #525050 69.84%),
+                linear-gradient(180deg, #AAAAAA -21.43%, rgba(82, 80, 80, 0) 45.41%, #323232 112.25%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            line-gap-override: 10px;
+            z-index: 1;
         }
-        #side_nav{
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            li{
-                padding: 40px 10px;
-                background-color: #fbfbfb76;
-                transition: 200ms ease-in-out;
+    }
+    img{
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        height: 70vh;
+        z-index: -0;
+    }
+
+    .tech{
+        display: flex;
+        height: 100vh;
+        .left{
+            width: 55%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: start;
+            padding: 30px;
+            .title{
+                display: flex;
+                justify-content: space-between;
+                justify-content: start;
+                align-items: center;
+                flex-direction: row;
+                overflow: hidden;
+                width: 70vw;
+                h1{
+                    margin: 20px;
+                    font-size: 2rem;
+                    font-weight: 400;
+                    
+                }
+            }
+            .content{
+                margin: 20px;
+                max-width: 500px;
+                h1{
+                    color: #BC0000;
+                    margin: 20px 0;
+                    font-size: 2rem;
+                    font-weight: 400;
+                }
+            }
+            .btn{
+                width: 100%;
+               display: flex;
+               justify-content: end;
+               button{
+                margin: 20px;
+                padding: 10px 20px;
+                border: none;
+                border: 1px solid black;
+                background-color: transparent;
+                width: 200px;
+                display: flex;
+                justify-content: space-between;
+                border-radius: 10px;
+                transition: 200ms ease;
+                span{
+                    font-size: 1rem;
+                }
                 &:hover{
-                    transition: 200ms ease-in-out;
-                    background-color: #FBFBFB;
+                    background-color: black;
+                    color: white;
+                    transition: 200ms ease;
+                }
+               }
+            }
+        }
+        .right{
+            width: 45%;
+            padding: 40px;
+            background-color: #F0F2F3;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            .tile{
+                display: flex;
+                width: 100%;
+                justify-content: space-evenly;
+                align-items: center;
+                svg{
+                    width: 60px;
+                }
+                .content{
+                    width: 60%;
+                    h1{
+                        font-size: 1.2rem;
+                    }
                 }
             }
         }
-
     }
+
+}
+
+.Landing{
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    h1{
+        position: absolute;
+        font-family: "monogram",sans-serif;
+        line-gap-override: 10px;
+    }
+    #side_nav{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        li{
+            padding: 40px 10px;
+            background-color: #fbfbfb76;
+            transition: 200ms ease-in-out;
+            &:hover{
+                transition: 200ms ease-in-out;
+                background-color: #FBFBFB;
+            }
+        }
+    }
+
+}
+#Charge{
     #Charge_page{
         height: 100vh;
         width: 100%;
@@ -290,7 +416,13 @@
                     padding: 10px;
                     font-size: 1.1rem;
                     background-color: red;
+                    border-radius: 5px;
                     color: white;
+                    transition: 100ms ease;
+                    &:hover{
+                        transition: 100ms ease;
+                        background-color: rgb(255, 106, 106);
+                    }
                 }
             }
         }

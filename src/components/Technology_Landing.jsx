@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import {motion, useScroll, useTransform} from "framer-motion";
 
 
-export default function TechnologyLanding() {
+export default function TechnologyLanding() { 
 
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({

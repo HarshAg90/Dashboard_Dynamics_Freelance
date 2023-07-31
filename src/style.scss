@@ -985,3 +985,100 @@
 
 
 }
+
+#UseCase{
+    .landing{
+        background-image: url(../public/assets/UseCase/Landing.png);
+            // text-align: center;
+            h1{
+                background: rgb(0,0,0);
+        background: linear-gradient(180deg, rgba(0,0,0,1) 37%, rgba(116,116,116,1) 91%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        top: 40%;
+        left: 40%;
+        font-size: 2.7rem;
+        font-weight: 400;
+        transform: translate(-50%,-50%);
+    
+        }
+    }
+
+    .userBase{
+        height: 150vh;
+        display: flex;
+        flex-direction: column;
+        gap: 10vh;
+        // justify-content: center;
+        align-items: center;
+        
+        .subHeading{
+
+            /* Our user base is omnidirectional */
+
+                width: 30vw;
+                height: auto;
+
+                font-family: 'Artifakt Element';
+                font-style: normal;
+                font-weight: 800;
+                font-size: 22px;
+                // line-height: 31px;
+                text-align: center;
+
+                color: #000000;
+                border: 1px solid #8E8787;
+                border-radius: 5px;
+
+                margin-top: 10vh;
+                padding-top: 10px;
+                padding-bottom: 10px;
+
+        }
+
+        .useCaseGrid{
+            width: 60vw;
+            height: 90vh;
+            display: grid;
+            // padding: 0;
+            padding-top: 20px;
+
+            justify-items: center;
+            justify-content: center;
+            align-items: center;
+            grid-template-rows: 37vh 37vh;
+            gap: 18px;
+            grid-template-columns: repeat(3, 18vw);
+            
+
+            img{
+                width: 20vw;
+                padding: 0;
+                z-index: 1;
+            }
+
+            // .g4{
+            //     grid-row-start: 2;
+            //     grid-row-end: 4;
+            // }
+
+            // .g5{
+            //     grid-column: 2 / span 2
+            // }
+
+            // .g6{
+            //     // max-width: 18vw;
+            //}
+
+        }
+
+        .downHeading{
+            font-family: 'Artifakt Element';
+            font-style: normal;
+            font-size: 20px;
+                // line-height: 31px;
+            text-align: center;   
+        }
+    }
+    
+}

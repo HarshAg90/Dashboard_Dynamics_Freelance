@@ -3,6 +3,7 @@ import {motion, useScroll, useTransform} from "framer-motion";
 import Sticky from 'react-stickynode';
 
 
+
 export default function Charge_final (){
 
 
@@ -41,6 +42,8 @@ export default function Charge_final (){
 
   return (
     <div>
+
+      
 
     {/* //CAR ANIMATION */}
 

@@ -9,6 +9,7 @@ import Product from "./pages/Product";
 import UseCase from "./pages/Use_case";
 import Contacts from "./pages/Contacts";
 import NewsRoom from "./pages/News_room";
+import Fleets from "./pages/Fleets";
 import ScrollToTop from "./ScrollToTop"; // Import the ScrollToTop component
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route exact path="/Contacts" element={<Contacts />} />
         <Route exact path="/News_room" element={<NewsRoom />} />
         <Route exact path="/Careers" element={<Charge />} />
+        <Route exact path="/Fleets" element={<Fleets />} />
       </Routes>
       <Footer />
     </Router>

@@ -15,6 +15,8 @@
     overflow-x: hidden;
 }
 
+
+
 .basicLand{
     min-height: 100vh;
         position: relative;
@@ -104,10 +106,9 @@
     }
 }
 #Home{
-    // background-image: url(../public/assets/home_1.png);
     position: relative;
     border-top: 1px solid black;
-    font-family: 'atrifakt',sans-serif;
+    font-family: 'atrifakt',sans-serif !important;
     .Landing{
         font-family: 'monogram',sans-serif;
         // background: linear-gradient(180deg, #E5EAED 66.98%, rgba(217, 217, 217, 0) 100%);
@@ -144,8 +145,10 @@
         align-items: center;
     }
     .tech{
+        font-family: "atrifakt",sans-serif !important;
         display: flex;
         height: 100vh;
+        overflow: hidden;
         .left{
             width: 55%;
             display: flex;
@@ -162,9 +165,11 @@
                 overflow: hidden;
                 width: 70vw;
                 h1{
+                    overflow: hidden;
+                    font-family: "artifakt",sans-serif;
                     margin: 20px;
                     font-size: 2rem;
-                    font-weight: 400;   
+                    font-weight: 700;   
                 }
                 hr{
                     height: 0px !important;
@@ -175,12 +180,18 @@
             }
             .content{
                 margin: 20px;
-                max-width: 500px;
+                max-width: 40vw;
                 h1{
+                    overflow: hidden;
+                    font-family: "artifakt",sans-serif;
                     color: #BC0000;
                     margin: 20px 0;
                     font-size: 2rem;
                     font-weight: 400;
+                }
+                p{
+                    overflow: hidden;
+                    font-family: "artifakt",sans-serif;
                 }
             }
             .btn{
@@ -199,6 +210,7 @@
                 border-radius: 10px;
                 transition: 200ms ease;
                 span{
+                    font-family: "artifakt",sans-serif;
                     font-size: 1rem;
                 }
                 &:hover{
@@ -211,6 +223,7 @@
             }
         }
         .right{
+            font-family: "artifakt",sans-serif !important;
             width: 45%;
             padding: 40px;
             background-color: #F0F2F3;
@@ -219,6 +232,8 @@
             justify-content: space-evenly;
             align-items: center;
             .tile{
+                overflow: hidden;
+                font-family: "artifakt",sans-serif;
                 display: flex;
                 width: 100%;
                 justify-content: space-evenly;
@@ -229,13 +244,17 @@
                 .content{
                     width: 60%;
                     h1{
+                        overflow: hidden;
                         font-size: 1.2rem;
+                        font-weight: 700;
+                        margin-bottom: 1em;
                     }
                 }
             }
         }
     }
     .title{
+        font-family: 'atrifakt',sans-serif;
         margin: 30px 0px;
         width: 100%;
         display: flex;
@@ -248,21 +267,25 @@
             display: flex;
             width: 700px;
             padding-right: 50px;
+            font-family: 'atrifakt',sans-serif;
             .svg{
                 display: flex;
                 margin-right: 20px;
                 align-items: center;
             }
             h1{
+                font-family: 'atrifakt',sans-serif;
                 font-size: 2rem;
                 font-weight: 300;
                 span{
+                    font-family: 'atrifakt',sans-serif;
                     font-weight: 600;
                     margin: 10px;
                 }
             }
         }
         button{
+            font-family: 'atrifakt',sans-serif;
             padding: 5px 20px;
             border: none;
             border: 1px solid black;
@@ -271,6 +294,7 @@
             font-weight: 500;
             transition: 200ms ease;
             &:hover{
+                font-family: 'atrifakt',sans-serif;
                 background-color: black;
                 color: white;
                 box-shadow: 0 0 10px grey;
@@ -308,12 +332,15 @@
         background-color: #fff;
         flex-direction: column;
         align-items: center;
+        font-family: 'atrifakt',sans-serif;
         img{
+            font-family: 'atrifakt',sans-serif;
             display: block;
             margin: 30px;
             height: 90vh;
         }
         .end_line{
+            font-family: 'atrifakt',sans-serif;
             width: 100%;
             display: flex;
             justify-content: end;
@@ -321,26 +348,31 @@
         }
     }
     .features{
+        font-family: 'atrifakt',sans-serif;
         .title{
             margin: 30px 0px;
+            font-family: 'atrifakt',sans-serif;
         }
         .content{
+            font-family: 'atrifakt',sans-serif;
             width: 100%;
-            // display: grid;
-            // grid-template-columns: repeat(auto-fit,minmax(1fr, 200px));
-            // gap: 20px;
+            overflow: hidden;
             display: flex;
             justify-content: space-evenly;
             .tiles{
+                font-family: 'atrifakt',sans-serif;
+                overflow: hidden;
                 padding: 10px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 img{
+                    font-family: 'atrifakt',sans-serif;
                     height: 100px;
                 }
                 p{
+                    font-family: 'atrifakt',sans-serif;
                     font-size: 1.2rem;
                     font-weight: 400;
                     margin: 20px;
@@ -412,11 +444,18 @@
         }   
         .parteners_li{
             display: flex;
+            justify-content: center;
+            align-items: center;
             img{
                 height: 200px;
                 width: auto;
                 margin: 20px;
                 padding: 20px;
+            }
+            .carouselItem{
+                width: 50vw;
+                height: 30vh;
+                overflow: hidden;
             }
         }
         .bottom_devide{
@@ -432,6 +471,10 @@
                 border-top: 2px solid #000000; /* Sets the top border to a solid line */   
             }
         }   
+    }
+
+    .finalyy{
+        height: 100vh;
     }
 }
 
@@ -830,8 +873,9 @@
             align-items: center;
             
             .heading{
+                overflow: hidden;
                 font-size: 34px;
-                font-weight: 500;
+                font-weight: 600;
                 font-family: "artifakt", sans-serif;
                 color: rgb(0, 0, 0);
                 padding-left: 2vh;
@@ -967,15 +1011,6 @@
                 align-self: flex-start;
                
             }
-
-            // .scnd.txt{
-            //     margin-top: 20vh;
-            //     min-height: 30vh;
-            // }
-            // .scnd.illustration{
-            //     top: 0;
-            //     grid-column: 3 / span 1;
-            // }
 
             
 
@@ -1274,5 +1309,160 @@
                 // line-height: 31px;
             text-align: center;   
         }
+    }
+}
+
+#Fleets{
+    .landing{
+        background-image: url(../public/assets/Fleets/landing.png);
+        font-family: 'monogram',sans-serif;
+        position: relative;
+        .gradient{
+            position: absolute;
+            width: 100%;
+            height: 70vh;
+            background: rgb(88,116,143);
+            background: linear-gradient(180deg, rgba(108,144,179,0.7120098039215687) 12%, rgba(255,255,255,0) 65%);
+        }
+        h1{
+            top: 40%;
+            left: 50%;
+            font-size: 3.2rem;
+            font-weight: 400;
+            width: 80%;
+            
+            transform: translate(-50%,-50%);
+            background: rgb(0, 0, 0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            z-index: 1;
+        }   
+    }   
+    
+    .nextPg{
+        max-width: 100%; /* Set the maximum width of the container */
+        max-height: 100%;
+        height: 150vh;
+        overflow: hidden;
+        background: linear-gradient(0deg, #BCA7B1 -26.12%, rgba(188, 167, 177, 0) 99.6%);
+
+        .txt{
+            z-index: 1;
+            display: flex;
+            gap: 5vw;
+            margin: auto 7vw;
+            margin-top: 5vh;
+            font-family: "artifakt", sans-serif;
+            overflow: visible;
+
+            .head{
+                z-index: 1;
+                white-space: nowrap;
+                overflow: visible;
+                text-align: center;
+                font-weight: 700;
+                margin-bottom: 5vh;
+                font-size: 1.15rem;
+            }
+
+            .subHead{
+                text-align: justify;
+                font-size: 16px;
+                z-index: 1;
+            }
+            .thd{
+                overflow: visible;
+            }
+            .scnd{
+                z-index: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 5vw;
+                overflow: visible;
+            }
+        }
+
+
+        .road{
+            overflow: hidden;
+            display: flex;
+            gap: 5vw;
+            justify-content: center;
+            align-items: flex-end;            
+            margin-top: -90vh;
+            z-index: -1;
+
+            img{
+                height: auto; 
+                width: 20vw;
+                z-index: 0;
+            }
+
+            .outerContainer {
+                overflow: hidden;
+                display: flex;
+                height: auto;
+                flex-direction: column;
+
+                .car1{
+                    width: 60px;
+                }
+
+                .car2{
+                    width: 80px;
+                }
+
+                .car3{
+                    width: 50px;
+                }
+
+                .carContainer1{
+                    align-self: flex-end;
+                    position: relative;
+                    display: flex;
+                    justify-content: flex-start;
+                    transform: translate(5%, 200%);
+                    // margin-top: -50%;
+                    margin-right: 5%;
+                    z-index: 1;
+                    // transform: translateY(-500px);
+                    // z-index: ;
+                  }
+
+                  .carContainer2{
+                    justify-self: flex-start;
+                    align-self: center;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    margin-top: -50%;
+                    // padding-bottom: 50%;
+                    transform: translate("0%", "800%") !important;
+                
+                  }
+
+                  .carContainer3{
+                    margin-top: 50vh;
+                    position: relative;
+                    align-self: flex-start;
+                    display: flex;
+                    justify-content: flex-start;
+                    // transform: translate(5%, 100%);
+                    margin-bottom: -120%;
+                    margin-left: 8%;
+                    // margin-top: -50%;
+                    // margin-right: 15%;
+                    z-index: 1;
+                    // transform: translateY(-500px);
+                    // z-index: ;
+                  }
+
+              }              
+              
+              
+              
+        }
+        
+            
     }
 }

@@ -1,31 +1,154 @@
-import React from "react";
-import Nav from "../components/nav";
-import Landing from "../components/Landing";
+import React, {useEffect, useRef} from "react";
+import {motion, useInView, useAnimation, useScroll, useTransform} from "framer-motion"
+import HomeLanding from "../components/HomeLanding";
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+
+const hrVariant = {
+  initial: {x: "100%"},
+  visible: {
+    x: "0%",
+    transition: {type: "spring", stiffness: 70, delay: 0.1}
+  }
+}
+
+const svgVariants = {
+  hidden: { rotate: 0, opacity: 0 },
+  visible: { 
+    rotate: 0, opacity: 1,
+    transition: { duration : 0.5, delay: 1.1 }
+  },
+}
+
+const pathVariants = {
+  hidden: {
+    opacity: 0,
+    pathLength: 0,
+  },
+  visible: {
+    opacity: 1,
+    pathLength: 1,
+    transition: { 
+      duration: 2,
+      ease: "easeInOut",
+    }
+  }
+};
+
+const wirelessVariants = {
+  hidden: {
+    opacity: 0,
+    x: "-100%"
+  },
+  visible: {
+    opacity: 1,
+    x: "0%",
+    transition: {
+      type: "spring",
+      stiffness: 40,
+      delay: 0.5 }
+  },
+  hiddenEnd: {
+    opacity: 0,
+    x: "100%"
+  },
+  visibleEnd: {
+    opacity: 1,
+    x: "0%",
+    transition: {
+      type: "spring",
+      stiffness: 40,
+      delay: 0.15 }
+  },
+
+}
+
+const featuresVariant = {
+  hidden1: {
+    opacity: 0, scale: 0, x: "100%"
+  },
+  visible: {
+    opacity: 1, scale: 1, x: "0%",
+  }
+}
+
+
+
+
+
+
 
 export default function Home() {
+
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    adaptiveHeight: true,
+    arrows: true,
+    autoplay: true,
+    autoplaySpeed: 2500,
+    slidesToShow: 2,
+    slidesToScroll: 1
+  };
+
+
+
+  //onScroll Parallax for TECH
+  const techRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: techRef,
+    offset: ["start end", "end start"],
+  });
+
+  const fstOpacity = useTransform(scrollYProgress, [.1, 0.30], [0, 1]);
+  const fstY = useTransform(scrollYProgress, [0.1, 0.30], ["80%", "0%"]);
+  const fstScale = useTransform(scrollYProgress, [0.1, 0.30], [1.2, 1]);
+
+  const scndOpacity = useTransform(scrollYProgress, [0.3, 0.40], [0, 1]);
+  const scndY = useTransform(scrollYProgress, [0.3, 0.40], ["80%", "0%"]);
+  const scndScale = useTransform(scrollYProgress, [0.3, 0.40], [1.2, 1]);
+
+
+  const thdOpacity = useTransform(scrollYProgress, [0.4, 0.50], [0, 1]);
+  const thdY = useTransform(scrollYProgress, [0.4, 0.50], ["40%", "0%"]);
+  const thdScale = useTransform(scrollYProgress, [0.4, 0.50], [1.2, 1]);
+
+
+  const frthOpacity = useTransform(scrollYProgress, [0.1, 0.50], [0, 1]);
+  const frthY = useTransform(scrollYProgress, [0.1, 0.50], ["70%", "0%"]);
+  const frthScale = useTransform(scrollYProgress, [0.1, 0.50], [1.1, 1]);
+
+
+
+  
+
+
+  const wirelessRef = useRef(null);
+  const isWirelessInView = useInView(wirelessRef, {once: true});
+  const wirelessAnimationControls = useAnimation();
+
+
+  useEffect(() => {
+    if(isWirelessInView){
+      wirelessAnimationControls.start("visible");
+    }
+  }, [isWirelessInView]);
+
+
+
+
+
+
   return (
     <div id="Home">
-      <Landing Id="Home1">
-        <h1>SIMPLY PARK AND CHARGE</h1>
-        <img src="../assets/Home/home_1.png" alt="" />
-      </Landing>
-      <div className="line">
-        <svg width="1114" height="1" viewBox="0 0 1114 1" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <line x1="1114" y1="0.5" y2="0.5" stroke="url(#paint0_linear_1_156)"/>
-        <defs>
-        <linearGradient id="paint0_linear_1_156" x1="16.4491" y1="-0.0055768" x2="1114" y2="0.00160008" gradientUnits="userSpaceOnUse">
-        <stop stop-color="#837F7F" stop-opacity="0.22"/>
-        <stop offset="0.534375"/>
-        <stop offset="1" stop-color="#837F7F" stop-opacity="0.22"/>
-        </linearGradient>
-        </defs>
-        </svg>
-      </div>
-      <div className="tech">
+    <HomeLanding />
+      <div ref={techRef} className="tech">
         <div className="left">
           <div className="title">
-            <h1>Technology Curator </h1>
-            {/* <div className="svg"> */}
+            <h1>TECHNOLOGY CURATOR </h1>
             <svg
               width="13"
               height="13"
@@ -35,9 +158,9 @@ export default function Home() {
             >
               <rect width="13" height="13" fill="black" />
             </svg>
-            <hr />
+            <hr/>
           </div>
-          <div className="content">
+          <motion.div className="content" style={{y: frthY, opacity: frthOpacity, scale: frthScale}}>
             <h1>Simply Park and Charge</h1>
             <p>
               Dash Dynamic, a visionary in deep-tech, is developing its
@@ -47,7 +170,7 @@ export default function Home() {
               enabling users to conveniently and efficiently charge their
               vehicles without the need for any physical connections.
             </p>
-          </div>
+          </motion.div>
           <div className="btn">
             <button>
               <span> Our Specifications</span>
@@ -56,21 +179,27 @@ export default function Home() {
           </div>
         </div>
         <div className="right">
-          <div className="tile">
-            <svg
+          <motion.div className="tile" style={{y: fstY, opacity: fstOpacity, scale: fstScale}}>
+            <motion.svg
               width="45"
               height="53"
               viewBox="0 0 45 53"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              // variants={svgVariants}
+              // initial="hidden"
+              // animate="visible"
             >
-              <path
+              <motion.path
                 fill-rule="evenodd"
                 clip-rule="evenodd"
                 d="M22.32 3.6966C19.8875 3.66882 17.4738 4.10768 15.2209 4.98735C12.9679 5.86702 10.9211 7.16974 9.20101 8.81889C7.48088 10.468 6.12208 12.4303 5.20455 14.5903C4.28702 16.7503 3.82928 19.0644 3.85825 21.3965C3.9431 31.2769 12.3743 39.3602 22.68 39.4416C32.9651 39.5205 41.224 31.6023 41.1417 21.7416C41.0569 11.8612 32.6257 3.77795 22.32 3.6966ZM0.00133665 21.4236C-0.0310353 18.6016 0.524897 15.8018 1.63651 13.1885C2.74811 10.5753 4.393 8.20122 6.47462 6.20572C8.55624 4.21023 11.0327 2.63349 13.7585 1.56805C16.4844 0.502617 19.4048 -0.0300524 22.3483 0.00130845C34.7624 0.0949849 44.8983 9.81269 44.9986 21.7145C45.054 26.4755 43.4351 31.1156 40.4028 34.8863C37.3706 38.657 33.1019 41.3386 28.2853 42.4984V45.0424C28.2853 45.57 28.2853 46.0532 28.2571 46.4624C28.2262 46.9012 28.1542 47.3819 27.9434 47.8724C27.4867 48.9294 26.6108 49.7691 25.5084 50.207C25.1381 50.3549 24.7756 50.4288 24.4284 50.4707V51.1511C24.4284 51.6415 24.2253 52.1117 23.8636 52.4585C23.5019 52.8052 23.0114 53 22.5 53C21.9885 53 21.498 52.8052 21.1364 52.4585C20.7747 52.1117 20.5715 51.6415 20.5715 51.1511V50.4707C20.2008 50.4296 19.8376 50.3409 19.4916 50.207C18.3892 49.7691 17.5133 48.9294 17.0566 47.8724C16.8717 47.4222 16.7657 46.9458 16.7429 46.4624C16.7146 46.0556 16.7146 45.57 16.7146 45.0424V42.3357C7.15976 39.7694 0.0861887 31.3583 0.00133665 21.4261V21.4236ZM20.5715 43.0309V44.9882C20.5715 45.5872 20.5715 45.9447 20.5921 46.2109C20.6024 46.3761 20.6178 46.4451 20.623 46.4648C20.6885 46.6089 20.809 46.7236 20.9598 46.7853C21.047 46.8029 21.1356 46.8137 21.2246 46.8174C21.5023 46.8371 21.8752 46.8371 22.5 46.8371C23.1248 46.8371 23.4976 46.8371 23.7753 46.8174C23.8643 46.8145 23.9529 46.8046 24.0402 46.7878C24.1905 46.7249 24.3101 46.6094 24.3744 46.4648C24.3928 46.3812 24.404 46.2963 24.4079 46.2109C24.4284 45.9447 24.4284 45.5872 24.4284 44.9882V43.0851C23.1435 43.1717 21.8532 43.1536 20.5715 43.0309ZM26.0329 12.8325C26.2166 13 26.364 13.2005 26.4668 13.4226C26.5695 13.6447 26.6256 13.8841 26.6318 14.127C26.6381 14.3699 26.5943 14.6116 26.503 14.8383C26.4117 15.065 26.2746 15.2722 26.0998 15.4481L21.8572 19.7202H27.6425C28.0198 19.7204 28.3887 19.8266 28.7036 20.0258C29.0185 20.225 29.2656 20.5083 29.4142 20.8408C29.5628 21.1732 29.6064 21.5402 29.5397 21.8962C29.473 22.2521 29.2988 22.5815 29.0387 22.8436L21.6926 30.2391C21.5199 30.422 21.3108 30.57 21.0775 30.6743C20.8443 30.7785 20.5916 30.837 20.3344 30.8462C20.0772 30.8553 19.8207 30.8151 19.58 30.7277C19.3393 30.6404 19.1193 30.5077 18.9329 30.3376C18.7465 30.1674 18.5975 29.9632 18.4947 29.737C18.3919 29.5108 18.3374 29.2672 18.3343 29.0204C18.3313 28.7737 18.3798 28.5289 18.477 28.3004C18.5742 28.0719 18.7181 27.8644 18.9002 27.6901L23.1428 23.418H17.3574C16.9802 23.4178 16.6112 23.3116 16.2963 23.1124C15.9814 22.9132 15.7344 22.6298 15.5858 22.2974C15.4371 21.9649 15.3935 21.598 15.4602 21.242C15.527 20.886 15.7012 20.5566 15.9612 20.2946L23.3074 12.8991C23.66 12.5442 24.1452 12.3381 24.6563 12.3261C25.1674 12.3141 25.6625 12.4946 26.0329 12.8325Z"
                 fill="#A14545"
+                variants={pathVariants}
+                initial="hidden"
+                animate="visible"
               />
-            </svg>
+            </motion.svg>
             <div className="content">
               <h1>25% MISALIGNMENT COMPENSATION</h1>
               <p>
@@ -79,8 +208,8 @@ export default function Home() {
                 transfer efficiency.
               </p>
             </div>
-          </div>
-          <div className="tile">
+          </motion.div>
+          <motion.div className="tile" style={{y: scndY, opacity: scndOpacity, scale: scndScale}}>
             <svg
               width="67"
               height="48"
@@ -100,8 +229,8 @@ export default function Home() {
                 30% speed boost and universal compatibility.
               </p>
             </div>
-          </div>
-          <div className="tile">
+          </motion.div>
+          <motion.div className="tile" style={{y: thdY, opacity: thdOpacity, scale: thdScale}}>
             <svg
               width="51"
               height="54"
@@ -143,7 +272,7 @@ export default function Home() {
                 until it is removed.
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 
@@ -151,8 +280,12 @@ export default function Home() {
         <br />
         <br />
         <br />
-        <div className="title">
-          <div className="title_h">
+        <div ref={wirelessRef} className="title">
+          <motion.div className="title_h"
+          variants={wirelessVariants}
+            initial="hidden"
+            animate={wirelessAnimationControls}
+          >
             <div className="svg">
               <svg
                 width="101"
@@ -176,13 +309,30 @@ export default function Home() {
             <h1>
               <span>GO WIRELESS</span>WITH OUR TECH
             </h1>
-          </div>
-          <button>Drive In</button>
+          </motion.div>
+          <button>Dive In</button>
         </div>
-        <img src="../assets/Home/home_2.png" alt="" />
+        <motion.img src="../assets/Home/home_2.png" alt=""
+        initial={{
+          scale: 0.9
+        }}
+        whileHover={{
+          scale: 1
+        }}
+        whileTap={{
+          scale: 0.95
+        }}
+        transition={{
+          type: "spring",
+          stiffness: 60,
+        }}/>
         <br />
         <br />
-        <div className="end_line">
+        <motion.div className="end_line"
+          variants={wirelessVariants}
+          initial="hiddenEnd"
+          whileInView="visibleEnd"
+        >
           <svg
             width="13"
             height="13"
@@ -207,7 +357,7 @@ export default function Home() {
           >
             <path d="M0 1L911 0.99992" stroke="black" />
           </svg>
-        </div>
+        </motion.div>
         <br />
         <br />
         <br />
@@ -237,32 +387,77 @@ export default function Home() {
               </svg>
             </div>
             <h1>
-              <span>Explore</span>
+              <span>FEATURES</span>
             </h1>
           </div>
-          <button>Drive In</button>
+          <button>Explore</button>
         </div>
         <div className="content">
-          <div className="tiles">
+          <motion.div className="tiles"
+            variants={featuresVariant}
+            initial="hidden1"
+            whileInView="visible"
+            transition= {{
+              type: "spring",
+              stiffness: 70,
+              delay: 0.5
+            }}
+          >
             <img src="../assets/Home/home_3_1.png" alt="" />
             <p>Mobile-operated</p>
-          </div>
-          <div className="tiles">
-            <img src="../assets/Home/home_3_2.png" alt="" />
-            <p>Range anxiety killer</p>
-          </div>
-          <div className="tiles">
+          </motion.div>
+          <motion.div className="tiles"
+          variants={featuresVariant}
+          initial="hidden1"
+          whileInView="visible"
+          transition= {{
+            type: "spring",
+            stiffness: 40,
+            delay: 0.4
+          }}>
             <img src="../assets/Home/home_3_3.png" alt="" />
+            <p>Range anxiety killer</p>
+          </motion.div>
+          <motion.div className="tiles"
+          variants={featuresVariant}
+          initial="hidden1"
+          whileInView="visible"
+          transition= {{
+            type: "spring",
+            stiffness: 50,
+            delay: 0.3
+          }}>
+            <img src="../assets/Home/home_3_2.png" alt="" />
             <p>AI powered</p>
-          </div>
-          <div className="tiles">
+          </motion.div>
+          <motion.div className="tiles"
+          variants={featuresVariant}
+          initial="hidden1"
+          whileInView="visible"
+          transition= {{
+            type: "spring",
+            stiffness: 60,
+            delay: 0.2
+          }}>
             <img src="../assets/Home/home_3_4.png" alt="" />
             <p>Agnostic charging</p>
-          </div>
-          <div className="tiles">
+          </motion.div>
+          <motion.div className="tiles"
+          initial={{
+            opacity: 0, x: "120%"
+          }}
+          whileInView={{
+            opacity: 1, x: "0%"
+          }}
+          transition= {{
+            type: "spring",
+            stiffness: 70,
+            delay: 0.05
+          }}
+          >
             <img src="../assets/Home/home_3_5.png" alt="" />
             <p>Techno- economical</p>
-          </div>
+          </motion.div>
         </div>
       </div>
       <div className="use_case">
@@ -278,7 +473,8 @@ export default function Home() {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path d="M-41 1L101 0.999988" stroke="black" />
+                <path d="M-41 1L101 0.999988" stroke="black"
+                />
               </svg>
               <svg
                 width="13"
@@ -299,7 +495,7 @@ export default function Home() {
         <div className="grid">
           <div className="grid1">
             <div className="ti">
-              <img src="../assets/Home/home_usecase_1.png" alt="" />
+              <img src="../assets/Home/home_usecase_1.png" alt=""/>
             </div>
             <div className="ti text t1">
               <p>
@@ -350,11 +546,12 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       <div className="partners">
         <div className="title t">
           <div className="title_h">
             <h1>
-              WHAT ARE THE<span>USE CASES</span>
+              OUR<span>STRATEGIC PARTENERS</span>
             </h1>
           </div>
           <button>Learn More</button>
@@ -372,11 +569,13 @@ export default function Home() {
           </svg>
         </div>
         <div className="parteners_li">
+        <Slider {...settings} className='carouselItem'>
           <img src="../assets/Home/partner_1.png" alt="" />
           <img src="../assets/Home/partner_2.png" alt="" />
           <img src="../assets/Home/partner_3.png" alt="" />
           <img src="../assets/Home/partner_4.png" alt="" />
           <img src="../assets/Home/partner_5.png" alt="" />
+        </Slider>          
         </div>
         <div className="bottom_devide">
           <svg
@@ -391,6 +590,7 @@ export default function Home() {
           <hr />
         </div>
       </div>
+      
     </div>
   );
 }

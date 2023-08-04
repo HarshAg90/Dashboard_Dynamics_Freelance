@@ -8,7 +8,7 @@ export default function Technology() {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
-    offset: ["start end", "end start"],
+    offset: ["start end", "end start"], 
   });
 
   const fstOpacity = useTransform(scrollYProgress, [0, 0.15], [0, 1]);

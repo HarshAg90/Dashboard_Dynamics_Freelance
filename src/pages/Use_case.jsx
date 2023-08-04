@@ -43,7 +43,7 @@ export default function UseCase() {
       <h1 className='subHeading'>Our user base is omnidirectional</h1>
 
       <div className='useCaseGrid'>
-        <motion.img src="../assets/Technology/Grids/Grid1.png" className='g1'
+        <motion.img src="../assets/UseCase/grid1.png" className='g1'
           whileHover={{
             scale: 1.1
           }}
@@ -55,7 +55,7 @@ export default function UseCase() {
             stiffness: 60,
           }}
         />
-        <motion.img src="../assets/Technology/Grids/Grid2.png" className='g2'
+        <motion.img src="../assets/UseCase/grid2.png" className='g2'
         whileHover={{
             scale: 1.1
           }}
@@ -66,7 +66,7 @@ export default function UseCase() {
             type: "spring",
             stiffness: 60,
           }}/>
-        <motion.img src="../assets/Technology/Grids/Grid3.png" className='g3'
+        <motion.img src="../assets/UseCase/grid3.png" className='g3'
         whileHover={{
             scale: 1.1
           }}
@@ -77,7 +77,7 @@ export default function UseCase() {
             type: "spring",
             stiffness: 60,
           }}/>
-        <motion.img src="../assets/Technology/Grids/Grid2.png" className='g4'
+        <motion.img src="../assets/UseCase/grid4.png" className='g4'
             whileHover={{
               scale: 1.1
             }}
@@ -89,7 +89,7 @@ export default function UseCase() {
               stiffness: 60,
             }}
         />
-        <motion.img src="../assets/Technology/Grids/Grid3.png" className='g5'
+        <motion.img src="../assets/UseCase/grid5.png" className='g5'
         whileHover={{
           scale: 1.1
         }}
@@ -100,7 +100,7 @@ export default function UseCase() {
           type: "spring",
           stiffness: 60,
         }}/>
-        <motion.img src="../assets/Technology/Grids/Grid1.png" className='g6'whileHover={{
+        <motion.img src="../assets/UseCase/grid6.png" className='g6'whileHover={{
               scale: 1.1
             }}
             whileTap={{

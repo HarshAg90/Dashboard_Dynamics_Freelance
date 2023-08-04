@@ -51,10 +51,7 @@ export default function Charge_final (){
     <motion.div ref={targetRef} id='Charge_page' >
 
       <Sticky  Sticky enabled={true} bottomBoundary="#Charge_page" innerZ={2}> 
-
       
-
-
             <motion.div className="carSection" style={{opacity: pgOpacity, scale: pgScale}}>
 
             <div className="heading">

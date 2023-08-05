@@ -80,7 +80,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="tile">
+          <div className="tile odd">
             <svg
               width="67"
               height="48"

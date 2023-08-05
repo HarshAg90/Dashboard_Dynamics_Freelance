@@ -1,6 +1,55 @@
-import React from "react";
+import React,{useState} from "react";
 import Landing from "../components/Landing";
 
+
+const QnA = ({ data }) => {
+  const [expandedIndex, setExpandedIndex] = useState(null);
+
+  const toggleAnswer = (index) => {
+    setExpandedIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
+
+  return (
+    <div>
+      {data.map((item, index) => (
+        <div key={index} className="qna-item">
+          <div className="qna-question" onClick={() => toggleAnswer(index)}>
+            {item.question}
+          </div>
+          <div
+            className={`qna-answer ${expandedIndex === index ? 'expanded' : ''}`}
+          >
+            {item.answer}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+// Example usage:
+const data = [
+  {
+    question: '1. Are Yulu and EV the same?',
+    answer: 'Dash dynamic charger takes around 30% less time to charge your vehicle. We appreciate your honesty and accuracy in providing the requested information.',
+  },
+  {
+    question: '2. How far can I go with my EV?',
+    answer: 'This is a random answer please remind me to get real answer',
+  },
+  {
+    question: '3. Where can I charge?',
+    answer: 'This is a random answer please remind me to get real answer',
+  },
+  {
+    question: '4. How much will it take to charge my vehicle?',
+    answer: 'This is a random answer please remind me to get real answer',
+  },
+  {
+    question: '5. How much will charging cost?',
+    answer: 'This is a random answer please remind me to get real answer',
+  }
+];
 export default function Contacts() {
   return (
     <div id="Contact_page">
@@ -56,6 +105,7 @@ export default function Contacts() {
             </svg>
 
             <p> +91-8737237231</p>
+            <p> +91-9560589782</p>
           </div>
         </div>
         <form className="form">
@@ -116,9 +166,7 @@ export default function Contacts() {
         <button>FAQs</button>
         <p>You question, We answer</p>
       </div>
-      <div className="questions">
-
-      </div>
+        <QnA data={data} />
       </div>
     </div>
   );

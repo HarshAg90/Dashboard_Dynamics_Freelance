@@ -1,31 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import { motion, useViewportScroll, useScroll } from "framer-motion";
+import { motion,  useScroll } from "framer-motion";
 // import logo from '../../public/assets/logo.png';
-
-
-const linkList = [{}, {}, {}, {}, {}];
-
-const navStyles = {
-  display: "flex",
-  position: "fixed",
-  alignItems: "center",
-  justifyContent: "space-between",
-  height: "4rem",
-  padding: "0 2rem",
-  width: "100vw",
-  left: "0",
-  overflow: "hidden",
-};
-
-const navLinksWrapper = {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "space-between",
-  width: "100%"
-};
-
-
 export default function Nav() {
 
   /** this hook gets the scroll y-axis **/
@@ -69,7 +45,7 @@ variants.visible = { ...variants.visible, background: backgroundColor };
       /** I'm also going to add a custom easing curve and duration for the animation **/
       transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.6 }}
       /** basic nav styles **/
-      style={navStyles}
+      // style={navStyles}
       >
         <ul>
             <Link to="/"><li className="nav_elements logo"><img src="../assets/logo.png" alt="" /></li></ Link>

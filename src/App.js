@@ -9,6 +9,7 @@ import Product from "./pages/Product";
 import UseCase from "./pages/Use_case";
 import Contacts from "./pages/Contacts";
 import NewsRoom from "./pages/News_room";
+import Fleets from "./pages/Fleets";
 import ScrollToTop from "./ScrollToTop"; // Import the ScrollToTop component
 import Blogs from "./pages/Blogs";
 import EV_users from "./pages/EV_users";
@@ -26,6 +27,7 @@ function App() {
         <Route path="/Contacts" element={<Contacts />} />
         <Route path="/News_room" element={<NewsRoom />} />
         <Route path="/Careers" element={<Charge />} />
+        <Route exact path="/Fleets" element={<Fleets />} />
         <Route path="/Blogs" element={<Blogs />} />
         <Route path="/Blogs" element={<Blogs />} />
         <Route path="/Ev_users" element={<EV_users />} />

@@ -3,6 +3,7 @@ import {motion, useScroll, useTransform} from "framer-motion";
 import Sticky from 'react-stickynode';
 
 
+
 export default function Charge_final (){
 
 
@@ -42,16 +43,15 @@ export default function Charge_final (){
   return (
     <div>
 
+      
+
     {/* //CAR ANIMATION */}
 
     
     <motion.div ref={targetRef} id='Charge_page' >
 
-      <Sticky  Sticky enabled={true} bottomBoundary="#Charge_page" innerZ={2}>
-
+      <Sticky  Sticky enabled={true} bottomBoundary="#Charge_page" innerZ={2}> 
       
-
-
             <motion.div className="carSection" style={{opacity: pgOpacity, scale: pgScale}}>
 
             <div className="heading">

@@ -37,6 +37,7 @@ const pathVariants = {
   }
 };
 
+
 const wirelessVariants = {
   hidden: {
     opacity: 0,
@@ -86,8 +87,8 @@ export default function Home() {
     dots: true,
     infinite: true,
     speed: 500,
-    adaptiveHeight: true,
-    arrows: true,
+    adaptiveHeight: false,
+    arrows: false,
     autoplay: true,
     autoplaySpeed: 2500,
     slidesToShow: 2,
@@ -569,7 +570,7 @@ export default function Home() {
           </svg>
         </div>
         <div className="parteners_li">
-        <Slider {...settings} className='carouselItem'>
+        <Slider {...settings} className='carouselKaItem'>
           <img src="../assets/Home/partner_1.png" alt="" />
           <img src="../assets/Home/partner_2.png" alt="" />
           <img src="../assets/Home/partner_3.png" alt="" />

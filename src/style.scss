@@ -28,8 +28,8 @@
             font-family: "monogram",sans-serif;
             font-size: 2.7rem;
             font-weight: 400;
-            background: rgb(0,0,0);
-            background: linear-gradient(180deg, rgba(0,0,0,1) 37%, rgba(116,116,116,1) 91%);
+            background: #525050;
+            // background: linear-gradient(180deg, rgba(0,0,0,1) 37%, rgba(116,116,116,1) 91%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             line-gap-override: 10px;
@@ -191,6 +191,7 @@
                 }
             }
             .content{
+                overflow: hidden;
                 margin: 20px;
                 max-width: 40vw;
                 h1{
@@ -235,6 +236,7 @@
             }
         }
         .right{
+            overflow: hidden;
             font-family: "artifakt",sans-serif !important;
             width: 45%;
             background-color: #F0F2F3;
@@ -463,11 +465,11 @@
             align-items: center;
             img{
                 height: 200px;
-                width: auto;
+                width: 50px;
                 margin: 20px;
                 padding: 20px;
             }
-            .carouselItem{
+            .carouselKaItem{
                 width: 50vw;
                 height: 30vh;
                 overflow: hidden;
@@ -842,7 +844,6 @@
 #Technology{
     #TechLanding{
         .landing{
-            // background-image: url(../public/assets/landing_picture.png);
             background-image: url(../public/assets/Technology/LandingTeml.png);
             text-align: center;
             h1{
@@ -1726,6 +1727,64 @@
                         text-align: justify;
                     }
                 }
+            }
+        }
+    }
+}
+
+#Team{
+    .landing{
+        background-image: url(../public/assets/Team/landing.png);
+        color: #ff0000;
+        h1{
+            margin-top: 40vh;
+            margin-left: 10vw;
+            color: #ff0000;
+        }
+    }
+
+    .teamMembers{
+        height: 250vh;
+        .subHeading{
+
+            /* Our user base is omnidirectional */
+
+                width: 15vw;
+                height: auto;
+
+                font-family: 'Artifakt Element';
+                font-style: normal;
+                font-weight: 900;
+                font-size: 28px;
+                // line-height: 31px;
+                text-align: center;
+
+                color: #000000;
+                border: 1px solid #8E8787;
+                border-radius: 5px;
+
+                margin-top: 10vh;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                margin-left: 5vw;
+
+        }
+
+        .teamGrid{
+            margin-top: 10vh;
+            .grid{
+                width: 100vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 2vw;
+                img{
+                    width: 30vw;
+                }
+            }
+
+            .scnd, .thd{
+                margin-top: 25vh;
             }
         }
     }

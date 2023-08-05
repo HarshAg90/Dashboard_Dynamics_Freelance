@@ -14,6 +14,7 @@ import ScrollToTop from "./ScrollToTop"; // Import the ScrollToTop component
 import Blogs from "./pages/Blogs";
 import EV_users from "./pages/EV_users";
 import EV_Manufacturer from "./pages/EV_Manufacturer";
+import Team from "./pages/Team";
 
 function App() {
   return (
@@ -32,6 +33,8 @@ function App() {
         <Route path="/Blogs" element={<Blogs />} />
         <Route path="/Ev_users" element={<EV_users />} />
         <Route exact path="/ev-manufacturer" element={<EV_Manufacturer />} />
+        <Route exact path="/team" element={<Team />} />
+        
       </Routes>
       <Footer />
     </BrowserRouter>

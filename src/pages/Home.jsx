@@ -209,7 +209,7 @@ export default function Home() {
               </p>
             </div>
           </motion.div>
-          <motion.div className="tile" style={{y: scndY, opacity: scndOpacity, scale: scndScale}}>
+          <motion.div className="tile odd" style={{y: scndY, opacity: scndOpacity, scale: scndScale}}>
             <svg
               width="67"
               height="48"

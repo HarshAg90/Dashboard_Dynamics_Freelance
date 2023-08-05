@@ -59,32 +59,44 @@
     left: 0;
     z-index: 2;
     ul{
+        height: 10vh;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: flex-end;
         align-items: center;
         width: 100%;
+        padding: 10px 5px !important;
         list-style: none;
         a{
+            overflow: hidden;
             text-decoration: none;
             display: flex;
             justify-content: center;
             align-items: center;
             color: black;
             height: 70px;
-            padding: 0 20px;
-            font-size: 1rem;
+            padding: 0 40px;
+            font-size: 1.1rem;
+            font-weight: 500;
             transition: 200ms ease;
+            &:first-child{
+                margin-right: auto;
+                padding-left: 0;
+            }
             &:hover{
                 // background-color: rgba(164, 164, 164, 0.716);
                 transition: 200ms ease;
                 border-bottom: 1px solid black;
                 margin: 2px;
-            }   
+            }
             li{
-                img{
-                    height: 50px;
-                }
+                font-weight: 500;
+                font-family: 'artifakt',sans-serif;
+                white-space: nowrap;
                 
+                img{
+                    width: 40vw;
+                }
+
             }
         }
     }
@@ -108,7 +120,7 @@
 #Home{
     position: relative;
     border-top: 1px solid black;
-    font-family: 'atrifakt',sans-serif !important;
+    font-family: 'artifakt',sans-serif !important;
     .Landing{
         font-family: 'monogram',sans-serif;
         // background: linear-gradient(180deg, #E5EAED 66.98%, rgba(217, 217, 217, 0) 100%);
@@ -145,7 +157,7 @@
         align-items: center;
     }
     .tech{
-        font-family: "atrifakt",sans-serif !important;
+        font-family: 'artifakt',sans-serif;
         display: flex;
         height: 100vh;
         overflow: hidden;
@@ -166,16 +178,16 @@
                 width: 70vw;
                 h1{
                     overflow: hidden;
-                    font-family: "artifakt",sans-serif;
+                    font-family: 'artifakt',sans-serif;
                     margin: 20px;
                     font-size: 2rem;
-                    font-weight: 700;   
+                    font-weight: 400;
                 }
                 hr{
                     height: 0px !important;
                     width:60%;
                     border: none; /* Removes the default border */
-                    border-top: 2px solid #000000; 
+                    border-top: 2px solid #000000;
                 }
             }
             .content{
@@ -183,7 +195,7 @@
                 max-width: 40vw;
                 h1{
                     overflow: hidden;
-                    font-family: "artifakt",sans-serif;
+                    font-family: 'artifakt',sans-serif;
                     color: #BC0000;
                     margin: 20px 0;
                     font-size: 2rem;
@@ -225,19 +237,21 @@
         .right{
             font-family: "artifakt",sans-serif !important;
             width: 45%;
-            padding: 40px;
             background-color: #F0F2F3;
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
             align-items: center;
             .tile{
-                overflow: hidden;
-                font-family: "artifakt",sans-serif;
+                padding: 20px 40px;
+                height: 100%;
                 display: flex;
                 width: 100%;
                 justify-content: space-evenly;
                 align-items: center;
+                &.odd{
+                    background-color: #E9EDF0;
+                }
                 svg{
                     width: 60px;
                 }
@@ -251,10 +265,11 @@
                     }
                 }
             }
+            
         }
     }
     .title{
-        font-family: 'atrifakt',sans-serif;
+        font-family: 'artifakt',sans-serif;
         margin: 30px 0px;
         width: 100%;
         display: flex;
@@ -267,25 +282,25 @@
             display: flex;
             width: 700px;
             padding-right: 50px;
-            font-family: 'atrifakt',sans-serif;
+            font-family: 'artifakt',sans-serif;
             .svg{
                 display: flex;
                 margin-right: 20px;
                 align-items: center;
             }
             h1{
-                font-family: 'atrifakt',sans-serif;
+                font-family: 'artifakt',sans-serif;
                 font-size: 2rem;
                 font-weight: 300;
                 span{
-                    font-family: 'atrifakt',sans-serif;
+                    font-family: 'artifakt',sans-serif;
                     font-weight: 600;
                     margin: 10px;
                 }
             }
         }
         button{
-            font-family: 'atrifakt',sans-serif;
+            font-family: 'artifakt',sans-serif;
             padding: 5px 20px;
             border: none;
             border: 1px solid black;
@@ -294,7 +309,7 @@
             font-weight: 500;
             transition: 200ms ease;
             &:hover{
-                font-family: 'atrifakt',sans-serif;
+                font-family: 'artifakt',sans-serif;
                 background-color: black;
                 color: white;
                 box-shadow: 0 0 10px grey;
@@ -322,7 +337,7 @@
                 height: 0px !important;
                 width:90%;
                 border: none; /* Removes the default border */
-                border-top: 2px solid #000000; /* Sets the top border to a solid line */   
+                border-top: 2px solid #000000; /* Sets the top border to a solid line */
             }
         }
     }
@@ -332,15 +347,15 @@
         background-color: #fff;
         flex-direction: column;
         align-items: center;
-        font-family: 'atrifakt',sans-serif;
+        font-family: 'artifakt',sans-serif;
         img{
-            font-family: 'atrifakt',sans-serif;
+            font-family: 'artifakt',sans-serif;
             display: block;
             margin: 30px;
             height: 90vh;
         }
         .end_line{
-            font-family: 'atrifakt',sans-serif;
+            font-family: 'artifakt',sans-serif;
             width: 100%;
             display: flex;
             justify-content: end;
@@ -348,19 +363,19 @@
         }
     }
     .features{
-        font-family: 'atrifakt',sans-serif;
+        font-family: 'artifakt',sans-serif;
         .title{
             margin: 30px 0px;
-            font-family: 'atrifakt',sans-serif;
+            font-family: 'artifakt',sans-serif;
         }
         .content{
-            font-family: 'atrifakt',sans-serif;
+            font-family: 'artifakt',sans-serif;
             width: 100%;
             overflow: hidden;
             display: flex;
             justify-content: space-evenly;
             .tiles{
-                font-family: 'atrifakt',sans-serif;
+                font-family: 'artifakt',sans-serif;
                 overflow: hidden;
                 padding: 10px;
                 display: flex;
@@ -368,11 +383,11 @@
                 justify-content: center;
                 align-items: center;
                 img{
-                    font-family: 'atrifakt',sans-serif;
+                    font-family: 'artifakt',sans-serif;
                     height: 100px;
                 }
                 p{
-                    font-family: 'atrifakt',sans-serif;
+                    font-family: 'artifakt',sans-serif;
                     font-size: 1.2rem;
                     font-weight: 400;
                     margin: 20px;
@@ -439,9 +454,9 @@
                 height: 0px !important;
                 width:60%;
                 border: none; /* Removes the default border */
-                border-top: 2px solid #000000; /* Sets the top border to a solid line */   
+                border-top: 2px solid #000000; /* Sets the top border to a solid line */
             }
-        }   
+        }
         .parteners_li{
             display: flex;
             justify-content: center;
@@ -468,9 +483,9 @@
                 height: 0px !important;
                 width:70%;
                 border: none; /* Removes the default border */
-                border-top: 2px solid #000000; /* Sets the top border to a solid line */   
+                border-top: 2px solid #000000; /* Sets the top border to a solid line */
             }
-        }   
+        }
     }
 
     .finalyy{
@@ -560,7 +575,7 @@
             background: linear-gradient(180deg, rgba(0,0,0,1) 37%, rgba(116,116,116,1) 91%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            
+
         }
         .subHeading{
             width: 100%;
@@ -571,16 +586,16 @@
             font-weight: 400;
             font-size: 1.2rem;
         }
-          
-          
-          
-          
+
+
+
+
 
           .car {
             width: 40vw;
             align-self: center;
             margin: auto;
-            margin-top: 15vh; 
+            margin-top: 15vh;
           }
 
           .charger {
@@ -595,19 +610,19 @@
             font-size: 1.2rem;
             font-family: "artifakt", sans-serif;
           }
-          
+
           .line1 {
             right: 20vw;
             width: 350px;
             top: 55px + 250px;
           }
-          
+
           .line2 {
             width: 100px;
             top: 68vh;
-            right: 23vw;           
+            right: 23vw;
           }
-          
+
           .line3 {
             width: 600px;
             top: 58vh + 28vh;
@@ -623,24 +638,24 @@
             left: 79vw;
             top: 480px;
             text-align: left;
-            
+
           }
 
           .initText3{
             left: 90vw;
-            top: 64vh + 28vh;            
+            top: 64vh + 28vh;
           }
 
           .finalLine1 {
             top: 23vh + 20vh; /* Place the first line 12% from the top */
             left: 22vw; /* Place the first line to the right of the car */
           }
-          
+
           .finalLine2 {
             top: 50vh + 15vh; /* Place the second line 35% from the top */
             left: 28vw; /* Place the second line to the right of the car */
           }
-          
+
           .finalLine3 {
             top: 80vh + 10vh;
             left: 30vw; /* Place the third line to the right of the car */
@@ -836,15 +851,15 @@
                 top: 75%;
                 margin: auto;
                 line-height: 40px;
-    
+
                 background: #BC0000;
                 background: linear-gradient(to right, #BC0000 0%, #BC0000 50%, #FFFFFF 51%, #FFF 100%);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
-    
+
             }
-        }    
-    
+        }
+
 
     }
 
@@ -856,7 +871,7 @@
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            
+
             .heading{
                 overflow: hidden;
                 font-size: 34px;
@@ -869,7 +884,7 @@
                 height:5px;
                 width:20%;
                 border: none; /* Removes the default border */
-                border-top: 5px solid #CD222A; /* Sets the top border to a solid line */   
+                border-top: 5px solid #CD222A; /* Sets the top border to a solid line */
             }
             .sqr{
                 height: 18px;
@@ -894,7 +909,7 @@
             justify-content: flex-end;
             align-items: center;
             margin-bottom: 7vh;
-            
+
             .heading{
                 font-size: 60px;
                 font-family: "monogram",sans-serif;
@@ -909,7 +924,7 @@
                 height:5px;
                 width:70%;
                 border: none; /* Removes the default border */
-                border-top: 5px solid #CD222A; /* Sets the top border to a solid line */   
+                border-top: 5px solid #CD222A; /* Sets the top border to a solid line */
             }
             .sqr{
                 height: 18px;
@@ -973,7 +988,7 @@
                 align-self: center;
             }
 
-            
+
 
             .thd.txt{
                 align-self: baseline;
@@ -994,10 +1009,19 @@
                 overflow: hidden;
                 width: 40vw;
                 align-self: flex-start;
-               
+
             }
 
-            
+            // .scnd.txt{
+            //     margin-top: 20vh;
+            //     min-height: 30vh;
+            // }
+            // .scnd.illustration{
+            //     top: 0;
+            //     grid-column: 3 / span 1;
+            // }
+
+
 
         }
     }
@@ -1014,7 +1038,7 @@
             min-width: 30vw;
             font-family: "monogram",sans-serif;
             font-size: 72px;
-            width: 40px; 
+            width: 40px;
 
             h1{
                 margin: 0;
@@ -1061,7 +1085,7 @@
 
 }
 #Contact_page{
-    
+
     .Landing{
         font-family: 'monogram',sans-serif;
         background-image: url(../public/assets/Contact/contact_landing.png);
@@ -1080,7 +1104,7 @@
             font-size: 3.5rem;
             font-weight: 400;
             width: 80%;
-            
+
             transform: translate(-50%,-50%);
             background: rgb(180,180,182);
             background: linear-gradient(0deg, #525050, #525050),
@@ -1169,6 +1193,27 @@
             }
         }
     }
+    .qna-item {
+        margin-bottom: 10px;
+        position: relative;
+
+        .qna-question {
+          border-bottom: 1px solid black;
+          width: 500px;
+          padding: 10px 20px;
+          cursor: pointer;
+        }
+
+        .qna-answer {
+            height: 0px;
+            width: 500px;
+            &.expanded {
+                height: auto !important;
+                padding: 10px 20px;
+            }
+        }
+    }
+
 }
 
 .Landing{
@@ -1215,7 +1260,7 @@
         font-size: 2.7rem;
         font-weight: 400;
         transform: translate(-50%,-50%);
-    
+
         }
     }
 
@@ -1226,7 +1271,7 @@
         gap: 10vh;
         // justify-content: center;
         align-items: center;
-        
+
         .subHeading{
 
             /* Our user base is omnidirectional */
@@ -1265,6 +1310,8 @@
             gap: 18px;
             grid-template-columns: repeat(3, 18vw);
             
+
+
             img{
                 width: 20vw;
                 padding: 0;
@@ -1281,7 +1328,7 @@
             font-style: normal;
             font-size: 20px;
                 // line-height: 31px;
-            text-align: center;   
+            text-align: center;
         }
     }
 }
@@ -1478,6 +1525,207 @@
             .right{
                 position: relative;
                 left: 2.2vw;
+            }
+        }
+    }
+}
+
+#Blogs{
+    background: linear-gradient(180deg, #BCC6D2 -25.46%, rgba(227, 232, 236, 0.19) 79.4%);
+    position: relative;
+    .top{
+        height: 100vh;
+        position: relative;
+        background-color: transparent;
+        h1{
+            position: absolute;
+            top: 28%;
+            left: 40%;
+            transform: translate(-50%,-50%);
+            font-size:34px;
+            font-weight: 400;
+            width: 60%;
+            z-index: 2;
+            font-family: "monogram",sans-serif;
+        }
+        img{
+            height: 402px;
+            width: 702px;
+            image-rendering: optimizeQuality;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            object-fit: cover;
+        }
+        .home_pg_div{
+            height: 441px;
+            width: 662px;
+            position: absolute;
+            z-index: -1;
+            top: 55%;
+            left: 45%;
+            transform: translate(-50%,-50%);
+            background: linear-gradient(359.11deg, #104C6E -8.96%, rgba(227, 232, 236, 0) 144.36%);
+        }
+    }
+    .content{
+        width: 100%;
+        position: relative;   
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+        height: 100%; /* Set the height of the parent container */
+        overflow: hidden; /* Disable scrolling for the parent container */
+        h1{
+            font-size: 2rem;
+            font-family: 'artifakt', sans-serif;
+        }
+        hr{
+            border:.5px solid black;
+            margin: 20px 0px;
+        }
+        p{
+            text-align: justify;
+        }
+        img{
+            padding: 40px;
+            border-radius: 5px;
+        }
+        .bg{
+            position: absolute;
+            width: auto;
+            display: flex;
+            overflow: visible;
+            height: 100%;
+            z-index: -1;
+            justify-content: center;
+            padding: 30px 20px;
+        }
+        .left{
+            width: 40vw;
+            padding: 20px;
+            .tile{
+                padding: 30px 20px;
+            }
+        }
+        .right{
+            width: 40vw;
+        }
+    }
+}
+
+#Ev_users{
+
+    .Landing{
+        // background: linear-gradient(180deg, rgba(205, 205, 205, 0.65) 0%, rgba(255, 255, 255, 0) 100%);
+        font-family: 'monogram',sans-serif;
+        background-image: url(../public/assets/EV_users/Ev_user_home.png);
+        // background-position: center 50px;
+        // background-size: 80%;
+        position: relative;
+        h1{
+            top: 40%;
+            left: 45%;
+            font-size: 2.7rem;
+            font-weight: 500;
+            width: 70%;
+            transform: translate(-50%,-50%);
+            z-index: 1;
+        }
+    }
+    .content{
+        font-family: 'artifakt', sans-serif;
+        .part1{
+            background: linear-gradient(to bottom, rgba(245, 245, 245, 0) -61.39%, #DFCBCB 190%);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            min-height: 90vh;
+            align-items: center;
+            p{
+                width: 100%;
+                text-align: center;
+                font-size: 1.2rem;
+                font-weight: 500;
+            }
+            .tiles{
+                overflow: hidden;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                width: 100%;
+                .tile{
+                    position: relative;
+                    overflow: visible;
+                    p{
+                        position: absolute;
+                        top: 50%;
+                        left: -50%;
+                        font-size: 1.4rem;
+                        font-weight: 600;
+                        text-align: left;
+                    }
+                }   
+            }
+        }
+        .part_2{
+            width: 100%;
+            display: flex;
+            img{
+                width: 60vw;
+            }
+            .points{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                .text{
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;  
+                    background-color: #F1EBEB;
+                    font-weight: 700;
+                    &.odd{
+                        background-color: #E1D4D4;
+                    }
+                    h1{
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+        .part_3{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            min-height: 80vh;
+            h1{
+                font-size: 18px;
+                font-weight: 700;
+            }
+            .tiles{
+                overflow: hidden;
+                width: 100vw;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: start;
+                gap: 30px;
+                .tile{
+                    overflow: hidden;
+                    img{
+                        width: 30px;
+                        margin: 20px 5px;
+                    }
+                    width: 20vw;
+                    p{
+                        font-size: 1rem;
+                        text-align: justify;
+                    }
+                }
             }
         }
     }

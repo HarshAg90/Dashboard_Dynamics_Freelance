@@ -11,6 +11,7 @@ import Contacts from "./pages/Contacts";
 import NewsRoom from "./pages/News_room";
 import Fleets from "./pages/Fleets";
 import ScrollToTop from "./ScrollToTop"; // Import the ScrollToTop component
+import EV_Manufacturer from "./pages/EV_Manufacturer";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route exact path="/News_room" element={<NewsRoom />} />
         <Route exact path="/Careers" element={<Charge />} />
         <Route exact path="/Fleets" element={<Fleets />} />
+        <Route exact path="/ev-manufacturer" element={<EV_Manufacturer />} />
       </Routes>
       <Footer />
     </Router>

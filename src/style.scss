@@ -63,7 +63,7 @@
         justify-content: flex-end;
         align-items: center;
         width: 100%;
-        padding: 10px 5px !important;
+        // padding: 10px 5px !important;
         list-style: none;
         a{
             text-decoration: none;
@@ -72,8 +72,8 @@
             align-items: center;
             color: black;
             height: 70px;
-            padding: 0 40px;
-            font-size: 1.2rem;
+            padding: 0 30px;
+            font-size: 1rem;
             font-weight: 400;
             transition: 200ms ease;
             &:first-child{
@@ -88,7 +88,7 @@
             }
             li{
                 img{
-                    height: 60px;
+                    height: 50px;
                 }
 
             }
@@ -1618,7 +1618,7 @@
         h1{
             top: 30%;
             left: 45%;
-            font-size: 3.5rem !important;
+            font-size: 3rem !important;
             font-weight: 400;
             width: 70%;
             transform: translate(-50%,-50%);
@@ -1707,6 +1707,24 @@
                     }
                 }
             }
+        }
+    }
+}
+
+
+#Careers{
+    .Landing{
+        font-family: 'monogram',sans-serif;
+        background-image: url(../public/assets/EV_users/Ev_user_home.png);
+        position: relative;
+        h1{
+            top: 30%;
+            left: 45%;
+            font-size: 3rem !important;
+            font-weight: 400;
+            width: 70%;
+            transform: translate(-50%,-50%);
+            z-index: 1;
         }
     }
 }

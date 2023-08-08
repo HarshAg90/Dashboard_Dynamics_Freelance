@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 import {motion, useScroll, useTransform} from "framer-motion";
 
-
 export default function TechnologyLanding() { 
 
   const targetRef = useRef(null);
@@ -13,6 +12,7 @@ export default function TechnologyLanding() {
   //LANDING PG ANIMATION
   const opacity = useTransform(scrollYProgress, [0, 0.95], [1, 0]);
   const scale = useTransform(scrollYProgress, [0, 0.95], [1, 0.9]);
+  
 
   return (
     <div  id='TechLanding'>

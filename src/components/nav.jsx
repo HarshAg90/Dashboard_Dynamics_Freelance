@@ -25,13 +25,13 @@ export default function Nav() {
 
   const variants = {
     /** this is the "visible" key and it's correlating styles **/
-    visible: { opacity: 1, y: 0 },
+    visible: { opacity: 1, y: 10 },
     /** this is the "hidden" key and it's correlating styles **/
     hidden: { opacity: 0, y: -25 }
   };
 
   // Calculate the background color based on scrollY?.current value
-const backgroundColor = scrollY?.current >= 500 && "white";
+const backgroundColor = scrollY?.current >= 500 && "";
 
 // Use the calculated backgroundColor in the variants
 variants.visible = { ...variants.visible, background: backgroundColor };
@@ -50,9 +50,10 @@ variants.visible = { ...variants.visible, background: backgroundColor };
         <ul>
             <Link to="/"><li className="nav_elements logo"><img src="../assets/logo.png" alt="" /></li></ Link>
             <Link to="/"><li className="nav_elements">Home</li></ Link>
+            <Link to="/about"><li className="nav_elements">About</li></ Link>
             <Link to="/Technology"><li className="nav_elements">Technology</li></ Link>
-            <Link to="/Products"><li className="nav_elements">Our Produts</li></ Link>
-            <Link to="/Use_case"><li className="nav_elements">Use Case</li></ Link>
+            <Link to="/Products"><li className="nav_elements">Our Products</li></ Link>
+            <Link to="/Use_case"><li className="nav_elements">Use cases</li></ Link>
             <Link to="/Contacts"><li className="nav_elements">Contact</li></ Link>
             <Link to="/News_rooms"><li className="nav_elements">News Room</li></ Link>
             <Link to="/Careers"><li className="nav_elements">Career</li></ Link>

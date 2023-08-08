@@ -13,6 +13,9 @@ import Fleets from "./pages/Fleets";
 import ScrollToTop from "./ScrollToTop"; // Import the ScrollToTop component
 import Blogs from "./pages/Blogs";
 import EV_users from "./pages/EV_users";
+import EV_Manufacturer from "./pages/EV_Manufacturer";
+import Careers from "./pages/Careers";
+import About from "./pages/About";
 
 function App() {
   return (
@@ -26,11 +29,13 @@ function App() {
         <Route path="/Use_case" element={<UseCase />} />
         <Route path="/Contacts" element={<Contacts />} />
         <Route path="/News_room" element={<NewsRoom />} />
-        <Route path="/Careers" element={<Charge />} />
+        <Route path="/Careers" element={<Careers />} />
+        <Route path="/Charge" element={<Charge />} />
         <Route exact path="/Fleets" element={<Fleets />} />
         <Route path="/Blogs" element={<Blogs />} />
-        <Route path="/Blogs" element={<Blogs />} />
         <Route path="/Ev_users" element={<EV_users />} />
+        <Route path="/about" element={<About />} />
+        <Route exact path="/ev-manufacturer" element={<EV_Manufacturer />} />
       </Routes>
       <Footer />
     </BrowserRouter>

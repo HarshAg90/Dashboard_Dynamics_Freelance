@@ -50,6 +50,7 @@ variants.visible = { ...variants.visible, background: backgroundColor };
         <ul>
             <Link to="/"><li className="nav_elements logo"><img src="../assets/logo.png" alt="" /></li></ Link>
             <Link to="/"><li className="nav_elements">Home</li></ Link>
+            <Link to="/about"><li className="nav_elements">About</li></ Link>
             <Link to="/Technology"><li className="nav_elements">Technology</li></ Link>
             <Link to="/Products"><li className="nav_elements">Our Products</li></ Link>
             <Link to="/Use_case"><li className="nav_elements">Use cases</li></ Link>

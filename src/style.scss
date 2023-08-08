@@ -64,7 +64,7 @@
         justify-content: flex-end;
         align-items: center;
         width: 100%;
-        padding: 10px 5px !important;
+        // padding: 10px 5px !important;
         list-style: none;
         a{
             overflow: hidden;
@@ -74,9 +74,9 @@
             align-items: center;
             color: black;
             height: 70px;
-            padding: 0 40px;
-            font-size: 1.1rem;
-            font-weight: 500;
+            padding: 0 30px;
+            font-size: 1rem;
+            font-weight: 400;
             transition: 200ms ease;
             &:first-child{
                 margin-right: auto;
@@ -94,7 +94,7 @@
                 white-space: nowrap;
                 
                 img{
-                    width: 40vw;
+                    height: 50px;
                 }
 
             }
@@ -1591,6 +1591,16 @@
         align-items: center;
         height: 100%; /* Set the height of the parent container */
         overflow: hidden; /* Disable scrolling for the parent container */
+        .bg{
+            position: absolute;
+            width: auto;
+            display: flex;
+            overflow: visible;
+            height: 100%;
+            z-index: -1;
+            justify-content: center;
+            padding: 30px 20px;
+        }
         h1{
             font-size: 2rem;
             font-family: 'artifakt', sans-serif;
@@ -1605,16 +1615,6 @@
         img{
             padding: 40px;
             border-radius: 5px;
-        }
-        .bg{
-            position: absolute;
-            width: auto;
-            display: flex;
-            overflow: visible;
-            height: 100%;
-            z-index: -1;
-            justify-content: center;
-            padding: 30px 20px;
         }
         .left{
             width: 40vw;
@@ -2126,6 +2126,234 @@
                     font-weight: 500;
                 }
             }
+        }
+    }
+}
+
+
+#Careers{
+    .Landing{
+        font-family: 'monogram',sans-serif;
+        background-image: url(../public/assets/Careers/Career_home.png);
+        position: relative;
+        h1{
+            top: 30%;
+            left: 45%;
+            font-size: 3rem !important;
+            font-weight: 400;
+            width: 70%;
+            transform: translate(-50%,-50%);
+            z-index: 1;
+        }
+    }
+    .Career_inner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .head{
+            height: 40vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            button{
+                padding: 10px 30px;
+                border-radius: 10px;
+                border: 1px solid black;
+                font-size: 1.2rem;
+                font-weight: 600;
+            }
+            p{
+                width: 60vw;
+                font-size: 1.1rem;
+                text-align: center;
+            }
+        }
+        .lets_Talk{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 80vw;
+            border-radius: 10px;
+            height: 60vh;
+            box-shadow: 0px 2px 4px 0px #00000040;
+            .contact{
+                width: 45%;
+                height: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: start;
+                h1.main{
+                    font-size: 3rem;
+                    font-weight: 600;
+                }
+                h1{
+                    font-weight: 600;
+                    display: flex;
+                    gap: 10px;
+                }
+                .socials{
+                    display: flex;
+                    gap: 1.2rem;
+                    justify-content: center;
+                    align-items: center;
+                    svg{
+                        height: 20px;
+                    }
+                }
+            }
+            form.form{
+                width: 45%;
+                padding: 0px 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                h1{
+                    text-align: end;
+                    margin: 30px 0px;
+                }
+                p{
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                }
+                input{
+                    border: none;
+                    width: 100%;
+                    background-color: transparent;
+                    border-bottom: 1px solid black;
+                    margin-bottom: 20px;
+                    padding: 5px;
+                }
+                ul{
+                    box-shadow: 0px 2px 4px 0px #00000040;
+                    border-radius: 10px;
+                    padding: 10px;
+                    li{
+                        border-bottom: 1px solid black;
+                        padding: 5px;
+                    }
+                }
+                .share{
+                    button{
+                        padding: 5px 30px;
+                        background-color: black;
+                        color: white;
+                        transition: 200ms ease;
+                        &:hover{
+                            color: #000000;
+                            background-color: white;
+                            border: 1px solid black;
+                            transition: 200ms ease;
+                        }
+                    }
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .socials{
+                        display: flex;
+                        gap: 1rem;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+        background-image: url(../public/assets/Careers/Career_cars.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 0px 150px;
+        // .mid{
+        // }
+
+        .mid_section{
+            min-height: 80vh;
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h1{
+                margin:100px 0px;
+                font-size: 1.4rem;
+                font-weight: 600;
+            }
+            .tiles{
+                display: grid;
+                grid-template-columns: repeat(auto-fit,minmax(120px, 1fr));
+                width: 80%;
+                align-items: center;
+                .tile {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    .icon{
+                        height: 150px;
+                        width: 150px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        box-shadow: 0px 2px 4px 0px #00000040;
+                        margin: 10px;
+                        position: relative;
+                        border-radius: 10px;
+                        overflow: visible;
+                        svg{
+                            height: 50px;
+                        }
+                        svg.odd{
+                            height: 30px;
+                            position: absolute;
+                            top: 90%;
+                        }
+                    }
+                    p{
+                        margin: 20px 0px;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+
+        .lets_Talk.two{
+            height: auto;
+            margin: 20px;
+            padding: 20px;
+            form.form{
+                width: 100%;
+                h1{
+                    text-align: start;
+                    font-size: 2rem;
+                }
+                .MID{
+                    display: flex;
+                    gap: 30px;
+                    div{
+                        width: 50%;
+                    }
+                }
+                .share{
+                    margin-top: 40px;
+                }
+            }
+        }
+
+    }
+}
+
+#About{
+    .Landing{
+        background-image: url(../public/assets/about/about_bg.png);
+        position: relative;
+        svg.about_home{
+            position: absolute;
+            top: 30%;
+            left: 45%;
+            transform: translate(-50%,-50%);
+            color: #000000;
+            fill:black;
+            z-index: 1;
         }
     }
 }

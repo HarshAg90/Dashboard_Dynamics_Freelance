@@ -87,12 +87,12 @@ export default function Home() {
     dots: true,
     infinite: true,
     speed: 500,
-    adaptiveHeight: false,
-    arrows: false,
+    arrows: true,
     autoplay: true,
     autoplaySpeed: 2500,
     slidesToShow: 2,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    pauseOnDotsHover: true
   };
 
 
@@ -569,7 +569,8 @@ export default function Home() {
             <rect width="13" height="13" fill="black" />
           </svg>
         </div>
-        <div className="parteners_li">
+        <div className="parteners_li"> 
+        <div className="lft"/>
         <Slider {...settings} className='carouselKaItem'>
           <img src="../assets/Home/partner_1.png" alt="" />
           <img src="../assets/Home/partner_2.png" alt="" />
@@ -577,6 +578,7 @@ export default function Home() {
           <img src="../assets/Home/partner_4.png" alt="" />
           <img src="../assets/Home/partner_5.png" alt="" />
         </Slider>          
+        <div className="rght"/>
         </div>
         <div className="bottom_devide">
           <svg

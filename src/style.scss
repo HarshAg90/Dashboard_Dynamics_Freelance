@@ -460,19 +460,31 @@
             }
         }
         .parteners_li{
+            overflow: visible;
             display: flex;
             justify-content: center;
             align-items: center;
             img{
-                height: 200px;
-                width: 50px;
+                height: 100%;
+                width: 100%;
                 margin: 20px;
                 padding: 20px;
             }
             .carouselKaItem{
+                overflow: visible;
                 width: 50vw;
                 height: 30vh;
-                overflow: hidden;
+                .slick-dots{
+                    // overflow: visible;
+                }
+            }
+
+            .lft, .rght{
+                width: 25vw;
+                height: 30vh;
+                background-color: #b0b3b5;
+                ;
+                // color: #525050;
             }
         }
         .bottom_devide{
@@ -1744,11 +1756,8 @@
     }
 
     .teamMembers{
-        height: 250vh;
+        height: 280vh;
         .subHeading{
-
-            /* Our user base is omnidirectional */
-
                 width: 15vw;
                 height: auto;
 
@@ -1772,19 +1781,350 @@
 
         .teamGrid{
             margin-top: 10vh;
+            overflow: visible;
             .grid{
                 width: 100vw;
+                overflow: visible;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 gap: 2vw;
+                
                 img{
                     width: 30vw;
+                }
+                .member{
+                    overflow: visible;
+                    display: flex;
+                    flex-direction: column;
+                    h1{
+                        font-family: 'Artifakt Element';
+                        font-size: 1.1rem;
+                        width: 25vw;
+                        justify-self: flex-end;
+                        align-self: flex-end;
+                        text-align: justify;
+                        margin-right: 2vw;
+                        min-height: 18vh;
+                    }
                 }
             }
 
             .scnd, .thd{
-                margin-top: 25vh;
+                margin-top: 15vh;
+            }
+        }
+    }
+
+    .partners{
+        height: 80vh;
+        .heading{
+            width: 35vw;
+            height: auto;
+
+            font-family: 'Artifakt Element';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 28px;
+            // line-height: 31px;
+            text-align: center;
+
+            color: #000000;
+            border: 2px solid #8E8787;
+            border-radius: 5px;
+
+            margin-top: 10vh;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-left: 50vw;
+        }
+
+
+
+        .fstLine{
+            height: 5vh;
+            margin-top: 15vh;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            hr{
+                height:3px;
+                width:70%;
+                border: none; /* Removes the default border */
+                border-top: 3px solid #000000; /* Sets the top border to a solid line */
+            }
+            .sqr{
+                height: 14px;
+                width: 13px;
+                background-color: #000000;
+            }
+        }
+
+            .carousel{
+                overflow: visible;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    height: 100%;
+                    width: 100%;
+                    margin: 20px;
+                    padding: 20px;
+                }
+                .carouselKaItem{
+                    overflow: visible;
+                    width: 50vw;
+                    height: 30vh;
+                    .slick-dots{
+                        // overflow: visible;
+                    }
+                }
+
+    
+                .lft, .rght{
+                    width: 25vw;
+                    height: 30vh;
+                    background-color: #b0b3b5;
+                }
+            }
+    
+
+        .lstLine{
+            height: 5vh;
+            margin-top: 5vh;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            hr{
+                height:3px;
+                width:70%;
+                border: none; /* Removes the default border */
+                border-top: 3px solid #000000; /* Sets the top border to a solid line */
+            }
+            .sqr{
+                height: 14px;
+                width: 13px;
+                background-color: #000000;
+            }
+        }
+    }
+
+    .journey {
+        height: 290vh;
+        .cols{
+            display: flex;
+            margin-top: 20vh;
+            height: 240vh;
+
+            svg{
+                position: absolute;
+                right: 0;
+                margin-top: 35vh;
+            }
+
+            .right, .left{
+                height: 240vh;
+                width: 150vw;
+                display: flex;
+                flex-direction: column;
+            }
+
+            
+
+            .right{
+                .scndAchivement{
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    margin-top: 60vh;
+                    .achieve{
+                        position: absolute;
+                        width: 30vw;
+                        margin-left: 13vw;
+                        margin-bottom: 10vh;
+                    }
+                }
+                .thdAchivement{
+                    position: relative;
+                    width: 30vw;
+                    margin-top: 5vh;
+                    margin-left: 13vw;
+                }
+                .sxthAchivement{
+                    position: relative;
+                    width: 30vw;
+                    align-self: flex-end;
+                    margin-top: 7vh;
+                    margin-right: 4vw;
+                }
+            }
+
+            .left{
+                .fstAchivement{
+                    width: 20vw;
+                    margin-top: 5vh;
+                    margin-left: 13vw;
+                }
+
+                .frthAchivement{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    .thdBox{
+                        position: relative;
+                        width: 40vw;
+                        margin-top: 15vh;
+                    }
+                    .achieve{
+                        position: absolute;
+                        width: 27vw;
+                        margin-left: 12vw;
+                        // margin-bottom: 10vh;
+                    }
+                }
+
+                .fthAchivement{
+                    position: relative;
+                    width: 20vw;
+                    align-self: flex-end;
+                    margin-top: 5vh;
+                    margin-left: 15vw;
+                }
+
+                
+            }
+        }
+
+        .downHead{
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start ;
+            h1{
+                width: 45vw;
+                height: auto;
+
+                font-family: 'Artifakt Element';
+                font-style: normal;
+                font-weight: 900;
+                font-size: 28px;
+                text-align: center;
+
+                color: #000000;
+                border: 2px solid #8E8787;
+                border-radius: 5px;
+
+                margin-top: 10vh;
+                padding-top: 10px;
+                padding-bottom: 10px;
+
+                span{
+                    padding-left: 1vw;
+                    font-weight: 400;
+                }
+
+            }
+        }
+
+
+
+    }
+}
+
+#EV_Manufacturer{
+    #EV_manuLanding{
+        .landing{
+            background-image: url(../public/assets/EV_manufacturer/landing.png);
+            text-align: center;
+            h1{
+                text-align: left;
+                // line-height: 40px;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                margin-left: 10vw;
+                margin-top: 55vh;
+                background-color: #000000;
+
+            }
+        }
+    }   
+
+    .hero{
+        background-image: url(../public/assets/EV_manufacturer/scndBg.png);
+        text-align: center;
+        height: 100vh;
+
+        .col{
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 3vh;
+            // gap: 5vh;
+
+            img{
+                z-index: 1;
+                margin-top: 15vh;
+                width: 50vw;
+            }
+
+            .downHead{
+                margin-top: -4vh;
+                font-weight: 600;
+                min-width: 30vw;
+                font-family: 'Artifakt Element';
+                font-size: 1.4rem;
+                letter-spacing: 3px;
+            }
+
+            h2{
+                font-family: 'Artifakt Element';
+                font-size: 1.1rem;
+                font-weight: 500;
+            }
+        }
+
+        svg{
+            z-index: 0;
+            position: absolute;
+            margin-left: 23vw;
+            margin-top: 5vh;
+        }
+    }
+
+    .scndPg{
+        height: auto;
+        .container{
+            margin-top: 10vh;
+            height: auto;
+            display: flex;
+
+            img{
+                width: 30vw;
+            }
+
+            .content{
+                display: flex;
+                flex-direction: column;
+                width: 63vw;
+                margin-left: 2vw;
+                // margin-top: 5vh;
+                gap: 10vh;
+                justify-content: center;
+
+                .head{
+                    font-family: 'Artifakt Element';
+                    font-size: 1.1rem;
+                    font-weight: 600;
+                }
+
+                .downHead{
+                    font-family: 'Artifakt Element';
+                    font-size: 1.1rem;
+                    font-weight: 500;
+                }
             }
         }
     }

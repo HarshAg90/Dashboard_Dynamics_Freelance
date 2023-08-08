@@ -32,7 +32,7 @@ function App() {
         <Route exact path="/Fleets" element={<Fleets />} />
         <Route path="/Blogs" element={<Blogs />} />
         <Route path="/Ev_users" element={<EV_users />} />
-        <Route exact path="/ev-manufacturer" element={<EV_Manufacturer />} />
+        <Route exact path="/ev_manufacturer" element={<EV_Manufacturer />} />
         <Route exact path="/team" element={<Team />} />
         
       </Routes>

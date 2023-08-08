@@ -11,8 +11,13 @@ export default function Nav() {
 
   /** this onUpdate function will be called in the `scrollY.onChange` callback **/
   function update() {
+    // if(scrollY?.current <= 200) {
+    //   backgroundColor = "blue";
+    //   setHidden(false)
+    // }
     if (scrollY?.current < scrollY?.prev) {
       setHidden(false);
+      // backgroundColor = "white";
     } else if (scrollY?.current > 100 && scrollY?.current > scrollY?.prev) {
       setHidden(true);
     }
@@ -31,7 +36,7 @@ export default function Nav() {
   };
 
   // Calculate the background color based on scrollY?.current value
-const backgroundColor = scrollY?.current >= 500 && "";
+const backgroundColor = scrollY?.current >= 500 && "white";
 
 // Use the calculated backgroundColor in the variants
 variants.visible = { ...variants.visible, background: backgroundColor };

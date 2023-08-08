@@ -1,14 +1,31 @@
-import React from 'react'
+import React, { useRef } from 'react';
+import {motion, useScroll, useTransform} from "framer-motion";
+
 
 export default function Blogs() {
+
+    const contentRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: contentRef,
+    offset: ["start end", "end start"], 
+  });
+
+
+  const leftY = useTransform(scrollYProgress, [0, 0.7], ["15%", "0%"]);
+  const leftOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 1]);
+  const rightY = useTransform(scrollYProgress, [0, 0.3, 0.7], ["45%", "20%", "0%"]);
+  const rightOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 1]);
+
+
+
   return (
-    <div id='Blogs'>
+    <div id='Blogs'> 
         <div className="top">
             <h1>FUTERISTIC WIRELESS TECHNOLOGY TO SUPPORT ECO-CONCIOUS TRANSPORTATION.</h1>
             <img className='Home_pg_img' src="../assets/blog/blog_pg_img.png" alt="" />
             <div className='home_pg_div' />
         </div>
-        <div className="content">
+        <div ref={contentRef} className="content">
             <div className="bg">
                 {/* <div className="some"></div> */}
                 <svg width="246" height="1819" viewBox="0 0 246 1819" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -21,7 +38,9 @@ export default function Blogs() {
                     </defs>
                 </svg>  
             </div>
-            <div className="left">
+            <motion.div className="left"
+                style={{y: leftY, scale: leftOpacity}}
+            >
                 <h1>The Future of Autonomous Electric Vehicles with Wireless Charging</h1>
                 <br />
                 <hr />
@@ -34,8 +53,10 @@ export default function Blogs() {
                         The integration of autonomous driving and wireless charging supports sustainability goals. A-EVs powered by clean electricity reduce emissions. Additionally, wireless charging infrastructure can use renewable energy sources, further lowering the carbon footprint.</p>
                 <img src="../assets/blog/blog_pg_img_2.png" alt="" />
                 <p>The combination of autonomous electric vehicles and wireless charging holds immense potential for transportation. These innovations offer simplified charging, enhanced user experiences, continuous charging, and efficient infrastructure use. As A-EVs become more prevalent, wireless charging will create a sustainable and convenient ecosystem for electric transportation. With ongoing advancements and investments, a fully autonomous electric vehicle fleet with wireless charging capabilities is on the horizon, bringing us closer to a greener and more efficient transportation future</p>
-            </div>
-            <div className="right">
+            </motion.div>
+            <motion.div className="right"
+                style={{y: rightY, scale: rightOpacity}}
+            >
                 <div className="tile">
                     <img src="../assets/blog/blog_pg_img_3.png" alt="" />
                     <h1>The Rise of Electric Vehicles: Navigating the Road to an Electric Future</h1>
@@ -56,7 +77,7 @@ export default function Blogs() {
                         <br /> Reduced Carbon Footprint: Dash Dynamic's wireless charging simplifies EV construction and maintenance, leading to a reduced carbon footprint. This technology eliminates clutter and utilizes smaller batteries, minimizing waste and contributing to a more sustainable future...read more</p>
                     <button>Read more</button>
                 </div>
-            </div>
+            </motion.div>
         </div>
     </div>
   )

@@ -10,7 +10,7 @@ const carLeftVariant = {
     visible: {
         y: "250%",
         rotate: [0, 0],
-        opacity: [1, 1, 0]
+        opacity: [1, 1, 1, 1, 1, 0]
     }
 }
 

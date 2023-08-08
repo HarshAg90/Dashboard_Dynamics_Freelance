@@ -87,7 +87,7 @@ export default function Contacts() {
                 fill="black"
               />
             </svg>
-            <p>robin.singh@gmail.com </p>
+            <p>robin.singh@gmail.com |</p>
             <p>shashank.sawai@gmail.com</p>
           </div>
           <div className="c">
@@ -105,7 +105,7 @@ export default function Contacts() {
             </svg>
 
             <p> +91-8737237231</p>
-            <p> +91-9560589782</p>
+            <p> | +91-9560589782</p>
           </div>
         </div>
         <form className="form">

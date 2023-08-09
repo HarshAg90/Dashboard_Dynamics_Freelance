@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import {motion, useScroll, useTransform} from "framer-motion";
 import TechnologyLanding from '../components/Technology_Landing';
+import CarCanvas from '../components/CarCanvas';
 
 
 export default function Technology() {
@@ -38,15 +39,16 @@ export default function Technology() {
 
    {/* PRODUCT PAGE */}
     <div className='product'>
-
-    <div className='productHead'>
-        <hr/>
-        <div className='sqr'/>
-        <h1 className='heading'>Product</h1>        
-        </div>
+      <div className='productHead'>
+      <hr/>
+      <div className='sqr'/>
+      <h1 className='heading'>Product</h1>        
+      </div>
 
         {/* <ComputersCanvas/> */}
+        <CarCanvas/>
     </div>
+    
 
   
     {/* WORKING */}

@@ -87,12 +87,11 @@ export default function Home() {
     dots: true,
     infinite: true,
     speed: 500,
-    arrows: true,
+    arrows: false,
     autoplay: true,
     autoplaySpeed: 2500,
-    slidesToShow: 2,
+    slidesToShow: 3,
     slidesToScroll: 1,
-    pauseOnDotsHover: true
   };
 
 
@@ -569,17 +568,46 @@ export default function Home() {
             <rect width="13" height="13" fill="black" />
           </svg>
         </div>
-        <div className="parteners_li"> 
+        <div className="container">
         <div className="lft"/>
+        <div className="parteners_li"> 
         <Slider {...settings} className='carouselKaItem'>
-          <img src="../assets/Home/partner_1.png" alt="" />
-          <img src="../assets/Home/partner_2.png" alt="" />
-          <img src="../assets/Home/partner_3.png" alt="" />
-          <img src="../assets/Home/partner_4.png" alt="" />
-          <img src="../assets/Home/partner_5.png" alt="" />
+          <motion.img src="../assets/Home/partner_1.png" alt="" 
+            whileHover={{scale: 1.15}}
+            transition={{
+              type: "spring",
+              stiffness: 60,
+            }}
+          />
+          <motion.img src="../assets/Home/partner_2.png" alt=""
+          whileHover={{scale: 1.15}}
+          transition={{
+            type: "spring",
+            stiffness: 60,
+          }}/>
+          <motion.img src="../assets/Home/partner_3.png" alt=""
+          whileHover={{scale: 1.15}}
+          transition={{
+            type: "spring",
+            stiffness: 60,
+          }}/>
+          <motion.img src="../assets/Home/partner_4.png" alt=""
+          whileHover={{scale: 1.15}}
+          transition={{
+            type: "spring",
+            stiffness: 60,
+          }}/>
+          <motion.img src="../assets/Home/partner_5.png" alt=""
+          whileHover={{scale: 1.15}}
+          transition={{
+            type: "spring",
+            stiffness: 60,
+          }}/>
         </Slider>          
+        </div>
         <div className="rght"/>
         </div>
+        
         <div className="bottom_devide">
           <svg
             width="13"

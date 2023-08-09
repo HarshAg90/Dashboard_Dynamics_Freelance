@@ -24,19 +24,33 @@ function App() {
       <ScrollToTop /> {/* Add the ScrollToTop component here */}
       <Nav />
       <Routes>
+        {/* PENDING SPEEDOMETER */}
         <Route path="/" element={<Home />} />
+        {/* PENDING PAGE */}
         <Route path="/Technology" element={<Technology />} />
+        {/* /////// */}
         <Route path="/Products" element={<Product />} />
+        {/* DONE */}
         <Route path="/Use_case" element={<UseCase />} />
+        {/* DONE */}
         <Route path="/Contacts" element={<Contacts />} />
+        {/* PENDING */}
         <Route path="/News_room" element={<NewsRoom />} />
+        {/* DONE */}
         <Route path="/Careers" element={<Careers />} />
+        {/* TO BE FIXED */}
         <Route path="/Charge" element={<Charge />} />
+        {/* TO BE FIX */}
         <Route exact path="/Fleets" element={<Fleets />} />
+        {/* DONE */}
         <Route path="/Blogs" element={<Blogs />} />
+        {/* DONE */}
         <Route path="/Ev_users" element={<EV_users />} />
+        {/* PENDING */}
         <Route path="/about" element={<About />} />
+        {/* DONE */}
         <Route exact path="/ev_manufacturer" element={<EV_Manufacturer />} />
+        {/* TO BE FIX */}
         <Route exact path="/team" element={<Team />} />
         
       </Routes>

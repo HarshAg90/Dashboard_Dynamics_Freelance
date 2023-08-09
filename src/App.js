@@ -17,6 +17,7 @@ import EV_Manufacturer from "./pages/EV_Manufacturer";
 import Team from "./pages/Team";
 import Careers from "./pages/Careers";
 import About from "./pages/About";
+import Market from "./pages/Market";
 
 function App() {
   return (
@@ -38,7 +39,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route exact path="/ev_manufacturer" element={<EV_Manufacturer />} />
         <Route exact path="/team" element={<Team />} />
-        
+        <Route exact path="/market" element={<Market />} />
       </Routes>
       <Footer />
     </BrowserRouter>

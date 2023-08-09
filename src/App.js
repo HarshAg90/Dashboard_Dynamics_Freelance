@@ -5,7 +5,7 @@ import Charge from "./components/Charge";
 import { BrowserRouter as Router,BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Technology from "./pages/Technology";
-import Product from "./pages/Product";
+import Products from "./pages/Products";
 import UseCase from "./pages/Use_case";
 import Contacts from "./pages/Contacts";
 import NewsRoom from "./pages/News_room";
@@ -26,7 +26,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Technology" element={<Technology />} />
-        <Route path="/Products" element={<Product />} />
+        <Route path="/Products" element={<Products />} />
         <Route path="/Use_case" element={<UseCase />} />
         <Route path="/Contacts" element={<Contacts />} />
         <Route path="/News_room" element={<NewsRoom />} />

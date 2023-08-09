@@ -5,7 +5,7 @@ import Charge from "./components/Charge";
 import { BrowserRouter as Router,BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Technology from "./pages/Technology";
-import Product from "./pages/Product";
+import Products from "./pages/Products";
 import UseCase from "./pages/Use_case";
 import Contacts from "./pages/Contacts";
 import NewsRoom from "./pages/News_room";
@@ -17,6 +17,7 @@ import EV_Manufacturer from "./pages/EV_Manufacturer";
 import Team from "./pages/Team";
 import Careers from "./pages/Careers";
 import About from "./pages/About";
+import Market from "./pages/Market";
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function App() {
         {/* PENDING PAGE */}
         <Route path="/Technology" element={<Technology />} />
         {/* /////// */}
-        <Route path="/Products" element={<Product />} />
+        <Route path="/Products" element={<Products />} />
         {/* DONE */}
         <Route path="/Use_case" element={<UseCase />} />
         {/* DONE */}
@@ -52,7 +53,7 @@ function App() {
         <Route exact path="/ev_manufacturer" element={<EV_Manufacturer />} />
         {/* TO BE FIX */}
         <Route exact path="/team" element={<Team />} />
-        
+        <Route exact path="/market" element={<Market />} />
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -356,6 +356,10 @@ export default function About() {
           />
         </svg>
       </Landing>
+      <div className="first_div">
+        <div className="gradient"></div>
+        
+      </div>
     </div>
   );
 }

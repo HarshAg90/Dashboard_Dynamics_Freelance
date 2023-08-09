@@ -366,7 +366,8 @@
     .features{
         font-family: 'artifakt',sans-serif;
         .title{
-            margin: 30px 0px;
+            margin-bottom: 20vh;
+            // margin: 20vh 0px;
             font-family: 'artifakt',sans-serif;
         }
         .content{
@@ -396,54 +397,60 @@
             }
         }
     }
-    .grid{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100vh;
-        .grid1{
-            width: 70vw;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            .ti.text{
 
-                display: flex;
-                flex-direction: column;
-                justify-content: end;
-                align-items: start;
-                h1{
-                    padding: 20px;
-                    font-size: 1.2rem;
-                    font-weight: 500;
+    .use_case{
+        margin-top: 20vh;
+
+        .grid{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            .grid1{
+                width: 70vw;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                .ti.text{
+    
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: end;
+                    align-items: start;
+                    h1{
+                        padding: 20px;
+                        font-size: 1.2rem;
+                        font-weight: 500;
+                    }
+                    p{
+                        padding: 20px;
+                        font-weight: 300;
+                    }
                 }
-                p{
-                    padding: 20px;
-                    font-weight: 300;
+                .l{
+                    height: 20px;
+                    width: 100%;
                 }
-            }
-            .l{
-                height: 20px;
-                width: 100%;
-            }
-            .l.l2{
-                background: linear-gradient(269.99deg, #EB5136 17.96%, #B72C29 99.99%);
-            }
-            .l.l3{
-                background: linear-gradient(90.02deg, #C6E4E2 15.65%, #92C4C4 100.92%);
-            }
-            .ti.text.t1{
-                background: #DEDEDE;
-            }
-            .ti.text.t2{
-                color: white;
-                background: #B72C29;
-            }
-            .ti.text.t3{
-                background: #C3E0DE;
+                .l.l2{
+                    background: linear-gradient(269.99deg, #EB5136 17.96%, #B72C29 99.99%);
+                }
+                .l.l3{
+                    background: linear-gradient(90.02deg, #C6E4E2 15.65%, #92C4C4 100.92%);
+                }
+                .ti.text.t1{
+                    background: #DEDEDE;
+                }
+                .ti.text.t2{
+                    color: white;
+                    background: #B72C29;
+                }
+                .ti.text.t3{
+                    background: #C3E0DE;
+                }
             }
         }
     }
+    
     .partners{
         .top_devide{
             width: 100%;
@@ -748,9 +755,11 @@
 }
 
 #Footer{
+    font-family: 'artifakt',sans-serif;
     height: 900px;
     position: relative;
     .data{
+        font-family: 'artifakt',sans-serif;
         height: inherit;
         display: flex;
         width: 100%;
@@ -759,6 +768,7 @@
         align-items: center;
         background: transparent;
         .form{
+            font-family: 'artifakt',sans-serif;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -767,11 +777,13 @@
                 margin: 20px;
             }
             form{
+                font-family: 'artifakt',sans-serif;
                 border: 1px solid black;
                 border-radius: 10px;
                 padding: 5px;
                 margin: 10px;
                 input{
+                    font-family: 'artifakt',sans-serif;
                     border: none;
                     outline: none;
                     background-color: transparent;
@@ -779,6 +791,7 @@
                     font-size: 1.1rem;
                 }
                 button{
+                    font-family: 'artifakt',sans-serif;
                     border: none;
                     outline: none;
                     padding: 5px 10px;
@@ -795,15 +808,18 @@
             }
         }
         .contacts{
+            font-family: 'artifakt',sans-serif;
             width: 100%;
             padding: 20px 0px;
             display: flex;
             justify-content: space-evenly;
             align-items: center;
             .logo{
+                font-family: 'artifakt',sans-serif;
                 width: 350px;
             }
             .contact{
+                font-family: 'artifakt',sans-serif;
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
                 gap: 1rem;
@@ -814,6 +830,7 @@
                     }
                   }
                 a{
+                    font-family: 'artifakt',sans-serif;
                     font-size: 1.2rem;
                     display: block;
                     text-decoration: none;
@@ -824,6 +841,7 @@
                     color: black;
                 }
                 .socials{
+                    font-family: 'artifakt',sans-serif;
                     display: flex;
                     justify-content: space-between;
                     width: 200px;
@@ -838,6 +856,7 @@
             align-items: center;
             .tnc_1{
                 a{
+                    font-family: 'artifakt',sans-serif;
                     display: block;
                     margin: 10px;
                     color: black;
@@ -846,11 +865,14 @@
                 }
             }
             .copy{
+                font-family: 'artifakt',sans-serif;
                 width: 60vw;
                 h3{
+                    font-family: 'artifakt',sans-serif;
                     font-weight: 400;
                     margin: 10px 0px;
                     span{
+                        font-family: 'artifakt',sans-serif;
                         margin-left: auto;
                     }
                 }
@@ -2075,7 +2097,7 @@
                 padding-top: 10px;
                 padding-bottom: 10px;
 
-                span{
+                a{
                     padding-left: 1vw;
                     font-weight: 400;
                 }

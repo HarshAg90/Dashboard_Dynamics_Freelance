@@ -51,8 +51,9 @@ function App() {
         <Route path="/about" element={<About />} />
         {/* DONE */}
         <Route exact path="/ev_manufacturer" element={<EV_Manufacturer />} />
-        {/* TO BE FIX */}
+        {/* DONE */}
         <Route exact path="/team" element={<Team />} />
+        {/* SCOOTY PENDING */}
         <Route exact path="/market" element={<Market />} />
       </Routes>
       <Footer />

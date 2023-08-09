@@ -66,7 +66,8 @@ export default function UseCase() {
             type: "spring",
             stiffness: 60,
           }}/>
-        <motion.img src="../assets/UseCase/grid3.png" className='g3'
+          <a href="/ev_manufacturer">
+          <motion.img src="../assets/UseCase/grid3.png" className='g3'
         whileHover={{
             scale: 1.1
           }}
@@ -77,6 +78,8 @@ export default function UseCase() {
             type: "spring",
             stiffness: 60,
           }}/>
+          </a>
+        
         <motion.img src="../assets/UseCase/grid4.png" className='g4'
             whileHover={{
               scale: 1.1
@@ -89,6 +92,7 @@ export default function UseCase() {
               stiffness: 60,
             }}
         />
+        <a href="/Charge">
         <motion.img src="../assets/UseCase/grid5.png" className='g5'
         whileHover={{
           scale: 1.1
@@ -100,6 +104,8 @@ export default function UseCase() {
           type: "spring",
           stiffness: 60,
         }}/>
+        </a>
+        <a href="/Fleets">
         <motion.img src="../assets/UseCase/grid6.png" className='g6'whileHover={{
               scale: 1.1
             }}
@@ -110,6 +116,8 @@ export default function UseCase() {
               type: "spring",
               stiffness: 60,
             }}/>
+        </a>
+        
         
       </div>
 

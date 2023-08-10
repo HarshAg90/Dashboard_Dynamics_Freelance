@@ -44,9 +44,10 @@ export default function Technology() {
       <div className='sqr'/>
       <h1 className='heading'>Product</h1>        
       </div>
+    </div> 
 
-        {/* <ComputersCanvas/> */}
-        <CarCanvas/>
+    <div className="carCanvas">
+    <CarCanvas/>
     </div>
     
 

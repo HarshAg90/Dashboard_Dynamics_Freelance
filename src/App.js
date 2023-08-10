@@ -49,7 +49,7 @@ function App() {
         <Route path="/Ev_users" element={<EV_users />} />
         {/* PENDING */}
         <Route path="/about" element={<About />} />
-        {/* DONE */}
+        {/* GRADIENT PENDING */}
         <Route exact path="/ev_manufacturer" element={<EV_Manufacturer />} />
         {/* DONE */}
         <Route exact path="/team" element={<Team />} />

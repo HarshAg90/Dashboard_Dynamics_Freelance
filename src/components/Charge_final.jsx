@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import {motion, useScroll, useTransform} from "framer-motion";
-import Sticky from 'react-stickynode';
+// import Sticky from 'react-stickynode';
+import Sticky from 'react-sticky-el';
 
 
 
@@ -104,7 +105,7 @@ export default function Charge_final (){
 
     </motion.div>
     </Sticky>
-        </motion.div>
+      </motion.div>
     
     
       

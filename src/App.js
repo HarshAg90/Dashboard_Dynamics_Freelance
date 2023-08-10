@@ -29,7 +29,7 @@ function App() {
         <Route path="/" element={<Home />} />
         {/* PENDING PAGE */}
         <Route path="/Technology" element={<Technology />} />
-        {/* /////// */}
+        {/* DONE */}
         <Route path="/Products" element={<Products />} />
         {/* DONE */}
         <Route path="/Use_case" element={<UseCase />} />

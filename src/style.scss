@@ -625,9 +625,6 @@
         }
 
 
-
-
-
           .car {
             width: 40vw;
             align-self: center;
@@ -663,7 +660,7 @@
           .line3 {
             width: 600px;
             top: 58vh + 28vh;
-            left: 50vw;
+            left: 40vw;
           }
 
           .initText1{
@@ -679,7 +676,7 @@
           }
 
           .initText3{
-            left: 90vw;
+            left: 80vw;
             top: 64vh + 28vh;
           }
 
@@ -894,8 +891,25 @@
 #Technology{
     #TechLanding{
         .landing{
-            background-image: url(../public/assets/Technology/LandingTeml.png);
+            background-image: url(../public/assets/Technology/TechBg.png);
             text-align: center;
+            // background: linear-gradient(to right, #ffffff 0%, #ffffff 5%, #0B132A 5%, #0B132A 100%);
+
+            .cars{
+                height: 100vh;
+                display: flex;
+                    justify-content: center;
+                    align-items: center;
+                .car1{
+                    width: 50vw;
+                }
+                .car2{
+                    margin-bottom: 20vh;
+                    width: 70vw;
+                }
+            }
+            
+            
             h1{
                 left: 0;
                 right: 0;
@@ -904,7 +918,7 @@
                 line-height: 40px;
 
                 background: #BC0000;
-                background: linear-gradient(to right, #BC0000 0%, #BC0000 50%, #FFFFFF 51%, #FFF 100%);
+                // background: linear-gradient(to right, #BC0000 0%, #BC0000 50%, #FFFFFF 51%, #FFF 100%);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
 

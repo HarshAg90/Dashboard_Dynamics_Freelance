@@ -6,8 +6,16 @@ export default function Market() {
   return (
     <div id='Market'>
       <Landing>
-        <h1>REVOLUTIONIZE INFRUSTRUCTURE FOR SEAMLESS ELECTRIC MOBILITY</h1>
-        <img src="../assets/market/market_home_2.png" alt="" />
+        <h1>REVOLUTIONIZED INFRUSTRUCTURE FOR SEAMLESS ELECTRIC MOBILITY</h1>
+        <motion.img src="../assets/market/market_home_2.png"
+          initial={{opacity: 0}}
+          animate={{opacity: 1}}
+          transition={{delay: 0.7, duration: 0.5}}
+        />
+        <motion.img className="blocks" src="../assets/market/landingBlocks.png"
+        initial={{opacity: 1}}
+        animate={{opacity: 0}}
+        transition={{delay: 0.5, duration: 2}}/>
       </Landing>
       <div className="body">
         <div className="div1">

@@ -2624,18 +2624,26 @@
             position: absolute;
             top: 20%;
             left: 10%;
-            width: 800px;
+            width: 70vw;
             color: rgb(0, 0, 0);
-            font-size: 48px;
+            font-size: 3rem;
         }
         img{
             position: absolute;
-            bottom: 5%;
+            bottom: 0%;
             right: 10%;
-            height:467px;
+            height:60%;
+        }
+
+        .blocks{
+            right: 10%;
+            height: 50%;
+            width: 40%;
         }
         overflow: visible;
     }
+
+
     .body{
         width: 100vw;
         min-height: 100vh;

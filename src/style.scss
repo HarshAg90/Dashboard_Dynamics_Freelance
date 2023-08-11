@@ -590,6 +590,7 @@
 
 
         .heading{
+            overflow: visible;
             width: 100%;
             text-align: center;
             align-items: center;
@@ -605,6 +606,7 @@
 
         }
         .subHeading{
+            overflow: visible;
             width: 100%;
             text-align: center;
             font-family: "artifakt", sans-serif;
@@ -614,92 +616,35 @@
             font-size: 1.2rem;
         }
 
-
-          .car {
-            width: 40vw;
+        .cars{
+            overflow: visible;
             align-self: center;
-            margin: auto;
-            margin-top: 15vh;
-          }
+            // overflow: hidden;
+            display: flex;
+            height: 72vh;
+            width: fit-content;
+            align-items: center;
+            .car {
+                width: 35vw;
+              }
+    
+              .charger {
+                width: 13vw;
+                // margin-left: 18vw;
+              }
 
-          .charger {
-            width: 15vw;
-            position: absolute;
-            margin-top: 45vh;
-            margin-left: 18vw;
-          }
+              .initLine{
+                width: 40vw;
+                margin-left: -22vw;
+              }
 
-          .line{
-            position: absolute;
-            font-size: 1.2rem;
-            font-family: "artifakt", sans-serif;
-          }
-
-          .line1 {
-            right: 20vw;
-            width: 350px;
-            top: 55px + 250px;
-          }
-
-          .line2 {
-            width: 100px;
-            top: 68vh;
-            right: 23vw;
-          }
-
-          .line3 {
-            width: 600px;
-            top: 58vh + 28vh;
-            left: 40vw;
-          }
-
-          .initText1{
-            left: 82vw;
-            top: 40px + 250px;
-          }
-
-          .initText2{
-            left: 79vw;
-            top: 480px;
-            text-align: left;
-
-          }
-
-          .initText3{
-            left: 80vw;
-            top: 64vh + 28vh;
-          }
-
-          .finalLine1 {
-            top: 23vh + 20vh; /* Place the first line 12% from the top */
-            left: 22vw; /* Place the first line to the right of the car */
-          }
-
-          .finalLine2 {
-            top: 50vh + 15vh; /* Place the second line 35% from the top */
-            left: 28vw; /* Place the second line to the right of the car */
-          }
-
-          .finalLine3 {
-            top: 80vh + 10vh;
-            left: 30vw; /* Place the third line to the right of the car */
-          }
-
-          .finalText1{
-            left: 56vw;
-            top: 19vh + 20vh;
-          }
-
-          .finalText2{
-            left: 57vw;
-            top: 45vh + 16vh;
-          }
-
-          .finalText3{
-            left: 59vw;
-            top: 72vh + 15vh;
-          }
-
+              .finalLine{
+                position: absolute;
+                width: 50vw;
+                left: 23vw;
+              }
+    
+        }
     }
     #Charge_about{
         overflow: hidden;

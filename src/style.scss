@@ -467,23 +467,17 @@
         }
 
         .container{
+            width: 100vw;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             .lft, .rght{
-                width: 15vw;
+                min-width: 10vw;
                 height: 40vh;
                 background-color: #F9F9F9;
-                ;
-                // color: #525050;
-            }
-
-            .right{
-                align-self: flex-end;
-                justify-self: flex-end;
             }
             .parteners_li{
-                max-width: fit-content;
+                min-width: 80vw;
                 overflow: visible;
                 display: flex;
                 justify-content: center;
@@ -504,11 +498,7 @@
                     }
                 }
 
-        }
-
-       
-
-            
+            }  
         }
         .bottom_devide{
             width: 100%;
@@ -1015,7 +1005,7 @@
             overflow: hidden;
             display: grid;
             grid-template-columns: 49vw 2vw 49vw;
-            grid-template-rows:  repeat(1, 250vh);
+            grid-template-rows:  repeat(1, 240vh);
             justify-items: center;
             gap: 5px;
 
@@ -1046,9 +1036,17 @@
                 flex-direction: column;
                 gap: 18vh;
                 // max
+
+                .svgs{
+                    position: absolute;
+                    display: flex;
+                     flex-direction: column;
+                     gap: 20vh;
+                }
             }
 
             .thdCol{
+                margin-top: 5vh;
                 display: flex;
                 flex-direction: column;
                 gap: 5vh;
@@ -1083,17 +1081,37 @@
 
             }
 
-            // .scnd.txt{
-            //     margin-top: 20vh;
-            //     min-height: 30vh;
-            // }
-            // .scnd.illustration{
-            //     top: 0;
-            //     grid-column: 3 / span 1;
-            // }
 
 
+        }
 
+        .btn{
+            width: 100%;
+           display: flex;
+           justify-content: end;
+           button{
+            margin: 20px;
+            padding: 10px 20px;
+            border: none;
+            border: 1px solid black;
+            background-color: transparent;
+            width: auto;
+            display: flex;
+            justify-content: space-between;
+            border-radius: 10px;
+            transition: 200ms ease;
+            span{
+                font-family: "artifakt",sans-serif;
+                font-size: 1.1rem;
+                font-weight: 600;
+            }
+            &:hover{
+                background-color: black;
+                color: white;
+                box-shadow: 0 0 10px grey;
+                transition: 200ms ease;
+            }
+           }
         }
     }
 
@@ -1513,15 +1531,16 @@
                 flex-direction: column;
 
                 .car1{
-                    width: 60px;
+                    width: 5rem;
                 }
 
                 .car2{
-                    width: 80px;
+                    width: 6.6rem;
                 }
 
                 .car3{
-                    width: 50px;
+                    z-index: 55;
+                    width: 4.1rem;
                 }
 
                 .carContainer1{
@@ -1939,23 +1958,17 @@
         }
 
         .container{
+            width: 100vw;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             .lft, .rght{
-                width: 15vw;
+                min-width: 10vw;
                 height: 40vh;
                 background-color: #F9F9F9;
-                ;
-                // color: #525050;
-            }
-
-            .right{
-                align-self: flex-end;
-                justify-self: flex-end;
             }
             .parteners_li{
-                max-width: fit-content;
+                min-width: 80vw;
                 overflow: visible;
                 display: flex;
                 justify-content: center;
@@ -1976,11 +1989,7 @@
                     }
                 }
 
-        }
-
-       
-
-            
+            }  
         }
     
 

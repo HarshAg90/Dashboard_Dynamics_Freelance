@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -43,11 +44,11 @@ export default function Footer() {
         <div className="contacts">
           <img className="logo" src="../assets/logo.png" alt="" />
           <div className="contact">
-            <a href="">Careers</a>
-            <a href="">Contact with Us</a>
-            <a href="">Technology</a>
-            <a href="">Blog</a>
-            <a href="">Contact</a>
+            <Link to="/Careers">Careers</Link>
+            <Link to="/">Contact with Us</Link>
+            <Link to="/Technology">Technology</Link>
+            <Link to="/Blogs">Blog</Link>
+            <Link to="/Contacts">Contact</Link>
             <div className="socials">
 
             <a href="">
@@ -104,9 +105,16 @@ export default function Footer() {
           <div className="copy">
             <h3>
               With the objective of simply park and charge, we at Dash Dynamic
-              focus on creating and producing wireless electric vehicle (EV)
-              chargers... <span>EXPLORE →</span>
+              focus on creating 
             </h3>
+            <div>
+
+            <h3>
+              and producing wireless electric vehicle (EV)
+              chargers...
+            </h3>
+            <Link to="/about"><p>EXPLORE →</p></Link>
+            </div>
             <p>&copy; 2023 Dash Dynamic. All Rights Reserved</p>
           </div>
         </div>

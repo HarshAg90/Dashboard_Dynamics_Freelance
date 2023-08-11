@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import { motion,  useScroll } from "framer-motion";
 // import logo from '../../public/assets/logo.png';
+
 export default function Nav() {
 
   /** this hook gets the scroll y-axis **/
@@ -43,8 +44,7 @@ variants.visible = { ...variants.visible, background: backgroundColor };
 
 
   return (
-    <motion.div id='nav'
-    variants={variants}
+    <motion.div id='nav' variants={variants}
       /** it's right here that we match our boolean state with these variant keys **/
       animate={hidden ? "hidden" : "visible"}
       /** I'm also going to add a custom easing curve and duration for the animation **/
@@ -58,9 +58,19 @@ variants.visible = { ...variants.visible, background: backgroundColor };
             <Link to="/about"><li className="nav_elements">About</li></ Link>
             <Link to="/Technology"><li className="nav_elements">Technology</li></ Link>
             <Link to="/Products"><li className="nav_elements">Our Products</li></ Link>
-            <Link to="/Use_case"><li className="nav_elements">Use cases</li></ Link>
+            <Link to="/Use_case"><li className="nav_elements">
+              Use cases
+              {/* Ev user
+              EV Manufacturers
+              Fleets
+              Charge Point Operators */}
+            </li></ Link>
             <Link to="/Contacts"><li className="nav_elements">Contact</li></ Link>
-            <Link to="/News_rooms"><li className="nav_elements">News Room</li></ Link>
+            <Link to="/News_rooms"><li className="nav_elements">
+              News Room
+              {/* news
+              blogs */}
+            </li></ Link>
             <Link to="/Careers"><li className="nav_elements">Career</li></ Link>
         </ul>
     </motion.div>

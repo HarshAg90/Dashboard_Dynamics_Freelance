@@ -6,7 +6,8 @@ export default function About() {
     <div id="About">
       <Landing Id="contact_landing">
         <div className="gradient"></div>
-        <svg className="about_home"
+        <svg
+          className="about_home"
           width="941"
           height="208"
           viewBox="0 0 941 208"
@@ -357,8 +358,189 @@ export default function About() {
         </svg>
       </Landing>
       <div className="first_div">
-        <div className="gradient"></div>
-        
+        <div className="gradient">
+          <h1>
+            About <span>DASH DYNAMIC</span>
+          </h1>
+          <div className="bg_text">
+            <p>Simply Park and Charge</p>
+          </div>
+
+          <img src="../assets/about/about_2.png" alt="" />
+        </div>
+      </div>
+      <div className="div_2">
+        <h1>The Canon moment</h1>
+        <p>
+          Founded by Shashank Sawai and Robin Singh in 2020, Dash Dynamic
+          provides seamless and efficient charging solutions for electric
+          automobiles. To Revolutionize the electric vehicle (EV) industry with
+          our wireless charging technology, Dash Dynamic attempts to make
+          charging accessible and convenient for all. It provides an ideal
+          opportunity for users to charge their vehicles dynamically.
+        </p>
+      </div>
+      <div className="div_3">
+        <h1>We founded Dash with a desire to make EVs more convenient</h1>
+        <div className="img">
+          <img src="../assets/about/about_3.png" alt="" />
+          <p className="p1">
+            With the convenience of mobile app, users can effortlessly start or
+            stop the charging process without having to be near their vehicle
+            every time.
+          </p>
+          <div className="p2">
+            <h1>What we do </h1>
+            <p>
+              Gone are the days of searching for rare charging stations or
+              carrying dedicated equipment. Dash Dynamic has developed a
+              groundbreaking wireless charging technology that enables EVs to
+              charge 30% faster than conventional plugged-in chargers. An
+              agnostic charger allows users to simply find a charging station
+              and park over the charger, eliminating the need for any physical
+              connections.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="div_4">
+        <img src="../assets/about/about_4.png" alt="" />
+
+        <h1>Values</h1>
+        <p>
+          Revolutionize smart mobility
+          <br />
+          <br />
+          Sustainable solutions
+          <br />
+          <br />
+          Connection
+          <br />
+          <br />
+          Dynamic charging
+        </p>
+
+        <svg
+          width="1101"
+          height="177"
+          viewBox="0 0 1101 177"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M10 174L1239 174" stroke="#CD222A" stroke-width="5" />
+          <path d="M10 0L9.99999 177" stroke="#CD222A" stroke-width="5" />
+          <rect width="20" height="18" fill="#CD222A" />
+        </svg>
+      </div>
+      <div className="div_2">
+        <h1>The aim</h1>
+        <p>
+          “Revolutionize smart mobility with sustainable solutions and wireless
+          charging technology, connecting the world in a smarter way.”
+        </p>
+      </div>
+      <div className="div_5">
+        <div className="img">
+          <img src="../assets/about/about_5.png" alt="" />
+          <div className="text">
+            <h1>Vision</h1>
+            <p>
+              We envision a future where roads become energy highways, capable
+              of charging EVs while they are on the move, thereby changing how
+              vehicles stay powered while driving
+            </p>
+          </div>
+        </div>
+        <div className="texts">
+          <p>
+            All electric vehicles could be retrofitted with coils underneath to
+            accommodate dynamic charging. Further, dynamic wireless charging is
+            to be installed on loop routes to facilitate seamless charging of
+            fleets.
+          </p>
+          <p>
+            This will include short sections of the road retrofitted to bury
+            cables beneath the asphalt for wireless power transmission.
+          </p>
+          <p>
+            We are committed to developing such an advanced wireless charging
+            system, deriving energy from renewable sources, so as to make
+            electric transportation accessible and hassle-free.
+          </p>
+        </div>
+      </div>
+      <div className="div_heading">
+        <div className="head">
+        <svg width="704" height="18" viewBox="0 0 704 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M-123 9L702 8.99993" stroke="#CD222A" stroke-width="5"/>
+<rect x="683" width="21" height="18" fill="#CD222A"/>
+</svg>
+
+          <h1>WIRELESS CHARGING NETWORK STATIONS</h1>
+        </div>
+
+        <div className="text">
+          <p>
+            We aim to assist CPOs in establishing an efficient charging
+            infrastructure network by strategically installing charging stations
+            such that the investment be minimal while the revenue generated is
+            substantial.{" "}
+          </p>
+          <p>
+            Our plan is to instate wireless charging in a plug-in charging
+            station. So, the need for management staff could be cut-off while
+            securing a safe and easy-to-handle charging option for customers who
+            wouldn’t want to lay their hands on large manual chargers.
+          </p>
+        </div>
+      </div>
+
+      <div className="div_heading">
+        <div className="head odd">
+          <h1>DRONE TOWERS</h1>
+          <svg width="834" height="18" viewBox="0 0 834 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M898 9L2 9" stroke="#CD222A" stroke-width="5"/>
+<rect width="21" height="18" transform="matrix(-1 0 0 1 21 0)" fill="#CD222A"/>
+</svg>
+
+        </div>
+
+        <div className="text">
+          <p>
+          Wireless charging for drone towers: We foresee a future where drone charging is seamlessly wireless through our advanced charging-enabled drone towers. Retrofitted with our wireless system, drones can efficiently dock, charge and continue operating, resulting in a substantial increase in their range and payload capacity.
+          </p>
+          <p>
+          Strategically positioned drone towers will allow payload-carrying and surveillance drones to recharge effortlessly, extending their operational time without having to return to their base. Through this approach, drones will be capable of functioning efficiently even in remote locations. 
+
+          </p>
+        </div>
+      </div>
+
+      <div className="img_div">
+        <div className="img">
+        <img src="../assets/about/about_7.png" className="p" alt="" />
+        <img src="../assets/about/about_6.png" className="abs" alt="" />
+        </div>
+      </div>
+
+      <div className="div_heading">
+        <div className="head">
+        <svg width="704" height="18" viewBox="0 0 704 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M-123 9L702 8.99993" stroke="#CD222A" stroke-width="5"/>
+<rect x="683" width="21" height="18" fill="#CD222A"/>
+</svg>
+
+          <h1>SUSTAINABLE FUTURE</h1>
+        </div>
+
+        <div className="text">
+          <p>
+          We're committed to reducing carbon footprints by eliminating cords that contribute majorly to waste generation.
+          </p>
+          <p>
+          We believe electrifying our means would help conserve natural resources. Our way of electricity generation will bring renewable sources like solar and wind power to use.
+          </p>
+        </div>
       </div>
     </div>
   );

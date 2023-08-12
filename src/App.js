@@ -22,8 +22,8 @@ import Market from "./pages/Market";
 function App() {
   return (
     <BrowserRouter className="App">
-      <ScrollToTop /> {/* Add the ScrollToTop component here */}
       <Nav />
+      <ScrollToTop /> {/* Add the ScrollToTop component here */}
       <Routes>
         {/* PENDING SPEEDOMETER */}
         <Route path="/" element={<Home />} />

@@ -47,24 +47,45 @@ export default function EV_Manufacturer(){
         <div className="container">
           <img src="../assets/EV_manufacturer/scndCar.png" alt="Car"/>
           <div className="content">
-            <div className="para1">
+            <motion.div className="para1"
+              initial={{x: "70%", opacity: 0}}
+              whileInView={{x: "0%", opacity: 1}}
+              transition={{
+                  type: "spring",
+                  stiffness: 20,
+                }}
+            >
               <h1 className="head">Optimized Charging Infrastructure Strategy</h1><br/>
               <h1 className="downHead">
               Our technology enables efficient revenue generation, maximizes the utilization of the charging infrastructure, and offers the flexibility to incorporate wireless charging as an add-on feature, meeting the diverse needs of electric vehicle owners. By upgrading existing EV models and introducing new ones with wireless charging technology, manufacturers can enhance the market appeal, gain a competitive edge, and attract a broader customer 
               </h1>
-            </div>
-            <div className="para2">
+            </motion.div>
+            <motion.div className="para2"
+            initial={{x: "70%", opacity: 0}}
+            whileInView={{x: "0%", opacity: 1}}
+            transition={{
+                type: "spring",
+                stiffness: 20,
+                delay: 0.3
+              }}>
               <h1 className="head">Maximizing Cost Efficiency</h1><br/>
               <h1 className="downHead">
               We reduce EV manufacturers' maintenance costs by minimizing battery degradation, simplifying powertrain maintenance, streamlining infrastructure support, and enhancing reliability. This improves cost efficiency and enhances the ownership experience.
               </h1>
-            </div>
-            <div className="para3">
+            </motion.div>
+            <motion.div className="para3"
+            initial={{x: "70%", opacity: 0}}
+            whileInView={{x: "0%", opacity: 1}}
+            transition={{
+                type: "spring",
+                stiffness: 20,
+                delay: 0.5
+              }}>
               <h1 className="head">Battery Excellence Solutions</h1><br/>
               <h1 className="downHead">
               We offer advanced battery management, intelligent predictive analytics, customized solutions, and comprehensive support to optimize EV battery performance. We minimize degradation, extend battery lifespan, and reduce maintenance costs. With our cutting-edge technology, industry collaborations, and cost optimization strategies, maximize your ROI and achieve superior EV performance.
               </h1>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

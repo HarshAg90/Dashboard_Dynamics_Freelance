@@ -1,24 +1,58 @@
-import React from "react";
-import Landing from "../components/Landing";
+import React from 'react';
+import {motion} from "framer-motion";
+import ProductLanding from '../components/ProductLanding';
+
+
+const tilesVariant = {
+  hidden: {
+    opacity: 0, scale: 0.2, x: "-100%"
+  },
+  visible: {
+    opacity: 1, scale: 1, x: "0%",
+  }
+}
+
+const productVariant = {
+  hidden: {
+    opacity: 0, scale: 1, y: "40%"
+  },
+  visible: {
+    opacity: 1, scale: 1, y: "0%",
+  },
+  
+}
 
 export default function Products() {
+
   return (
     <div id="product">
-      <Landing>
-        <h1>DESIGNED TO REDEFINE POSSIBILITIES AND ELEVATE EXPERIENCES</h1>
-        <img src="../assets/products/product_charger.png" alt="" />
-      </Landing>
+      <ProductLanding></ProductLanding>
 
 
       <div className="content">
-        <h1 className="c">Our product is as wide as our range.</h1>
+        <motion.h1 className="c"
+          initial={{x: "-100%"}}
+          whileInView={{x: "0%"}}
+          transition={{
+            type: "spring",
+            stiffness: 55,
+          }}>
+            Our product is as wide as our range.
+          </motion.h1>
 
-        <p className="c">
+        <motion.p className="c"
+        initial={{x: "100%"}}
+        whileInView={{x: "0%"}}
+        transition={{
+          type: "spring",
+          stiffness: 25,
+        }}
+        >
           Dash Dynamic’s highly efficient and unbeatable EV Charging solutions
           comes up with more to explore. It provides wireless technology for
           drone towers, charging for laptop, and heavy duty commercial vehicles
           for industrial purpose.
-        </p>
+        </motion.p>
         <div className="btn">
         <button className="c">
           {"  "}Explore{" >"}
@@ -26,7 +60,16 @@ export default function Products() {
         </div>
 
         <div className="boxes">
-          <div className="box">
+          <motion.div className="box"
+            variants={tilesVariant}
+            initial="hidden"
+            whileInView="visible"
+            transition= {{
+              type: "spring",
+              stiffness: 50,
+              // delay: 0.6
+            }}
+          >
             <div className="icon">
             <svg
               width="59"
@@ -46,8 +89,16 @@ export default function Products() {
             </svg>
             </div>
             <p>Drone towers</p>
-          </div>
-          <div className="box">
+          </motion.div>
+          <motion.div className="box"
+          variants={tilesVariant}
+          initial="hidden"
+          whileInView="visible"
+          transition= {{
+            type: "spring",
+            stiffness: 40,
+            delay: 0.25
+          }}>
             <div className="icon">
 
             <svg
@@ -64,8 +115,16 @@ export default function Products() {
             </svg>
             </div>
             <p>Laptop charging</p>
-          </div>
-          <div className="box">
+          </motion.div>
+          <motion.div className="box"
+          variants={tilesVariant}
+          initial="hidden"
+          whileInView="visible"
+          transition= {{
+            type: "spring",
+            stiffness: 30,
+            delay: 0.5
+          }}>
               <div className="icon">
             <svg
               width="62"
@@ -103,32 +162,54 @@ export default function Products() {
             </svg>
               </div>
             <p>Heavy Duty Commercial Vehicle</p>
-          </div>
+          </motion.div>
         </div>
 
-        <div className="tile">
+        <motion.div className="tile"
+          variants={productVariant}
+          initial="hidden"
+          whileInView="visible"
+          transition={{
+            type: "spring",
+            stiffness: 25,
+          }}
+        >
           <img src="../assets/products/product_1.png" alt="" />
           <div>
             <h1>Drone towers</h1>
             <p>Advanced wireless towers, for seamless charging, extended range, and enhanced payload capacity for unparalleled operational efficiency</p>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="tile">
+        <motion.div className="tile"
+        variants={productVariant}
+        initial="hidden"
+        whileInView="visible"
+        transition={{
+          type: "spring",
+          stiffness: 25,
+        }}>
           <img src="../assets/products/product_2.png" alt="" />
           <div>
             <h1>Heavy Duty Vehicles</h1>
             <p>For heavy-duty electric vehicle fleets, compatible wireless charging up to 500 KW with adequate safety features ensuring fast charging efficiency and streamlined operations</p>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="tile">
+        <motion.div className="tile"
+        variants={productVariant}
+        initial="hidden"
+        whileInView="visible"
+        transition={{
+          type: "spring",
+          stiffness: 25,
+        }}>
           <img src="../assets/products/product_3.png" alt="" />
           <div>
             <h1>Laptop charging</h1>
             <p>Adaptive wireless charger up to 250W in laptops with unparalleled flexibility, enabling easy power transfer for maximum efficiency, eliminating user charge anxiety.</p>
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </div>

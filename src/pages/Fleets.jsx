@@ -1,10 +1,11 @@
 import React, { useRef, useEffect } from 'react';
-import {motion, useScroll, useTransform, useInView, useAnimation} from "framer-motion";
+import {motion, useScroll, useTransform, useInView, useAnimation, useAnimate} from "framer-motion";
 
+const pathLeft = "M175 857V208.125C174.288 145.812 138.492 17.3487 1.00001 2"
 
 const carLeftVariant = {
     hidden: {
-        opacity: 0,
+        opacity: 1,
         y: "470%"
     },
     visible: {
@@ -21,9 +22,12 @@ const carMidVariant = {
     }
 }
 
+
+const pathRight = "M2 857V208.125C2.71166 145.812 38.508 17.3487 176 2";
 const carRightVariant = {
     visible: {
-        y: ["0%", "-150%", "-150%", "-150%"],
+        // path: pathRight,
+        y: ["100%", "-150%", "-150%", "-150%"],
         x: ["0%", "50%", "50%", "50%"],
         rotate: [0,30, 30, 30, 30],
         opacity: [1,1,1,0,0,0,0]
@@ -32,7 +36,29 @@ const carRightVariant = {
 
 
 
+
+
+
+
+
 const Fleets = () => {
+
+
+    const [scope, animate] = useAnimate();
+
+    function sequence() {
+        animate([
+            // [scope.current, { y: "400" }],
+            // [scope.current, { y: "380%" }],
+            // [scope.current, { y: "310%" }],
+            // [scope.current, { y: "240%" }],
+            // [scope.current, { rotate: -45 }],
+            // [scope.current, { x: "-50%" }],
+            [scope.current, { scale: 1 }]
+        ]);
+    }
+
+
 
     const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -115,18 +141,19 @@ const Fleets = () => {
                 <h1 className="head">Proactive Maintenance and Cost Optimization</h1>
                 <h1 className="subHead">Our proactive approach tackles high maintenance costs by using real-time data and predictive analytics. Early issue detection allows for timely repairs, minimizing downtime and expenses. Optimized fleet reliability and lower maintenance costs enhance profitability and efficiency in your cab services.</h1>
             </div>    
-            </div>   
+            </div>
 
             <div className='road'>
             <div className="left outerContainer">
                 <motion.div className='carContainer1'
                     variants={carLeftVariant}
+                    ref={scope}
                     initial="hidden"
-                    animate={roadAnimationControls}
+                    whileInView="visible"
                     transition={{
                         duration: 4
                     }}
-                    >
+                >
                     <img src="../assets/Fleets/leftCar.png" alt="Left-car" className='car1'/>
                     </motion.div>
                     <img src="../assets/Fleets/leftArrow.png" alt="Left-arrow" className='arrow'/>
@@ -148,15 +175,20 @@ const Fleets = () => {
                     </motion.div>                    
                 </div>
 
+                {/* <svg width="177" height="857" viewBox="0 0 177 857" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.15" d="M2 857V208.125C2.71166 145.812 38.508 17.3487 176 2" stroke="#7E757E" stroke-width="3" stroke-dasharray="10 10"/>
+</svg> */}
+
+
                 <div className="right outerContainer">
                 <motion.div className="carContainer3"
                         variants={carRightVariant}
                         initial={{
                             opacity: 0
                         }}
-                        animate={roadAnimationControls}
+                        whileInView="visible"
                         transition={{
-                            duration: 3
+                            duration: 6
                         }}
                     >
                     <img src="../assets/Fleets/rightCar.png" alt="Right-car" className='car3'/>

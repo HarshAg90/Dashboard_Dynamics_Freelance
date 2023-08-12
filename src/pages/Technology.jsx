@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import {motion, useScroll, useTransform} from "framer-motion";
 import TechnologyLanding from '../components/Technology_Landing';
+import CarCanvas from '../components/CarCanvas';
 
 
 export default function Technology() {
@@ -30,6 +31,13 @@ export default function Technology() {
   const frthScale = useTransform(scrollYProgress, [0.5, 0.69], [1.01, 1]);
 
 
+  //SVG ANIMATION
+  const fstPathLength = useTransform(scrollYProgress, [0, 0.2], [0, 1]);
+  const scndPathLength = useTransform(scrollYProgress, [0.2, 0.4], [0, 1]);
+  const thdPathLength = useTransform(scrollYProgress, [0.4, 0.55], [0, 1]);
+  const frthPathLength = useTransform(scrollYProgress, [0.57, 0.69], [0, 1]);
+
+
   return (
     <div  id='Technology'>
       
@@ -38,15 +46,17 @@ export default function Technology() {
 
    {/* PRODUCT PAGE */}
     <div className='product'>
+      <div className='productHead'>
+      <hr/>
+      <div className='sqr'/>
+      <h1 className='heading'>Product</h1>        
+      </div>
+    </div> 
 
-    <div className='productHead'>
-        <hr/>
-        <div className='sqr'/>
-        <h1 className='heading'>Product</h1>        
-        </div>
-
-        {/* <ComputersCanvas/> */}
+    <div className="carCanvas">
+    <CarCanvas/>
     </div>
+    
 
   
     {/* WORKING */}
@@ -58,14 +68,10 @@ export default function Technology() {
         <hr/>
       </div>
 
-      {/* <svg width="8" className='division' height="1416" viewBox="0 0 8 1416" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 4L3.99994 1412" stroke="#D9D8D8" stroke-width="8" stroke-linecap="round"/>
-</svg> */}
-
 
       <div ref={targetRef} className='explanation'>
 
-        <div className='fstCol'>
+        <div className='fstCol'> 
         <motion.img src='../assets/Technology/Working_1.png' className='illustration' alt='W1'
           style={{y: fstY, opacity: fstOpacity, scale: fstScale}}
         ></motion.img>
@@ -96,44 +102,46 @@ export default function Technology() {
 </svg>
 
 
+        <div className="svgs">
+        <svg className="fstSvg" width="8" height="275" viewBox="0 0 8 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+<motion.path style={{pathLength: fstPathLength}} d="M4 4.5L3.99993 271" stroke="url(#paint0_linear_1_691)" stroke-width="8" stroke-linecap="round"/>
+<defs>
+<linearGradient id="paint0_linear_1_691" x1="3.5" y1="271" x2="3.49999" y2="2.39632e-05" gradientUnits="userSpaceOnUse">
+<stop offset="0.466667" stop-color="#9C1313"/>
+<stop offset="1" stop-color="#D9D8D8" stop-opacity="0"/>
+</linearGradient>
+</defs>
+        </svg>
+        <svg className="scndSvg" width="8" height="275" viewBox="0 0 8 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+<motion.path style={{pathLength: scndPathLength}} d="M4 4.5L3.99993 271" stroke="url(#paint0_linear_1_691)" stroke-width="8" stroke-linecap="round"/>
+<defs>
+<linearGradient id="paint0_linear_1_691" x1="3.5" y1="271" x2="3.49999" y2="2.39632e-05" gradientUnits="userSpaceOnUse">
+<stop offset="0.466667" stop-color="#9C1313"/>
+<stop offset="1" stop-color="#D9D8D8" stop-opacity="0"/>
+</linearGradient>
+</defs>
+        </svg>
+        <svg className="thdSvg" width="8" height="275" viewBox="0 0 8 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+<motion.path style={{pathLength: thdPathLength}} d="M4 4.5L3.99993 271" stroke="url(#paint0_linear_1_691)" stroke-width="8" stroke-linecap="round"/>
+<defs>
+<linearGradient id="paint0_linear_1_691" x1="3.5" y1="271" x2="3.49999" y2="2.39632e-05" gradientUnits="userSpaceOnUse">
+<stop offset="0.466667" stop-color="#9C1313"/>
+<stop offset="1" stop-color="#D9D8D8" stop-opacity="0"/>
+</linearGradient>
+</defs>
+        </svg>
+        <svg className="frthSvg" width="8" height="275" viewBox="0 0 8 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+<motion.path style={{pathLength: frthPathLength}} d="M4 4.5L3.99993 271" stroke="url(#paint0_linear_1_691)" stroke-width="8" stroke-linecap="round"/>
+<defs>
+<linearGradient id="paint0_linear_1_691" x1="3.5" y1="271" x2="3.49999" y2="2.39632e-05" gradientUnits="userSpaceOnUse">
+<stop offset="0.466667" stop-color="#9C1313"/>
+<stop offset="1" stop-color="#D9D8D8" stop-opacity="0"/>
+</linearGradient>
+</defs>
+        </svg>
+        </div>
 
-
-        {/* <svg width="8" height="275" viewBox="0 0 8 275" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M3.99993 271L4 4.5" stroke="url(#paint0_linear_1_691)" stroke-width="8" stroke-linecap="round"/>
-<defs>
-<linearGradient id="paint0_linear_1_691" x1="3.5" y1="271" x2="3.49999" y2="2.39632e-05" gradientUnits="userSpaceOnUse">
-<stop offset="0.466667" stop-color="#9C1313"/>
-<stop offset="1" stop-color="#D9D8D8" stop-opacity="0"/>
-</linearGradient>
-</defs>
-        </svg>
-        <svg width="8" height="275" viewBox="0 0 8 275" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M3.99993 271L4 4.5" stroke="url(#paint0_linear_1_691)" stroke-width="8" stroke-linecap="round"/>
-<defs>
-<linearGradient id="paint0_linear_1_691" x1="3.5" y1="271" x2="3.49999" y2="2.39632e-05" gradientUnits="userSpaceOnUse">
-<stop offset="0.466667" stop-color="#9C1313"/>
-<stop offset="1" stop-color="#D9D8D8" stop-opacity="0"/>
-</linearGradient>
-</defs>
-        </svg>
-        <svg width="8" height="275" viewBox="0 0 8 275" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M3.99993 271L4 4.5" stroke="url(#paint0_linear_1_691)" stroke-width="8" stroke-linecap="round"/>
-<defs>
-<linearGradient id="paint0_linear_1_691" x1="3.5" y1="271" x2="3.49999" y2="2.39632e-05" gradientUnits="userSpaceOnUse">
-<stop offset="0.466667" stop-color="#9C1313"/>
-<stop offset="1" stop-color="#D9D8D8" stop-opacity="0"/>
-</linearGradient>
-</defs>
-        </svg>
-        <svg width="8" height="275" viewBox="0 0 8 275" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M3.99993 271L4 4.5" stroke="url(#paint0_linear_1_691)" stroke-width="8" stroke-linecap="round"/>
-<defs>
-<linearGradient id="paint0_linear_1_691" x1="3.5" y1="271" x2="3.49999" y2="2.39632e-05" gradientUnits="userSpaceOnUse">
-<stop offset="0.466667" stop-color="#9C1313"/>
-<stop offset="1" stop-color="#D9D8D8" stop-opacity="0"/>
-</linearGradient>
-</defs>
-        </svg> */}
+        
         </div>
 
         <div className="thdCol">
@@ -162,6 +170,12 @@ export default function Technology() {
         </div>
 
       </div>
+
+      <div className="btn">
+            <button>
+              <span> Learn more about the existing technology</span>
+            </button>
+          </div>
 
     </div>
 

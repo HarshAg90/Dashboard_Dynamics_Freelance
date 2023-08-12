@@ -37,7 +37,7 @@ export default function Nav() {
   };
 
   // Calculate the background color based on scrollY?.current value
-const backgroundColor = scrollY?.current >= 500 && "white";
+const backgroundColor = scrollY?.current >= 500 && "";
 
 // Use the calculated backgroundColor in the variants
 variants.visible = { ...variants.visible, background: backgroundColor };

@@ -4,6 +4,7 @@ import TeamLanding from "../components/TeamLanding"
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from "react-router-dom";
 
 const pathVariants = {
     hidden: {
@@ -19,17 +20,16 @@ const pathVariants = {
 
 export default function Team(){
 
-    var settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        arrows: true,
-        autoplay: true,
-        autoplaySpeed: 2500,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        pauseOnDotsHover: true
-      };
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 2500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+  };
 
 
     const journeyRef = useRef(null);
@@ -68,11 +68,8 @@ export default function Team(){
                             initial={{
                                 scale: 1
                             }}
-                            whileHover={{
-                                scale: 1.15
-                              }}
                               whileTap={{
-                                scale: 1
+                                scale: 0.95
                               }}
                               transition={{
                                 type: "spring",
@@ -84,36 +81,30 @@ export default function Team(){
                     <div className="member2 member">
                         <motion.img src="../assets/Team/Members/member2.png" alt="Robin Singh"
                         initial={{
-                            scale: 1
+                          scale: 1
+                      }}
+                        whileTap={{
+                          scale: 0.95
                         }}
-                        whileHover={{
-                            scale: 1.15
-                          }}
-                          whileTap={{
-                            scale: 1
-                          }}
-                          transition={{
-                            type: "spring",
-                            stiffness: 60,
-                          }}/>
+                        transition={{
+                          type: "spring",
+                          stiffness: 60,
+                        }}/>
                         <h1>A highly successful electrical engineer with 7 years of entrepreneurial experience, founder of Tron Fire Protection Pvt Ltd, known for innovative solutions in transformer fire safety, and COVID initiatives.
 </h1>
                     </div>
                     <div className="member3 member">
                         <motion.img src="../assets/Team/Members/member3.png" alt="B K Panigrahi"
                         initial={{
-                            scale: 1
+                          scale: 1
+                      }}
+                        whileTap={{
+                          scale: 0.95
                         }}
-                        whileHover={{
-                            scale: 1.15
-                          }}
-                          whileTap={{
-                            scale: 1
-                          }}
-                          transition={{
-                            type: "spring",
-                            stiffness: 60,
-                          }}/>
+                        transition={{
+                          type: "spring",
+                          stiffness: 60,
+                        }}/>
                         <h1>A highly esteemed professor with 40 years of teaching experience at IIT Delhi, specializing in Power Electronics and Power Systems, and currently researching EV Charging Infrastructure & Grid Impact</h1>
                     </div>                                  
                 </div>
@@ -121,53 +112,44 @@ export default function Team(){
                     <div className="member4 member">
                     <motion.img src="../assets/Team/Members/member4.png" alt="Ajeet Prabhakar"
                     initial={{
-                        scale: 1
+                      scale: 1
+                  }}
+                    whileTap={{
+                      scale: 0.95
                     }}
-                    whileHover={{
-                        scale: 1.15
-                      }}
-                      whileTap={{
-                        scale: 1
-                      }}
-                      transition={{
-                        type: "spring",
-                        stiffness: 60,
-                      }}/>
+                    transition={{
+                      type: "spring",
+                      stiffness: 60,
+                    }}/>
                     <h1>With 5 years of experience, a skilled product designer passionate about UI/UX, graphic design, and animation, crafting visually captivating user interfaces.</h1>
                     </div>
                     <div className="member5 member">
                     <motion.img src="../assets/Team/Members/member5.png" alt="Dr. Anadi"
                     initial={{
-                        scale: 1
+                      scale: 1
+                  }}
+                    whileTap={{
+                      scale: 0.95
                     }}
-                    whileHover={{
-                        scale: 1.15
-                      }}
-                      whileTap={{
-                        scale: 1
-                      }}
-                      transition={{
-                        type: "spring",
-                        stiffness: 60,
-                      }}/>
+                    transition={{
+                      type: "spring",
+                      stiffness: 60,
+                    }}/>
                     <h1>Professor of Strategic Management with 7 years of experience at IIM Lucknow with a distinguished academic and industry background and extensive experience in research and case writing.
 </h1>
                     </div>
                     <div className="member6 member">
                     <motion.img src="../assets/Team/Members/member6.png" alt="Eric Azulay"
                     initial={{
-                        scale: 1
+                      scale: 1
+                  }}
+                    whileTap={{
+                      scale: 0.95
                     }}
-                    whileHover={{
-                        scale: 1.15
-                      }}
-                      whileTap={{
-                        scale: 1
-                      }}
-                      transition={{
-                        type: "spring",
-                        stiffness: 60,
-                      }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 60,
+                    }}
                     />
                     <h1>Executive Director of Startup Nexus, ACIR, responsible for promoting economic development and tech commercialization, while incubating start-ups and forming strategic partnerships.
 </h1>
@@ -177,18 +159,15 @@ export default function Team(){
                     <div className="member7 member">
                     <motion.img src="../assets/Team/Members/member7.png" alt="Sayan Mandal"
                     initial={{
-                        scale: 1
+                      scale: 1
+                  }}
+                    whileTap={{
+                      scale: 0.95
                     }}
-                    whileHover={{
-                        scale: 1.15
-                      }}
-                      whileTap={{
-                        scale: 1
-                      }}
-                      transition={{
-                        type: "spring",
-                        stiffness: 60,
-                      }}/>
+                    transition={{
+                      type: "spring",
+                      stiffness: 60,
+                    }}/>
                     <h1>Dedicated R&D engineer with 5 years of industrial experience, proficient in circuit design, signal processing, and control algorithms, committed to collaborative problem-solving for innovative solutions.
 
 </h1>
@@ -196,42 +175,66 @@ export default function Team(){
                     <div className="member8 member">
                     <motion.img src="../assets/Team/Members/member8.png" alt="Kiran Pandav"
                     initial={{
-                        scale: 1
+                      scale: 1
+                  }}
+                    whileTap={{
+                      scale: 0.95
                     }}
-                    whileHover={{
-                        scale: 1.15
-                      }}
-                      whileTap={{
-                        scale: 1
-                      }}
-                      transition={{
-                        type: "spring",
-                        stiffness: 60,
-                      }}/>
+                    transition={{
+                      type: "spring",
+                      stiffness: 60,
+                    }}/>
                     <h1>An accomplished power electronics specialist engineer with 8 years of experience, adept at designing and developing diverse power electronic converters, and integrating renewable sources into EV power management systems.</h1>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div className="partners">
+        <div className="partners"> 
             <h1 className='heading'>STRATEGIC PARTNERS</h1>
             <div className="fstLine">
                 <div className="sqr"/>
                 <hr/>
             </div>
-            <div className="carousel">
-                {/* CAROUSEL HERE */}
-                <div className="lft"/>
+            <div className="container">
+        <div className="lft"/>
+        <div className="parteners_li"> 
         <Slider {...settings} className='carouselKaItem'>
-          <img src="../assets/Home/partner_1.png" alt="" />
-          <img src="../assets/Home/partner_2.png" alt="" />
-          <img src="../assets/Home/partner_3.png" alt="" />
-          <img src="../assets/Home/partner_4.png" alt="" />
-          <img src="../assets/Home/partner_5.png" alt="" />
+          <motion.img src="../assets/Home/partner_1.png" alt="" 
+            whileHover={{scale: 1.15}}
+            transition={{
+              type: "spring",
+              stiffness: 60,
+            }}
+          />
+          <motion.img src="../assets/Home/partner_2.png" alt=""
+          whileHover={{scale: 1.15}}
+          transition={{
+            type: "spring",
+            stiffness: 60,
+          }}/>
+          <motion.img src="../assets/Home/partner_3.png" alt=""
+          whileHover={{scale: 1.15}}
+          transition={{
+            type: "spring",
+            stiffness: 60,
+          }}/>
+          <motion.img src="../assets/Home/partner_4.png" alt=""
+          whileHover={{scale: 1.15}}
+          transition={{
+            type: "spring",
+            stiffness: 60,
+          }}/>
+          <motion.img src="../assets/Home/partner_5.png" alt=""
+          whileHover={{scale: 1.15}}
+          transition={{
+            type: "spring",
+            stiffness: 60,
+          }}/>
         </Slider>          
+        </div>
         <div className="rght"/>
-            </div>
+        </div>
             <div className="lstLine">
                 <hr/>
                 <div className="sqr"/>
@@ -286,8 +289,8 @@ export default function Team(){
 
             <div className="downHead">
                 <h1>
-                    Want to be a part of the team? 
-                    <span>Contact us</span>
+                    Want to be a part of the team?
+                    <Link to="/Contacts">Contact us</Link>
                     </h1>
             </div>
 

@@ -1,6 +1,7 @@
 import React, {useEffect, useRef} from "react";
 import {motion, useInView, useAnimation, useScroll, useTransform} from "framer-motion"
 import HomeLanding from "../components/HomeLanding";
+import Speedometer from "../components/speedometer";
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -545,6 +546,10 @@ export default function Home() {
             <hr />
           </div>
         </div>
+
+        <Speedometer Rate={70} />
+
+        
       </div>
 
       <div className="partners">

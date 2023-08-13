@@ -18,6 +18,7 @@ import Team from "./pages/Team";
 import Careers from "./pages/Careers";
 import About from "./pages/About";
 import Market from "./pages/Market";
+import Test from "./components/test";
 
 function App() {
   return (

@@ -1,7 +1,40 @@
-import React from "react";
+import React, { useRef, useEffect } from 'react';
+import {motion, useScroll, useTransform, useInView, useAnimation, useAnimate} from "framer-motion";
 import Landing from "../components/Landing";
 
+
+const svgPathVariant={
+  hidden: {
+    pathLength: 0
+  },
+  visible: {
+    pathLength: 1
+  }
+}
+
+const svgBoxVariant={
+  hidden: {
+    opacity: 0
+  },
+  visible: {
+    opacity: 1
+  }
+}
+
 export default function About() {
+
+  const valuesRef = useRef(null);
+  const isValueInView = useInView(valuesRef, {once: true});
+  const valueAnimationControls = useAnimation();
+
+
+  useEffect(() => {
+    if(isValueInView){
+      valueAnimationControls.start("visible");
+    }
+  }, [isValueInView]);
+
+
   return (
     <div id="About">
       <Landing Id="contact_landing">
@@ -359,37 +392,77 @@ export default function About() {
       </Landing>
       <div className="first_div">
         <div className="gradient">
-          <h1>
+          <motion.h1
+            initial={{x: "-100%", opacity: 0}}
+            whileInView={{x: "0%", opacity: 1}}
+            transition={{
+              type: "spring",
+              stiffness: 25,
+            }}
+          >
             About <span>DASH DYNAMIC</span>
-          </h1>
-          <div className="bg_text">
+          </motion.h1>
+          <motion.div className="bg_text"
+            initial={{ opacity: 0}}
+            whileInView={{opacity: 1}}
+            transition={{
+              delay: 0.5,
+              type: "spring",
+              stiffness: 50,
+            }}
+          >
             <p>Simply Park and Charge</p>
-          </div>
+          </motion.div>
 
           <img src="../assets/about/about_2.png" alt="" />
         </div>
       </div>
       <div className="div_2">
-        <h1>The Canon moment</h1>
-        <p>
+        <motion.h1
+          initial={{x: "-50%", opacity: 0}}
+          whileInView={{x: "0%", opacity: 1}}
+          transition={{
+            type: "spring",
+            stiffness: 25,
+          }}
+        >The Canon moment</motion.h1>
+        <motion.p
+        initial={{y: "100%", opacity: 0}}
+        whileInView={{y: "0%", opacity: 1}}
+        transition={{
+          type: "spring",
+          stiffness: 25,
+        }}>
           Founded by Shashank Sawai and Robin Singh in 2020, Dash Dynamic
           provides seamless and efficient charging solutions for electric
           automobiles. To Revolutionize the electric vehicle (EV) industry with
           our wireless charging technology, Dash Dynamic attempts to make
           charging accessible and convenient for all. It provides an ideal
           opportunity for users to charge their vehicles dynamically.
-        </p>
+        </motion.p>
       </div>
       <div className="div_3">
         <h1>We founded Dash with a desire to make EVs more convenient</h1>
         <div className="img">
           <img src="../assets/about/about_3.png" alt="" />
-          <p className="p1">
+          <motion.p className="p1"
+          initial={{x: "-80%", opacity: 0}}
+          whileInView={{x: "0%", opacity: 1}}
+          transition={{
+            type: "spring",
+            stiffness: 25,
+          }}>
             With the convenience of mobile app, users can effortlessly start or
             stop the charging process without having to be near their vehicle
             every time.
-          </p>
-          <div className="p2">
+          </motion.p>
+          <motion.div className="p2"
+          initial={{y: "100%", opacity: 0}}
+          whileInView={{y: "0%", opacity: 1}}
+          transition={{
+            type: "spring",
+            stiffness: 25,
+          }}>
             <h1>What we do </h1>
             <p>
               Gone are the days of searching for rare charging stations or
@@ -400,14 +473,25 @@ export default function About() {
               and park over the charger, eliminating the need for any physical
               connections.
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
       <div className="div_4">
         <img src="../assets/about/about_4.png" alt="" />
 
-        <h1>Values</h1>
-        <p>
+        <motion.h1 ref={valuesRef}
+          initial={{x: "50%", opacity: 0}}
+          whileInView={{x: "0%", opacity: 1}}
+          transition={{delay: 4, duration: 2}}
+        >Values</motion.h1>
+        <motion.p 
+        initial={{y: "50%", opacity: 0}}
+        whileInView={{y: "0%", opacity: 1}}
+        transition={{
+          delay: 5,
+          type: "spring",
+          stiffness: 25,
+        }}>
           Revolutionize smart mobility
           <br />
           <br />
@@ -418,7 +502,7 @@ export default function About() {
           <br />
           <br />
           Dynamic charging
-        </p>
+        </motion.p>
 
         <svg
           width="1101"
@@ -427,17 +511,30 @@ export default function About() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M10 174L1239 174" stroke="#CD222A" stroke-width="5" />
-          <path d="M10 0L9.99999 177" stroke="#CD222A" stroke-width="5" />
-          <rect width="20" height="18" fill="#CD222A" />
+          <motion.path variants={svgPathVariant} initial="hidden" animate={valueAnimationControls} transition={{duration: 2, delay: 1}} d="M1239 174L10 174" stroke="#CD222A" stroke-width="5" />
+          <motion.path variants={svgPathVariant} initial="hidden" animate={valueAnimationControls} transition={{duration: 1, delay: 3}} d="M9.99999 177L10 0" stroke="#CD222A" stroke-width="5" />
+          <motion.rect variants={svgBoxVariant} initial="hidden" animate={valueAnimationControls} transition={{duration: 0.5, delay: 4}}  width="20" height="18" fill="#CD222A" />
         </svg>
       </div>
       <div className="div_2">
-        <h1>The aim</h1>
-        <p>
+        <motion.h1
+        initial={{y: "-80%", opacity: 0, scale: 1}}
+        whileInView={{y: "0%", opacity: 1, scale: 1}}
+        transition={{
+          type: "spring",
+          stiffness: 25,
+        }}
+        >The aim</motion.h1>
+        <motion.p
+        initial={{x: "80%", opacity: 0, scale: 1}}
+        whileInView={{x: "0%", opacity: 1, scale: 1}}
+        transition={{
+          type: "spring",
+          stiffness: 25,
+        }}>
           “Revolutionize smart mobility with sustainable solutions and wireless
           charging technology, connecting the world in a smarter way.”
-        </p>
+        </motion.p>
       </div>
       <div className="div_5">
         <div className="img">

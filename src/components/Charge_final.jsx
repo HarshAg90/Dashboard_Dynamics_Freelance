@@ -57,7 +57,7 @@ export default function Charge_final (){
       
 
       <div className="cars">
-      <motion.img src="../assets/charge/charger.png" alt="" className="charger" style={{opacity: chargerOpacity}}/>
+      <motion.img src="../assets/charge/chargerTopFull.png" alt="" className="charger" style={{opacity: chargerOpacity}}/>
 
       <motion.img src="../assets/charge/car.png" alt="" className="car"
     style={{x: carInitialX, rotate: carRotation, y: carFinalY, opacity: carFinalOpacity, scale: carScale}}/>

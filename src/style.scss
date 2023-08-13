@@ -15,6 +15,15 @@
     overflow-x: hidden;
 }
 
+#test{
+    z-index: 99 !important;
+    height: 100vh;
+    Menu{
+        overflow: visible;
+        font-family: "artifakt";
+        
+    }
+}
 
 
 .basicLand{
@@ -637,8 +646,8 @@
               }
     
               .charger {
-                width: 13vw;
-                // margin-left: 18vw;
+                width: 20vw;
+                margin-right: -8vw;
               }
 
               .initLine{
@@ -1130,7 +1139,6 @@
     .Landing{
         font-family: 'monogram',sans-serif;
         background-image: url(../public/assets/Contact/contact_landing.png);
-        // background: linear-gradient(180deg, #E5EAED 66.98%, rgba(217, 217, 217, 0) 100%);
         position: relative;
         .gradient{
             position: absolute;
@@ -2425,22 +2433,6 @@
     }
 }
 
-#About{
-    .Landing{
-        background-image: url(../public/assets/about/about_bg.png);
-        position: relative;
-        svg.about_home{
-            position: absolute;
-            top: 30%;
-            left: 45%;
-            transform: translate(-50%,-50%);
-            color: #000000;
-            fill:black;
-            z-index: 1;
-        }
-    }
-}
-
 #product{
     .Landing{
         background-image: url(../public/assets/products/Product_home.png);
@@ -2738,9 +2730,11 @@
             z-index: 1;
             position: absolute;
             top: 38%;
+            font-weight: 500;
             left: 22%;
             span{
                 display: block;
+                font-weight: 700;
                 font-size: 2.2rem;
             }
         }
@@ -2754,6 +2748,7 @@
         }
     }
     .div_2{
+        overflow: hidden;
         display: flex;
         padding: 50px 0px;
         width: 100%;
@@ -2761,28 +2756,35 @@
         align-items: center;
         margin: 50px 0px;
         h1{
+            overflow: hidden;
+            font-weight: 600;
             width: 30vw;
             text-align: center;
             font-size: 1.6rem;
             
         }
         p{
+            overflow: hidden;
+            text-align: justify;
             width: 50vw;
         }
     }
     .div_3{
+        overflow: hidden;
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         h1{
+            overflow: hidden;
             margin: 30px 10px;
             text-align: center;
             font-weight: 400;
             font-size: 2rem;
         }
         .img{
+            overflow: hidden;
 
             position: relative;
             width: 90%;
@@ -2792,6 +2794,7 @@
                 width: 100%;
             }
             p.p1{
+                overflow: hidden;
                 position: absolute;
                 top: 30%;
                 right: 30%;
@@ -2800,12 +2803,14 @@
                 size: 18px;
             }
             .p2{
+                overflow: hidden;
                 position: absolute;
                 // transform: translate(-50%,50%);
                 bottom: 20%;
                 left: 10%;
                 width: 40vw;
                 h1{
+                    overflow: hidden;
                     padding: 20px 0px;
                     border-bottom: 1px solid black;
                     margin-bottom: 20px;

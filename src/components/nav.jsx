@@ -66,7 +66,7 @@ variants.visible = { ...variants.visible, background: backgroundColor };
               Charge Point Operators */}
             </li></ Link>
             <Link to="/Contacts"><li className="nav_elements">Contact</li></ Link>
-            <Link to="/News_rooms"><li className="nav_elements">
+            <Link to="/News_room"><li className="nav_elements">
               News Room
               {/* news
               blogs */}

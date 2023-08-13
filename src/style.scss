@@ -62,7 +62,7 @@
         height: auto;
         display: flex;
         justify-content: flex-end;
-        gap: 60px;
+        gap: 40px;
         align-items: center;
         width: 100%;
         padding-right: 20px;
@@ -70,7 +70,7 @@
         list-style: none;
         margin-top: 0 !important;
         @media screen and (max-width: 1300px) {
-            gap: 30px;
+            gap: 10px;
         }
         a{
             overflow: hidden;
@@ -80,7 +80,7 @@
             align-items: center;
             color: black;
             height: 70px;
-            // padding: 0 30px;
+            padding: 0 10px;
             font-size: 1rem;
             font-weight: 400;
             transition: 200ms ease;
@@ -93,6 +93,9 @@
                 // text-decoration: underline;
                 transition: 200ms ease;
                 border-bottom: 1px solid black;
+                &.logo{
+                    border: none;
+                }
                 // font-weight: 1000 !important;
             }
             li{
@@ -2425,21 +2428,6 @@
     }
 }
 
-#About{
-    .Landing{
-        background-image: url(../public/assets/about/about_bg.png);
-        position: relative;
-        svg.about_home{
-            position: absolute;
-            top: 30%;
-            left: 45%;
-            transform: translate(-50%,-50%);
-            color: #000000;
-            fill:black;
-            z-index: 1;
-        }
-    }
-}
 
 #product{
     .Landing{
@@ -2634,7 +2622,6 @@
                 padding: 20px 0px;
                 border-bottom: 1px solid black;
                 margin-bottom: 20px;
-                padding-right: 30px;
                 font-size: 1.9rem;
                 font-weight: 500;
             }

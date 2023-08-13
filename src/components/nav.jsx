@@ -53,7 +53,7 @@ variants.visible = { ...variants.visible, background: backgroundColor };
       // style={navStyles}
       >
         <ul>
-            <Link to="/"><li className="nav_elements logo"><img src="../assets/logo.png" alt="" /></li></ Link>
+            <Link to="/" className='logo'><li className="nav_elements logo"><img src="../assets/logo.png" alt="" /></li></ Link>
             <Link to="/"><li className="nav_elements">Home</li></ Link>
             <Link to="/about"><li className="nav_elements">About</li></ Link>
             <Link to="/Technology"><li className="nav_elements">Technology</li></ Link>

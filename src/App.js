@@ -1,4 +1,5 @@
 import "./style.scss";
+import "./styles.css"
 import Nav from "./components/nav";
 import Footer from "./components/Footer";
 import Charge from "./components/Charge";
@@ -18,11 +19,11 @@ import Team from "./pages/Team";
 import Careers from "./pages/Careers";
 import About from "./pages/About";
 import Market from "./pages/Market";
-import Test from "./components/test";
+
 
 function App() {
   return (
-    <BrowserRouter className="App">
+    <BrowserRouter className="App"> 
       <Nav />
       <ScrollToTop /> {/* Add the ScrollToTop component here */}
       <Routes>
@@ -55,7 +56,7 @@ function App() {
         {/* DONE */}
         <Route exact path="/team" element={<Team />} />
         {/* SCOOTY PENDING */}
-        <Route exact path="/market" element={<Market />} />
+        <Route exact path="/market" element={<Market />} />        
       </Routes>
       <Footer />
     </BrowserRouter>

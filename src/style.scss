@@ -29,6 +29,9 @@
     }
 
     .speedometer__canvas {
+        width: 100%;
+        overflow: visible;
+        height: auto;
         background-image: url(../public/assets/Home/speedoBg.png);
         background-size: contain;
         background-repeat: no-repeat;
@@ -908,7 +911,7 @@
     #TechLanding{
         .landing{
             
-            background-image: url(../public/assets/Technology/landing1.png);
+            background-image: url(../public/assets/Technology/landing2.png);
             text-align: center;
             // background: linear-gradient(to right, #ffffff 0%, #ffffff 5%, #0B132A 5%, #0B132A 100%);
 

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class Speedometer extends Component {
+class Speedometer2 extends Component {
   constructor(props) {
     super(props);
     this.canvas = React.createRef();
@@ -49,9 +49,9 @@ class Speedometer extends Component {
     const minRad = 1 * Math.PI;
     const maxRad = 2 * Math.PI;
     const grd = ctx.createLinearGradient(x - radius, 0, x - radius + 185, 0);
-    grd.addColorStop(0.1, "#6886F0");
-    grd.addColorStop(0.5, "#8FEFEF");
-    grd.addColorStop(0.9, "#72CAFC");
+    grd.addColorStop(0.1, "#ED6400");
+    grd.addColorStop(0.5, "#E9EB71");
+    grd.addColorStop(0.9, "#EA8237");
     grd.addColorStop(1, "#02E7BE");
 
     function speedometer(value) {
@@ -114,4 +114,4 @@ class Speedometer extends Component {
   }
 }
 
-export default Speedometer;
+export default Speedometer2;

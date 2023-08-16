@@ -1,7 +1,9 @@
 import React, {useEffect, useRef} from "react";
 import {motion, useInView, useAnimation, useScroll, useTransform} from "framer-motion"
 import HomeLanding from "../components/HomeLanding";
-import Speedometer from "../components/speedometer";
+import Speedometer1 from "../components/speedometer_One";
+import Speedometer2 from "../components/speedometer_Two";
+import Speedometer3 from "../components/speedometer_Three";
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -572,20 +574,20 @@ export default function Home() {
 
         <div className="speedometerS">
           <div className="subDiv">
-          <Speedometer Rate={247} />
-          <h1 className="num"> <Number n={247}/> </h1>
+          <Speedometer1 Rate={247} />
+          <h1 className="num1"> <Number n={247}/> </h1>
           <h1 className="subHead">EV stations in India</h1>
           </div>
 
           <div className="subDiv">
-          <Speedometer Rate={52} />
-          <h1 className="num"> <Number n={52}/> </h1>
+          <Speedometer2 Rate={52} />
+          <h1 className="num2"> <Number n={52}/> </h1>
           <h1 className="subHead">Mishappenings around EV hardware</h1>
           </div>
 
           <div className="subDiv">
-          <Speedometer Rate={363} />
-          <h1 className="num"><Number n={363}/> </h1>
+          <Speedometer3 Rate={363} />
+          <h1 className="num3"><Number n={363}/> </h1>
           <h1 className="subHead">EV on roads in India</h1>
           </div>
 

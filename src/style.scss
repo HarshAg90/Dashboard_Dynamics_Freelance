@@ -29,7 +29,7 @@
     }
 
     .speedometer__canvas {
-        background-image: url(../public/assets/speedo.png);
+        background-image: url(../public/assets/Home/speedoBg.png);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center top;
@@ -445,7 +445,7 @@
     .speedometerS{
         gap: 10vw;
         height: 50vh;
-        width: 100vw;
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -457,14 +457,25 @@
             justify-content: center;
             align-items: center;
 
-            .num{
-                margin-top: -20vh;
+            .num1, .num2, .num3{
                 font-size: 2.5rem;
                 color: #FC7575;
             }
 
+            .num1{
+                margin-top: -75%;
+            }
+
+            .num2{
+                margin-top: -60%;
+            }
+
+            .num3{
+                margin-top: -75%;
+            }
+
             .subHead{
-                margin-top: 3vh;
+                margin-top: 1.5vh;
             }
         }
     }
@@ -973,7 +984,27 @@
     }
 
     .carCanvas{
-        height: 80vh;
+        height: 75vh;
+        .imageCar{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .car{
+                width: 40vw;
+            }
+
+            .left{
+                width: 20vw;
+                margin-right: -4vw;
+                margin-top: 15vh;
+            }
+            .right{
+                width: 25vw;
+                margin-left: -5vw;
+                margin-top: 20vh;
+            }
+        }
     }
 
     .working{
@@ -2050,7 +2081,8 @@
             height: 240vh;
 
             svg{
-                width: 85vw;
+                width: 85%;
+                height: 150%;
                 position: absolute;
                 right: 0;
                 margin-top: 35vh;
@@ -2136,7 +2168,7 @@
             justify-content: center;
             align-items: flex-start ;
             h1{
-                width: 45vw;
+                width: 42%;
                 height: auto;
 
                 font-family: 'Artifakt Element';
@@ -2220,9 +2252,10 @@
         }
 
         svg{
+            width: 100%;
             z-index: 0;
             position: absolute;
-            margin-left: 23vw;
+            margin-left: 3%;
             margin-top: 5vh;
         }
     }
@@ -2904,8 +2937,9 @@
             height: auto;
         }
         svg{
+            width: 100%;
             position: absolute;
-            right: 0;
+            right: -10%;
             bottom: 12%;
         }
         h1{

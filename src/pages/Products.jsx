@@ -30,17 +30,17 @@ export default function Products() {
 
 
       <div className="content">
-        <motion.h1 className="c">
+        <h1 className="c">
             Our product is as wide as our range.
-          </motion.h1>
+          </h1>
 
-        <motion.p className="c"
+        <p className="c"
         >
           Dash Dynamic’s highly efficient and unbeatable EV Charging solutions
           comes up with more to explore. It provides wireless technology for
           drone towers, charging for laptop, and heavy duty commercial vehicles
           for industrial purpose.
-        </motion.p>
+        </p>
         <div className="btn">
         <button className="c">
           {"  "}Explore{" >"}

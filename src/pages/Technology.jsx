@@ -51,7 +51,27 @@ export default function Technology() {
     </div> 
 
     <div className="carCanvas">
-    <CarCanvas/>
+    <div className="imageCar">
+      <motion.img className='left' src="../assets/Technology/productLeft.png"
+        initial={{x: "-15%", opacity: 0.5}}
+        whileInView={{x: "0%", opacity: 1}}
+        transition={{
+          type: "spring",
+          stiffness: 25,
+        }}
+      />
+      <img className='car' src="../assets/Technology/2dCar.png" alt="" />
+      <motion.img className='right' src="../assets/Technology/productRight.png"
+      initial={{x: "15%", opacity: 0.5}}
+      whileInView={{x: "0%", opacity: 1}}
+      transition={{
+        type: "spring",
+        stiffness: 25,
+        delay: 0.5
+      }}
+      />
+    </div>
+    {/* <CarCanvas/> */}
     </div>
     
 

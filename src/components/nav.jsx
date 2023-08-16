@@ -128,7 +128,7 @@ export default function Nav() {
     /** this is the "visible" key and it's correlating styles **/
     visible: { opacity: 1, y: 10 },
     /** this is the "hidden" key and it's correlating styles **/
-    hidden: { opacity: 0, y: -25 }
+    hidden: { opacity: 1, y: 10 }
   };
 
   // Calculate the background color based on scrollY?.current value
@@ -136,6 +136,8 @@ const backgroundColor = scrollY?.current >= 500 && "white";
 
 // Use the calculated backgroundColor in the variants
 variants.visible = { ...variants.visible, background: backgroundColor };
+
+variants.hidden = { ...variants.hidden, background: "white" };
 
 
   return (

@@ -30,23 +30,11 @@ export default function Products() {
 
 
       <div className="content">
-        <motion.h1 className="c"
-          initial={{x: "-100%"}}
-          whileInView={{x: "0%"}}
-          transition={{
-            type: "spring",
-            stiffness: 55,
-          }}>
+        <motion.h1 className="c">
             Our product is as wide as our range.
           </motion.h1>
 
         <motion.p className="c"
-        initial={{x: "100%"}}
-        whileInView={{x: "0%"}}
-        transition={{
-          type: "spring",
-          stiffness: 25,
-        }}
         >
           Dash Dynamic’s highly efficient and unbeatable EV Charging solutions
           comes up with more to explore. It provides wireless technology for
@@ -61,13 +49,15 @@ export default function Products() {
 
         <div className="boxes">
           <motion.div className="box"
-            variants={tilesVariant}
-            initial="hidden"
-            whileInView="visible"
-            transition= {{
+            whileHover={{
+              scale: 1.15
+            }}
+            whileTap={{
+              scale: 0.95
+            }}
+            transition={{
               type: "spring",
-              stiffness: 50,
-              // delay: 0.6
+              stiffness: 60,
             }}
           >
             <div className="icon">
@@ -91,13 +81,15 @@ export default function Products() {
             <p>Drone towers</p>
           </motion.div>
           <motion.div className="box"
-          variants={tilesVariant}
-          initial="hidden"
-          whileInView="visible"
-          transition= {{
+          whileHover={{
+            scale: 1.15
+          }}
+          whileTap={{
+            scale: 0.95
+          }}
+          transition={{
             type: "spring",
-            stiffness: 40,
-            delay: 0.25
+            stiffness: 60,
           }}>
             <div className="icon">
 
@@ -117,13 +109,15 @@ export default function Products() {
             <p>Laptop charging</p>
           </motion.div>
           <motion.div className="box"
-          variants={tilesVariant}
-          initial="hidden"
-          whileInView="visible"
-          transition= {{
+          whileHover={{
+            scale: 1.15
+          }}
+          whileTap={{
+            scale: 0.95
+          }}
+          transition={{
             type: "spring",
-            stiffness: 30,
-            delay: 0.5
+            stiffness: 60,
           }}>
               <div className="icon">
             <svg

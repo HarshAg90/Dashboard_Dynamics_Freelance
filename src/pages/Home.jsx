@@ -5,23 +5,32 @@ import Speedometer from "../components/speedometer";
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useSpring, animated } from 'react-spring';
+import { useInView as useInViewObserve } from 'react-intersection-observer';
+
+  function Number({ n }) {
+    const [ref, inView] = useInViewObserve({
+        triggerOnce: true, // Only trigger once when it enters the view
+    });
+
+    const { number } = useSpring({
+        from: { number: 0 },
+        number: inView ? n : 0, // Animate only when in view
+        delay: 200,
+        config: { mass: 1, tension: 20, friction: 10 },
+    });
 
 
-const hrVariant = {
-  initial: {x: "100%"},
-  visible: {
-    x: "0%",
-    transition: {type: "spring", stiffness: 70, delay: 0.1}
-  }
+    
+
+    return (
+        <animated.div ref={ref}>
+            {number.to((n) => n.toFixed(0))}
+        </animated.div>
+    );
 }
 
-const svgVariants = {
-  hidden: { rotate: 0, opacity: 0 },
-  visible: { 
-    rotate: 0, opacity: 1,
-    transition: { duration : 0.5, delay: 1.1 }
-  },
-}
+
 
 const pathVariants = {
   hidden: {
@@ -50,7 +59,7 @@ const wirelessVariants = {
     transition: {
       type: "spring",
       stiffness: 40,
-      delay: 0.5 }
+      delay: 0.25 }
   },
   hiddenEnd: {
     opacity: 0,
@@ -67,17 +76,18 @@ const wirelessVariants = {
 
 }
 
-const featuresVariant = {
-  hidden1: {
-    opacity: 0, scale: 0, x: "100%"
+const lftRightVariant = {
+  hidden: {
+    x: "-50%"
   },
   visible: {
-    opacity: 1, scale: 1, x: "0%",
+    x: "0%",
+    transition: {
+      type: "spring",
+      stiffness: 40,
+      delay: 0.1 }
   }
 }
-
-
-
 
 
 
@@ -315,13 +325,13 @@ export default function Home() {
         </div>
         <motion.img src="../assets/Home/home_2.png" alt=""
         initial={{
-          scale: 0.9
+          scale: 0.93
         }}
         whileHover={{
-          scale: 1
+          scale: 0.95
         }}
         whileTap={{
-          scale: 0.95
+          scale: 0.94
         }}
         transition={{
           type: "spring",
@@ -366,7 +376,10 @@ export default function Home() {
 
       <div className="features">
         <div className="title">
-          <div className="title_h">
+          <motion.div className="title_h"
+          variants={lftRightVariant}
+          initial="hidden"
+          whileInView="visible">
             <div className="svg">
               <svg
                 width="101"
@@ -390,70 +403,77 @@ export default function Home() {
             <h1>
               <span>FEATURES</span>
             </h1>
-          </div>
+          </motion.div>
           <button>Explore</button>
-        </div>
+        </div> 
         <div className="content">
           <motion.div className="tiles"
-            variants={featuresVariant}
-            initial="hidden1"
-            whileInView="visible"
-            transition= {{
+            whileHover={{
+              scale: 1.15
+            }}
+            whileTap={{
+              scale: 0.95
+            }}
+            transition={{
               type: "spring",
-              stiffness: 70,
-              delay: 0.5
+              stiffness: 60,
             }}
           >
             <img src="../assets/Home/home_3_1.png" alt="" />
             <p>Mobile-operated</p>
           </motion.div>
           <motion.div className="tiles"
-          variants={featuresVariant}
-          initial="hidden1"
-          whileInView="visible"
-          transition= {{
+          whileHover={{
+            scale: 1.15
+          }}
+          whileTap={{
+            scale: 0.95
+          }}
+          transition={{
             type: "spring",
-            stiffness: 40,
-            delay: 0.4
+            stiffness: 60,
           }}>
             <img src="../assets/Home/home_3_3.png" alt="" />
             <p>Range anxiety killer</p>
           </motion.div>
           <motion.div className="tiles"
-          variants={featuresVariant}
-          initial="hidden1"
-          whileInView="visible"
-          transition= {{
+          whileHover={{
+            scale: 1.15
+          }}
+          whileTap={{
+            scale: 0.95
+          }}
+          transition={{
             type: "spring",
-            stiffness: 50,
-            delay: 0.3
+            stiffness: 60,
           }}>
             <img src="../assets/Home/home_3_2.png" alt="" />
             <p>AI powered</p>
           </motion.div>
           <motion.div className="tiles"
-          variants={featuresVariant}
-          initial="hidden1"
-          whileInView="visible"
-          transition= {{
+          whileHover={{
+            scale: 1.15
+          }}
+          whileTap={{
+            scale: 0.95
+          }}
+          transition={{
             type: "spring",
             stiffness: 60,
-            delay: 0.2
           }}>
             <img src="../assets/Home/home_3_4.png" alt="" />
             <p>Agnostic charging</p>
           </motion.div>
           <motion.div className="tiles"
-          initial={{
-            opacity: 0, x: "120%"
+          whileHover={{
+            scale: 1.15
           }}
-          whileInView={{
-            opacity: 1, x: "0%"
+          whileTap={{
+            scale: 0.95
           }}
-          transition= {{
+          transition={{
             type: "spring",
-            stiffness: 70,
-            delay: 0.05
+            stiffness: 60,
           }}
           >
             <img src="../assets/Home/home_3_5.png" alt="" />
@@ -463,7 +483,10 @@ export default function Home() {
       </div>
       <div className="use_case">
         <div className="title">
-          <div className="title_h">
+          <motion.div className="title_h"
+          variants={lftRightVariant}
+          initial="hidden"
+          whileInView="visible">
             <div className="box" />
             <hr />
             <div className="svg">
@@ -490,7 +513,7 @@ export default function Home() {
             <h1>
               WHAT ARE THE<span>USE CASES</span>
             </h1>
-          </div>
+          </motion.div>
           <button>Learn More</button>
         </div>
         <div className="grid">
@@ -547,9 +570,28 @@ export default function Home() {
           </div>
         </div>
 
-        <Speedometer Rate={70} />
+        <div className="speedometerS">
+          <div className="subDiv">
+          <Speedometer Rate={247} />
+          <h1 className="num"> <Number n={247}/> </h1>
+          <h1 className="subHead">EV stations in India</h1>
+          </div>
 
-        
+          <div className="subDiv">
+          <Speedometer Rate={52} />
+          <h1 className="num"> <Number n={52}/> </h1>
+          <h1 className="subHead">Mishappenings around EV hardware</h1>
+          </div>
+
+          <div className="subDiv">
+          <Speedometer Rate={363} />
+          <h1 className="num"><Number n={363}/> </h1>
+          <h1 className="subHead">EV on roads in India</h1>
+          </div>
+
+          
+        </div>
+
       </div>
 
       <div className="partners">

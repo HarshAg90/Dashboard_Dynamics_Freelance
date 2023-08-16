@@ -32,10 +32,7 @@ export default function Technology() {
 
 
   //SVG ANIMATION
-  const fstPathLength = useTransform(scrollYProgress, [0, 0.2], [0, 1]);
-  const scndPathLength = useTransform(scrollYProgress, [0.2, 0.4], [0, 1]);
-  const thdPathLength = useTransform(scrollYProgress, [0.4, 0.55], [0, 1]);
-  const frthPathLength = useTransform(scrollYProgress, [0.57, 0.69], [0, 1]);
+  const fstPathLength = useTransform(scrollYProgress, [0, 0.8], [0, 1]);
 
 
   return (
@@ -96,50 +93,39 @@ export default function Technology() {
         </div>
 
         <div className='scndCol'>
-
-        <svg width="8" height="1416" viewBox="0 0 8 1416" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 4L3.99994 1412" stroke="#D9D8D8" stroke-width="8" stroke-linecap="round"/>
+        <div className="svgs">
+        <svg width="8" height="2500" viewBox="0 0 8 2500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <motion.path
+    style={{ pathLength: fstPathLength }}
+    d="M3.99993 3.99997L6.00014 1600"
+    stroke="url(#paint0_linear_1983_480)"
+    stroke-width="10"
+    stroke-linecap="round"
+  />
+  <defs>
+    <linearGradient
+      id="paint0_linear_1983_480"
+      x1="4.43853"
+      y1="2500"
+      x2="4.43847"
+      y2="-19.7916"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop offset="0.466667" stop-color="#9C1313" />
+      <stop offset="1" stop-color="#D9D8D8" stop-opacity="0" />
+    </linearGradient>
+  </defs>
 </svg>
 
 
-        <div className="svgs">
-        <svg className="fstSvg" width="8" height="275" viewBox="0 0 8 275" fill="none" xmlns="http://www.w3.org/2000/svg">
-<motion.path style={{pathLength: fstPathLength}} d="M4 4.5L3.99993 271" stroke="url(#paint0_linear_1_691)" stroke-width="8" stroke-linecap="round"/>
-<defs>
-<linearGradient id="paint0_linear_1_691" x1="3.5" y1="271" x2="3.49999" y2="2.39632e-05" gradientUnits="userSpaceOnUse">
-<stop offset="0.466667" stop-color="#9C1313"/>
-<stop offset="1" stop-color="#D9D8D8" stop-opacity="0"/>
-</linearGradient>
-</defs>
-        </svg>
-        <svg className="scndSvg" width="8" height="275" viewBox="0 0 8 275" fill="none" xmlns="http://www.w3.org/2000/svg">
-<motion.path style={{pathLength: scndPathLength}} d="M4 4.5L3.99993 271" stroke="url(#paint0_linear_1_691)" stroke-width="8" stroke-linecap="round"/>
-<defs>
-<linearGradient id="paint0_linear_1_691" x1="3.5" y1="271" x2="3.49999" y2="2.39632e-05" gradientUnits="userSpaceOnUse">
-<stop offset="0.466667" stop-color="#9C1313"/>
-<stop offset="1" stop-color="#D9D8D8" stop-opacity="0"/>
-</linearGradient>
-</defs>
-        </svg>
-        <svg className="thdSvg" width="8" height="275" viewBox="0 0 8 275" fill="none" xmlns="http://www.w3.org/2000/svg">
-<motion.path style={{pathLength: thdPathLength}} d="M4 4.5L3.99993 271" stroke="url(#paint0_linear_1_691)" stroke-width="8" stroke-linecap="round"/>
-<defs>
-<linearGradient id="paint0_linear_1_691" x1="3.5" y1="271" x2="3.49999" y2="2.39632e-05" gradientUnits="userSpaceOnUse">
-<stop offset="0.466667" stop-color="#9C1313"/>
-<stop offset="1" stop-color="#D9D8D8" stop-opacity="0"/>
-</linearGradient>
-</defs>
-        </svg>
-        <svg className="frthSvg" width="8" height="275" viewBox="0 0 8 275" fill="none" xmlns="http://www.w3.org/2000/svg">
-<motion.path style={{pathLength: frthPathLength}} d="M4 4.5L3.99993 271" stroke="url(#paint0_linear_1_691)" stroke-width="8" stroke-linecap="round"/>
-<defs>
-<linearGradient id="paint0_linear_1_691" x1="3.5" y1="271" x2="3.49999" y2="2.39632e-05" gradientUnits="userSpaceOnUse">
-<stop offset="0.466667" stop-color="#9C1313"/>
-<stop offset="1" stop-color="#D9D8D8" stop-opacity="0"/>
-</linearGradient>
-</defs>
-        </svg>
         </div>
+
+        <svg className='bg' width="8" height="1416" viewBox="0 0 8 1416" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4L3.99994 1412" stroke="#D9D8D8" stroke-width="8" stroke-linecap="round"/>
+        </svg>
+
+
+        
 
         
         </div>

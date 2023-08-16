@@ -7,15 +7,8 @@ export default function Market() {
     <div id='Market'>
       <Landing>
         <h1>REVOLUTIONIZED INFRUSTRUCTURE FOR SEAMLESS ELECTRIC MOBILITY</h1>
-        <motion.img src="../assets/market/market_home_2.png"
-          initial={{opacity: 0}}
-          animate={{opacity: 1}}
-          transition={{delay: 0.7, duration: 0.5}}
+        <img src="../assets/market/market_home_2.png"
         />
-        <motion.img className="blocks" src="../assets/market/landingBlocks.png"
-        initial={{opacity: 1}}
-        animate={{opacity: 0}}
-        transition={{delay: 0.5, duration: 2}}/>
       </Landing>
       <div className="body">
         <div className="div1">
@@ -45,7 +38,7 @@ export default function Market() {
         </p>
         <div className="div3 tile">
             <motion.div className="p"
-                initial={{x: "-100%", opacity: 0}}
+                initial={{x: "-10%", opacity: 0.7}}
                 whileInView={{x: "0%", opacity: 1}}
                 transition={{
                     type: "spring",
@@ -55,7 +48,7 @@ export default function Market() {
                 <img src="../assets/market/market_3.png"/>
             </motion.div>
             <motion.div className="pm"
-            initial={{y: "-50%", opacity: 0}}
+            initial={{y: "-10%", opacity: 0.7}}
             whileInView={{y: "0%", opacity: 1}}
             transition={{
                 type: "spring",
@@ -66,7 +59,7 @@ export default function Market() {
                 <p>When the vehicle is stationary, it can be charged conveniently by parking it in a designated space or a garage equipped with a Dash Vehicle Pad. This system features a wireless charger on the ground and a corresponding receiver, known as the dash car pad, installed underneath the vehicle.</p>
             </motion.div>
             <motion.div className="p"
-                initial={{x: "100%", opacity: 0}}
+                initial={{x: "10%", opacity: 0.7}}
                 whileInView={{x: "0%", opacity: 1}}
                 transition={{
                     type: "spring",
@@ -78,7 +71,7 @@ export default function Market() {
         </div>
         <div className="div4 tile">
             <motion.div className="p"
-                initial={{x: "-100%", opacity: 0}}
+                initial={{x: "-10%", opacity: 0.7}}
                 whileInView={{x: "0%", opacity: 1}}
                 transition={{
                     type: "spring",
@@ -88,7 +81,7 @@ export default function Market() {
                 <p>Semi-dynamic charging refers to a scenario where vehicles operate in a cyclic pattern, with regular intervals of starting and stopping along a predetermined route.</p>
             </motion.div>
             <motion.div className="pm"
-                initial={{y: "50%", opacity: 0}}
+                initial={{y: "10%", opacity: 0.7}}
                 whileInView={{y: "0%", opacity: 1}}
                 transition={{
                     type: "spring",
@@ -99,7 +92,7 @@ export default function Market() {
                 <p>During this process, electric vehicles (EVs) can rapidly acquire their initial charge, while power snacking becomes a viable solution to alleviate range concerns for both commercial and residential users.</p>
             </motion.div>
             <motion.div className="p"
-                initial={{x: "100%", opacity: 0}}
+                initial={{x: "10%", opacity: 0.7}}
                 whileInView={{x: "0%", opacity: 1}}
                 transition={{
                     type: "spring",
@@ -111,7 +104,7 @@ export default function Market() {
         </div>
         <div className="div5 tile">
             <motion.div className="p"
-                initial={{x: "-100%", opacity: 0}}
+                initial={{x: "-10%", opacity: 0.7}}
                 whileInView={{x: "0%", opacity: 1}}
                 transition={{
                     type: "spring",
@@ -121,7 +114,7 @@ export default function Market() {
                 <img src="../assets/market/market_5.png" alt="" />
             </motion.div>
             <motion.div className="pm"
-                initial={{y: "80%", opacity: 0}}
+                initial={{y: "10%", opacity: 0.7}}
                 whileInView={{y: "0%", opacity: 1}}
                 transition={{
                     type: "spring",
@@ -132,7 +125,7 @@ export default function Market() {
                 <p>In this scenario, the charging process occurs while the vehicle is in motion. A fixed ground charger serves the purpose of transmitting electricity to the receiver coil located within the mobile vehicle, spanning a limited distance of up to 250 mm.</p>
             </motion.div>
             <motion.div className="p"
-            initial={{x: "100%", opacity: 0}}
+            initial={{x: "10%", opacity: 0.7}}
             whileInView={{x: "0%", opacity: 1}}
             transition={{
                 type: "spring",

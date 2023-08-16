@@ -15,6 +15,30 @@
     overflow-x: hidden;
 }
 
+
+#speedometer{
+    font-family: "artifakt";
+    
+
+    .speedometer__text{
+        p{
+            font-family: "artifakt";
+            color: #000000;
+            background-color: #000000; 
+        }
+    }
+
+    .speedometer__canvas {
+        background-image: url(../public/assets/speedo.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center top;
+      }
+}
+  
+
+
+
 #test{
     z-index: 99 !important;
     height: 100vh;
@@ -418,6 +442,33 @@
         }
     }
 
+    .speedometerS{
+        gap: 10vw;
+        height: 50vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .subDiv{
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .num{
+                margin-top: -20vh;
+                font-size: 2.5rem;
+                color: #FC7575;
+            }
+
+            .subHead{
+                margin-top: 3vh;
+            }
+        }
+    }
+
     .use_case{
         margin-top: 20vh;
 
@@ -694,7 +745,7 @@
                 margin-bottom: 70px;
                 img{
                     margin: 5px 10px;
-                    width: 50px;
+                    width: 10vw;
                     // height: auto;
                 }
                 p{
@@ -845,17 +896,23 @@
 #Technology{
     #TechLanding{
         .landing{
-            background-image: url(../public/assets/Technology/TechBg.png);
+            
+            background-image: url(../public/assets/Technology/landing1.png);
             text-align: center;
             // background: linear-gradient(to right, #ffffff 0%, #ffffff 5%, #0B132A 5%, #0B132A 100%);
 
             .cars{
+                overflow: hidden;
                 height: 100vh;
                 display: flex;
                     justify-content: center;
                     align-items: center;
-                .car1{
-                    width: 50vw;
+
+                    
+                .landingInit{
+                    overflow: hidden;
+                    width: 100vw;
+                    height: fit-content;
                 }
                 .car2{
                     margin-bottom: 20vh;
@@ -998,14 +1055,20 @@
                 // background-image: url(../public/assets/Technology/Vector89.png);
                 display: flex;
                 flex-direction: column;
-                gap: 18vh;
+                min-height: 250vh;
                 // max
 
+                .bg{
+                    z-index: 0;
+                }
+
                 .svgs{
+                    z-index: 5;
+                    min-height: 250vh;
                     position: absolute;
-                    display: flex;
-                     flex-direction: column;
-                     gap: 20vh;
+                    svg{
+                        z-index: 10;
+                    }
                 }
             }
 
@@ -1723,7 +1786,7 @@
                 font-weight: 500;
             }
             .tiles{
-                overflow: hidden;
+                overflow: visible;
                 display: flex;
                 justify-content: space-evenly;
                 align-items: center;
@@ -1731,6 +1794,9 @@
                 .tile{
                     position: relative;
                     overflow: visible;
+                    svg{
+                        overflow: visible;
+                    }
                     p{
                         position: absolute;
                         top: 50%;
@@ -2570,17 +2636,18 @@
         position: relative;
         h1{
             position: absolute;
-            top: 20%;
+            top: 15%;
             left: 10%;
             width: 70vw;
             color: rgb(0, 0, 0);
             font-size: 3rem;
         }
         img{
+            width: 35vw;
             position: absolute;
             bottom: 0%;
             right: 10%;
-            height:60%;
+            height:auto;
         }
 
         .blocks{

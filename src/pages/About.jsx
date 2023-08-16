@@ -2,6 +2,14 @@ import React, { useRef, useEffect } from 'react';
 import {motion, useScroll, useTransform, useInView, useAnimation, useAnimate} from "framer-motion";
 import Landing from "../components/Landing";
 
+const valueVariant={
+  hidden: {
+    y: "25%", opacity: 0
+  },
+  visible: {
+    y: "0%", opacity: 1
+  }
+}
 
 const svgPathVariant={
   hidden: {
@@ -20,6 +28,34 @@ const svgBoxVariant={
     opacity: 1
   }
 }
+
+const lftRightVariant = {
+  hidden: {
+    x: "-75%"
+  },
+  visible: {
+    x: "0%",
+    transition: {
+      type: "spring",
+      stiffness: 15,
+      delay: 0.1 }
+  }
+}
+
+
+const rightLftVariant = {
+  hidden: {
+    x: "75%"
+  },
+  visible: {
+    x: "0%",
+    transition: {
+      type: "spring",
+      stiffness: 15,
+      delay: 0.1 }
+  }
+}
+
 
 export default function About() {
 
@@ -419,7 +455,7 @@ export default function About() {
       </div>
       <div className="div_2">
         <motion.h1
-          initial={{x: "-50%", opacity: 0}}
+          initial={{x: "-5%", opacity: 0.5}}
           whileInView={{x: "0%", opacity: 1}}
           transition={{
             type: "spring",
@@ -427,7 +463,7 @@ export default function About() {
           }}
         >The Canon moment</motion.h1>
         <motion.p
-        initial={{y: "100%", opacity: 0}}
+        initial={{y: "20%", opacity: 0.5}}
         whileInView={{y: "0%", opacity: 1}}
         transition={{
           type: "spring",
@@ -446,7 +482,7 @@ export default function About() {
         <div className="img">
           <img src="../assets/about/about_3.png" alt="" />
           <motion.p className="p1"
-          initial={{x: "-80%", opacity: 0}}
+          initial={{x: "-10%", opacity: 0.5}}
           whileInView={{x: "0%", opacity: 1}}
           transition={{
             type: "spring",
@@ -457,7 +493,7 @@ export default function About() {
             every time.
           </motion.p>
           <motion.div className="p2"
-          initial={{y: "100%", opacity: 0}}
+          initial={{y: "10%", opacity: 0.5}}
           whileInView={{y: "0%", opacity: 1}}
           transition={{
             type: "spring",
@@ -479,16 +515,13 @@ export default function About() {
       <div className="div_4">
         <img src="../assets/about/about_4.png" alt="" />
 
-        <motion.h1 ref={valuesRef}
-          initial={{x: "50%", opacity: 0}}
-          whileInView={{x: "0%", opacity: 1}}
-          transition={{delay: 4, duration: 2}}
-        >Values</motion.h1>
-        <motion.p 
-        initial={{y: "50%", opacity: 0}}
-        whileInView={{y: "0%", opacity: 1}}
+        <h1 ref={valuesRef}
+        >Values</h1>
+        <motion.p
+        variants={valueVariant}
+        initial="hidden" animate={valueAnimationControls}
         transition={{
-          delay: 5,
+          delay: 2.75,
           type: "spring",
           stiffness: 25,
         }}>
@@ -511,23 +544,23 @@ export default function About() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <motion.path variants={svgPathVariant} initial="hidden" animate={valueAnimationControls} transition={{duration: 2, delay: 1}} d="M1239 174L10 174" stroke="#CD222A" stroke-width="5" />
-          <motion.path variants={svgPathVariant} initial="hidden" animate={valueAnimationControls} transition={{duration: 1, delay: 3}} d="M9.99999 177L10 0" stroke="#CD222A" stroke-width="5" />
-          <motion.rect variants={svgBoxVariant} initial="hidden" animate={valueAnimationControls} transition={{duration: 0.5, delay: 4}}  width="20" height="18" fill="#CD222A" />
+          <motion.path variants={svgPathVariant} initial="hidden" animate={valueAnimationControls} transition={{duration: 1.5, delay: 0.30}} d="M1239 174L10 174" stroke="#CD222A" stroke-width="5" />
+          <motion.path variants={svgPathVariant} initial="hidden" animate={valueAnimationControls} transition={{duration: 0.75, delay: 1.8}} d="M9.99999 177L10 0" stroke="#CD222A" stroke-width="5" />
+          <motion.rect variants={svgBoxVariant} initial="hidden" animate={valueAnimationControls} transition={{duration: 0.25, delay: 2.5}}  width="20" height="18" fill="#CD222A" />
         </svg>
       </div>
       <div className="div_2">
         <motion.h1
-        initial={{y: "-80%", opacity: 0, scale: 1}}
-        whileInView={{y: "0%", opacity: 1, scale: 1}}
+        initial={{y: "-15%", opacity: 0.5}}
+        whileInView={{y: "0%", opacity: 1}}
         transition={{
           type: "spring",
           stiffness: 25,
         }}
         >The aim</motion.h1>
         <motion.p
-        initial={{x: "80%", opacity: 0, scale: 1}}
-        whileInView={{x: "0%", opacity: 1, scale: 1}}
+        initial={{x: "10%", opacity: 0.5}}
+        whileInView={{x: "0%", opacity: 1}}
         transition={{
           type: "spring",
           stiffness: 25,
@@ -567,14 +600,17 @@ export default function About() {
         </div>
       </div>
       <div className="div_heading">
-        <div className="head">
+        <motion.div className="head"
+        variants={lftRightVariant}
+        initial="hidden"
+        whileInView="visible">
         <svg width="704" height="18" viewBox="0 0 704 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M-123 9L702 8.99993" stroke="#CD222A" stroke-width="5"/>
 <rect x="683" width="21" height="18" fill="#CD222A"/>
 </svg>
 
           <h1>WIRELESS CHARGING NETWORK STATIONS</h1>
-        </div>
+        </motion.div>
 
         <div className="text">
           <p>
@@ -592,15 +628,21 @@ export default function About() {
         </div>
       </div>
 
-      <div className="div_heading">
-        <div className="head odd">
+      <div className="div_heading"
+      variants={rightLftVariant}
+      initial="hidden"
+      whileInView="visible">
+        <motion.div className="head odd"
+        variants={rightLftVariant}
+        initial="hidden"
+        whileInView="visible">
           <h1>DRONE TOWERS</h1>
           <svg width="834" height="18" viewBox="0 0 834 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M898 9L2 9" stroke="#CD222A" stroke-width="5"/>
 <rect width="21" height="18" transform="matrix(-1 0 0 1 21 0)" fill="#CD222A"/>
 </svg>
 
-        </div>
+        </motion.div>
 
         <div className="text">
           <p>
@@ -621,14 +663,17 @@ export default function About() {
       </div>
 
       <div className="div_heading">
-        <div className="head">
+        <motion.div className="head"
+        variants={lftRightVariant}
+        initial="hidden"
+        whileInView="visible">
         <svg width="704" height="18" viewBox="0 0 704 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M-123 9L702 8.99993" stroke="#CD222A" stroke-width="5"/>
 <rect x="683" width="21" height="18" fill="#CD222A"/>
 </svg>
 
           <h1>SUSTAINABLE FUTURE</h1>
-        </div>
+        </motion.div>
 
         <div className="text">
           <p>

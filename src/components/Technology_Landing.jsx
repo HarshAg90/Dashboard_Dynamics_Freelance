@@ -21,11 +21,17 @@ export default function TechnologyLanding() {
     <div  id='TechLanding'>
       <motion.div ref={targetRef} className='basicLand landing'  style={{opacity, scale}}>
       <div className="cars">
-      <motion.img className='landingInit' src="../assets/Technology/landing2.png"
+        <div className="fg_img">
+        {/* <img src="../assets/Technology/landing2.png" className='bg_img' alt="BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" /> */}
+        </div>
+      {/* <motion.img className='landingInit' src="../assets/Technology/landing2.png"
         initial={{opacity: 0, }}
         animate={{opacity: 1}}
         transition={{duration: 0.25, delay: 0.5, ease: "linear"}}
-      />
+      /> */}
+      {/* <img src="" className='bg_img' alt="" /> */}
+
+
       </div>
         <ul id="side_nav">
             <li><svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">

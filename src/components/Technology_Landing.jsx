@@ -20,11 +20,7 @@ export default function TechnologyLanding() {
   return (
     <div  id='TechLanding'>
       <motion.div ref={targetRef} className='basicLand landing'  style={{opacity, scale}}>
-      <div className="cars">
-        <div className="fg_img"/>
-
-
-      </div>
+      <div className="fg_img"/>
       
         <ul id="side_nav">
             <li><svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">

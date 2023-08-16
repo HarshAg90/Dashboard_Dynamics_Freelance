@@ -910,58 +910,33 @@
 #Technology{
     #TechLanding{
         .landing{
-              
+            background-image: url(../public/assets/Technology/landing1.png);
             
             
             .fg_img{
-                width: 100vw;
+                width: 100%;
                 position: absolute;
                 top: 0;
                 left: 0;
                 height: fit-content;
                 background-color: black;
-                animation: colapse 5s ease;
-                background-image: url(../public/assets/Technology/landing1.png);
+                animation: colapse 5s ease 1s;
+                background-image: url(../public/assets/Technology/landing2.png);
                 background-size:100vw;
                 background-repeat: no-repeat;
                 @keyframes colapse {
                     0%{
-                        height: 100vh;
-                        width: 100vw;
+                        height: 100%;
+                        width: 0%;
                     }
-                    // 25%{
-                    //     height: 100vh;
-                    //     width: 75vw;
-                    // }
-                    // 50%{
-                    //     width: 50vw;
-                    // }
-                    // 75%{
-                    //     width: 25vw;
-                    //     height: 100vh;
-                    // }
                     100%{
-                        height: 100vh;
-                        width: 0vw;
+                        height: 100%;
+                        width: 100%;
                     }
                     
                 }
                 
             }
-            background-image: url(../public/assets/Technology/landing2.png);
-            // background-size: 100vw;
-            // background: linear-gradient(to right, #ffffff 0%, #ffffff 5%, #0B132A 5%, #0B132A 100%);
-
-            .cars{
-                overflow: hidden;
-                height: 100vh;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                    
-            }
-            
             
         }
 

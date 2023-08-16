@@ -1,5 +1,4 @@
 import React from 'react'
-import { DownOutlined } from '@ant-design/icons';
 import { Dropdown, Space } from 'antd';
 import { Link } from "react-router-dom";
 import { motion,  useScroll } from "framer-motion";
@@ -158,7 +157,6 @@ variants.hidden = { ...variants.hidden, background: "white" };
               <a onClick={(e) => e.preventDefault()}>
                 <Space>
                 <Link><li className="nav_elements">About</li></ Link>
-                  <DownOutlined />
                 </Space>
               </a>
             </Dropdown>
@@ -173,7 +171,6 @@ variants.hidden = { ...variants.hidden, background: "white" };
               <a onClick={(e) => e.preventDefault()}>
                 <Space>
                 <Link><li className="nav_elements">Technology</li></ Link>
-                  <DownOutlined />
                 </Space>
               </a>
             </Dropdown>
@@ -188,7 +185,6 @@ variants.hidden = { ...variants.hidden, background: "white" };
               <a onClick={(e) => e.preventDefault()}>
                 <Space>
                   <Link to="/Use_case"><li className="nav_elements">Use cases</li></ Link>
-                  <DownOutlined />
                 </Space>
               </a>
             </Dropdown>
@@ -203,8 +199,6 @@ variants.hidden = { ...variants.hidden, background: "white" };
               <a onClick={(e) => e.preventDefault()}>
                 <Space>
                 <Link><li className="nav_elements">News Room</li></ Link>
-                
-                  <DownOutlined />
                 </Space>
               </a>
             </Dropdown>

@@ -31,28 +31,26 @@ const svgBoxVariant={
 
 const lftRightVariant = {
   hidden: {
-    x: "-75%"
+    x: "-25%", opacity: 0
   },
   visible: {
-    x: "0%",
+    x: "0%", opacity: 1,
     transition: {
       type: "spring",
-      stiffness: 15,
-      delay: 0.1 }
+      stiffness: 20, }
   }
 }
 
 
 const rightLftVariant = {
   hidden: {
-    x: "75%"
+    x: "25%", opacity: 0
   },
   visible: {
-    x: "0%",
+    x: "0%", opacity: 1,
     transition: {
       type: "spring",
-      stiffness: 15,
-      delay: 0.1 }
+      stiffness: 20, }
   }
 }
 
@@ -600,14 +598,14 @@ export default function About() {
         </div>
       </div>
       <div className="div_heading">
-        <motion.div className="head"
+        <motion.div className="head">
+        <motion.svg width="704" height="18" viewBox="0 0 704 18" fill="none" xmlns="http://www.w3.org/2000/svg"
         variants={lftRightVariant}
         initial="hidden"
         whileInView="visible">
-        <svg width="704" height="18" viewBox="0 0 704 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M-123 9L702 8.99993" stroke="#CD222A" stroke-width="5"/>
 <rect x="683" width="21" height="18" fill="#CD222A"/>
-</svg>
+</motion.svg>
 
           <h1>WIRELESS CHARGING NETWORK STATIONS</h1>
         </motion.div>
@@ -632,17 +630,17 @@ export default function About() {
       variants={rightLftVariant}
       initial="hidden"
       whileInView="visible">
-        <motion.div className="head odd"
-        variants={rightLftVariant}
-        initial="hidden"
-        whileInView="visible">
+        <div className="head odd">
           <h1>DRONE TOWERS</h1>
-          <svg width="834" height="18" viewBox="0 0 834 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <motion.svg width="834" height="18" viewBox="0 0 834 18" fill="none" xmlns="http://www.w3.org/2000/svg"
+          variants={rightLftVariant}
+          initial="hidden"
+          whileInView="visible">
 <path d="M898 9L2 9" stroke="#CD222A" stroke-width="5"/>
 <rect width="21" height="18" transform="matrix(-1 0 0 1 21 0)" fill="#CD222A"/>
-</svg>
+</motion.svg>
 
-        </motion.div>
+        </div>
 
         <div className="text">
           <p>
@@ -663,17 +661,17 @@ export default function About() {
       </div>
 
       <div className="div_heading">
-        <motion.div className="head"
+        <div className="head">
+        <motion.svg width="704" height="18" viewBox="0 0 704 18" fill="none" xmlns="http://www.w3.org/2000/svg"
         variants={lftRightVariant}
         initial="hidden"
         whileInView="visible">
-        <svg width="704" height="18" viewBox="0 0 704 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M-123 9L702 8.99993" stroke="#CD222A" stroke-width="5"/>
 <rect x="683" width="21" height="18" fill="#CD222A"/>
-</svg>
+</motion.svg>
 
           <h1>SUSTAINABLE FUTURE</h1>
-        </motion.div>
+        </div>
 
         <div className="text">
           <p>

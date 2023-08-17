@@ -109,7 +109,7 @@ export default function Contacts() {
           </div>
         </div>
         <form className="form">
-          <h1>Career</h1>
+          {/* <h1>Career</h1> */}
           <p>Name</p>
           <input type="text" placeholder="Full Name" />
           <p>E-MAIL</p>
@@ -162,7 +162,7 @@ export default function Contacts() {
         </form>
       </div>
 
-      <div className="contact_head">
+      <div className="contact_head odd">
         <button>FAQs</button>
         <p>You question, We answer</p>
       </div>

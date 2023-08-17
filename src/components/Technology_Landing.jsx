@@ -26,7 +26,7 @@ export default function TechnologyLanding() {
         </div>
       {/* <motion.img className='landingInit' src="../assets/Technology/landing2.png"
         initial={{opacity: 0, }}
-        animate={{opacity: 1}}
+        animate={{opacity: 1}}`
         transition={{duration: 0.25, delay: 0.5, ease: "linear"}}
       /> */}
       {/* <img src="" className='bg_img' alt="" /> */}

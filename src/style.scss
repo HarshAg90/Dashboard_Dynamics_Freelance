@@ -112,6 +112,12 @@
             justify-content: center;
             align-items: center;
             color: black;
+            &.red{
+                color: #BC0000;
+                ;
+                // text-decoration: underline;
+                // border-bottom: 2px solid black;
+            }
             height: 70px;
             padding: 0 10px;
             font-size: 1rem;
@@ -1302,6 +1308,10 @@
         .contact_head{
             font-family: 'artifakt',sans-serif;
             height: 40vh;
+            &.odd{
+                height: 25vh;
+                margin: 5vh;
+            }
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
@@ -1803,6 +1813,17 @@
         img{
             padding: 40px;
             border-radius: 5px;
+        }
+        .btn{
+            width: 100%;
+            display: flex;
+            justify-content: end;
+            button{
+                padding: 5px 20px;
+                margin: 10px 0px;
+                border-radius: 10px;
+                border: 1px solid black;
+            }
         }
         .left{
             width: 40vw;
@@ -2378,6 +2399,7 @@
             display: flex;
             justify-content: space-evenly;
             align-items: center;
+            background:white;
             width: 80vw;
             border-radius: 10px;
             height: 60vh;
@@ -2593,7 +2615,7 @@
         overflow: hidden;
     }
     .content{
-        height: 400vh;
+        height: 350vh;
         font-family: "artifakt", sans-serif;
         display: flex;
         flex-direction: column;
@@ -2651,15 +2673,15 @@
                 flex-direction: column;
                 margin-bottom: 30px;
                 .icon{
-                    height: 100px;
-                    width: 100px;
+                    height: 150px;
+                    width: 150px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                 }
                 p{
                     font-family: "artifakt", sans-serif;
-                    
+                    margin-top: -20px;
                     width: auto;
                 }
             }
@@ -2935,10 +2957,10 @@
             p.p1{
                 overflow: hidden;
                 position: absolute;
-                top: 30%;
-                right: 30%;
+                top: 27%;
+                right: 20%;
                 transform: translate(50%,-50%);
-                width: 534px;
+                width: 30vw;
                 size: 18px;
             }
             .p2{
@@ -2952,9 +2974,12 @@
                     overflow: hidden;
                     padding: 20px 0px;
                     border-bottom: 1px solid black;
-                    margin-bottom: 20px;
-                    padding-right: 30px;
+                    margin-bottom: 20px 0;
+                    font-family: "artifakt",sans-serif;
+                    padding-right: 50px;
+                    width:fit-content;
                     font-size: 24px;
+                    margin-right: 0 !important;
                     font-weight: 600;
                 }
             }
@@ -2987,8 +3012,9 @@
         }
         p{
             position: absolute;
-            top: 20%;
-            right: 20%;
+            top: 30%;
+            font-size: 1.5rem;
+            right: 17%;
         }
     }
     .div_5{

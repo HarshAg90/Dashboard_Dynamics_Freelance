@@ -63,8 +63,11 @@ export default function Blogs() {
                     <br />
                     <hr />
                     <p>The global shift towards electric vehicles (EVs) is gathering momentum, driven by environmental concerns, government incentives, and technological advancements. As the popularity of EVs grows, it is crucial to address the challenges faced by EV owners and develop a reliable charging infrastructure to support their widespread use. 
-                        <br />To fully embrace the electric revolution, a comprehensive charging infrastructure is essential. While home charging is convenient for many, it is not feasible for everyone. Therefore, a robust public charging network is necessary in urban areas, public parking lots, workplaces, and major highways. By providing accessible charging options, range anxiety can be alleviated, encouraging more people to switch to EVs....read more</p>
+                        <br />To fully embrace the electric revolution, a comprehensive charging infrastructure is essential. While home charging is convenient for many, it is not feasible for everyone. Therefore, a robust public charging network is necessary in urban areas, public parking lots, workplaces, and major highways. By providing accessible charging options, range anxiety can be alleviated, encouraging more people to switch to EVs.</p>
+                    <div className="btn">
+
                     <button>Read more</button>
+                    </div>
                 </div>
                     <br />
                     <br />
@@ -74,8 +77,10 @@ export default function Blogs() {
                     <br />
                     <hr />
                     <p>Wireless charging technology by Dash Dynamic has revolutionized the world of electric vehicles (EVs) by offering a convenient, efficient, and sustainable charging solution. The advantages of Dash Dynamic's innovative wireless charging technology are as follows:
-                        <br /> Reduced Carbon Footprint: Dash Dynamic's wireless charging simplifies EV construction and maintenance, leading to a reduced carbon footprint. This technology eliminates clutter and utilizes smaller batteries, minimizing waste and contributing to a more sustainable future...read more</p>
+                        <br /> Reduced Carbon Footprint: Dash Dynamic's wireless charging simplifies EV construction and maintenance, leading to a reduced carbon footprint. This technology eliminates clutter and utilizes smaller batteries, minimizing waste and contributing to a more sustainable future.</p>
+                        <div className="btn">
                     <button>Read more</button>
+                        </div>
                 </div>
             </motion.div>
         </div>

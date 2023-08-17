@@ -2,16 +2,6 @@ import React from 'react';
 import {motion} from "framer-motion";
 import ProductLanding from '../components/ProductLanding';
 
-
-const tilesVariant = {
-  hidden: {
-    opacity: 0, scale: 0.2, x: "-100%"
-  },
-  visible: {
-    opacity: 1, scale: 1, x: "0%",
-  }
-}
-
 const productVariant = {
   hidden: {
     opacity: 0, scale: 1, y: "40%"

@@ -1,7 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import {motion, useScroll, useTransform, useInView, useAnimation, useAnimate} from "framer-motion";
 
-const pathLeft = "M175 857V208.125C174.288 145.812 138.492 17.3487 1.00001 2"
 
 const carLeftVariant = {
     hidden: {
@@ -9,8 +8,7 @@ const carLeftVariant = {
         y: "470%"
     },
     visible: {
-        y: "250%",
-        rotate: [0, 0],
+        y: "200%",
         opacity: [1, 1, 1, 1, 1, 0]
     }
 }
@@ -22,15 +20,13 @@ const carMidVariant = {
     }
 }
 
-
-const pathRight = "M2 857V208.125C2.71166 145.812 38.508 17.3487 176 2";
 const carRightVariant = {
     visible: {
         // path: pathRight,
-        y: ["100%", "-150%", "-150%", "-150%"],
-        x: ["0%", "50%", "50%", "50%"],
-        rotate: [0,30, 30, 30, 30],
-        opacity: [1,1,1,0,0,0,0]
+        y: ["100%", "-100%"],
+        // x: ["0%", "50%", "50%", "50%"],
+        // rotate: [0,30, 30, 30, 30],
+        opacity: [1,1,1,1,1,1,0]
     }
 }
 
@@ -44,19 +40,6 @@ const carRightVariant = {
 const Fleets = () => {
 
 
-    const [scope, animate] = useAnimate();
-
-    function sequence() {
-        animate([
-            // [scope.current, { y: "400" }],
-            // [scope.current, { y: "380%" }],
-            // [scope.current, { y: "310%" }],
-            // [scope.current, { y: "240%" }],
-            // [scope.current, { rotate: -45 }],
-            // [scope.current, { x: "-50%" }],
-            [scope.current, { scale: 1 }]
-        ]);
-    }
 
 
 
@@ -147,11 +130,10 @@ const Fleets = () => {
             <div className="left outerContainer">
                 <motion.div className='carContainer1'
                     variants={carLeftVariant}
-                    ref={scope}
                     initial="hidden"
-                    whileInView="visible"
+                    animate={roadAnimationControls}
                     transition={{
-                        duration: 4
+                        duration: 3
                     }}
                 >
                     <img src="../assets/Fleets/leftCar.png" alt="Left-car" className='car1'/>
@@ -186,9 +168,9 @@ const Fleets = () => {
                         initial={{
                             opacity: 0
                         }}
-                        whileInView="visible"
+                        animate={roadAnimationControls}
                         transition={{
-                            duration: 6
+                            duration: 1.5
                         }}
                     >
                     <img src="../assets/Fleets/rightCar.png" alt="Right-car" className='car3'/>

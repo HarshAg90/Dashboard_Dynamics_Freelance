@@ -910,9 +910,6 @@
 #Technology{
     #TechLanding{
         .landing{
-            background-image: url(../public/assets/Technology/landing1.png);
-            
-            
             .fg_img{
                 width: 100%;
                 position: absolute;
@@ -920,7 +917,7 @@
                 left: 0;
                 height: fit-content;
                 background-color: black;
-                animation: colapse 5s ease 1s;
+                animation: colapse 5s forwards 2s;
                 background-image: url(../public/assets/Technology/landing2.png);
                 background-size:100vw;
                 background-repeat: no-repeat;
@@ -937,7 +934,7 @@
                 }
                 
             }
-            
+            background-image: url(../public/assets/Technology/landing1.png);
         }
 
 

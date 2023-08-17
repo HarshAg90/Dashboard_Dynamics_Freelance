@@ -933,7 +933,7 @@
                 left: 0;
                 height: fit-content;
                 background-color: black;
-                animation: colapse 5s forwards 2s;
+                animation: colapse 5s forwards 1.5s;
                 background-image: url(../public/assets/Technology/landing2.png);
                 background-size:100vw;
                 background-repeat: no-repeat;
@@ -1113,7 +1113,7 @@
                     max-height: 210%;
                     position: absolute;
                     svg{
-                        overflow: visible;
+                        overflow: hidden;
                         z-index: 10;
                     }
                 }
@@ -2253,9 +2253,11 @@
     .hero{
         background-image: url(../public/assets/EV_manufacturer/scndBg.png);
         text-align: center;
+        overflow: hidden;
         height: 100vh;
 
         .col{
+            overflow: hidden;
             min-height: 90vh;
             display: flex;
             flex-direction: column;
@@ -2286,6 +2288,7 @@
         }
 
         svg{
+            overflow: hidden;
             width: 100%;
             z-index: 0;
             position: absolute;

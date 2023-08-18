@@ -159,7 +159,6 @@ variants.hidden = { ...variants.hidden, background: "white" };
               <a onClick={(e) => e.preventDefault()}>
                 <Space>
                 <Link className={`a2 ${(red_btn===2)?'red':""}`}><li className="nav_elements">About</li></ Link>
-                  <DownOutlined />
                 </Space>
               </a>
             </Dropdown>
@@ -174,7 +173,7 @@ variants.hidden = { ...variants.hidden, background: "white" };
               <a onClick={(e) => e.preventDefault()}>
                 <Space>
                 <Link className={`a3 ${(red_btn===3)?'red':""}`}><li className="nav_elements">Technology</li></ Link>
-                  <DownOutlined />
+                  {/* <DownOutlined /> */}
                 </Space>
               </a>
             </Dropdown>
@@ -189,7 +188,7 @@ variants.hidden = { ...variants.hidden, background: "white" };
               <a onClick={(e) => e.preventDefault()}>
                 <Space>
                   <Link to="/Use_case" className={`a5 ${(red_btn===5)?'red':""}`}  onClick={()=>set_red_btn(5)}><li className="nav_elements">Use cases</li></ Link>
-                  <DownOutlined />
+                  {/* <DownOutlined /> */}
                 </Space>
               </a>
             </Dropdown>
@@ -205,9 +204,9 @@ variants.hidden = { ...variants.hidden, background: "white" };
                 <Space>
                 <Link className={`a7 ${(red_btn===7)?'red':""}`}><li className="nav_elements">News Room</li></ Link>
                 
-                  <DownOutlined />
+                  {/* <DownOutlined /> */}
                 </Space>
-              </a>
+              </a>  
             </Dropdown>
             <Link to="/Careers" className={`a8 ${(red_btn===8)?'red':""}`}  onClick={()=>set_red_btn(8)}><li className="nav_elements">Career</li></ Link>
         </ul>

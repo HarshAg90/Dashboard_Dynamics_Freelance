@@ -1,110 +1,108 @@
-import React, { useState } from 'react'
-import { DownOutlined } from '@ant-design/icons';
+import React from 'react'
 import { Dropdown, Space } from 'antd';
 import { Link } from "react-router-dom";
 import { motion,  useScroll } from "framer-motion";
 
 
+const itemsUseCase = [
+  {
+    key: '1',
+    label: (
+      <a rel="noopener noreferrer" href="/Ev_users">
+        Ev Users
+      </a>
+    ),
+  },
+  {
+    key: '2',
+    label: (
+      <a rel="noopener noreferrer" href="/ev_manufacturer">
+        EV Manufacturers
+      </a>
+    ),
+  },
+  {
+    key: '3',
+    label: (
+      <a rel="noopener noreferrer" href="/fleets">
+        Fleets
+      </a>
+    ),
+  },
+  {
+    key: '4',
+    label: (
+      <a rel="noopener noreferrer" href="/charge">
+        Charge Point Operators
+      </a>
+    ),
+  }
+];
+
+const itemsTech = [
+  {
+    key: '1',
+    label: (
+      <a rel="noopener noreferrer" href="/Technology">
+        Our Tech
+      </a>
+    ),
+  },
+  {
+    key: '2',
+    label: (
+      <a rel="noopener noreferrer" href="/market">
+        Market
+      </a>
+    ),
+  }
+];
+
+const itemsAbout = [
+  {
+    key: '1',
+    label: (
+      <a rel="noopener noreferrer" href="/about">
+        About Us
+      </a>
+    ),
+  },
+  {
+    key: '2',
+    label: (
+      <a rel="noopener noreferrer" href="/team">
+        Team
+      </a>
+    ),
+  }
+];
+
+const itemsNews = [
+  {
+    key: '1',
+    label: (
+      <a rel="noopener noreferrer" href="/News_room">
+        News
+      </a>
+    ),
+  },
+  {
+    key: '2',
+    label: (
+      <a rel="noopener noreferrer" href="/Blogs">
+        Blog
+      </a>
+    ),
+  }
+];
+
+
 export default function Nav() {
-  const [red_btn, set_red_btn] = useState(1);
-  const itemsUseCase = [
-    {
-      key: '1',
-      label: (
-        <Link  onClick={()=>set_red_btn(5)} rel="noopener noreferrer" to="/Ev_users">
-          Ev Users
-        </Link>
-      ),
-    },
-    {
-      key: '2',
-      label: (
-        <Link onClick={()=>set_red_btn(5)} rel="noopener noreferrer" to="/ev_manufacturer">
-          EV Manufacturers
-        </Link>
-      ),
-    },
-    {
-      key: '3',
-      label: (
-        <Link onClick={()=>set_red_btn(5)} rel="noopener noreferrer" to="/fleets">
-          Fleets
-        </Link>
-      ),
-    },
-    {
-      key: '4',
-      label: (
-        <Link rel="noopener noreferrer" to="/charge">
-          Charge Point Operators
-        </Link>
-      ),
-    }
-  ];
-  
-  const itemsTech = [
-    {
-      key: '1',
-      label: (
-        <Link  onClick={()=>set_red_btn(3)} rel="noopener noreferrer" to="/Technology">
-          Our Tech
-        </Link>
-      ),
-    },
-    {
-      key: '2',
-      label: (
-        <Link onClick={()=>set_red_btn(3)} rel="noopener noreferrer" to="/market">
-          Market
-        </Link>
-      ),
-    }
-  ];
-  
-  const itemsAbout = [
-    {
-      key: '1',
-      label: (
-        <Link onClick={()=>set_red_btn(2)} rel="noopener noreferrer" to="/about">
-          About Us
-        </Link>
-      ),
-    },
-    {
-      key: '2',
-      label: (
-        <Link onClick={()=>set_red_btn(2)} rel="noopener noreferrer" to="/team">
-          Team
-        </Link>
-      ),
-    }
-  ];
-  
-  const itemsNews = [
-    {
-      key: '1',
-      label: (
-        <Link onClick={()=>set_red_btn(7)} rel="noopener noreferrer" to="/News_room">
-          News
-        </Link>
-      ),
-    },
-    {
-      key: '2',
-      label: (
-        <Link onClick={()=>set_red_btn(7)} rel="noopener noreferrer" to="/Blogs">
-          Blog
-        </Link>
-      ),
-    }
-  ];
 
   /** this hook gets the scroll y-axis **/
   const { scrollY } = useScroll();
   /** this hook manages state **/
   const [hidden, setHidden] = React.useState(false);
-
-  
 
   /** this onUpdate function will be called in the `scrollY.onChange` callback **/
   function update() {
@@ -148,7 +146,7 @@ variants.hidden = { ...variants.hidden, background: "white" };
       >
         <ul>
             <Link to="/" className='logo'><li className="nav_elements logo"><img src="../assets/logo.png" alt="" /></li></ Link>
-            <Link to="/" className={`a1 ${(red_btn===1)?'red':""}`}  onClick={()=>set_red_btn(1)}><li className="a1 nav_elements">Home</li></ Link>
+            <Link to="/"><li className="nav_elements">Home</li></ Link>
             <Dropdown
               menu={{
                 items: itemsAbout,
@@ -158,7 +156,7 @@ variants.hidden = { ...variants.hidden, background: "white" };
             >
               <a onClick={(e) => e.preventDefault()}>
                 <Space>
-                <Link className={`a2 ${(red_btn===2)?'red':""}`}><li className="nav_elements">About</li></ Link>
+                <Link><li className="nav_elements">About</li></ Link>
                 </Space>
               </a>
             </Dropdown>
@@ -172,12 +170,11 @@ variants.hidden = { ...variants.hidden, background: "white" };
             >
               <a onClick={(e) => e.preventDefault()}>
                 <Space>
-                <Link className={`a3 ${(red_btn===3)?'red':""}`}><li className="nav_elements">Technology</li></ Link>
-                  {/* <DownOutlined /> */}
+                <Link><li className="nav_elements">Technology</li></ Link>
                 </Space>
               </a>
             </Dropdown>
-            <Link to="/Products" className={`a4 ${(red_btn===4)?'red':""}`}  onClick={()=>set_red_btn(4)}><li className="nav_elements">Our Products</li></ Link>
+            <Link to="/Products"><li className="nav_elements">Our Products</li></ Link>
             <Dropdown
               menu={{
                 items: itemsUseCase,
@@ -187,12 +184,11 @@ variants.hidden = { ...variants.hidden, background: "white" };
             >
               <a onClick={(e) => e.preventDefault()}>
                 <Space>
-                  <Link to="/Use_case" className={`a5 ${(red_btn===5)?'red':""}`}  onClick={()=>set_red_btn(5)}><li className="nav_elements">Use cases</li></ Link>
-                  {/* <DownOutlined /> */}
+                  <Link to="/Use_case"><li className="nav_elements">Use cases</li></ Link>
                 </Space>
               </a>
             </Dropdown>
-            <Link to="/Contacts" className={`a6 ${(red_btn===6)?'red':""}`}  onClick={()=>set_red_btn(6)}><li className="nav_elements">Contact</li></ Link>
+            <Link to="/Contacts"><li className="nav_elements">Contact</li></ Link>
             <Dropdown
               menu={{
                 items: itemsNews,
@@ -202,13 +198,11 @@ variants.hidden = { ...variants.hidden, background: "white" };
             >
               <a onClick={(e) => e.preventDefault()}>
                 <Space>
-                <Link className={`a7 ${(red_btn===7)?'red':""}`}><li className="nav_elements">News Room</li></ Link>
-                
-                  {/* <DownOutlined /> */}
+                <Link><li className="nav_elements">News Room</li></ Link>
                 </Space>
-              </a>  
+              </a>
             </Dropdown>
-            <Link to="/Careers" className={`a8 ${(red_btn===8)?'red':""}`}  onClick={()=>set_red_btn(8)}><li className="nav_elements">Career</li></ Link>
+            <Link to="/Careers"><li className="nav_elements">Career</li></ Link>
         </ul>
     </motion.div>
   )

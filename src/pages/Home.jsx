@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from "react";
+import React, { useRef, useState, useEffect } from 'react';
 import {motion, useInView, useAnimation, useScroll, useTransform} from "framer-motion"
 import HomeLanding from "../components/HomeLanding";
 import Speedometer1 from "../components/speedometer_One";
@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useSpring, animated } from 'react-spring';
 import { useInView as useInViewObserve } from 'react-intersection-observer';
+import ReactPlayer from 'react-player'
 
   function Number({ n }) {
     const [ref, inView] = useInViewObserve({
@@ -31,6 +32,9 @@ import { useInView as useInViewObserve } from 'react-intersection-observer';
         </animated.div>
     );
 }
+
+
+
 
 
 
@@ -96,13 +100,29 @@ const lftRightVariant = {
 
 export default function Home() {
 
+  
+  const [myElementIsVisible, updateMyElementIsVisible] = useState();
+  const myRef = useRef(null);
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries, observer) => {
+      const entry = entries[0];
+      console.log('entry', entry);
+      console.log('entry.isIntersecting', entry.isIntersecting);
+      updateMyElementIsVisible(entry.isIntersecting);
+    });
+    observer.observe(myRef.current);
+  }, []);
+
+
+
+
   var settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 3000,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 2500,
+    autoplaySpeed: 70,
     slidesToShow: 3,
     slidesToScroll: 1,
   };
@@ -133,6 +153,7 @@ export default function Home() {
   const frthOpacity = useTransform(scrollYProgress, [0.1, 0.50], [0, 1]);
   const frthY = useTransform(scrollYProgress, [0.1, 0.50], ["70%", "0%"]);
   const frthScale = useTransform(scrollYProgress, [0.1, 0.50], [1.1, 1]);
+
 
 
 
@@ -293,7 +314,7 @@ export default function Home() {
         <br />
         <br />
         <br />
-        <div ref={wirelessRef} className="title">
+        <div ref={wirelessRef} ref={myRef} className="title">
           <motion.div className="title_h"
           variants={wirelessVariants}
             initial="hidden"
@@ -325,7 +346,7 @@ export default function Home() {
           </motion.div>
           <button>Dive In</button>
         </div>
-        <motion.img src="../assets/Home/home_2.png" alt=""
+        {/* <motion.img src="../assets/Home/home_2.png" alt=""
         initial={{
           scale: 0.93
         }}
@@ -338,7 +359,17 @@ export default function Home() {
         transition={{
           type: "spring",
           stiffness: 60,
-        }}/>
+        }}/> */}
+        <ReactPlayer
+        
+          url='https://www.youtube.com/watch?v=Lmt_CGlEQ-4'
+          width='69%'
+          height='80vh'
+          playing={myElementIsVisible}
+          muted={true}
+          playbackRate= {1.25}
+          controls={false}
+        />
         <br />
         <br />
         <motion.div className="end_line"

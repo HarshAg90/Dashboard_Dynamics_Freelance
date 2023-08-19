@@ -314,7 +314,7 @@ export default function Home() {
         <br />
         <br />
         <br />
-        <div ref={wirelessRef} ref={myRef} className="title">
+        <div ref={wirelessRef} className="title">
           <motion.div className="title_h"
           variants={wirelessVariants}
             initial="hidden"
@@ -360,16 +360,19 @@ export default function Home() {
           type: "spring",
           stiffness: 60,
         }}/> */}
+        <div  ref={myRef} className="videoWrapper">
         <ReactPlayer
+        url='https://www.youtube.com/watch?v=Lmt_CGlEQ-4'
+        width="65%"
+        height='65%'
+        playing={myElementIsVisible}
+        muted={true}
+        playbackRate= {1.25}
+        controls={false}
+        loop={true}
+      />
+        </div>
         
-          url='https://www.youtube.com/watch?v=Lmt_CGlEQ-4'
-          width='69%'
-          height='80vh'
-          playing={myElementIsVisible}
-          muted={true}
-          playbackRate= {1.25}
-          controls={false}
-        />
         <br />
         <br />
         <motion.div className="end_line"

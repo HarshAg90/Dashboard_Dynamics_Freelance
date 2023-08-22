@@ -179,6 +179,7 @@ export default function Home() {
   return (
     <div id="Home">
     <HomeLanding />
+    
       <div ref={techRef} className="tech">
         <div className="left">
           <div className="title">
@@ -346,20 +347,6 @@ export default function Home() {
           </motion.div>
           <button>Dive In</button>
         </div>
-        {/* <motion.img src="../assets/Home/home_2.png" alt=""
-        initial={{
-          scale: 0.93
-        }}
-        whileHover={{
-          scale: 0.95
-        }}
-        whileTap={{
-          scale: 0.94
-        }}
-        transition={{
-          type: "spring",
-          stiffness: 60,
-        }}/> */}
         <div  ref={myRef} className="videoWrapper">
         <ReactPlayer
         url='https://www.youtube.com/watch?v=Lmt_CGlEQ-4'

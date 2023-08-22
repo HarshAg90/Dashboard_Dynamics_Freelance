@@ -8,7 +8,6 @@
     src: url("./ArtifaktElement-Regular.woff.ttf");
 }
 *{
-    // min-height: 100vh;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -64,10 +63,10 @@
             font-family: "monogram",sans-serif;
             font-size: 2.7rem;
             font-weight: 400;
-            background: #525050;
+            // background: #525050;
             // background: linear-gradient(180deg, rgba(0,0,0,1) 37%, rgba(116,116,116,1) 91%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            // -webkit-background-clip: text;
+            // -webkit-text-fill-color: transparent;
             line-gap-override: 10px;
         }
         #side_nav{
@@ -105,7 +104,7 @@
         // padding: 10px 5px !important;
         list-style: none;
         margin-top: 0 !important;
-        background-color: #7676764b;
+        // background-color: #7676764b;
         @media screen and (max-width: 1300px) {
             gap: 10px;
         }
@@ -116,7 +115,7 @@
             justify-content: center;
             align-items: center;
             color: black;
-            color: white;
+            // color: white;
             &.red{
                 color: #BC0000;
                 ;
@@ -187,7 +186,7 @@
             font-size: 5rem;
             font-weight: 200 !important;
             width: 50%;
-            background-color: rgb(255, 255, 255);
+            background-color: rgba(73, 72, 72, 0.233);
             text-align: center !important;
             transform: translate(-50%,-50%);
             // background: rgb(180,180,182);
@@ -197,7 +196,6 @@
             // -webkit-background-clip: text;
             // -webkit-text-fill-color: transparent;
             color: white;
-
             z-index: 1;
         }
         img{
@@ -210,7 +208,7 @@
         }
     }
     #Home1{
-        background: linear-gradient(180deg, #E5EAED 66.98%, rgba(217, 217, 217, 0) 100%);
+        // background: linear-gradient(180deg, #E5EAED 66.98%, rgba(217, 217, 217, 0) 100%);
         // background-color: rgb(20, 0, 58);
     }
     .line{

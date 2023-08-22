@@ -5,7 +5,7 @@ export default function Landing(props) {
     <div id={props.Id} className="Landing">
       {props.children}
 
-      <ul id="side_nav">
+      {/* <ul id="side_nav">
         <li>
           <svg
             width="25"
@@ -70,7 +70,7 @@ export default function Landing(props) {
             />
           </svg>
         </li>
-      </ul>
+      </ul> */}
     </div>
   );
 }

@@ -105,6 +105,7 @@
         // padding: 10px 5px !important;
         list-style: none;
         margin-top: 0 !important;
+        background-color: #7676764b;
         @media screen and (max-width: 1300px) {
             gap: 10px;
         }
@@ -115,6 +116,7 @@
             justify-content: center;
             align-items: center;
             color: black;
+            color: white;
             &.red{
                 color: #BC0000;
                 ;
@@ -176,20 +178,25 @@
     .Landing{
         font-family: 'monogram',sans-serif;
         // background: linear-gradient(180deg, #E5EAED 66.98%, rgba(217, 217, 217, 0) 100%);
+        background-image: url(../public/assets/Home/home_new.png) !important;
+        background-repeat: no-repeat;
+        background-size: cover !important;
         h1{
             top: 30%;
-            left: 50%;
+            left: 35%;
             font-size: 6rem;
-            font-weight: 400;
-            width: 80%;
+            font-weight: 200 !important;
+            width: 60%;
             text-align: center;
             transform: translate(-50%,-50%);
             background: rgb(180,180,182);
             background: linear-gradient(128.22deg, #525050 26.13%, rgba(82, 80, 80, 0) 48.21%, #525050 69.84%),
-                linear-gradient(180deg, #AAAAAA -21.43%, rgba(82, 80, 80, 0) 45.41%, #323232 112.25%);
+            linear-gradient(180deg, #AAAAAA -21.43%, rgba(82, 80, 80, 0) 45.41%, #323232 112.25%);
+            background: #ffffff;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             z-index: 1;
+            text-align: start !important;
         }
         img{
             position: absolute;
@@ -202,6 +209,7 @@
     }
     #Home1{
         background: linear-gradient(180deg, #E5EAED 66.98%, rgba(217, 217, 217, 0) 100%);
+        // background-color: rgb(20, 0, 58);
     }
     .line{
         display: flex;

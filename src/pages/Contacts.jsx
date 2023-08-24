@@ -93,7 +93,27 @@ export default function Contacts() {
   if (loading) {
     return (
       <div className="Loading_pg">
-        <h1 className="loading">Loading...</h1>
+        <svg version="1.1" id="L5" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0" y="0"
+  viewBox="0 0 160 100" enableBackground="new 0 0 0 0" xmlSpace="preserve">
+  <circle fill="#000" stroke="none" cx="60" cy="50" r="8">
+    <animateTransform 
+      attributeName="transform" 
+      dur="1s" 
+      type="translate" 
+      values="0 15 ; 0 -15; 0 15" 
+      repeatCount="indefinite" 
+      begin="0.1s"/>
+  </circle>
+  <circle fill="#000" stroke="none" cx="100" cy="50" r="8">
+    <animateTransform 
+      attributeName="transform" 
+      dur="1s" 
+      type="translate" 
+      values="0 10 ; 0 -10; 0 10" 
+      repeatCount="indefinite" 
+      begin="0.2s"/>
+  </circle>
+</svg>
       </div> // Display loader while fetching data
     );
   }

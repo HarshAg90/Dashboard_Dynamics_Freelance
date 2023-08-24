@@ -67,7 +67,7 @@ export default function Contacts() {
       subject:"Website Mailing Querry"+name,
       message:message
     }
-    // try {
+    try {
       const response = await fetch(
         // "https://dashdynamicbackend.onrender.com/send_mail",{
         "http://127.0.0.1:9000/send_mail",{
@@ -85,10 +85,10 @@ export default function Contacts() {
       setEmail("")
       setMessage("")
       console.log(jsonData);
-    // } catch (error) {
-    //   console.log("Error:", error);
-    //   setLoading(false);
-    // }
+    } catch (error) {
+      console.log("Error:", error);
+      setLoading(false);
+    }
   };
   if (loading) {
     return (

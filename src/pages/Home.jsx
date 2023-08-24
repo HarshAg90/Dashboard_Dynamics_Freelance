@@ -13,12 +13,12 @@ import ReactPlayer from 'react-player'
 
   function Number({ n }) {
     const [ref, inView] = useInViewObserve({
-        triggerOnce: true, // Only trigger once when it enters the view
+        triggerOnce: true,
     });
 
     const { number } = useSpring({
         from: { number: 0 },
-        number: inView ? n : 0, // Animate only when in view
+        number: inView ? n : 0, 
         delay: 200,
         config: { mass: 1, tension: 20, friction: 10 },
     });
@@ -349,7 +349,7 @@ export default function Home() {
         </div>
         <div  ref={myRef} className="videoWrapper">
         <ReactPlayer
-        url='https://www.youtube.com/watch?v=Lmt_CGlEQ-4&t=13s'
+        url='https://www.youtube.com/watch?v=Lmt_CGlEQ-4&t=14s'
         width="65%"
         height='65%'
         playing={myElementIsVisible}

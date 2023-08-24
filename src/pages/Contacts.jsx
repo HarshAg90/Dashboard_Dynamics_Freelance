@@ -1,5 +1,6 @@
-import React,{useState} from "react";
+import React,{useEffect, useState} from "react";
 import Landing from "../components/Landing";
+import { async } from "q";
 
 
 const QnA = ({ data }) => {
@@ -51,6 +52,51 @@ const data = [
   }
 ];
 export default function Contacts() {
+  let [name,setName] = useState("");
+  let [email,setEmail] = useState("");
+  let [message,setMessage] = useState("");
+  let [loading,setLoading] = useState(false);
+  let [response,setResponse] = useState(false);
+
+  const sendEmail = async (e)=>{
+    e.preventDefault();
+    setLoading(true);
+    let data = {
+      to:"harshagnihotri90@gmail.com",
+      from:email,
+      subject:"Website Mailing Querry"+name,
+      message:message
+    }
+    // try {
+      const response = await fetch(
+        // "https://dashdynamicbackend.onrender.com/send_mail",{
+        "http://127.0.0.1:9000/send_mail",{
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(data)
+        }
+      ); // Replace with your API endpoint
+      const jsonData = await response.json();
+      setResponse(jsonData);
+      setLoading(false);
+      setName("")
+      setEmail("")
+      setMessage("")
+      console.log(jsonData);
+    // } catch (error) {
+    //   console.log("Error:", error);
+    //   setLoading(false);
+    // }
+  };
+  if (loading) {
+    return (
+      <div className="Loading_pg">
+        <h1 className="loading">Loading...</h1>
+      </div> // Display loader while fetching data
+    );
+  }
   return (
     <div id="Contact_page">
       <Landing Id="contact_landing">
@@ -108,14 +154,14 @@ export default function Contacts() {
             <p> | +91-9560589782</p>
           </div>
         </div>
-        <form className="form">
+        <form className="form" onSubmit={sendEmail}>
           {/* <h1>Career</h1> */}
           <p>Name</p>
-          <input type="text" placeholder="Full Name" />
+          <input type="text" value={name} onChange={(e)=> setName(e.target.value)} placeholder="Full Name" />
           <p>E-MAIL</p>
-          <input type="text" placeholder="example@gmail.com" />
+          <input type="text" value={email} onChange={(e)=> setEmail(e.target.value)} placeholder="example@gmail.com" />
           <p>WRITE TO US</p>
-          <input type="text" placeholder="Message" />
+          <input type="text" value={message} onChange={(e)=> setMessage(e.target.value)} placeholder="Message" />
           <div className="share">
             <button type="submit">Share</button>
             <div className="socials">

@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { DownOutlined } from '@ant-design/icons';
 import { Dropdown, Space } from 'antd';
 import { Link } from "react-router-dom";
 import { motion,  useScroll } from "framer-motion";
@@ -133,7 +132,7 @@ export default function Nav() {
   };
 
   // Calculate the background color based on scrollY?.current value
-const backgroundColor = scrollY?.current >= 500 && "white";
+const backgroundColor = "white";
 
 // Use the calculated backgroundColor in the variants
 variants.visible = { ...variants.visible, background: backgroundColor };
@@ -143,8 +142,7 @@ variants.hidden = { ...variants.hidden, background: "white" };
 
   return (
     <motion.div id='nav' variants={variants}
-      animate={hidden ? "hidden" : "visible"}
-      transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.6 }}
+      animate="visible"
       >
         <ul>
             <Link to="/" className='logo'><li className="nav_elements logo"><img src="../assets/logo.png" alt="" /></li></ Link>

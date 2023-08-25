@@ -448,7 +448,7 @@ export default function About() {
             <p>Simply Park and Charge</p>
           </motion.div>
 
-          <img src="../assets/about/about_2.png" alt="" />
+          <img src="../assets/about/about_2_1.png" alt="" />
         </div>
       </div>
       <div className="div_2">

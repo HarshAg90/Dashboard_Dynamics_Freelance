@@ -183,8 +183,10 @@
             top: 30%;
             left: 35%;
             font-size: 5rem;
+            padding: 0 10px;
             font-weight: 200 !important;
-            width: 50%;
+            width: auto;
+            max-width: 80%;
             background-color: rgba(73, 72, 72, 0.233);
             text-align: center !important;
             transform: translate(-50%,-50%);
@@ -475,14 +477,13 @@
                 align-items: center;
                 img{
                     overflow: visible;
-                    font-family: 'artifakt',sans-serif;
-                    height: 100px;
+                    height: 70px;
                 }
                 p{
                     font-family: 'artifakt',sans-serif;
                     font-size: 1.2rem;
                     font-weight: 400;
-                    margin: 20px;
+                    margin-top: 50px;
                 }
             }
         }
@@ -873,9 +874,10 @@
             }
             .contact{
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                grid-template-columns: 1fr 1fr 1fr 1fr;
                 gap: 1rem;
                 width: 60vw;
+                align-content: center;
                 @media (max-width: 600px) {
                     & {
                       grid-template-columns: 1fr;
@@ -896,8 +898,9 @@
                 }
                 .socials{
                     display: flex;
-                    justify-content: space-between;
-                    width: 200px;
+                    justify-content: center;
+                    gap: 10px;
+                    width: 100%;
                 }
             }
         }
@@ -1490,7 +1493,7 @@
                 width: 30vw;
                 height: auto;
 
-                font-family: 'Artifakt Element';
+                font-family: 'Artifakt';
                 font-style: normal;
                 font-weight: 800;
                 font-size: 22px;
@@ -1537,7 +1540,7 @@
         }
 
         .downHeading{
-            font-family: 'Artifakt Element';
+            font-family: 'Artifakt';
             font-style: normal;
             font-size: 20px;
                 // line-height: 31px;
@@ -1978,7 +1981,7 @@
                 width: 15vw;
                 height: auto;
 
-                font-family: 'Artifakt Element';
+                font-family: 'Artifakt';
                 font-style: normal;
                 font-weight: 900;
                 font-size: 28px;
@@ -2016,7 +2019,7 @@
                     display: flex;
                     flex-direction: column;
                     h1{
-                        font-family: 'Artifakt Element';
+                        font-family: 'Artifakt';
                         font-size: 1.1rem;
                         width: 25vw;
                         justify-self: flex-end;
@@ -2040,7 +2043,7 @@
             width: 35vw;
             height: auto;
 
-            font-family: 'Artifakt Element';
+            font-family: 'Artifakt';
             font-style: normal;
             font-weight: 900;
             font-size: 28px;
@@ -2232,7 +2235,7 @@
                 width: 42%;
                 height: auto;
 
-                font-family: 'Artifakt Element';
+                font-family: 'Artifakt';
                 font-style: normal;
                 font-weight: 900;
                 font-size: 28px;
@@ -2275,8 +2278,8 @@
 
             }
         }
-    }   
-
+    }
+    font-family: "artifakt", sans-serif !important;
     .hero{
         background-image: url(../public/assets/EV_manufacturer/scndBg.png);
         text-align: center;
@@ -2302,13 +2305,13 @@
                 margin-top: -4vh;
                 font-weight: 600;
                 min-width: 30vw;
-                font-family: 'Artifakt Element';
+                font-family: 'Artifakt';
                 font-size: 1.4rem;
                 letter-spacing: 3px;
             }
 
             h2{
-                font-family: 'Artifakt Element';
+                font-family: 'Artifakt';
                 font-size: 1.1rem;
                 font-weight: 500;
             }
@@ -2345,13 +2348,13 @@
                 justify-content: center;
 
                 .head{
-                    font-family: 'Artifakt Element';
+                    font-family: 'Artifakt';
                     font-size: 1.1rem;
                     font-weight: 600;
                 }
 
                 .downHead{
-                    font-family: 'Artifakt Element';
+                    font-family: 'Artifakt';
                     font-size: 1.1rem;
                     font-weight: 500;
                 }
@@ -2914,11 +2917,11 @@
                 font-size: 2.2rem;
             }
         }
-        overflow: hidden;
+        overflow: visible;
         img{
-            height: 80vh;
+            height: 60vh;
             position: absolute;
-            bottom: -12%;
+            bottom: 10%;
             right: 10%;
 
         }

@@ -43,11 +43,15 @@ export default function Footer() {
 
         <div className="contacts">
           <img className="logo" src="../assets/logo.png" alt="" />
+          <div className="contact_p">
           <div className="contact">
             <Link to="/Careers">Careers</Link>
             <Link to="/">Contact with Us</Link>
             <Link to="/Technology">Technology</Link>
             <Link to="/Blogs">Blog</Link>
+          </div>
+          <div className="contact">
+
             <Link to="/Contacts">Contact</Link>
             <div className="socials">
 
@@ -94,6 +98,7 @@ export default function Footer() {
               </svg>
             </a>
             </div>
+          </div>
           </div>
         </div>
         <div className="tnc">

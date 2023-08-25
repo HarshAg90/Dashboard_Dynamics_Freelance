@@ -9,7 +9,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useSpring, animated } from 'react-spring';
 import { useInView as useInViewObserve } from 'react-intersection-observer';
-import { useNavigate } from 'react-router-dom';
 import ReactPlayer from 'react-player'
 
   function Number({ n }) {
@@ -222,9 +221,6 @@ export default function Home() {
               viewBox="0 0 45 53"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              // variants={svgVariants}
-              // initial="hidden"
-              // animate="visible"
             >
               <motion.path
                 fill-rule="evenodd"
@@ -350,7 +346,8 @@ export default function Home() {
         </div>
         <div  ref={myRef} className="videoWrapper">
         <ReactPlayer
-        url='https://www.youtube.com/watch?v=Lmt_CGlEQ-4&t=14s'
+        url='https://www.youtube.com/watch?v=Lmt_CGlEQ-4&start=14&end=62'
+        // url='https://youtube.com/clip/UgkxVSZlFijLAazJVQ5rTSP6uwOkOrzfkTV9?si=y3n30ro79QGAcecD'
         width="65%"
         height='65%'
         playing={myElementIsVisible}

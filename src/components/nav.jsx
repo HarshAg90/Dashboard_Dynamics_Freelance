@@ -107,13 +107,8 @@ export default function Nav() {
 
   /** this onUpdate function will be called in the `scrollY.onChange` callback **/
   function update() {
-    // if(scrollY?.current <= 200) {
-    //   backgroundColor = "blue";
-    //   setHidden(false)
-    // }
     if (scrollY?.current < scrollY?.prev) {
       setHidden(false);
-      // backgroundColor = "white";
     } else if (scrollY?.current > 100 && scrollY?.current > scrollY?.prev) {
       setHidden(true);
     }
@@ -137,12 +132,12 @@ const backgroundColor = "white";
 // Use the calculated backgroundColor in the variants
 variants.visible = { ...variants.visible, background: backgroundColor };
 
-variants.hidden = { ...variants.hidden, background: "white" };
+variants.hidden = { ...variants.hidden, background: "" };
 
 
   return (
     <motion.div id='nav' variants={variants}
-      animate="visible"
+      animate={`${(red_btn===1)?'visible':"hidden"}`}
       >
         <ul>
             <Link to="/" className='logo'><li className="nav_elements logo"><img src="../assets/logo.png" alt="" /></li></ Link>

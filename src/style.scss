@@ -957,30 +957,30 @@
     #TechLanding{
         .landing{
             .fg_img{
-                width: 100%;
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: fit-content;
-                background-color: black;
-                animation: colapse 5s forwards 1.5s;
-                background-image: url(../public/assets/Technology/landing2.png);
-                background-size:100vw;
-                background-repeat: no-repeat;
-                @keyframes colapse {
-                    0%{
-                        height: 100%;
-                        width: 0%;
-                    }
-                    100%{
-                        height: 100%;
-                        width: 100%;
-                    }
+                // width: 100%;
+                // position: absolute;
+                // top: 0;
+                // left: 0;
+                // height: fit-content;
+                // background-color: black;
+                // animation: colapse 5s forwards 1.5s;
+                // background-image: url(../public/assets/Technology/landing2.png);
+                // background-size:100vw;
+                // background-repeat: no-repeat;
+                // @keyframes colapse {
+                //     0%{
+                //         height: 100%;
+                //         width: 0%;
+                //     }
+                //     100%{
+                //         height: 100%;
+                //         width: 100%;
+                //     }
                     
-                }
+                // }
                 
             }
-            background-image: url(../public/assets/Technology/landing1.png);
+            background-image: url(../public/assets/Technology/initBg.png);
         }
 
 

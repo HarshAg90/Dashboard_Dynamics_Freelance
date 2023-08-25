@@ -347,7 +347,6 @@ export default function Home() {
         <div  ref={myRef} className="videoWrapper">
         <ReactPlayer
         url='https://www.youtube.com/watch?v=Lmt_CGlEQ-4&start=14&end=62'
-        // url='https://youtube.com/clip/UgkxVSZlFijLAazJVQ5rTSP6uwOkOrzfkTV9?si=y3n30ro79QGAcecD'
         width="65%"
         height='65%'
         playing={myElementIsVisible}
@@ -356,6 +355,8 @@ export default function Home() {
         controls={false}
         loop={true}
       />
+
+      
         </div>
         
         <br />

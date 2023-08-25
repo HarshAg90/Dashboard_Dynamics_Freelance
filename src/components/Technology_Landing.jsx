@@ -21,6 +21,7 @@ export default function TechnologyLanding() {
     <div  id='TechLanding'>
       <motion.div ref={targetRef} className='basicLand landing'  style={{opacity, scale}}>
       <div className="fg_img"/>
+      <video src="../assets/Technology/demo5.mov" autoPlay muted></video>
       
         {/* <ul id="side_nav">
             <li><svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">

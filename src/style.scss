@@ -414,21 +414,21 @@
     .go_wireless{
         min-height: 100vh;
         display: flex;
-        // background-color: #fff;
-        background: linear-gradient(-90deg, #ec5e5e, #f0b324, #e7fbb8, #b8fbfa, #17bff2);
-        background-size: 400% 400%;
-        animation: gradient 10s ease infinite;
-        @keyframes gradient {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
+        background-color: #fff;
+        // background: linear-gradient(-90deg, #ec5e5e, #f0b324, #e7fbb8, #b8fbfa, #17bff2);
+        // background-size: 400% 400%;
+        // animation: gradient 10s ease infinite;
+        // @keyframes gradient {
+        //     0% {
+        //         background-position: 0% 50%;
+        //     }
+        //     50% {
+        //         background-position: 100% 50%;
+        //     }
+        //     100% {
+        //         background-position: 0% 50%;
+        //     }
+        // }
 
         flex-direction: column;
         align-items: center;

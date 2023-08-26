@@ -347,8 +347,8 @@ export default function Home() {
         <div  ref={myRef} className="videoWrapper">
         <ReactPlayer
         url='https://www.youtube.com/watch?v=Lmt_CGlEQ-4&start=14&end=62'
-        width="65%"
-        height='65%'
+        width="80%"
+        height='80%'
         playing={myElementIsVisible}
         muted={true}
         playbackRate= {1.25}

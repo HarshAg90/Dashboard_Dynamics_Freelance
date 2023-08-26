@@ -101,17 +101,17 @@ const lftRightVariant = {
 export default function Home() {
 
   
-  const [myElementIsVisible, updateMyElementIsVisible] = useState();
-  const myRef = useRef(null);
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries, observer) => {
-      const entry = entries[0];
-      console.log('entry', entry);
-      console.log('entry.isIntersecting', entry.isIntersecting);
-      updateMyElementIsVisible(entry.isIntersecting);
-    });
-    observer.observe(myRef.current);
-  }, []);
+  // const [myElementIsVisible, updateMyElementIsVisible] = useState();
+  // const myRef = useRef(null);
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver((entries, observer) => {
+  //     const entry = entries[0];
+  //     console.log('entry', entry);
+  //     console.log('entry.isIntersecting', entry.isIntersecting);
+  //     updateMyElementIsVisible(entry.isIntersecting);
+  //   });
+  //   observer.observe(myRef.current);
+  // }, []);
 
 
 
@@ -344,7 +344,7 @@ export default function Home() {
           </motion.div>
           <button>Dive In</button>
         </div>
-        <div  ref={myRef} className="videoWrapper">
+        {/* <div  ref={myRef} className="videoWrapper">
         <ReactPlayer
         url='https://www.youtube.com/watch?v=Lmt_CGlEQ-4&start=14&end=62'
         width="80%"
@@ -357,7 +357,7 @@ export default function Home() {
       />
 
       
-        </div>
+        </div> */}
         
         <br />
         <br />

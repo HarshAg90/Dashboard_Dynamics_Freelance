@@ -415,9 +415,9 @@
         min-height: 100vh;
         display: flex;
         // background-color: #fff;
-        background: linear-gradient(-90deg, #ffffff, #F2F2F2, #dfdfdf);
+        background: linear-gradient(-90deg, #ec5e5e, #f0b324, #e7fbb8, #b8fbfa, #17bff2);
         background-size: 400% 400%;
-        animation: gradient 5s ease infinite;
+        animation: gradient 10s ease infinite;
         @keyframes gradient {
             0% {
                 background-position: 0% 50%;
@@ -2626,6 +2626,7 @@
     .Landing{
         background-image: url(../public/assets/products/Product_home.png);
         position: relative;
+        
         h1{
             position: absolute;
             top: 243px;
@@ -2644,6 +2645,20 @@
         overflow: hidden;
     }
     .content{
+        background: linear-gradient(-90deg, #ec5e5e, #f0b324, #e7fbb8, #b8fbfa, #17bff2);
+        background-size: 400% 400%;
+        animation: gradient 10s ease infinite;
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
         overflow: hidden;
         height: 350%;
         font-family: "artifakt", sans-serif;

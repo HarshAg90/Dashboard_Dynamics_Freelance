@@ -2645,20 +2645,20 @@
         overflow: hidden;
     }
     .content{
-        background: linear-gradient(-90deg, #ec5e5e, #f0b324, #e7fbb8, #b8fbfa, #17bff2);
-        background-size: 400% 400%;
-        animation: gradient 10s ease infinite;
-        @keyframes gradient {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
+        // background: linear-gradient(-90deg, #ec5e5e, #f0b324, #e7fbb8, #b8fbfa, #17bff2);
+        // background-size: 400% 400%;
+        // animation: gradient 10s ease infinite;
+        // @keyframes gradient {
+        //     0% {
+        //         background-position: 0% 50%;
+        //     }
+        //     50% {
+        //         background-position: 100% 50%;
+        //     }
+        //     100% {
+        //         background-position: 0% 50%;
+        //     }
+        // }
         overflow: hidden;
         height: 350%;
         font-family: "artifakt", sans-serif;

@@ -26,7 +26,7 @@ import {isMobile} from 'react-device-detect';
 function App() {
 
   if (isMobile) {
-    window.location.replace('https://www.dashdynamic.in/');
+    window.location.replace('https://md.dashdynamic.in/');
   }
 
   return (

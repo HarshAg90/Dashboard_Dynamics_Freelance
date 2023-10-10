@@ -63,23 +63,8 @@ export default function Team(){
             <h1 className='subHeading'>OUR TEAM</h1>
             <div className="teamGrid">
                 <div className="grid fst">
-                    <div className="member1 member">
-                        <motion.img src="../assets/Team/Members/member1.png" alt="Shashank Sawai"
-                            initial={{
-                                scale: 1
-                            }}
-                              whileTap={{
-                                scale: 0.95
-                              }}
-                              transition={{
-                                type: "spring",
-                                stiffness: 60,
-                              }}
-                        />
-                        <h1>An M.Tech professional with 7 years of experience, excelling in electrical & telecommunications project management.</h1>
-                    </div>
-                    <div className="member2 member">
-                        <motion.img src="../assets/Team/Members/member2.png" alt="Robin Singh"
+                <div className="member2 member">
+                        <motion.img src="../assets/Team/Members/Robin_Singh.png" alt="Robin Singh"
                         initial={{
                           scale: 1
                       }}
@@ -93,8 +78,24 @@ export default function Team(){
                         <h1>A highly successful electrical engineer with 7 years of entrepreneurial experience, founder of Tron Fire Protection Pvt Ltd, known for innovative solutions in transformer fire safety, and COVID initiatives.
 </h1>
                     </div>
+                    <div className="member1 member">
+                        <motion.img src="../assets/Team/Members/Shashank_Sawai.png" alt="Shashank Sawai"
+                            initial={{
+                                scale: 1
+                            }}
+                              whileTap={{
+                                scale: 0.95
+                              }}
+                              transition={{
+                                type: "spring",
+                                stiffness: 60,
+                              }}
+                        />
+                        <h1>An M.Tech professional with 7 years of experience, excelling in electrical & telecommunications project management.</h1>
+                    </div>
+                    
                     <div className="member3 member">
-                        <motion.img src="../assets/Team/Members/member3.png" alt="B K Panigrahi"
+                        <motion.img src="../assets/Team/Members/BK_Panigrahi.png" alt="B K Panigrahi"
                         initial={{
                           scale: 1
                       }}
@@ -109,37 +110,8 @@ export default function Team(){
                     </div>                                  
                 </div>
                 <div className="grid scnd">
-                    <div className="member4 member">
-                    <motion.img src="../assets/Team/Members/member4.png" alt="Ajeet Prabhakar"
-                    initial={{
-                      scale: 1
-                  }}
-                    whileTap={{
-                      scale: 0.95
-                    }}
-                    transition={{
-                      type: "spring",
-                      stiffness: 60,
-                    }}/>
-                    <h1>With 5 years of experience, a skilled product designer passionate about UI/UX, graphic design, and animation, crafting visually captivating user interfaces.</h1>
-                    </div>
-                    <div className="member5 member">
-                    <motion.img src="../assets/Team/Members/member5.png" alt="Dr. Anadi"
-                    initial={{
-                      scale: 1
-                  }}
-                    whileTap={{
-                      scale: 0.95
-                    }}
-                    transition={{
-                      type: "spring",
-                      stiffness: 60,
-                    }}/>
-                    <h1>Professor of Strategic Management with 7 years of experience at IIM Lucknow with a distinguished academic and industry background and extensive experience in research and case writing.
-</h1>
-                    </div>
-                    <div className="member6 member">
-                    <motion.img src="../assets/Team/Members/member6.png" alt="Eric Azulay"
+                <div className="member6 member">
+                    <motion.img src="../assets/Team/Members/Eric_Azulay.png" alt="Eric Azulay"
                     initial={{
                       scale: 1
                   }}
@@ -153,11 +125,71 @@ export default function Team(){
                     />
                     <h1>Executive Director of Startup Nexus, ACIR, responsible for promoting economic development and tech commercialization, while incubating start-ups and forming strategic partnerships.
 </h1>
-                    </div>                   
+                    </div>  
+
+                    <div className="member8 member">
+                    <motion.img src="../assets/Team/Members/Sanjeevi.png" alt="Sanjeevikumar Padmanaban"
+                    initial={{
+                      scale: 1
+                  }}
+                    whileTap={{
+                      scale: 0.95
+                    }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 60,
+                    }}/>
+                    <h1>P. Sanjeevikumar, an accomplished electrical engineer, IEEE member, and fellow of Indian and UK institutions, specializes in Power Electronics, Drives, and renewable energy. With 250+ research papers, he's received Best Paper Awards and serves on editorial boards, contributing significantly to his field.</h1>
+                    </div>
+                    
+                    <div className="member8 member">
+                    <motion.img src="../assets/Team/Members/Kiran_Pandav.png" alt="Kiran Pandav"
+                    initial={{
+                      scale: 1
+                  }}
+                    whileTap={{
+                      scale: 0.95
+                    }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 60,
+                    }}/>
+                    <h1>An accomplished power electronics specialist engineer with 8 years of experience, adept at designing and developing diverse power electronic converters, and integrating renewable sources into EV power management systems.</h1>
+                    </div>
+                    {/* <div className="member5 member">
+                    <motion.img src="../assets/Team/Members/member5.png" alt="Dr. Anadi"
+                    initial={{
+                      scale: 1
+                  }}
+                    whileTap={{
+                      scale: 0.95
+                    }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 60,
+                    }}/>
+                    <h1>Professor of Strategic Management with 7 years of experience at IIM Lucknow with a distinguished academic and industry background and extensive experience in research and case writing.
+</h1>
+                    </div> */}
+                                     
                 </div>
                 <div className="grid thd">
+                <div className="member4 member">
+                    <motion.img src="../assets/Team/Members/Ajeet.png" alt="Ajeet Prabhakar"
+                    initial={{
+                      scale: 1
+                  }}
+                    whileTap={{
+                      scale: 0.95
+                    }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 60,
+                    }}/>
+                    <h1>With 5 years of experience, a skilled product designer passionate about UI/UX, graphic design, and animation, crafting visually captivating user interfaces.</h1>
+                    </div>
                     <div className="member7 member">
-                    <motion.img src="../assets/Team/Members/member7.png" alt="Sayan Mandal"
+                    <motion.img src="../assets/Team/Members/Sayan.png" alt="Sayan Mandal"
                     initial={{
                       scale: 1
                   }}
@@ -172,20 +204,7 @@ export default function Team(){
 
 </h1>
                     </div>
-                    <div className="member8 member">
-                    <motion.img src="../assets/Team/Members/member8.png" alt="Kiran Pandav"
-                    initial={{
-                      scale: 1
-                  }}
-                    whileTap={{
-                      scale: 0.95
-                    }}
-                    transition={{
-                      type: "spring",
-                      stiffness: 60,
-                    }}/>
-                    <h1>An accomplished power electronics specialist engineer with 8 years of experience, adept at designing and developing diverse power electronic converters, and integrating renewable sources into EV power management systems.</h1>
-                    </div>
+                    
                 </div>
             </div>
         </div>

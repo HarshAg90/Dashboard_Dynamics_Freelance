@@ -19,10 +19,16 @@ import Team from "./pages/Team";
 import Careers from "./pages/Careers";
 import About from "./pages/About";
 import Market from "./pages/Market";
+import {isMobile} from 'react-device-detect';
 
 
 
 function App() {
+
+  if (isMobile) {
+    window.location.replace('https://www.dashdynamic.in/');
+  }
+
   return (
     <BrowserRouter className="App"> 
       <Nav />

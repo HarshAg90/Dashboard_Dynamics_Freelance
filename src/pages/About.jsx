@@ -432,7 +432,7 @@ export default function About() {
             transition={{
               type: "spring",
               stiffness: 25,
-            }}
+            }} 
           >
             About <span>DASH DYNAMIC</span>
           </motion.h1>
@@ -477,9 +477,8 @@ export default function About() {
       </div>
       <div className="div_3">
         <h1>We founded Dash with a desire to make EVs more convenient</h1>
-        <div className="img">
-          <img src="../assets/about/about_3.png" alt="" />
-          <motion.p className="p1"
+        <div className="insideImg">
+        <motion.p className="p1"
           initial={{x: "-10%", opacity: 0.5}}
           whileInView={{x: "0%", opacity: 1}}
           transition={{
@@ -502,7 +501,7 @@ export default function About() {
               Gone are the days of searching for rare charging stations or
               carrying dedicated equipment. Dash Dynamic has developed a
               groundbreaking wireless charging technology that enables EVs to
-              charge 30% faster than conventional plugged-in chargers. An
+              charge 30% faster than conventional plugged-in chargers.<br/> An
               agnostic charger allows users to simply find a charging station
               and park over the charger, eliminating the need for any physical
               connections.

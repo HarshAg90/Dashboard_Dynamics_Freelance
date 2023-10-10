@@ -75,13 +75,14 @@ export default function Team(){
                           type: "spring",
                           stiffness: 60,
                         }}/>
+                        <a href="https://www.linkedin.com/in/robin-singh-b9952028/" className="linkedin" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" style={{fill:"#000000"}}><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg></a>
                         <h1>A highly successful electrical engineer with 7 years of entrepreneurial experience, founder of Tron Fire Protection Pvt Ltd, known for innovative solutions in transformer fire safety, and COVID initiatives.
 </h1>
                     </div>
                     <div className="member1 member">
                         <motion.img src="../assets/Team/Members/Shashank_Sawai.png" alt="Shashank Sawai"
                             initial={{
-                                scale: 1
+                              scale: 1
                             }}
                               whileTap={{
                                 scale: 0.95
@@ -91,6 +92,8 @@ export default function Team(){
                                 stiffness: 60,
                               }}
                         />
+                        <a href="https://www.linkedin.com/in/shashank-sawai-8a0511125/" className="linkedin" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" style={{fill:"#000000"}}><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg></a>
+                        
                         <h1>An M.Tech professional with 7 years of experience, excelling in electrical & telecommunications project management.</h1>
                     </div>
                     
@@ -98,7 +101,7 @@ export default function Team(){
                         <motion.img src="../assets/Team/Members/BK_Panigrahi.png" alt="B K Panigrahi"
                         initial={{
                           scale: 1
-                      }}
+                        }}
                         whileTap={{
                           scale: 0.95
                         }}
@@ -106,6 +109,7 @@ export default function Team(){
                           type: "spring",
                           stiffness: 60,
                         }}/>
+                        <a href="https://www.linkedin.com/in/bkpanigrahi/" className="linkedin" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" style={{fill:"#000000"}}><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg></a>
                         <h1>A highly esteemed professor with 40 years of teaching experience at IIT Delhi, specializing in Power Electronics and Power Systems, and currently researching EV Charging Infrastructure & Grid Impact</h1>
                     </div>                                  
                 </div>
@@ -123,6 +127,7 @@ export default function Team(){
                       stiffness: 60,
                     }}
                     />
+                    <a href="https://www.linkedin.com/in/erikazulay/" className="linkedin" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" style={{fill:"#000000"}}><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg></a>
                     <h1>Executive Director of Startup Nexus, ACIR, responsible for promoting economic development and tech commercialization, while incubating start-ups and forming strategic partnerships.
 </h1>
                     </div>  
@@ -139,7 +144,8 @@ export default function Team(){
                       type: "spring",
                       stiffness: 60,
                     }}/>
-                    <h1>P. Sanjeevikumar, an accomplished electrical engineer, IEEE member, and fellow of Indian and UK institutions, specializes in Power Electronics, Drives, and renewable energy. With 250+ research papers, he's received Best Paper Awards and serves on editorial boards, contributing significantly to his field.</h1>
+                    <a href="https://www.linkedin.com/in/sanjeevikumarpadmanaban/" className="linkedin" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" style={{fill:"#000000"}}><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg></a>
+                    <h1>Sanjeevikumar Padmanaban, an accomplished electrical engineer, IEEE member, and fellow of Indian and UK institutions, specializes in Power Electronics, Drives, and renewable energy. With 250+ research papers, he's received Best Paper Awards and serves on editorial boards, contributing significantly to his field.</h1>
                     </div>
                     
                     <div className="member8 member">
@@ -154,23 +160,9 @@ export default function Team(){
                       type: "spring",
                       stiffness: 60,
                     }}/>
+                    <a href="https://www.linkedin.com/in/dr-kiran-maroti-pandav-smieee-ab619a66/" className="linkedin" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" style={{fill:"#000000"}}><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg></a>
                     <h1>An accomplished power electronics specialist engineer with 8 years of experience, adept at designing and developing diverse power electronic converters, and integrating renewable sources into EV power management systems.</h1>
                     </div>
-                    {/* <div className="member5 member">
-                    <motion.img src="../assets/Team/Members/member5.png" alt="Dr. Anadi"
-                    initial={{
-                      scale: 1
-                  }}
-                    whileTap={{
-                      scale: 0.95
-                    }}
-                    transition={{
-                      type: "spring",
-                      stiffness: 60,
-                    }}/>
-                    <h1>Professor of Strategic Management with 7 years of experience at IIM Lucknow with a distinguished academic and industry background and extensive experience in research and case writing.
-</h1>
-                    </div> */}
                                      
                 </div>
                 <div className="grid thd">
@@ -186,6 +178,7 @@ export default function Team(){
                       type: "spring",
                       stiffness: 60,
                     }}/>
+                    <a href="https://www.linkedin.com/in/ajeet-prabhakar-79a4841b1/" className="linkedin" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" style={{fill:"#000000"}}><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg></a>
                     <h1>With 5 years of experience, a skilled product designer passionate about UI/UX, graphic design, and animation, crafting visually captivating user interfaces.</h1>
                     </div>
                     <div className="member7 member">
@@ -200,6 +193,7 @@ export default function Team(){
                       type: "spring",
                       stiffness: 60,
                     }}/>
+                    <a href="https://www.linkedin.com/in/sayan-mondal-b56287174/" className="linkedin" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" style={{fill:"#000000"}}><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg></a>
                     <h1>Dedicated R&D engineer with 5 years of industrial experience, proficient in circuit design, signal processing, and control algorithms, committed to collaborative problem-solving for innovative solutions.
 
 </h1>

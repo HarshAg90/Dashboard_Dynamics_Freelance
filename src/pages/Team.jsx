@@ -5,6 +5,12 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
+import Timeline from '@mui/lab/Timeline';
+import TimelineItem from '@mui/lab/TimelineItem';
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import TimelineConnector from '@mui/lab/TimelineConnector';
+import TimelineContent from '@mui/lab/TimelineContent';
+import TimelineDot from '@mui/lab/TimelineDot';
 
 const pathVariants = {
     hidden: {
@@ -255,6 +261,8 @@ export default function Team(){
         </div>
 
         <div ref={journeyRef} className="journey">      
+    
+
 
             <div className="cols">
                 <div className="left">
@@ -278,7 +286,7 @@ export default function Team(){
                     
                 </div>
 
-                <svg width="1278" height="1119" viewBox="0 0 1278 1119" fill="none" xmlns="http://www.w3.org/2000/svg">
+                {/* <svg width="1278" height="1119" viewBox="0 0 1278 1119" fill="none" xmlns="http://www.w3.org/2000/svg">
 <motion.path style={{pathLength: pathLen}} d="M324.14 46.2945V8.34505C324.303 5.8967 323.063 1 316.796 1H6.38566C4.59044 1 1 2.34659 1 7.73297V79.9593C1 81.7956 2.07713 85.4681 6.38566 85.4681H237.969C244.497 85.0601 257.553 88.0389 257.553 103.219V285.009C257.39 290.722 260.001 302.147 271.752 302.147H667.353C683.347 302.147 715.335 314.511 715.335 363.968V680.418C716.151 704.493 707.697 753.011 667.353 754.48H157.184C138.579 755.296 101.369 770.272 101.369 823.646V1035.43C101.206 1061.95 112.14 1115 157.184 1115H1367" stroke="url(#paint0_linear_0_1)" stroke-width="2"/>
 <rect x="321" y="39" width="6" height="5" fill="black"/>
 <rect x="254" y="225" width="6" height="7" fill="black"/>
@@ -295,7 +303,7 @@ export default function Team(){
 <stop offset="0.984375"/>
 </linearGradient>
 </defs>
-                </svg>
+                </svg> */}
                 
 
             </div>

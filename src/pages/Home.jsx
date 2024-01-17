@@ -108,10 +108,10 @@ export default function Home() {
   var settings = {
     dots: true,
     infinite: true,
-    speed: 3000,
-    arrows: false,
+    speed: 500,
+    arrows: true,
     autoplay: true,
-    autoplaySpeed: 70,
+    autoplaySpeed: 3000,
     slidesToShow: 3,
     slidesToScroll: 1,
   };

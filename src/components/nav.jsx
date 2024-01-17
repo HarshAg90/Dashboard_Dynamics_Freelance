@@ -109,7 +109,7 @@ export default function Nav() {
   function update() {
     if (scrollY?.current < scrollY?.prev) {
       setHidden(false);
-    } else if (scrollY?.current > 100 && scrollY?.current > scrollY?.prev) {
+    } else if (scrollY?.current > 500 && scrollY?.current > scrollY?.prev) {
       setHidden(true);
     }
   }
@@ -132,7 +132,7 @@ const backgroundColor = "white";
 // Use the calculated backgroundColor in the variants
 variants.visible = { ...variants.visible, background: backgroundColor };
 
-variants.hidden = { ...variants.hidden, background: "" };
+variants.hidden = { ...variants.hidden, background: "white" };
 
 
   return (
@@ -152,7 +152,6 @@ variants.hidden = { ...variants.hidden, background: "" };
               <a onClick={(e) => e.preventDefault()}>
                 <Space>
                 <Link className={`a2 ${(red_btn===2)?'red':""}`}><li className="nav_elements">About</li></ Link>
-                  {/* <DownOutlined /> */}
                 </Space>
               </a>
             </Dropdown>

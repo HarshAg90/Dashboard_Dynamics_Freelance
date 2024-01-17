@@ -55,7 +55,7 @@ export default function Footer() {
             <Link to="/Contacts">Contact</Link>
             <div className="socials">
 
-            <a href="">
+            <a href="https://www.linkedin.com/company/dash-dynamic-llp/" target="_blank">
               <svg
                 width="28"
                 height="28"
@@ -69,7 +69,7 @@ export default function Footer() {
                   />
               </svg>
             </a>
-            <a href="">
+            <a href="https://www.youtube.com/@dashdynamic" target="_blank">
               <svg
                 width="33"
                 height="24"
@@ -83,7 +83,7 @@ export default function Footer() {
                 />
               </svg>
             </a>
-            <a href="">
+            <a href=""  target="_blank">
               <svg
                 width="35"
                 height="28"

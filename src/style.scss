@@ -419,6 +419,21 @@
         min-height: 100vh;
         display: flex;
         background-color: #fff;
+        // background: linear-gradient(-90deg, #ec5e5e, #f0b324, #e7fbb8, #b8fbfa, #17bff2);
+        // background-size: 400% 400%;
+        // animation: gradient 10s ease infinite;
+        // @keyframes gradient {
+        //     0% {
+        //         background-position: 0% 50%;
+        //     }
+        //     50% {
+        //         background-position: 100% 50%;
+        //     }
+        //     100% {
+        //         background-position: 0% 50%;
+        //     }
+        // }
+
         flex-direction: column;
         align-items: center;
         font-family: 'artifakt',sans-serif;
@@ -456,6 +471,8 @@
             }
         }
     }
+    
+
     .features{
         overflow: visible;
         font-family: 'artifakt',sans-serif;
@@ -1970,11 +1987,11 @@
 #Team{
     .landing{
         background-image: url(../public/assets/Team/landing.png);
-        color: #ff0000;
+        color: #000;
         h1{
             margin-top: 40vh;
             margin-left: 10vw;
-            color: #ff0000;
+            color: #000;
         }
     }
 
@@ -2012,31 +2029,40 @@
                 overflow: visible;
                 display: flex;
                 justify-content: center;
-                align-items: center;
-                gap: 2vw;
+                align-items: start;
+                gap: 3vw;
                 
                 img{
-                    width: 30vw;
+                    width: 28vw;
                 }
+                
                 .member{
+
                     overflow: visible;
                     display: flex;
                     flex-direction: column;
                     h1{
                         font-family: 'Artifakt';
-                        font-size: 1.1rem;
-                        width: 25vw;
+                        font-size: 1rem;
+                        width: 23vw;
                         justify-self: flex-end;
-                        align-self: flex-end;
+                        align-self: baseline;
                         text-align: justify;
-                        margin-right: 2vw;
+                        margin-left: 12%;
+                        // margin-right: 2vw;
                         min-height: 18vh;
+                    }
+                    // position: relative;
+                    .linkedin{
+                        font-size: 1.8rem;
+                        align-self: flex-end;
+                        transform: translate(-140%,-270%);
                     }
                 }
             }
 
             .scnd, .thd{
-                margin-top: 15vh;
+                margin-top: 10vh;
             }
         }
     }
@@ -2149,11 +2175,12 @@
             height: 240vh;
 
             svg{
+                scale: 100%;
                 width: 85%;
                 height: 150%;
                 position: absolute;
                 right: 0;
-                margin-top: 35vh;
+                margin-top: 15%;
             }
 
             .right, .left{
@@ -2613,6 +2640,7 @@
     .Landing{
         background-image: url(../public/assets/products/Product_home.png);
         position: relative;
+        
         h1{
             position: absolute;
             top: 243px;
@@ -2631,6 +2659,20 @@
         overflow: hidden;
     }
     .content{
+        // background: linear-gradient(-90deg, #ec5e5e, #f0b324, #e7fbb8, #b8fbfa, #17bff2);
+        // background-size: 400% 400%;
+        // animation: gradient 10s ease infinite;
+        // @keyframes gradient {
+        //     0% {
+        //         background-position: 0% 50%;
+        //     }
+        //     50% {
+        //         background-position: 100% 50%;
+        //     }
+        //     100% {
+        //         background-position: 0% 50%;
+        //     }
+        // }
         overflow: hidden;
         height: 350%;
         font-family: "artifakt", sans-serif;
@@ -2905,7 +2947,9 @@
             flex-direction: column;
             height: 250px;
             p{
-                color: white;
+                color:  #870507;
+                font-size: 1.4rem;
+                font-weight: 500;
             }
         }
         h1{
@@ -2913,8 +2957,8 @@
             z-index: 1;
             position: absolute;
             top: 38%;
-            font-weight: 500;
-            left: 22%;
+            font-weight: 600;
+            left: 24%;
             span{
                 display: block;
                 font-weight: 700;
@@ -2931,67 +2975,96 @@
         }
     }
     .div_2{
+        height: 55vh;
         overflow: hidden;
         display: flex;
         padding: 50px 0px;
         width: 100%;
         justify-content: space-evenly;
         align-items: center;
-        margin: 50px 0px;
+        margin: 0px 0px;
+        background: linear-gradient(-45deg, #e8e8e8,#F5F5F5);
+//   background-size: 700% 700%;
+//   animation: gradient 3s linear infinite;
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
         h1{
             overflow: hidden;
             font-weight: 600;
             width: 30vw;
             text-align: center;
-            font-size: 1.6rem;
+            font-size: 1.9rem;
             
         }
         p{
+            font-size: 1.1rem;
             overflow: hidden;
             text-align: justify;
-            width: 50vw;
+            width: 50%;
+            font-weight: 500;
         }
     }
     .div_3{
+        background-image: url(../public/assets/about/about_div_bg.png);
+        background-size: auto 90%; /* Adjust the width as needed */
+  background-repeat: no-repeat;
+  background-position: center;
+        height: 100vh;
         overflow: hidden;
         width: 100%;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        // align-items: center;
+        // justify-content: center;
         flex-direction: column;
         h1{
             overflow: hidden;
-            margin: 30px 10px;
-            text-align: center;
-            font-weight: 400;
+            margin: 2% 2%;
+            text-align: left;
+            width: 35%;
+            margin-left: 10%;
+            font-weight: 600;
             font-size: 2rem;
         }
-        .img{
+        .insideImg{
+            // height: 100%;
             overflow: hidden;
 
-            position: relative;
-            width: 90%;
-            margin-top: 50px;
-            // border: 1px solid black;
-            img{
-                width: 100%;
-            }
-            p.p1{
-                overflow: hidden;
-                position: absolute;
-                top: 27%;
-                right: 20%;
-                transform: translate(50%,-50%);
-                width: 30vw;
-                size: 18px;
+            // position: relative;
+            // width: 90%;
+            // margin-top: 50px;
+            .p1{
+                text-align: left;
+                
+                // overflow: hidden;
+                // position: absolute;
+                // top: 27%;
+                // right: 20%;
+                margin-top: 3%;
+                margin-left: 50%;
+                font-weight: 600;
+                // font-size: medium;
+                // transform: translate(50%,-50%);
+                width: 35%;
+                // margin-left: 10%;
+                // size: 10rem;
             }
             .p2{
                 overflow: hidden;
-                position: absolute;
+                margin-top: 4%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                // position: absolute;
                 // transform: translate(-50%,50%);
-                bottom: 20%;
-                left: 10%;
-                width: 40vw;
+                // bottom: 20%;
+                // left: 10%;
+                // width: 40vw;
                 h1{
                     overflow: hidden;
                     padding: 20px 0px;
@@ -3001,6 +3074,19 @@
                     padding-right: 50px;
                     width:fit-content;
                     font-size: 24px;
+                    margin-right: 0 !important;
+                    font-weight: 600;
+                }
+                p{
+                    width: 55%;
+                    overflow: hidden;
+                    padding: 0px 0px;
+                    // margin-bottom: 20px 0;
+                    margin-left: 10%;
+                    font-family: "artifakt",sans-serif;
+                    padding-right: 50px;
+                    // width:fit-content;
+                    // font-size: 24px;
                     margin-right: 0 !important;
                     font-weight: 600;
                 }

@@ -20,7 +20,7 @@ import Careers from "./pages/Careers";
 import About from "./pages/About";
 import Market from "./pages/Market";
 import {isMobile} from 'react-device-detect';
-
+import BoardMembers from "./pages/Board_members"
 
 
 function App() {
@@ -64,6 +64,8 @@ function App() {
         <Route exact path="/team" element={<Team />} />
         {/* SCOOTY PENDING */}
         <Route exact path="/market" element={<Market />} />        
+
+        <Route path="/board_members" element={<BoardMembers />} />
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -175,7 +175,6 @@
     font-family: 'artifakt',sans-serif !important;
     .Landing{
         font-family: 'monogram',sans-serif;
-        // background: linear-gradient(180deg, #E5EAED 66.98%, rgba(217, 217, 217, 0) 100%);
         background-image: url(../public/assets/Home/home_new.png) !important;
         background-repeat: no-repeat;
         background-size: cover !important;
@@ -190,12 +189,6 @@
             background-color: rgba(73, 72, 72, 0.233);
             text-align: center !important;
             transform: translate(-50%,-50%);
-            // background: rgb(180,180,182);
-            // background: linear-gradient(128.22deg, #525050 26.13%, rgba(82, 80, 80, 0) 48.21%, #525050 69.84%),
-            // linear-gradient(180deg, #AAAAAA -21.43%, rgba(82, 80, 80, 0) 45.41%, #323232 112.25%);
-            // background: #ffffff;
-            // -webkit-background-clip: text;
-            // -webkit-text-fill-color: transparent;
             color: white;
             z-index: 1;
         }
@@ -211,6 +204,14 @@
     #Home1{
         // background: linear-gradient(180deg, #E5EAED 66.98%, rgba(217, 217, 217, 0) 100%);
         // background-color: rgb(20, 0, 58);
+        img{
+            position: absolute;
+            top: 42%;
+            left: 50%;
+            width: 25vw;
+            height: auto;
+            transform: translate(-50%,-50%);
+        }
     }
     .line{
         display: flex;
@@ -229,6 +230,8 @@
             justify-content: space-between;
             align-items: start;
             padding: 30px;
+            background: linear-gradient(180deg, #EBEBEB 0%, rgba(235, 235, 235, 0) 100%);
+
             .title{
                 display: flex;
                 justify-content: space-between;
@@ -317,9 +320,10 @@
                 width: 100%;
                 justify-content: space-evenly;
                 align-items: center;
-                &.odd{
-                    background-color: #E9EDF0;
-                }
+                background: linear-gradient(180deg, #E4E4E4 0%, rgba(255, 255, 255, 0) 100%);
+                // &.odd{
+                //     background-color: #E9EDF0;
+                // }
                 svg{
                     overflow: hidden;
                     width: 60px;

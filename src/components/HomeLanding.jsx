@@ -19,7 +19,9 @@ export default function HomeLanding() {
     <motion.div ref={targetRef} className='basicLand landing'  style={{opacity, scale}}>
       <Landing Id="Home1">
         {/* <h1>SIMPLY PARK AND CHARGE</h1> */}
-        <h1>SIMPLY PARK <br /> AND CHARGE</h1>
+        {/* <div className=""> */}
+        <img src="../assets/Home/home_Heading.png" alt="" />
+        {/* </div> */}
         {/* <img src="../assets/Home/home_1.png" alt="" /> */}
       </Landing>
 

@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
 import {motion, useScroll, useTransform} from "framer-motion";
-import Landing from '../components/Landing';
+import Landing from './Landing';
 
-export default function Team() {
+export default function BoardLanding() {
 
     const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -17,7 +17,7 @@ export default function Team() {
 
   return (
     <motion.div ref={targetRef} className='basicLand landing' style={{opacity, scale}}>
-        <h1>DIVERSITY WITH THE PERFECT BLEND OF EXPERIENCE  <br/> AND EXPERTISE PAVE THE WAY FOR INNOVATION</h1>
+        <h1>JOIN US AS A STRATEGIC PARTNER AND INVESTOR IN <br/> SHAPING THE FUTURE OF OUR INNOVATIVE ENDEAVORS </h1>
         {/* <ul id="side_nav">
             <li><svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 2.13172L1.48849 7.72897C0.980499 7.98719 0.362788 7.77786 0.108793 7.26143C-0.145202 6.745 0.0607013 6.11702 0.568691 5.8588L11.7327 0.184052C11.9708 0.0631978 12.2339 0 12.5 0C12.7661 0 13.0286 0.0629122 13.2668 0.183766L24.4313 5.8588C24.9393 6.11702 25.1452 6.745 24.8912 7.26143C24.6372 7.77786 24.0195 7.98719 23.5115 7.72897L12.5 2.13172ZM3.32287 9.24705C3.89082 9.24705 4.35124 9.71511 4.35124 10.2925V19.6221C4.35124 19.9635 4.48461 20.2908 4.72202 20.5322C4.95942 20.7735 5.28141 20.9091 5.61715 20.9091H19.3828C19.7186 20.9091 20.0406 20.7735 20.278 20.5322C20.5154 20.2908 20.6488 19.9635 20.6488 19.6221V10.2925C20.6488 9.71511 21.1092 9.24705 21.6771 9.24705C22.2451 9.24705 22.7055 9.71511 22.7055 10.2925V19.6221C22.7055 20.518 22.3554 21.3772 21.7323 22.0106C21.1092 22.6441 20.2641 23 19.3828 23H5.61715C4.73593 23 3.8908 22.6441 3.26769 22.0106C2.64457 21.3772 2.29451 20.518 2.29451 19.6221V10.2925C2.29451 9.71511 2.75492 9.24705 3.32287 9.24705Z" fill="#942D2D"/>

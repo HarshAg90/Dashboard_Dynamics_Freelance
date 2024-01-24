@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import TeamLanding from "../components/TeamLanding"
+import JourneyLanding from '../components/JourneyLanding';
 import {motion, useScroll, useTransform} from "framer-motion";
 import BoardLanding from '../components/BoardLanding';
 import Slider from 'react-slick';
@@ -56,7 +57,7 @@ export default function Journey(){
   return (
     
     <div id='Journey'>
-    <TeamLanding/>
+    <JourneyLanding/>
     <div className="head">
           <h1 className='subHeading'>MILESTONES</h1>
           </div>

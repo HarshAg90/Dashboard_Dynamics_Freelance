@@ -76,6 +76,22 @@ export default function Nav() {
           Team
         </Link>
       ),
+    },
+    {
+      key: '3',
+      label: (
+        <Link onClick={()=>set_red_btn(2)} rel="noopener noreferrer" to="/journey">
+          Journey So Far
+        </Link>
+      ),
+    },
+    {
+      key: '4',
+      label: (
+        <Link onClick={()=>set_red_btn(2)} rel="noopener noreferrer" to="/board_members">
+          Board Members
+        </Link>
+      ),
     }
   ];
   

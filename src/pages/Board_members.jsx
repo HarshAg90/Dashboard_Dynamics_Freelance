@@ -60,7 +60,6 @@ export default function BoardMembers(){
 
   return (
     <div id='BoardMember'>
-
         <BoardLanding/>
 
         <div className="members">

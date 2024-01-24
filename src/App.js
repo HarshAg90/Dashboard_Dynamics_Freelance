@@ -26,9 +26,9 @@ import Journey from "./pages/Journey";
 
 function App() {
 
-  if (isMobile) {
-    window.location.replace('https://md.dashdynamic.in/');
-  }
+  // if (isMobile) {
+  //   window.location.replace('https://md.dashdynamic.in/');
+  // }
 
   return (
     <BrowserRouter className="App"> 

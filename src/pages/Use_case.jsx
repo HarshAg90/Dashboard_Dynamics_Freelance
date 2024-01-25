@@ -1,5 +1,5 @@
-import React, { useRef } from 'react';
-import {motion, useScroll, useTransform} from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function UseCase() {
   const targetRef = useRef(null);
@@ -13,8 +13,8 @@ export default function UseCase() {
   const scale = useTransform(scrollYProgress, [0, 0.95], [1, 0.9]);
 
   return (
-    <div  id='UseCase'>
-      <motion.div ref={targetRef} className='basicLand landing'  style={{opacity, scale}}> 
+    <div id="UseCase">
+      {/* <motion.div ref={targetRef} className='basicLand landing'  style={{opacity, scale}}> 
         <h1 className=''>FROM PROBLEM-SOLVING TO GAME-CHANGING, ALWAYS IN ACTION</h1>
         {/* <ul id="side_nav">
             <li><svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -30,100 +30,131 @@ export default function UseCase() {
             <path fill-rule="evenodd" clip-rule="evenodd" d="M9.42857 0V9H0V0H9.42857ZM1.65 1.61538V7.38462H7.77857V1.61538H1.65ZM22 0V9H12.5714V0H22ZM14.2214 1.61538V7.38462H20.35V1.61538H14.2214ZM9.42857 12V21H0V12H9.42857ZM1.65 13.6154V19.3846H7.77857V13.6154H1.65ZM22 12V21H12.5714V12H22ZM14.2214 13.6154V19.3846H20.35V13.6154H14.2214Z" fill="#942D2D"/>
             </svg>
             </li>
-                        <li><svg width="19" height="23" viewBox="0 0 19 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <li><svg width="19" height="23" viewBox="0 0 19 23" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1.88183 6.6711C1.53198 4.48844 3.15666 2.52787 5.63855 1.80958C6.07898 1.68202 6.55419 1.71833 6.96734 1.91111C7.38049 2.10388 7.70051 2.43862 7.86218 2.84712L8.65895 4.85974C8.78722 5.18351 8.81041 5.53621 8.72555 5.87256C8.6407 6.20892 8.45167 6.51357 8.18272 6.74744L5.81256 8.80343C5.69573 8.90499 5.60868 9.03349 5.55988 9.1764C5.51109 9.31931 5.50222 9.47177 5.53415 9.61889L5.55613 9.70911L5.61291 9.93466C5.90767 11.0306 6.35679 12.0839 6.94819 13.0664C7.5924 14.1103 8.39187 15.061 9.32201 15.8892L9.39528 15.9517C9.5136 16.0512 9.65712 16.1199 9.81184 16.1513C9.96656 16.1826 10.1272 16.1754 10.2781 16.1304L13.3425 15.2161C13.6907 15.1125 14.0637 15.1098 14.4136 15.2085C14.7634 15.3071 15.0742 15.5024 15.306 15.7695L16.7567 17.4369C17.3611 18.1309 17.2879 19.1511 16.5937 19.7635C14.6943 21.4413 12.0823 21.7848 10.2653 20.402C8.03807 18.7002 6.16049 16.6247 4.72639 14.2791C3.28065 11.9354 2.31678 9.35418 1.88183 6.6711ZM7.45555 9.7334L9.41909 8.02614C9.95729 7.55862 10.3357 6.9494 10.5057 6.27668C10.6758 5.60397 10.6297 4.89847 10.3734 4.25075L9.57844 2.23813C9.25304 1.41616 8.60901 0.742644 7.77759 0.354831C6.94617 -0.0329832 5.98992 -0.105914 5.10371 0.150899C2.02104 1.04443 -0.453528 3.66257 0.0703246 6.93308C0.436655 9.21637 1.28105 12.1208 3.14384 15.1536C4.69106 17.6827 6.7164 19.9206 9.1187 21.7553C11.8442 23.8287 15.4819 23.1208 17.8447 21.0353C18.5208 20.439 18.9312 19.6208 18.9921 18.7477C19.053 17.8745 18.7599 17.0123 18.1726 16.3369L16.7219 14.6678C16.2578 14.1342 15.6361 13.7442 14.9364 13.5475C14.2367 13.3509 13.491 13.3568 12.7948 13.5643L10.2507 14.3225C9.59377 13.681 9.01839 12.9688 8.53623 12.2006C8.07048 11.4239 7.70752 10.5959 7.45555 9.73514V9.7334Z" fill="#942D2D"/>
             </svg>
             </li>
-        </ul> */}
-    </motion.div>
+        </ul>
+    </motion.div> */}
 
-    
-    <div className='userBase'>
+      <div className="userBase">
+        <h1>From problem-solving to game-changing, always in action</h1>
 
-      <h1 className='subHeading'>Our user base is omnidirectional</h1>
+        <div className="useCaseGrid">
+          <div>
+            <a href="">
 
-      <div className='useCaseGrid'>
-        <motion.img src="../assets/UseCase/grid1.png" className='g1'
-          whileHover={{
-            scale: 1.1
-          }}
-          whileTap={{
-            scale: 0.95
-          }}
-          transition={{
-            type: "spring",
-            stiffness: 60,
-          }}
-        />
-        <motion.img src="../assets/UseCase/grid2.png" className='g2'
-        whileHover={{
-            scale: 1.1
-          }}
-          whileTap={{
-            scale: 0.95
-          }}
-          transition={{
-            type: "spring",
-            stiffness: 60,
-          }}/>
-          <a href="/ev_manufacturer">
-          <motion.img src="../assets/UseCase/grid3.png" className='g3'
-        whileHover={{
-            scale: 1.1
-          }}
-          whileTap={{
-            scale: 0.95
-          }}
-          transition={{
-            type: "spring",
-            stiffness: 60,
-          }}/>
-          </a>
-        
-        <motion.img src="../assets/UseCase/grid4.png" className='g4'
-            whileHover={{
-              scale: 1.1
-            }}
-            whileTap={{
-              scale: 0.95
-            }}
-            transition={{
-              type: "spring",
-              stiffness: 60,
-            }}
-        />
-        <a href="/Charge">
-        <motion.img src="../assets/UseCase/grid5.png" className='g5'
-        whileHover={{
-          scale: 1.1
-        }}
-        whileTap={{
-          scale: 0.95
-        }}
-        transition={{
-          type: "spring",
-          stiffness: 60,
-        }}/>
-        </a>
-        <a href="/Fleets">
-        <motion.img src="../assets/UseCase/grid6.png" className='g6'whileHover={{
-              scale: 1.1
-            }}
-            whileTap={{
-              scale: 0.95
-            }}
-            transition={{
-              type: "spring",
-              stiffness: 60,
-            }}/>
-        </a>
-        
-        
+            <motion.img
+              src="../assets/Home/home_usecase_1.png"
+              className="g1"
+              whileHover={{
+                scale: 1.1,
+              }}
+              whileTap={{
+                scale: 0.95,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 60,
+              }}
+              />
+              <p>Residental</p>
+              </a>
+              <a href="">
+            <motion.img
+              src="../assets/Home/home_usecase_2.png"
+              className="g2"
+              whileHover={{
+                scale: 1.1,
+              }}
+              whileTap={{
+                scale: 0.95,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 60,
+              }}
+            />
+            <p>Multidevice</p>
+            </a>
+            <a href="/ev_manufacturer">
+              <motion.img
+                src="../assets/Home/home_usecase_3.png"
+                className="g3"
+                whileHover={{
+                  scale: 1.1,
+                }}
+                whileTap={{
+                  scale: 0.95,
+                }}
+                transition={{
+                  type: "spring",
+                  stiffness: 60,
+                }}
+              />
+              <p>Manifacture</p>
+            </a>
+          </div>
+          <div>
+            <a href="">
+            <motion.img
+              src="../assets/Home/home_usecase_4.png"
+              className="g4"
+              whileHover={{
+                scale: 1.1,
+              }}
+              whileTap={{
+                scale: 0.95,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 60,
+              }}
+              />
+                <p>Drone</p>
+            </a>
+            <a href="/Charge">
+              <motion.img
+                src="../assets/UseCase/grid5.png"
+                className="g5"
+                whileHover={{
+                  scale: 1.1,
+                }}
+                whileTap={{
+                  scale: 0.95,
+                }}
+                transition={{
+                  type: "spring",
+                  stiffness: 60,
+                }}
+                />
+              <p>Charge Point Opperator</p>
+            </a>
+            <a href="/Fleets">
+              <motion.img
+                src="../assets/Home/home_usecase_6.png"
+                className="g6"
+                whileHover={{
+                  scale: 1.1,
+                }}
+                whileTap={{
+                  scale: 0.95,
+                }}
+                transition={{
+                  type: "spring",
+                  stiffness: 60,
+                }}
+              />
+              <p>Fleet</p>
+            </a>
+          </div>
+        </div>
       </div>
-
-      <h1 className='downHeading'>From fueling commercial fleets to supporting charge point operators, Dash’s wireless charging <br/> technology serves its purpose in multiple zones.</h1>
-
+      <h1 className="downHeading">
+        From fueling commercial fleets to supporting charge point operators,
+        Dash’s wireless charging <br /> technology serves its purpose in
+        multiple zones.
+      </h1>
     </div>
-    </div>
-  )
+  );
 }

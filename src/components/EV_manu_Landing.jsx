@@ -16,6 +16,7 @@ export default function EV_manuLanding() {
 
   return (
     <div  id='EV_manuLanding'>
+      <div className="overlay"></div>
       <motion.div ref={targetRef} className='basicLand landing'  style={{opacity, scale}}> 
         <h1>OPTIMIZING OPERATIONS, <br/> ENHANCING EFFICIENCY</h1>
         {/* <ul id="side_nav">

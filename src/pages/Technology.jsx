@@ -185,6 +185,13 @@ export default function Technology() {
 
     </div>
 
+    <div className="part_2">
+      <div className="container">
+        <h1>Smart and safe</h1>
+        <p>A system that is protected by sophisticated safety rules has been created by adopting the most stringent testing and design standards. According to SAE specification, the Dash Dynamic system includes Foreign Object Detection (F.O.D.).</p>
+      </div>
+      <img src="../assets/Technology/tech_part.png" alt="" />
+    </div>
     
     <div className='why'>
       <div className='whyText'>

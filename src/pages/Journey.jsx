@@ -4,6 +4,8 @@ import {motion, useScroll, useTransform} from "framer-motion";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+const delayP = "0.1";
+
 const aniVariant = {
   hiddenY: {
     opacity: 0.75, y: "15%"
@@ -26,19 +28,6 @@ const aniVariant = {
 }
 
 export default function Journey(){
-
-  var settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: 2500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-  };
-
-
     const journeyRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: journeyRef,
@@ -89,6 +78,7 @@ export default function Journey(){
     whileInView="visibleL"
     viewport={{ once: true }}
     transition= {{
+      delay: delayP,
         type: "spring",
         stiffness: 50,
       }}/>
@@ -98,6 +88,7 @@ export default function Journey(){
      whileInView="visibleY"
      viewport={{ once: true }}
      transition= {{
+      delay: delayP,
          type: "spring",
          stiffness: 50,
        }}>Incubated in <br/>

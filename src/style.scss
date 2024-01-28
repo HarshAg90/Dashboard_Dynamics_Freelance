@@ -240,10 +240,11 @@
       justify-content: start;
       align-items: start;
       padding: 30px;
+      background-color: #fff;
       background: linear-gradient(
         180deg,
-        #ebebeb 0%,
-        rgba(235, 235, 235, 0) 100%
+        #ffffff 80%,
+         rgba(242, 242, 242, 0) 100%
       );
       @media screen and (max-width: 500px) {
         width: 100%;
@@ -276,7 +277,7 @@
         }
       }
       .content {
-        overflow: hidden;
+        overflow: visible;
         margin: 0px 20px;
         max-width: 40vw;
         h1 {
@@ -298,6 +299,10 @@
           button {
             position: absolute;
           }
+        }
+
+        .statImg{
+          overflow: visible;
         }
       }
       .btn {
@@ -616,11 +621,14 @@
       .left {
         display: flex;
         flex-direction: column;
-        height: 100% !important;
+        height: 45rem !important;
         justify-content: space-between;
         align-items: center;
         gap: 10px;
         width: 60vw;
+        .innr{
+          height: 15rem;
+        }
         & > div {
           padding: 10px;
           border: 3px solid rgb(255, 255, 255);
@@ -824,6 +832,22 @@
   }
 
   .partners {
+    background-color: #fff;
+
+    // .slick-slider {
+    //   button.slick-next:before {
+    //     overflow: visible !important;
+    //     background-size: 50px 50px;
+    //       content: url(../public/assets/Home/left.png);
+    //   }
+    //   button.slick-prev:before {
+    //       content: url(../public/assets/Home/home_product.png);
+    //   }
+    //  }
+
+
+
+
     .top_devide {
       width: 100%;
       display: flex;
@@ -845,9 +869,12 @@
       align-items: center;
       .lft,
       .rght {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         min-width: 10vw;
         height: 40vh;
-        background-color: #f9f9f9;
+        // background-color: #f9f9f9;
       }
       .parteners_li {
         min-width: 80vw;
@@ -2732,9 +2759,10 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 21rem;
+            gap: 18rem;
 
             .partnerSet{
+              overflow: visible;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -2748,10 +2776,12 @@
                 }
 
         .fg {
+          overflow: visible !important;
           z-index: 1;
         }
 
                 .bg{
+                  overflow: visible;
                     z-index: 0;
                     position: absolute;
                 }
@@ -2777,7 +2807,7 @@
     
 
     .teamMembers{
-        overflow: hidden;
+        overflow: visible;
         height: 280vh;
         .subHeading{
                 width: 15vw;

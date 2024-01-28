@@ -34,20 +34,54 @@ function Number({ n }) {
   );
 }
 
-const pathVariants = {
-  hidden: {
-    opacity: 0,
-    pathLength: 0,
-  },
-  visible: {
-    opacity: 1,
-    pathLength: 1,
-    transition: {
-      duration: 2,
-      ease: "easeInOut",
-    },
-  },
-};
+
+
+
+// const CustomPrevArrow = (props) => {
+//   const { className, style, onClick } = props;
+//   return (
+//     <div
+//       className={className}
+//       style={{ ...style, width: '50px', height: '50px', color: "black"}}
+//       onClick={onClick}
+//     />
+//   );
+// }
+
+// const CustomNextArrow = (props) => {
+//   const { className, style, onClick } = props;
+//   return (
+//     <div
+//       className={className}
+//       style={{ ...style, width: '50px', height: '50px', backgroundImage: `url(${nextArrow})`}}
+//       onClick={onClick}
+//     />
+//   );
+// }
+
+
+// function SampleNextArrow(props) {
+//   const { className, style, onClick } = props;
+//   return (
+//     <div
+//       className={className}
+//       style={{ ...style, display: "block", background: "black" }}
+//       onClick={onClick}
+//     />
+//   );
+// }
+
+// function SamplePrevArrow(props) {
+//   const { className, style, onClick } = props;
+//   return (
+//     <div
+//       className={className}
+//       style={{ ...style, display: "block", background: "green" }}
+//       onClick={onClick}
+//     />
+//   );
+// }
+
 
 const wirelessVariants = {
   hidden: {
@@ -92,6 +126,38 @@ const lftRightVariant = {
   },
 };
 
+
+//ANIMATION CONFIG
+const isOnce = true;
+const delayP = "0";
+
+const animationVariant = {
+  hidden: {
+    opacity: 0
+  },
+  visible: {
+    opacity: 1
+  },
+  hiddenY: {
+    opacity: 0.75, y: "15%"
+  },
+  visibleY: {
+    opacity: 1, y: "0%",
+  },
+  hiddenL: {
+    opacity: 0.75, x: "-10%"
+  },
+  visibleL: {
+    opacity: 1, x: "0%",
+  },
+  hiddenR: {
+    opacity: 0.75, x: "10%"
+  },
+  visibleR: {
+    opacity: 1, x: "0%",
+  }
+}
+
 export default function Home() {
   const [myElementIsVisible, updateMyElementIsVisible] = useState();
   const myRef = useRef(null);
@@ -105,6 +171,8 @@ export default function Home() {
     observer.observe(myRef.current);
   }, []);
 
+  const slider = React.useRef(null);
+
   var settings = {
     dots: true,
     infinite: true,
@@ -114,6 +182,8 @@ export default function Home() {
     autoplaySpeed: 3000,
     slidesToShow: 3,
     slidesToScroll: 1,
+    // prevArrow: <CustomPrevArrow />,
+    // nextArrow: <CustomNextArrow />
   };
 
   //onScroll Parallax for TECH
@@ -170,7 +240,15 @@ export default function Home() {
           </div>
           <motion.div
             className="content"
-            style={{ y: frthY, opacity: frthOpacity, scale: frthScale }}
+            variants={animationVariant}
+            initial="hiddenY"
+            whileInView="visibleY"
+            viewport={{ once: isOnce }}
+            transition= {{
+              delay: delayP,
+                type: "spring",
+                stiffness: 50,
+              }}
           >
             <h1>Why go wireless?</h1>
             <p>Simply Park and Charge</p>
@@ -189,43 +267,32 @@ export default function Home() {
               electric vehicle user will be able to wirelessly charge by simply
               parking above the charger on ground.
             </p>
-            <div className="">
+            <div className="statImg">
               <img src="../assets/Home/home_tech.png" alt="" />
-              <button>
+              {/* <button>
                 <span> Our Specifications</span>
                 <span>{">"}</span>
-              </button>
+              </button> */}
             </div>
           </motion.div>
         </div>
         <div className="right">
-          <motion.div
-            className="tile"
-            style={{ y: fstY, opacity: fstOpacity, scale: fstScale }}
-          >
-            {/* <motion.svg
-              width="45"
-              height="53"
-              viewBox="0 0 45 53"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <motion.path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M22.32 3.6966C19.8875 3.66882 17.4738 4.10768 15.2209 4.98735C12.9679 5.86702 10.9211 7.16974 9.20101 8.81889C7.48088 10.468 6.12208 12.4303 5.20455 14.5903C4.28702 16.7503 3.82928 19.0644 3.85825 21.3965C3.9431 31.2769 12.3743 39.3602 22.68 39.4416C32.9651 39.5205 41.224 31.6023 41.1417 21.7416C41.0569 11.8612 32.6257 3.77795 22.32 3.6966ZM0.00133665 21.4236C-0.0310353 18.6016 0.524897 15.8018 1.63651 13.1885C2.74811 10.5753 4.393 8.20122 6.47462 6.20572C8.55624 4.21023 11.0327 2.63349 13.7585 1.56805C16.4844 0.502617 19.4048 -0.0300524 22.3483 0.00130845C34.7624 0.0949849 44.8983 9.81269 44.9986 21.7145C45.054 26.4755 43.4351 31.1156 40.4028 34.8863C37.3706 38.657 33.1019 41.3386 28.2853 42.4984V45.0424C28.2853 45.57 28.2853 46.0532 28.2571 46.4624C28.2262 46.9012 28.1542 47.3819 27.9434 47.8724C27.4867 48.9294 26.6108 49.7691 25.5084 50.207C25.1381 50.3549 24.7756 50.4288 24.4284 50.4707V51.1511C24.4284 51.6415 24.2253 52.1117 23.8636 52.4585C23.5019 52.8052 23.0114 53 22.5 53C21.9885 53 21.498 52.8052 21.1364 52.4585C20.7747 52.1117 20.5715 51.6415 20.5715 51.1511V50.4707C20.2008 50.4296 19.8376 50.3409 19.4916 50.207C18.3892 49.7691 17.5133 48.9294 17.0566 47.8724C16.8717 47.4222 16.7657 46.9458 16.7429 46.4624C16.7146 46.0556 16.7146 45.57 16.7146 45.0424V42.3357C7.15976 39.7694 0.0861887 31.3583 0.00133665 21.4261V21.4236ZM20.5715 43.0309V44.9882C20.5715 45.5872 20.5715 45.9447 20.5921 46.2109C20.6024 46.3761 20.6178 46.4451 20.623 46.4648C20.6885 46.6089 20.809 46.7236 20.9598 46.7853C21.047 46.8029 21.1356 46.8137 21.2246 46.8174C21.5023 46.8371 21.8752 46.8371 22.5 46.8371C23.1248 46.8371 23.4976 46.8371 23.7753 46.8174C23.8643 46.8145 23.9529 46.8046 24.0402 46.7878C24.1905 46.7249 24.3101 46.6094 24.3744 46.4648C24.3928 46.3812 24.404 46.2963 24.4079 46.2109C24.4284 45.9447 24.4284 45.5872 24.4284 44.9882V43.0851C23.1435 43.1717 21.8532 43.1536 20.5715 43.0309ZM26.0329 12.8325C26.2166 13 26.364 13.2005 26.4668 13.4226C26.5695 13.6447 26.6256 13.8841 26.6318 14.127C26.6381 14.3699 26.5943 14.6116 26.503 14.8383C26.4117 15.065 26.2746 15.2722 26.0998 15.4481L21.8572 19.7202H27.6425C28.0198 19.7204 28.3887 19.8266 28.7036 20.0258C29.0185 20.225 29.2656 20.5083 29.4142 20.8408C29.5628 21.1732 29.6064 21.5402 29.5397 21.8962C29.473 22.2521 29.2988 22.5815 29.0387 22.8436L21.6926 30.2391C21.5199 30.422 21.3108 30.57 21.0775 30.6743C20.8443 30.7785 20.5916 30.837 20.3344 30.8462C20.0772 30.8553 19.8207 30.8151 19.58 30.7277C19.3393 30.6404 19.1193 30.5077 18.9329 30.3376C18.7465 30.1674 18.5975 29.9632 18.4947 29.737C18.3919 29.5108 18.3374 29.2672 18.3343 29.0204C18.3313 28.7737 18.3798 28.5289 18.477 28.3004C18.5742 28.0719 18.7181 27.8644 18.9002 27.6901L23.1428 23.418H17.3574C16.9802 23.4178 16.6112 23.3116 16.2963 23.1124C15.9814 22.9132 15.7344 22.6298 15.5858 22.2974C15.4371 21.9649 15.3935 21.598 15.4602 21.242C15.527 20.886 15.7012 20.5566 15.9612 20.2946L23.3074 12.8991C23.66 12.5442 24.1452 12.3381 24.6563 12.3261C25.1674 12.3141 25.6625 12.4946 26.0329 12.8325Z"
-                fill="#A14545"
-                variants={pathVariants}
-                initial="hidden"
-                animate="visible"
-              />
-            </motion.svg> */}
-            <svg
+          <div className="tile">
+            <motion.svg
               width="63"
               height="55"
               viewBox="0 0 63 55"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              variants={animationVariant}
+     initial="hidden"
+     whileInView="visible"
+     viewport={{ once: isOnce }}
+     transition= {{
+      delay: delayP,
+         type: "spring",
+         stiffness: 50,
+       }}
             >
               <path
                 d="M58.5438 16.2755C59.2888 15.6795 59.9727 15.1267 60.6626 14.5798C61.1707 14.179 61.6624 14.1567 62.0215 14.5068C62.3806 14.857 62.3761 15.3472 61.9723 15.8612C61.3242 16.6867 60.6462 17.4883 60.0234 18.3332C59.9484 18.4431 59.8979 18.5678 59.8753 18.6989C59.8527 18.83 59.8585 18.9644 59.8923 19.0931C62.5572 25.4965 63.0225 32.603 61.2154 39.2992C61.0664 39.8654 60.7311 40.1232 60.1277 40.1217C55.2568 40.1097 50.3845 40.1217 45.5121 40.1217C44.7299 40.1217 44.4304 39.7805 44.4572 38.9803C44.4691 38.6331 44.4572 38.286 44.4572 37.8092C43.97 38.4052 43.5632 38.9267 43.137 39.4318C42.617 40.0516 42.1223 40.074 41.5442 39.4988C40.0393 38.0088 38.5394 36.5094 37.0444 35.0005C36.4588 34.4045 36.499 33.8949 37.1591 33.3615C39.0753 31.8268 40.9944 30.2965 42.991 28.7007C42.6126 27.8305 42.2728 26.935 41.8377 26.0872C41.5397 25.4912 41.574 25.0099 41.9018 24.4482C44.8928 19.2997 47.8728 14.1452 50.8419 8.98483C51.42 7.98354 51.9207 7.92095 52.7566 8.72109C54.9082 10.7897 56.7509 13.1573 58.2279 15.751C58.3233 15.9104 58.4201 16.0698 58.5438 16.2755ZM59.6047 38.3396C61.1141 32.2082 60.7162 26.2452 58.4559 20.3536C58.3846 20.4029 58.3173 20.4577 58.2547 20.5175C54.3231 25.4386 50.3929 30.3606 46.4642 35.2836C46.3607 35.3855 46.2892 35.5155 46.2586 35.6576C46.2407 36.5516 46.2497 37.4456 46.2497 38.3396H59.6047ZM52.0294 10.5195C49.1984 15.4262 46.4181 20.2315 43.6496 25.0427C43.5688 25.1769 43.5432 25.3371 43.5781 25.4897C43.8493 26.1558 44.1547 26.8069 44.4721 27.5132L57.1044 17.4213C55.7624 14.8839 54.0522 12.5592 52.0294 10.5225V10.5195ZM55.236 21.4175L55.1212 21.3073L38.9635 34.2212L42.325 37.5827L55.236 21.4175Z"
@@ -275,51 +342,89 @@ export default function Home() {
                 d="M18.0823 51.7015C15.4658 51.7015 13.2969 50.5938 13.2969 49.0695C13.2969 47.5452 15.4658 46.4375 18.0823 46.4375C20.6988 46.4375 22.8677 47.5452 22.8677 49.0695C22.8677 50.5938 20.6988 51.7015 18.0823 51.7015ZM18.0823 50.9495C20.3447 50.9495 22.1315 50.0365 22.1315 49.0695C22.1315 48.1024 20.3447 47.1895 18.0823 47.1895C15.8199 47.1895 14.0331 48.1024 14.0331 49.0695C14.0331 50.0365 15.8199 50.9495 18.0823 50.9495Z"
                 fill="#870507"
               />
-            </svg>
+            </motion.svg>
 
-            <div className="content">
+            <motion.div className="content"
+            variants={animationVariant}
+            initial="hiddenR"
+            whileInView="visibleR"
+            viewport={{ once: isOnce }}
+            transition= {{
+              delay: delayP,
+                type: "spring",
+                stiffness: 50,
+              }}>
               <h1>FASTER</h1>
               <p>
                 Experience rapid charging with our autonomous charger that gives
                 30% speed boost and universal compatibility.
               </p>
-            </div>
-          </motion.div>
-          <motion.div
+            </motion.div>
+          </div>
+
+
+
+          <div
             className="tile"
             style={{ y: scndY, opacity: scndOpacity, scale: scndScale }}
           >
-            <svg
+            <motion.svg
               width="53"
               height="53"
               viewBox="0 0 53 53"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              variants={animationVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: isOnce }}
+            transition= {{
+              delay: delayP,
+                type: "spring",
+                stiffness: 50,
+              }}
             >
               <path
                 d="M26.5 0C27.002 0 27.4835 0.199425 27.8385 0.554405C28.1934 0.909385 28.3929 1.39084 28.3929 1.89286V11.5199L34.626 5.28675C34.8006 5.10596 35.0095 4.96176 35.2404 4.86256C35.4714 4.76336 35.7198 4.71114 35.9711 4.70895C36.2224 4.70677 36.4717 4.75466 36.7043 4.84984C36.9369 4.94501 37.1483 5.08556 37.326 5.26329C37.5037 5.44101 37.6443 5.65235 37.7394 5.88498C37.8346 6.11761 37.8825 6.36686 37.8803 6.61819C37.8782 6.86952 37.8259 7.1179 37.7267 7.34884C37.6275 7.57977 37.4833 7.78864 37.3025 7.96325L28.3929 16.8729V24.6071H36.1271L45.0368 15.6975C45.2114 15.5167 45.4202 15.3725 45.6512 15.2733C45.8821 15.1741 46.1305 15.1219 46.3818 15.1197C46.6331 15.1175 46.8824 15.1654 47.115 15.2606C47.3476 15.3557 47.559 15.4963 47.7367 15.674C47.9144 15.8517 48.055 16.0631 48.1502 16.2957C48.2453 16.5283 48.2932 16.7776 48.291 17.0289C48.2889 17.2802 48.2366 17.5286 48.1374 17.7596C48.0382 17.9905 47.894 18.1994 47.7133 18.374L41.4801 24.6071H51.1071C51.6092 24.6071 52.0906 24.8066 52.4456 25.1615C52.8006 25.5165 53 25.998 53 26.5C53 27.002 52.8006 27.4835 52.4456 27.8385C52.0906 28.1934 51.6092 28.3929 51.1071 28.3929H41.4801L47.7133 34.626C48.0581 34.983 48.2488 35.4612 48.2445 35.9575C48.2402 36.4538 48.0411 36.9285 47.6902 37.2795C47.3392 37.6304 46.8645 37.8295 46.3682 37.8338C45.8719 37.8381 45.3937 37.6473 45.0368 37.3025L36.1271 28.3929H28.3929V36.1271L37.3025 45.0368C37.6473 45.3937 37.8381 45.8719 37.8338 46.3682C37.8295 46.8645 37.6304 47.3392 37.2795 47.6902C36.9285 48.0411 36.4538 48.2402 35.9575 48.2445C35.4612 48.2488 34.983 48.0581 34.626 47.7133L28.3929 41.4801V51.1071C28.3929 51.6092 28.1934 52.0906 27.8385 52.4456C27.4835 52.8006 27.002 53 26.5 53C25.998 53 25.5165 52.8006 25.1615 52.4456C24.8066 52.0906 24.6071 51.6092 24.6071 51.1071V41.4801L18.374 47.7133C18.017 48.0581 17.5388 48.2488 17.0425 48.2445C16.5462 48.2402 16.0715 48.0411 15.7205 47.6902C15.3696 47.3392 15.1705 46.8645 15.1662 46.3682C15.1619 45.8719 15.3527 45.3937 15.6975 45.0368L24.6071 36.1271V28.3929H16.8729L7.96325 37.3025C7.60625 37.6473 7.12811 37.8381 6.63181 37.8338C6.13551 37.8295 5.66076 37.6304 5.30981 37.2795C4.95886 36.9285 4.75979 36.4538 4.75547 35.9575C4.75116 35.4612 4.94195 34.983 5.28675 34.626L11.5199 28.3929H1.89286C1.39084 28.3929 0.909385 28.1934 0.554405 27.8385C0.199425 27.4835 0 27.002 0 26.5C0 25.998 0.199425 25.5165 0.554405 25.1615C0.909385 24.8066 1.39084 24.6071 1.89286 24.6071H11.5199L5.28675 18.374C5.10596 18.1994 4.96176 17.9905 4.86256 17.7596C4.76336 17.5286 4.71114 17.2802 4.70895 17.0289C4.70677 16.7776 4.75466 16.5283 4.84984 16.2957C4.94501 16.0631 5.08556 15.8517 5.26329 15.674C5.44101 15.4963 5.65235 15.3557 5.88498 15.2606C6.11761 15.1654 6.36686 15.1175 6.61819 15.1197C6.86952 15.1219 7.1179 15.1741 7.34884 15.2733C7.57977 15.3725 7.78864 15.5167 7.96325 15.6975L16.8729 24.6071H24.6071V16.8729L15.6975 7.96325C15.5167 7.78864 15.3725 7.57977 15.2733 7.34884C15.1741 7.1179 15.1219 6.86952 15.1197 6.61819C15.1175 6.36686 15.1654 6.11761 15.2606 5.88498C15.3557 5.65235 15.4963 5.44101 15.674 5.26329C15.8517 5.08556 16.0631 4.94501 16.2957 4.84984C16.5283 4.75466 16.7776 4.70677 17.0289 4.70895C17.2802 4.71114 17.5286 4.76336 17.7596 4.86256C17.9905 4.96176 18.1994 5.10596 18.374 5.28675L24.6071 11.5199V1.89286C24.6071 1.39084 24.8066 0.909385 25.1615 0.554405C25.5165 0.199425 25.998 0 26.5 0Z"
                 fill="#870507"
               />
-            </svg>
+            </motion.svg>
 
-            <div className="content">
+            <motion.div className="content"
+            variants={animationVariant}
+            initial="hiddenR"
+            whileInView="visibleR"
+            viewport={{ once: isOnce }}
+            transition= {{
+              delay: delayP,
+                type: "spring",
+                stiffness: 50,
+              }}>
               <h1>Versatile</h1>
               <p>
                 No specific parking orientation is required. System works in any
                 weather condition like snow, rainy, and dirt seamlessly
               </p>
-            </div>
-          </motion.div>
-          <motion.div
+            </motion.div>
+          </div>
+          <div
             className="tile"
-            style={{ y: thdY, opacity: thdOpacity, scale: thdScale }}
           >
-            <svg
+            <motion.svg
               width="58"
               height="48"
               viewBox="0 0 58 48"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              variants={animationVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: isOnce }}
+            transition= {{
+              delay: delayP,
+                type: "spring",
+                stiffness: 50,
+              }}
             >
               <path
                 d="M10.3658 48.0034C6.90608 43.3031 3.48326 38.6397 0 33.9025C1.19522 33.0178 2.35015 32.1567 3.5118 31.3039C6.39241 29.1837 9.29988 27.0971 12.1503 24.94C13.6603 23.7694 15.5208 23.1419 17.4314 23.1589C22.8032 23.1304 28.1749 23.028 33.5467 22.9525C35.2875 22.929 36.5012 23.7498 36.9259 25.2489C37.3187 26.6372 36.7396 28.1631 35.4386 28.8262C34.8597 29.095 34.2302 29.2375 33.592 29.2442C31.074 29.3214 28.556 29.2794 26.038 29.3986C25.1824 29.4592 24.3486 29.6958 23.5888 30.0936C22.6991 30.5451 22.3432 31.6799 22.6001 32.5579C22.8401 33.372 23.6375 33.9495 24.6866 33.9394C29.162 33.8941 33.6407 33.9025 38.1161 33.6994C39.2039 33.6507 40.3789 33.0497 41.3056 32.4017C44.8308 29.9374 48.2738 27.3506 51.7453 24.8091C52.4436 24.2971 53.1302 23.7683 53.8403 23.2714C55.1009 22.3868 56.6571 22.5999 57.4796 23.7616C58.3408 24.9736 58.0856 26.4475 56.8233 27.3674C50.0045 32.385 43.1672 37.379 36.3703 42.4268C34.9477 43.5216 33.2014 44.1122 31.4064 44.1055C26.6792 44.1307 21.9538 44.2599 17.2266 44.2834C15.9908 44.268 14.7883 44.6835 13.8256 45.4585C12.7227 46.3113 11.5778 47.1154 10.3658 48.0034Z"
@@ -337,26 +442,43 @@ export default function Home() {
                 d="M39.2801 25.695C39.1827 25.2519 39.0938 24.8557 38.9863 24.3605C39.5739 24.2396 40.1362 24.1355 40.6935 24.008C45.2092 22.9722 48.7512 19.0492 49.2884 14.4076C49.3743 13.4683 49.3872 12.5237 49.327 11.5824C49.3035 11.0402 49.2481 10.5181 49.9347 10.4308C50.5843 10.3469 50.722 10.869 50.7656 11.3541C51.1014 15.0841 50.1814 18.4432 47.7003 21.2986C45.4845 23.8519 42.6677 25.2804 39.2801 25.695Z"
                 fill="#870507"
               />
-            </svg>
-            <div className="content">
+            </motion.svg>
+            <motion.div className="content"
+            variants={animationVariant}
+            initial="hiddenR"
+            whileInView="visibleR"
+            viewport={{ once: isOnce }}
+            transition= {{
+              delay: delayP,
+                type: "spring",
+                stiffness: 50,
+              }}>
               <h1>Safety - FOREIGN OBJECT DETECTION</h1>
               <p>
                 Through the proximity sensors and thermal sensors incorporated
                 in the device to detect objects, the charging could be halted
                 until it is removed.
               </p>
-            </div>
-          </motion.div>
-          <motion.div
+            </motion.div>
+          </div>
+          <div
             className="tile"
-            style={{ y: thdY, opacity: thdOpacity, scale: thdScale }}
           >
-            <svg
+            <motion.svg
               width="78"
               height="43"
               viewBox="0 0 78 43"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              variants={animationVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: isOnce }}
+            transition= {{
+              delay: delayP,
+                type: "spring",
+                stiffness: 50,
+              }}
             >
               <path
                 d="M0.541016 1H78.0001M78.0001 42H0.541016"
@@ -453,18 +575,30 @@ export default function Home() {
                 d="M15.041 11.1996L16.0724 10.9247L14.7463 12.0242L14.7463 11.1996L13.7148 11.4745L15.041 10.375L15.041 11.1996Z"
                 fill="#870507"
               />
-            </svg>
+            </motion.svg>
 
-            <div className="content">
+            <motion.div className="content"
+            variants={animationVariant}
+            initial="hiddenR"
+            whileInView="visibleR"
+            viewport={{ once: isOnce }}
+            transition= {{
+              delay: delayP,
+                type: "spring",
+                stiffness: 50,
+              }}>
               <h1>Future - Dynamic Charging</h1>
               <p>
                 Future roads - energy highways, charging EVs on the move,
                 transforming how vehicles stay powered while driving
               </p>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </div>
+
+
+
       <div className="features">
         <div className="title">
           <motion.div
@@ -721,7 +855,16 @@ export default function Home() {
         </div>
         <div className="third">
           <div className="left">
-            <div className="">
+            <motion.div className="innr"
+            variants={animationVariant}
+            initial="hiddenL"
+            whileInView="visibleL"
+            viewport={{ once: isOnce }}
+            transition= {{
+              delay: delayP,
+                type: "spring",
+                stiffness: 50,
+              }}>
               <div className="">
                 <svg
                   width="80"
@@ -745,8 +888,17 @@ export default function Home() {
                 wireless EV charging systems through our engineering offices
                 worldwide.
               </p>
-            </div>
-            <div className="">
+            </motion.div>
+            <motion.div className="innr"
+            variants={animationVariant}
+            initial="hiddenL"
+            whileInView="visibleL"
+            viewport={{ once: isOnce }}
+            transition= {{
+              delay: delayP,
+                type: "spring",
+                stiffness: 50,
+              }}>
               <div className="">
                 <svg
                   width="80"
@@ -781,8 +933,17 @@ export default function Home() {
                 subject our charging solutions to rigorous testing, which
                 demonstrates their performance in real-world conditions.
               </p>
-            </div>
-            <div className="">
+            </motion.div>
+            <motion.div className="innr"
+            variants={animationVariant}
+            initial="hiddenL"
+            whileInView="visibleL"
+            viewport={{ once: isOnce }}
+            transition= {{
+              delay: delayP,
+                type: "spring",
+                stiffness: 50,
+              }}>
               <div className="">
                 <svg
                   width="69"
@@ -822,13 +983,15 @@ export default function Home() {
                 have undergone testing and implementation by leading global
                 OEMs.
               </p>
-            </div>
+            </motion.div>
           </div>
           <div className="right">
             <img src="../assets/Home/home_product_4.png" alt="" />
           </div>
         </div>
       </div>
+
+      
       <div class="use_case">
         <div className="title">
           <motion.div
@@ -1129,9 +1292,14 @@ export default function Home() {
           </svg>
         </div>
         <div className="container">
-          <div className="lft" />
+          <div className="lft">
+          <button onClick={() => slider?.current?.slickPrev()}>
+          <img src="../assets/Home/left.png" alt="prev" />
+          </button>
+          </div>
           <div className="parteners_li">
-            <Slider {...settings} className="carouselKaItem">
+            <Slider ref={slider} {...settings} className="carouselKaItem">
+            
               <motion.img
                 src="../assets/Home/partner_1.png"
                 alt=""
@@ -1179,7 +1347,11 @@ export default function Home() {
               />
             </Slider>
           </div>
-          <div className="rght" />
+          <div className="rght">
+          <button onClick={() => slider?.current?.slickNext()}>
+          <img src="../assets/Home/right.png" alt="next" />
+          </button>
+          </div>
         </div>
 
         <div className="bottom_devide">

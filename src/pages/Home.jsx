@@ -1294,7 +1294,7 @@ export default function Home() {
         <div className="container">
           <div className="lft">
           <button onClick={() => slider?.current?.slickPrev()}>
-          <img src="../assets/Home/left.png" alt="prev" />
+          <img className="arrow" src="../assets/Home/left.png" alt="prev" />
           </button>
           </div>
           <div className="parteners_li">
@@ -1349,7 +1349,7 @@ export default function Home() {
           </div>
           <div className="rght">
           <button onClick={() => slider?.current?.slickNext()}>
-          <img src="../assets/Home/right.png" alt="next" />
+          <img className="arrow" src="../assets/Home/right.png" alt="next" />
           </button>
           </div>
         </div>

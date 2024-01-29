@@ -1,96 +1,54 @@
-import React, { useRef } from 'react';
-import {motion, useScroll, useTransform} from "framer-motion";
+import React from 'react';
+import {motion} from "framer-motion";
 import TeamLanding from "../components/TeamLanding"
-import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Link } from "react-router-dom";
-import Timeline from '@mui/lab/Timeline';
-import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
-import TimelineConnector from '@mui/lab/TimelineConnector';
-import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineDot from '@mui/lab/TimelineDot';
 
-const pathVariants = {
-    hidden: {
-      pathLength: 0,
-    },
-    visible: {
-      pathLength: 1,
-      transition: { 
-        duration: 10
-      }
-    }
-  };
+
+const tiles3Variant = {
+  hiddenY: {
+    opacity: 0.75, y: "15%"
+  },
+  visibleY: {
+    opacity: 1, y: "0%",
+  },
+  hiddenL: {
+    opacity: 0.75, x: "-10%"
+  },
+  visibleL: {
+    opacity: 1, x: "0%",
+  },
+  hiddenR: {
+    opacity: 0.75, x: "10%"
+  },
+  visibleR: {
+    opacity: 1, x: "0%",
+  }
+}
 
 export default function Team(){
 
-  var settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: 2500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-  };
-
-
-    const journeyRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: journeyRef,
-    offset: ["start end", "end start"], 
-  });
-
-  const pathLen = useTransform(scrollYProgress, [0.2, 0.6, 0.65], [0, 0.7, 1]);
-
-
-  const achieveOpacity1 = useTransform(scrollYProgress, [0, 0.315, 0.325], [0, 0, 1]);
-  const xLen1 = useTransform(scrollYProgress, [0, 0.315, 0.325], ["-20%","-20%", "0%"]);
-  const achieveOpacity2 = useTransform(scrollYProgress, [0, 0.4, 0.41], [0, 0, 1]);
-  const xLen2 = useTransform(scrollYProgress, [0, 0.4, 0.41], ["20%", "20%", "0%"]);
-  const achieveOpacity3 = useTransform(scrollYProgress, [0, 0.45, 0.46], [0, 0, 1]);
-  const xLen3 = useTransform(scrollYProgress, [0, 0.45, 0.46], ["20%", "20%", "0%"]);
-  const achieveOpacity4 = useTransform(scrollYProgress, [0, 0.55, 0.56], [0, 0, 1]);
-  const xLen4 = useTransform(scrollYProgress, [0, 0.55, 0.56], ["-20%","-20%", "0%"]);
-  const achieveOpacity5 = useTransform(scrollYProgress, [0, 0.6, 0.61], [0, 0, 1]);
-  const yLen5 = useTransform(scrollYProgress, [0, 0.6, 0.61], ["20%","20%", "0%"]);
-  const achieveOpacity6 = useTransform(scrollYProgress, [0, 0.63, 0.64], [0, 0, 1]);
-  const yLen6 = useTransform(scrollYProgress, [0, 0.63, 0.64], ["-20%","-20%", "0%"]);
-
-  const transition = { duration: 2, yoyo: Infinity, ease: "easeInOut" };
+ 
 
   return ( 
     <div id='Team'>
         <TeamLanding/>
-        <div className="container">
-      <svg xmlns="http://www.w3.org/2000/svg" width="1236" height="4004">
-        <motion.path
-          d="M0 5H947C1041.17 15.3333 1229.5 86.3 1229.5 287.5C1229.5 550.5 1041.17 566 947 579.5L434.5 592C335.667 589.5 111 643 111 851C111 1094.2 252 1154 434.5 1154L947 1168C1041.17 1162.33 1219.77 1241.75 1229.5 1429C1241.5 1660 1041.17 1712.33 947 1718L434.5 1736.5C335.667 1738.67 80.9653 1764.9 103 2034.5C120 2242.5 296.167 2290 395 2286.5L947 2307.5C1041.17 2310.33 1229.5 2366.73 1229.5 2602.5C1229.5 2795.5 1041.17 2865.17 947 2859.5L395 2878.5C291 2878.5 87.5 2948 103 3164.5C118.5 3381 308.333 3429.67 395 3428.5L947 3447C1041.17 3453.33 1248.5 3498 1229.5 3765.5C1214.56 3975.77 1061 3982.5 947 3999H103"
-          fill="transparent"
-          strokeWidth="12"
-          stroke="rgba(255, 255, 255, 0.69)"
-          strokeLinecap="round"
-          initial={{ pathLength: 0 }}
-          animate={{ pathLength: 1 }}
-          transition={transition}
-        />
-      </svg>
-      <motion.div
-        className="box"
-        initial={{ offsetDistance: "0%" }}
-        animate={{ offsetDistance: "12.3%"}}
-        transition={transition}
-      />
-    </div>
         <div className="teamMembers">
-            <h1 className='subHeading'>OUR TEAM</h1>
+        <div className="head">
+          <h1 className='subHeading'>OUR TEAM</h1>
+          </div>
             <div className="teamGrid">
                 <div className="grid fst">
-                <div className="member2 member">
-                        <motion.img src="../assets/Team/Members/Robin_Singh.png" alt="Robin Singh"
+                <motion.div className="member2 member"
+                variants={tiles3Variant}
+                initial="hiddenY"
+                whileInView="visibleY"
+                viewport={{ once: true }}
+                transition= {{
+                    type: "spring",
+                    stiffness: 50,
+                  }}>
+                        <motion.img src="../assets/Board_members/Robin.png" alt="Robin Singh"
                         initial={{
                           scale: 1
                       }}
@@ -102,11 +60,19 @@ export default function Team(){
                           stiffness: 60,
                         }}/>
                         <a href="https://www.linkedin.com/in/robin-singh-b9952028/" className="linkedin" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" style={{fill:"#000000"}}><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg></a>
-                        <h1>A highly successful electrical engineer with 7 years of entrepreneurial experience, founder of Tron Fire Protection Pvt Ltd, known for innovative solutions in transformer fire safety, and COVID initiatives.
-</h1>
-                    </div>
-                    <div className="member1 member">
-                        <motion.img src="../assets/Team/Members/Shashank_Sawai.png" alt="Shashank Sawai"
+                        {/* <h1>A highly successful electrical engineer with 7 years of entrepreneurial experience, founder of Tron Fire Protection Pvt Ltd, known for innovative solutions in transformer fire safety, and COVID initiatives.
+</h1> */}
+                    </motion.div>
+                    <motion.div className="member1 member"
+                    variants={tiles3Variant}
+                    initial="hiddenY"
+                    whileInView="visibleY"
+                    viewport={{ once: true }}
+                    transition= {{
+                        type: "spring",
+                        stiffness: 50,
+                      }}>
+                        <motion.img src="../assets/Board_members/Shashank.png" alt="Shashank Sawai"
                             initial={{
                               scale: 1
                             }}
@@ -120,11 +86,20 @@ export default function Team(){
                         />
                         <a href="https://www.linkedin.com/in/shashank-sawai-8a0511125/" className="linkedin" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" style={{fill:"#000000"}}><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg></a>
                         
-                        <h1>An M.Tech professional with 7 years of experience, excelling in electrical & telecommunications project management.</h1>
-                    </div>
-                    
-                    <div className="member3 member">
-                        <motion.img src="../assets/Team/Members/BK_Panigrahi.png" alt="B K Panigrahi"
+                        {/* <h1>An M.Tech professional with 7 years of experience, excelling in electrical & telecommunications project management.</h1> */}
+                    </motion.div>                                
+                </div>
+                <div className="grid scnd">
+                <motion.div className="member3 member"
+                variants={tiles3Variant}
+                initial="hiddenL"
+                whileInView="visibleL"
+                viewport={{ once: true }}
+                transition= {{
+                    type: "spring",
+                    stiffness: 50,
+                  }}>
+                        <motion.img src="../assets/Board_members/Pani.png" alt="B K Panigrahi"
                         initial={{
                           scale: 1
                         }}
@@ -136,12 +111,18 @@ export default function Team(){
                           stiffness: 60,
                         }}/>
                         <a href="https://www.linkedin.com/in/bkpanigrahi/" className="linkedin" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" style={{fill:"#000000"}}><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg></a>
-                        <h1>A highly esteemed professor with 40 years of teaching experience at IIT Delhi, specializing in Power Electronics and Power Systems, and currently researching EV Charging Infrastructure & Grid Impact</h1>
-                    </div>                                  
-                </div>
-                <div className="grid scnd">
-                <div className="member6 member">
-                    <motion.img src="../assets/Team/Members/Eric_Azulay.png" alt="Eric Azulay"
+                        {/* <h1>A highly esteemed professor with 40 years of teaching experience at IIT Delhi, specializing in Power Electronics and Power Systems, and currently researching EV Charging Infrastructure & Grid Impact</h1> */}
+                    </motion.div>  
+                <motion.div className="member6 member"
+                variants={tiles3Variant}
+                initial="hiddenY"
+                whileInView="visibleY"
+                viewport={{ once: true }}
+                transition= {{
+                    type: "spring",
+                    stiffness: 50,
+                  }}>
+                    <motion.img src="../assets/Board_members/Erik.png" alt="Eric Azulay"
                     initial={{
                       scale: 1
                   }}
@@ -154,12 +135,20 @@ export default function Team(){
                     }}
                     />
                     <a href="https://www.linkedin.com/in/erikazulay/" className="linkedin" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" style={{fill:"#000000"}}><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg></a>
-                    <h1>Executive Director of Startup Nexus, ACIR, responsible for promoting economic development and tech commercialization, while incubating start-ups and forming strategic partnerships.
-</h1>
-                    </div>  
+                    {/* <h1>Executive Director of Startup Nexus, ACIR, responsible for promoting economic development and tech commercialization, while incubating start-ups and forming strategic partnerships.
+</h1> */}
+                    </motion.div>  
 
-                    <div className="member8 member">
-                    <motion.img src="../assets/Team/Members/Sanjeevi.png" alt="Sanjeevikumar Padmanaban"
+                    <motion.div className="member8 member"
+                    variants={tiles3Variant}
+                    initial="hiddenR"
+                    whileInView="visibleR"
+                    viewport={{ once: true }}
+                    transition= {{
+                        type: "spring",
+                        stiffness: 50,
+                      }}>
+                    <motion.img src="../assets/Board_members/Sanjeev.png" alt="Sanjeevikumar Padmanaban"
                     initial={{
                       scale: 1
                   }}
@@ -171,11 +160,23 @@ export default function Team(){
                       stiffness: 60,
                     }}/>
                     <a href="https://www.linkedin.com/in/sanjeevikumarpadmanaban/" className="linkedin" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" style={{fill:"#000000"}}><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg></a>
-                    <h1>Sanjeevikumar Padmanaban, an accomplished electrical engineer, IEEE member, and fellow of Indian and UK institutions, specializes in Power Electronics, Drives, and renewable energy. With 250+ research papers, he's received Best Paper Awards and serves on editorial boards, contributing significantly to his field.</h1>
-                    </div>
+                    {/* <h1>Sanjeevikumar Padmanaban, an accomplished electrical engineer, IEEE member, and fellow of Indian and UK institutions, specializes in Power Electronics, Drives, and renewable energy. With 250+ research papers, he's received Best Paper Awards and serves on editorial boards, contributing significantly to his field.</h1> */}
+                    </motion.div>
                     
-                    <div className="member8 member">
-                    <motion.img src="../assets/Team/Members/Kiran_Pandav.png" alt="Kiran Pandav"
+                    
+                                     
+                </div>
+                <div className="grid thd">
+                <motion.div className="member8 member"
+                variants={tiles3Variant}
+                initial="hiddenL"
+                whileInView="visibleL"
+                viewport={{ once: true }}
+                transition= {{
+                    type: "spring",
+                    stiffness: 50,
+                  }}>
+                    <motion.img src="../assets/Board_members/Kiran.png" alt="Kiran Pandav"
                     initial={{
                       scale: 1
                   }}
@@ -187,13 +188,18 @@ export default function Team(){
                       stiffness: 60,
                     }}/>
                     <a href="https://www.linkedin.com/in/dr-kiran-maroti-pandav-smieee-ab619a66/" className="linkedin" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" style={{fill:"#000000"}}><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg></a>
-                    <h1>An accomplished power electronics specialist engineer with 8 years of experience, adept at designing and developing diverse power electronic converters, and integrating renewable sources into EV power management systems.</h1>
-                    </div>
-                                     
-                </div>
-                <div className="grid thd">
-                <div className="member4 member">
-                    <motion.img src="../assets/Team/Members/Ajeet.png" alt="Ajeet Prabhakar"
+                    {/* <h1>An accomplished power electronics specialist engineer with 8 years of experience, adept at designing and developing diverse power electronic converters, and integrating renewable sources into EV power management systems.</h1> */}
+                    </motion.div>
+                <motion.div className="member4 member"
+                variants={tiles3Variant}
+                initial="hiddenY"
+                whileInView="visibleY"
+                viewport={{ once: true }}
+                transition= {{
+                    type: "spring",
+                    stiffness: 50,
+                  }}>
+                    <motion.img src="../assets/Board_members/Ajeet.png" alt="Ajeet Prabhakar"
                     initial={{
                       scale: 1
                   }}
@@ -205,10 +211,18 @@ export default function Team(){
                       stiffness: 60,
                     }}/>
                     <a href="https://www.linkedin.com/in/ajeet-prabhakar-79a4841b1/" className="linkedin" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" style={{fill:"#000000"}}><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg></a>
-                    <h1>With 5 years of experience, a skilled product designer passionate about UI/UX, graphic design, and animation, crafting visually captivating user interfaces.</h1>
-                    </div>
-                    <div className="member7 member">
-                    <motion.img src="../assets/Team/Members/Sayan.png" alt="Sayan Mandal"
+                    {/* <h1>With 5 years of experience, a skilled product designer passionate about UI/UX, graphic design, and animation, crafting visually captivating user interfaces.</h1> */}
+                    </motion.div>
+                    <motion.div className="member7 member"
+                    variants={tiles3Variant}
+                    initial="hiddenR"
+                    whileInView="visibleR"
+                    viewport={{ once: true }}
+                    transition= {{
+                        type: "spring",
+                        stiffness: 50,
+                      }}>
+                    <motion.img src="../assets/Board_members/Sayan.png" alt="Sayan Mandal"
                     initial={{
                       scale: 1
                   }}
@@ -220,16 +234,17 @@ export default function Team(){
                       stiffness: 60,
                     }}/>
                     <a href="https://www.linkedin.com/in/sayan-mondal-b56287174/" className="linkedin" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" style={{fill:"#000000"}}><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg></a>
-                    <h1>Dedicated R&D engineer with 5 years of industrial experience, proficient in circuit design, signal processing, and control algorithms, committed to collaborative problem-solving for innovative solutions.
-
-</h1>
-                    </div>
+                    {/* <h1>Dedicated R&D engineer with 5 years of industrial experience, proficient in circuit design, signal processing, and control algorithms, committed to collaborative problem-solving for innovative solutions.</h1> */}
+                    </motion.div>
                     
                 </div>
             </div>
+            <div className="head">
+          <h1 className='subHeading smalll'>Want to be a part of the team? Contact Us!</h1>
+          </div>
         </div>
 
-        <div className="partners"> 
+        {/* <div className="partners"> 
             <h1 className='heading'>STRATEGIC PARTNERS</h1>
             <div className="fstLine">
                 <div className="sqr"/>
@@ -278,64 +293,8 @@ export default function Team(){
                 <hr/>
                 <div className="sqr"/>
             </div>
-        </div>
+        </div> */}
 
-        <div ref={journeyRef} className="journey">      
-    
-
-
-            <div className="cols">
-                <div className="left">
-                    <img src="../assets/Team/Journey/fstBox.png" alt="" />
-                    <motion.img style={{opacity: achieveOpacity1, x: xLen1, scale: achieveOpacity1}} className="fstAchivement achieve" src="../assets/Team/Journey/achieve1.png" alt="" />
-                    <div className="frthAchivement">
-                        <img className="thdBox" src="../assets/Team/Journey/thdBox.png" alt="" />
-                        <motion.img style={{opacity: achieveOpacity4, x: xLen4, scale: achieveOpacity4}} className="achieve" src="../assets/Team/Journey/achieve4.png" alt="" />
-                    </div>
-                    <motion.img style={{opacity: achieveOpacity5, y: yLen5, scale: achieveOpacity5}} className="fthAchivement" src="../assets/Team/Journey/achieve5.png" alt="" />
-                    
-                </div>
-                <div className="right">
-                    <div className="scndAchivement">
-                        <img src="../assets/Team/Journey/scndBox.png" alt="" />
-                        <motion.img style={{opacity: achieveOpacity2, x: xLen2, scale: achieveOpacity2}} className="achieve" src="../assets/Team/Journey/achieve2.png" alt="" />
-                    </div>
-                    <motion.img style={{opacity: achieveOpacity3, x: xLen3, scale: achieveOpacity3}} className="thdAchivement" src="../assets/Team/Journey/achieve3.png" alt="" />
-                    <motion.img style={{opacity: achieveOpacity6, y: yLen6, scale: achieveOpacity6}} className="sxthAchivement" src="../assets/Team/Journey/achieve6.png" alt="" />
-                    
-                    
-                </div>
-
-                {/* <svg width="1278" height="1119" viewBox="0 0 1278 1119" fill="none" xmlns="http://www.w3.org/2000/svg">
-<motion.path style={{pathLength: pathLen}} d="M324.14 46.2945V8.34505C324.303 5.8967 323.063 1 316.796 1H6.38566C4.59044 1 1 2.34659 1 7.73297V79.9593C1 81.7956 2.07713 85.4681 6.38566 85.4681H237.969C244.497 85.0601 257.553 88.0389 257.553 103.219V285.009C257.39 290.722 260.001 302.147 271.752 302.147H667.353C683.347 302.147 715.335 314.511 715.335 363.968V680.418C716.151 704.493 707.697 753.011 667.353 754.48H157.184C138.579 755.296 101.369 770.272 101.369 823.646V1035.43C101.206 1061.95 112.14 1115 157.184 1115H1367" stroke="url(#paint0_linear_0_1)" stroke-width="2"/>
-<rect x="321" y="39" width="6" height="5" fill="black"/>
-<rect x="254" y="225" width="6" height="7" fill="black"/>
-<rect x="712" y="348" width="7" height="7" fill="black"/>
-<rect x="711" y="692" width="6" height="7" fill="black"/>
-<rect x="99" y="828" width="6" height="8" fill="black"/>
-<rect x="360" y="1111" width="6" height="8" fill="black"/>
-<rect x="983" y="1111" width="6" height="8" fill="black"/>
-<defs>
-<linearGradient id="paint0_linear_0_1" x1="32.3348" y1="39.5615" x2="1256.67" y2="1878.47" gradientUnits="userSpaceOnUse">
-<stop/>
-<stop offset="0.0447915" stop-opacity="0.43"/>
-<stop offset="0.401042" stop-opacity="0.16"/>
-<stop offset="0.984375"/>
-</linearGradient>
-</defs>
-                </svg> */}
-                
-
-            </div>
-
-            <div className="downHead">
-                <h1>
-                    Want to be a part of the team?
-                    <Link to="/Contacts">Contact us</Link>
-                    </h1>
-            </div>
-
-        </div>
     </div>
   )
 }

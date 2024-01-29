@@ -1,6 +1,7 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {motion, useScroll, useTransform} from "framer-motion";
 import Landing from './Landing';
+import { isMobile } from "react-device-detect";
 
 
 export default function HomeLanding() { 
@@ -15,8 +16,17 @@ export default function HomeLanding() {
   const opacity = useTransform(scrollYProgress, [0, 0.95], [1, 0]);
   const scale = useTransform(scrollYProgress, [0, 0.95], [1, 0.8]);
 
+  let [mobile, setMobile] = useState(false);
+  
+  useEffect(() => {
+    if (isMobile) {
+      setMobile(true);
+    } else {
+      setMobile(false);
+    }
+  }, []);
   return (
-    <motion.div ref={targetRef} className='basicLand landing'  style={{opacity, scale}}>
+    <motion.div ref={targetRef} className='basicLand landing' style={!mobile ? { opacity, scale } : {}}>
       <Landing Id="Home1">
         {/* <h1>SIMPLY PARK AND CHARGE</h1> */}
         {/* <div className=""> */}

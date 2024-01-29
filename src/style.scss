@@ -47,6 +47,10 @@
 
 .basicLand {
   min-height: 100vh;
+  @media screen and (max-width:540px ){
+    height:auto;
+    min-height: auto;
+  }
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
@@ -56,10 +60,6 @@
     font-family: "monogram", sans-serif;
     font-size: 2.7rem;
     font-weight: 400;
-    // background: #525050;
-    // background: linear-gradient(180deg, rgba(0,0,0,1) 37%, rgba(116,116,116,1) 91%);
-    // -webkit-background-clip: text;
-    // -webkit-text-fill-color: transparent;
     line-gap-override: 10px;
   }
   #side_nav {
@@ -85,13 +85,55 @@
   margin-top: 0 !important;
   left: 0;
   z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .logo img {
+    height: 50px;
+    margin-left: 20px;
+    @media screen and (max-width: 540px) {
+      height: 40px !important;
+    }
+  }
+  // HamburgerMenu.scss
+
+  .hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+
+    .bar {
+      width: 30px;
+      height: 3px;
+      background-color: #000000;
+      margin: 4px 0;
+      transition: 0.4s;
+    }
+
+    &.active {
+      .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-10px, 6px);
+      }
+
+      .bar:nth-child(2) {
+        opacity: 0;
+      }
+
+      .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-10px, -6px);
+      }
+    }
+  }
+
+  overflow: visible;
   ul {
     height: auto;
     display: flex;
     justify-content: flex-end;
     gap: 40px;
     align-items: center;
-    width: 100%;
+    width: auto;
     padding: 0 20px;
     // padding: 10px 5px !important;
     list-style: none;
@@ -99,7 +141,59 @@
     // background-color: #ffffff4b;
 
     &.mobile {
-      display: none !important;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      background-color: white;
+      z-index: 10;
+      width: 100%;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease-in-out;
+      &.show {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      a {
+        width: 100%;
+        overflow: hidden;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        &.red {
+          color: #bc0000;
+          // text-decoration: underline;
+          // border-bottom: 2px solid black;
+        }
+        height: 30px;
+        padding: 0;
+        font-size: 1rem;
+        font-weight: 400;
+        transition: 200ms ease;
+        // &:first-child {
+        //   margin-right: auto;
+        //   padding-left: 0;
+        // }
+        &:hover {
+          // background-color: rgba(164, 164, 164, 0.716);
+          // text-decoration: underline;
+          transition: 200ms ease;
+          border-bottom: 1px solid black;
+          &.logo {
+            border: none;
+          }
+          // font-weight: 1000 !important;
+        }
+        li {
+          font-weight: 500;
+          font-family: "artifakt", sans-serif;
+          white-space: nowrap;
+        }
+      }
     }
 
     @media screen and (max-width: 1300px) {
@@ -122,10 +216,10 @@
       font-size: 1rem;
       font-weight: 400;
       transition: 200ms ease;
-      &:first-child {
-        margin-right: auto;
-        padding-left: 0;
-      }
+      // &:first-child {
+      //   margin-right: auto;
+      //   padding-left: 0;
+      // }
       &:hover {
         // background-color: rgba(164, 164, 164, 0.716);
         // text-decoration: underline;
@@ -140,10 +234,6 @@
         font-weight: 500;
         font-family: "artifakt", sans-serif;
         white-space: nowrap;
-
-        img {
-          height: 50px;
-        }
       }
     }
   }
@@ -184,7 +274,11 @@
     font-family: "monogram", sans-serif;
     background-image: url(../public/assets/Home/home_new.png) !important;
     background-repeat: no-repeat;
-    background-size: cover !important;
+    background-size: cover;
+    @media screen and (max-width: 540px) {
+      height: 40vh;
+      width: 100vw;
+    }
     h1 {
       top: 30%;
       left: 35%;
@@ -228,7 +322,7 @@
   .tech {
     font-family: "artifakt", sans-serif;
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     overflow: hidden;
     @media screen and (max-width: 500px) {
       flex-direction: column;
@@ -244,13 +338,15 @@
         180deg,
         #ebebeb 0%,
         rgba(235, 235, 235, 0) 100%
-      );
-      @media screen and (max-width: 500px) {
-        width: 100%;
-        height: fit-content;
+        );
+        overflow: hidden;
+        @media screen and (max-width: 500px) {
+          width: 100vw;
+          height: fit-content;
+          padding: 5px;
+          overflow: scroll;
         // flex-direction: column;
       }
-      overflow: hidden;
       .title {
         display: flex;
         justify-content: space-between;
@@ -259,11 +355,16 @@
         flex-direction: row;
         overflow: hidden;
         width: 70vw;
+        @media screen and (max-width: 500px) {
+          width: 100vw;
+          height: fit-content;
+          overflow: visible;
+        }
         margin-bottom: 0;
         h1 {
           overflow: hidden;
           font-family: "artifakt", sans-serif;
-          margin: 20px;
+          // margin: 20px;
           font-size: 2rem;
           font-weight: 400;
         }
@@ -271,6 +372,9 @@
           overflow: hidden;
           height: 0px !important;
           width: 60%;
+          @media screen and (max-width: 500px) {
+            width: 100%;
+          }
           border: none; /* Removes the default border */
           border-top: 2px solid #000000;
         }
@@ -279,6 +383,12 @@
         overflow: hidden;
         margin: 0px 20px;
         max-width: 40vw;
+        @media screen and (max-width: 500px) {
+          max-width: 100vw;
+          width: 100vw;
+          height: fit-content;
+          // flex-direction: column;
+        }
         h1 {
           overflow: hidden;
           font-family: "artifakt", sans-serif;
@@ -340,6 +450,11 @@
       flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
+      @media screen and (max-width: 500px) {
+        width: 100vw;
+        height: fit-content;
+        // flex-direction: column;
+      }
       .tile {
         overflow: hidden;
         padding: 20px 40px;
@@ -356,6 +471,10 @@
         // &.odd{
         //     background-color: #E9EDF0;
         // }
+        @media screen and (max-width: 500px) {
+          padding: 10px;
+          // flex-direction: column;
+        }
         svg {
           overflow: hidden;
           width: 60px;
@@ -383,6 +502,9 @@
     &.t {
       padding: 30px 40px;
     }
+    @media screen and (max-width: 500px) {
+      margin: 10px;
+    }
     .title_h {
       display: flex;
       width: 700px;
@@ -392,6 +514,10 @@
         display: flex;
         margin-right: 20px;
         align-items: center;
+        @media screen and (max-width: 500px) {
+          margin-right: 10px;
+          margin-left: -50px;
+        }
       }
       h1 {
         font-family: "artifakt", sans-serif;
@@ -402,6 +528,13 @@
           font-weight: 600;
           margin: 10px;
         }
+        @media screen and (max-width: 500px) {
+          font-size: 1.2rem;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        margin-right: 10px;
+        padding-right: 10px;
       }
     }
     button {
@@ -413,7 +546,7 @@
         285.84deg,
         #ffffff 16.64%,
         rgba(255, 255, 255, 0.85) 77.79%
-      );
+        );
       color: #000;
       border-radius: 100px;
       margin-right: 5vw;
@@ -494,6 +627,10 @@
       align-items: center;
       width: 100%;
       height: 115vh;
+      @media screen and (max-width: 500px) {
+        width: 100vw;
+        height: fit-content !important;
+      }
     }
 
     @media (min-width: 1800px) {
@@ -901,14 +1038,17 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    .overlay{
+    .overlay {
       width: 100vw;
       height: 60vh;
       position: absolute;
       top: 0;
       left: 0;
-      background: linear-gradient(180deg, #FFFFFF 0%, rgba(217, 217, 217, 0) 100%);
-
+      background: linear-gradient(
+        180deg,
+        #ffffff 0%,
+        rgba(217, 217, 217, 0) 100%
+      );
     }
     h1 {
       position: absolute;
@@ -1460,28 +1600,28 @@
       }
     }
   }
-  .part_2{
-      .container{
-          width: 40vw;
-          padding: 20px;
-          box-shadow: 0 5px 10px gray;
-          margin: 20px;
-          border-radius: 20px;
-        margin: 20px auto;
-        transform: translateY(40px);
-        background-color: rgba(243, 243, 243, 0.396);
-        margin-bottom: -100px;
-        h1{
-            font-size: 2rem;
-            text-align: center;
-        }
-        p{
-            font-size: 1.6rem;
-            text-align: center;
-        }
+  .part_2 {
+    .container {
+      width: 40vw;
+      padding: 20px;
+      box-shadow: 0 5px 10px gray;
+      margin: 20px;
+      border-radius: 20px;
+      margin: 20px auto;
+      transform: translateY(40px);
+      background-color: rgba(243, 243, 243, 0.396);
+      margin-bottom: -100px;
+      h1 {
+        font-size: 2rem;
+        text-align: center;
+      }
+      p {
+        font-size: 1.6rem;
+        text-align: center;
+      }
     }
-    img{
-        width: 100%;
+    img {
+      width: 100%;
     }
   }
   .why {
@@ -1824,7 +1964,7 @@
     background-image: url(../public/assets/UseCase/usecase_bg.png);
     background-repeat: no-repeat;
     background-size: cover;
-    &>h1 {
+    & > h1 {
       width: 80vw;
       font-family: "Artifakt";
       font-style: normal;
@@ -1845,7 +1985,7 @@
       align-items: center;
 
       overflow: visible;
-      &>div{
+      & > div {
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -1855,13 +1995,13 @@
         a {
           overflow: visible;
           position: relative;
-          p{
+          p {
             position: absolute;
             bottom: 10px;
             font-size: 1.3rem;
             font-weight: 600;
             text-shadow: 0 0 10px black;
-            z-index: 10;  
+            z-index: 10;
             width: 100%;
             text-align: center;
             color: white;
@@ -1881,14 +2021,14 @@
     }
   }
 
-      .downHeading {
-        font-family: "Artifakt";
-        font-style: normal;
-        font-size: 20px;
-        // line-height: 31px;
-        margin: 20px 10px;
-        text-align: center;
-      }
+  .downHeading {
+    font-family: "Artifakt";
+    font-style: normal;
+    font-size: 20px;
+    // line-height: 31px;
+    margin: 20px 10px;
+    text-align: center;
+  }
 }
 
 #Fleets {
@@ -3414,8 +3554,12 @@
 
 #EV_Manufacturer {
   #EV_manuLanding {
-    .overlay{
-      background: linear-gradient(180deg, #FFFFFF 0%, rgba(217, 217, 217, 0) 100%);
+    .overlay {
+      background: linear-gradient(
+        180deg,
+        #ffffff 0%,
+        rgba(217, 217, 217, 0) 100%
+      );
       z-index: 1;
       height: 100vh;
       width: 100vw;
@@ -3994,12 +4138,12 @@
     font-size: 1.1rem;
     // font-weight: 500;
   }
-  .tiles{
+  .tiles {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    &>h1{
+    & > h1 {
       font-size: 1.4rem;
       text-align: center;
       padding: 10px 30px;
@@ -4027,7 +4171,7 @@
         text-align: justify;
       }
     }
-}
+  }
   .tile {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

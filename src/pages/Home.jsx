@@ -16,6 +16,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { useSpring, animated } from "react-spring";
 import { useInView as useInViewObserve } from "react-intersection-observer";
 import ReactPlayer from "react-player";
+import { isMobile } from "react-device-detect";
 
 function Number({ n }) {
   const [ref, inView] = useInViewObserve({
@@ -149,25 +150,36 @@ export default function Home() {
     }
   }, [isWirelessInView]);
 
+  let [mobile, setMobile] = useState(false);
+  
+  useEffect(() => {
+    if (isMobile) {
+      setMobile(true);
+    } else {
+      setMobile(false);
+    }
+  }, []);
   return (
     <div id="Home">
       <HomeLanding />
 
       <div ref={techRef} className="tech">
         <div className="left">
-          <div className="title">
-            <h1>TECHNOLOGY CURATOR </h1>
-            <svg
-              width="13"
-              height="13"
-              viewBox="0 0 13 13"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect width="13" height="13" fill="black" />
-            </svg>
-            <hr />
-          </div>
+          {!mobile &&(
+           <div className="title">
+             <h1>TECHNOLOGY CURATOR </h1>
+             <svg
+               width="13"
+               height="13"
+               viewBox="0 0 13 13"
+               fill="none"
+               xmlns="http://www.w3.org/2000/svg"
+             >
+               <rect width="13" height="13" fill="black" />
+             </svg>
+             <hr />
+           </div>
+          )}
           <motion.div
             className="content"
             style={{ y: frthY, opacity: frthOpacity, scale: frthScale }}
@@ -623,7 +635,7 @@ export default function Home() {
           <ReactPlayer
             url="https://www.youtube.com/watch?v=Lmt_CGlEQ-4&start=14&end=62"
             width="85%"
-            height="80%"
+            height={mobile?"20%":"80%"}
             playing={myElementIsVisible}
             muted={true}
             playbackRate={1.25}
@@ -631,9 +643,10 @@ export default function Home() {
             loop={true}
           />
         </div>
-
-        <br />
-        <br />
+        
+                  <br />
+                <br />
+        {!mobile && (
         <motion.div
           className="end_line"
           variants={wirelessVariants}
@@ -665,6 +678,7 @@ export default function Home() {
             <path d="M0 1L911 0.99992" stroke="black" />
           </svg>
         </motion.div>
+        )}
         <br />
         <br />
         <br />

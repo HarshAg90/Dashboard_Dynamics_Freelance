@@ -303,7 +303,7 @@
     }
   }
   #Home1 {
-    // background: linear-gradient(180deg, #E5EAED 66.98%, rgba(217, 217, 217, 0) 100%);
+    // background: linear-gradient(180deg, #E5EAED 66.98%, rgba(217, 217, 217, 0) 80%);
     // background-color: rgb(20, 0, 58);
     img {
       position: absolute;
@@ -337,9 +337,9 @@
       background-color: #fff;
       background: linear-gradient(
         180deg,
-        #ebebeb 0%,
-        rgba(235, 235, 235, 0) 100%
-        );
+        #ffffff 80%,
+         rgba(242, 242, 242, 0) 100%
+      );
         overflow: hidden;
         @media screen and (max-width: 500px) {
           width: 100vw;
@@ -2843,6 +2843,13 @@
   .landing {
     background-image: url(../public/assets/Journey/bg.png);
     color: #ffffff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media screen and (max-width: 540px) {
+      height: 40vh;
+      width: 100vw;
+    }
+    
     h1 {
       width: 100%;
       font-family: "artifakt";
@@ -3978,163 +3985,196 @@
     }
     overflow: hidden;
   }
-  .content {
-    // background: linear-gradient(-90deg, #ec5e5e, #f0b324, #e7fbb8, #b8fbfa, #17bff2);
-    // background-size: 400% 400%;
-    // animation: gradient 10s ease infinite;
-    // @keyframes gradient {
-    //     0% {
-    //         background-position: 0% 50%;
-    //     }
-    //     50% {
-    //         background-position: 100% 50%;
-    //     }
-    //     100% {
-    //         background-position: 0% 50%;
-    //     }
-    // }
-    overflow: hidden;
-    height: 350%;
-    font-family: "artifakt", sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10vh;
-    h1.c {
-      overflow: visible;
-      font-family: "artifakt", sans-serif;
-      margin-top: 10vh;
-      border: 0.05rem solid black;
-      border-radius: 0.5rem;
-      font-size: 24px;
-      font-weight: 600;
-      padding: 10px 30px;
-    }
-    p.c {
-      overflow: visible;
-      font-family: "artifakt", sans-serif;
-      width: 70vw;
-      text-align: center;
-      font-size: 20px;
-    }
-    .btn {
-      font-family: "artifakt", sans-serif;
-      width: 70vw;
-      display: flex;
-      justify-content: end;
-      button.c {
-        overflow: visible;
-        font-family: "artifakt", sans-serif;
-        padding: 5px 10px;
-        border: none;
-        border-radius: 10px;
-        outline: none;
-        border: 1px solid black;
-        background-color: transparent;
 
-        &:hover {
-          background-color: #000000;
-          color: white;
-        }
-      }
-    }
-    .boxes {
-      font-family: "artifakt", sans-serif;
-      overflow: visible;
+    .sec_1{
+      height: auto;
       display: flex;
-      justify-content: space-evenly;
-      width: 70vw;
+      flex-direction: column;
+      gap: 3%;
+      // justify-content: center;
       align-items: center;
-      .box {
-        font-family: "artifakt", sans-serif;
-        overflow: visible;
+      background: linear-gradient(180deg, rgba(255, 0, 0, 0) -23.99%, #FFFFFF 4.39%, rgba(255, 218, 218, 0.605739) 57.24%, rgba(255, 255, 255, 0) 92.91%, rgba(255, 255, 255, 0) 121.76%);
+      .head {
+        margin-top: 3%;
+      
+        width: 40%;
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
-        margin-bottom: 30px;
-        .icon {
-          overflow: visible;
-          height: 150px;
-          width: 150px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        p {
-          overflow: visible;
-          font-family: "artifakt", sans-serif;
-          margin-top: -20px;
-          width: auto;
+  
+  box-sizing: border-box;
+  
+  // position: absolute;
+  
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 5px 4px rgba(217, 217, 217, 0.5);
+  backdrop-filter: blur(2px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 34px;
+  
+  
+  /* Our product is as wide as our range. */
+  
+  
+  font-family: 'Artifakt Element';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  text-align: center;
+  
+  color: #000000;
+  
+  // border: 0.2px solid #000000;
+  
+        .subHeading {
+          width: 100%;
+          height: auto;
+    
+          font-family: "Artifakt";
+          font-style: normal;
+          font-weight: 800;
+          font-size: 28px;
+          text-align: center;
+    
+          color: #000000;
+          border: 0.5px solid #ffffff;
+          border-radius: 50px;
+    
+          margin-top: 10vh;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          margin-bottom: 10px;
+    
+          /* Add the box shadow */
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adjust values as needed */
         }
       }
-    }
-    .tile {
-      font-family: "artifakt", sans-serif;
-      position: relative;
-      overflow: visible;
-      margin-bottom: 25vh;
-      div {
-        font-family: "artifakt", sans-serif;
-        position: absolute;
-        width: 70%;
-        background-color: white;
-        top: 60%;
-        left: 50%;
-        transform: translate(-50%, 50%);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        padding: 10px;
+      .ttt{
+        margin-top: 3%;
+        width: 75%;
+font-family: 'Artifakt Element';
+font-style: normal;
+font-weight: 400;
+font-size: 1.5rem;
+/* or 30px */
+text-align: center;
 
-        h1 {
-          font-weight: 600;
-          font-family: "artifakt", sans-serif;
-          margin: 10px;
-          font-size: 1.4rem;
-        }
-        p {
-          text-align: justify;
-        }
+color: #000000;
+
+      }
+
+      img{
+        margin-top: 3%;
+        width: 75%;
+        height: auto;
       }
     }
-  }
+
+    .sec_2{
+      margin-top: 3%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 5%;
+      background: linear-gradient(0deg, #7D0407, #7D0407),
+linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 78.75%);
+
+h1, img{
+  margin: 2%;
+}
+
+h1{
+  font-size: 1.5rem;
+  font-family: 'Artifakt Element';
+font-style: normal;
+font-weight: 500;
+color: #FFFFFF;
+
+}
+
+img{
+  // margin: 2%;
+  width: 10%;
+  height: auto;
+}
+
+    }
+
+    @keyframes animatedGradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .sec_3{
+      background: linear-gradient(180deg, rgba(255, 0, 0, 0) -23.99%, #FFFFFF 4.39%, rgba(255, 218, 218, 0.605739) 57.24%, rgba(255, 255, 255, 0) 92.91%, rgba(255, 255, 255, 0) 121.76%);
+  background-size: 300% 300%; /* Adjust size as needed */
+  animation: animatedGradient 4s ease infinite; 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      // gap: 7%;
+
+      img{
+        margin-bottom: 2%;
+        margin-top: 2%;
+        width: 70%;
+        height: auto;
+      }
+    }
+
+    
 }
 
 #Market {
   .Landing {
-    background: linear-gradient(
-      89.65deg,
-      #e6cbd7 44.18%,
-      rgba(230, 203, 215, 0) 73.85%,
-      #e6cbd7 93.71%
-    );
-    position: relative;
-    h1 {
-      position: absolute;
-      top: 15%;
-      left: 10%;
-      width: 70vw;
-      color: rgb(0, 0, 0);
-      font-size: 3rem;
-    }
-    img {
-      width: 35vw;
-      position: absolute;
-      bottom: 0%;
-      right: 10%;
-      height: auto;
-    }
+    background-image: url(../public/assets/market/landing.png);
+    background-position: 10px 10px;
+    background-size: cover;
+    // background: linear-gradient(
+    //   89.65deg,
+    //   #e6cbd7 44.18%,
+    //   rgba(230, 203, 215, 0) 73.85%,
+    //   #e6cbd7 93.71%
+    // );
+    // position: relative;
+    // h1 {
+    //   position: absolute;
+    //   top: 15%;
+    //   left: 10%;
+    //   width: 70vw;
+    //   color: rgb(0, 0, 0);
+    //   font-size: 3rem;
+    // }
+    // img {
+    //   width: 35vw;
+    //   position: absolute;
+    //   bottom: 0%;
+    //   right: 10%;
+    //   height: auto;
+    // }
 
-    .blocks {
-      right: 10%;
-      height: 50%;
-      width: 40%;
-    }
-    overflow: visible;
+    // .blocks {
+    //   right: 10%;
+    //   height: 50%;
+    //   width: 40%;
+    // }
+    // overflow: visible;
   }
+
+
+
+
+
 
   .body {
     width: 100vw;

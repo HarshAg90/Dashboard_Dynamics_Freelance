@@ -6,9 +6,9 @@ export default function Market() {
   return (
     <div id='Market'>
       <Landing>
-        <h1>REVOLUTIONIZED INFRUSTRUCTURE FOR SEAMLESS ELECTRIC MOBILITY</h1>
-        <img src="../assets/market/market_home_2.png"
-        />
+        {/* <h1>REVOLUTIONIZED INFRUSTRUCTURE FOR SEAMLESS ELECTRIC MOBILITY</h1> */}
+        {/* <img src="../assets/market/landing.png"
+        /> */}
       </Landing>
       <div className="body">
         <div className="div1">

@@ -35,6 +35,7 @@ function Number({ n }) {
   );
 }
 
+<<<<<<< HEAD
 // const CustomPrevArrow = (props) => {
 //   const { className, style, onClick } = props;
 //   return (
@@ -79,6 +80,8 @@ function Number({ n }) {
 //   );
 // }
 
+=======
+>>>>>>> dba87d1b4386625048f443d490f1bb949ec90895
 const wirelessVariants = {
   hidden: {
     opacity: 0,
@@ -194,21 +197,10 @@ export default function Home() {
     offset: ["start end", "end start"],
   });
 
-  const fstOpacity = useTransform(scrollYProgress, [0.1, 0.3], [0, 1]);
-  const fstY = useTransform(scrollYProgress, [0.1, 0.3], ["80%", "0%"]);
-  const fstScale = useTransform(scrollYProgress, [0.1, 0.3], [1.2, 1]);
 
   const scndOpacity = useTransform(scrollYProgress, [0.3, 0.4], [0, 1]);
   const scndY = useTransform(scrollYProgress, [0.3, 0.4], ["80%", "0%"]);
   const scndScale = useTransform(scrollYProgress, [0.3, 0.4], [1.2, 1]);
-
-  const thdOpacity = useTransform(scrollYProgress, [0.4, 0.5], [0, 1]);
-  const thdY = useTransform(scrollYProgress, [0.4, 0.5], ["40%", "0%"]);
-  const thdScale = useTransform(scrollYProgress, [0.4, 0.5], [1.2, 1]);
-
-  const frthOpacity = useTransform(scrollYProgress, [0.1, 0.5], [0, 1]);
-  const frthY = useTransform(scrollYProgress, [0.1, 0.5], ["70%", "0%"]);
-  const frthScale = useTransform(scrollYProgress, [0.1, 0.5], [1.1, 1]);
 
   const wirelessRef = useRef(null);
   const isWirelessInView = useInView(wirelessRef, { once: true });

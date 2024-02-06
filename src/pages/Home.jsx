@@ -35,9 +35,6 @@ function Number({ n }) {
   );
 }
 
-
-
-
 // const CustomPrevArrow = (props) => {
 //   const { className, style, onClick } = props;
 //   return (
@@ -60,7 +57,6 @@ function Number({ n }) {
 //   );
 // }
 
-
 // function SampleNextArrow(props) {
 //   const { className, style, onClick } = props;
 //   return (
@@ -82,7 +78,6 @@ function Number({ n }) {
 //     />
 //   );
 // }
-
 
 const wirelessVariants = {
   hidden: {
@@ -127,37 +122,42 @@ const lftRightVariant = {
   },
 };
 
-
 //ANIMATION CONFIG
 const isOnce = true;
 const delayP = "0";
 
 const animationVariant = {
   hidden: {
-    opacity: 0
+    opacity: 0,
   },
   visible: {
-    opacity: 1
+    opacity: 1,
   },
   hiddenY: {
-    opacity: 0.75, y: "15%"
+    opacity: 0.75,
+    y: "15%",
   },
   visibleY: {
-    opacity: 1, y: "0%",
+    opacity: 1,
+    y: "0%",
   },
   hiddenL: {
-    opacity: 0.75, x: "-10%"
+    opacity: 0.75,
+    x: "-10%",
   },
   visibleL: {
-    opacity: 1, x: "0%",
+    opacity: 1,
+    x: "0%",
   },
   hiddenR: {
-    opacity: 0.75, x: "10%"
+    opacity: 0.75,
+    x: "10%",
   },
   visibleR: {
-    opacity: 1, x: "0%",
-  }
-}
+    opacity: 1,
+    x: "0%",
+  },
+};
 
 export default function Home() {
   const [myElementIsVisible, updateMyElementIsVisible] = useState();
@@ -221,7 +221,7 @@ export default function Home() {
   }, [isWirelessInView]);
 
   let [mobile, setMobile] = useState(false);
-  
+
   useEffect(() => {
     if (isMobile) {
       setMobile(true);
@@ -235,20 +235,20 @@ export default function Home() {
 
       <div ref={techRef} className="tech">
         <div className="left">
-          {!mobile &&(
-           <div className="title">
-             <h1>TECHNOLOGY CURATOR </h1>
-             <svg
-               width="13"
-               height="13"
-               viewBox="0 0 13 13"
-               fill="none"
-               xmlns="http://www.w3.org/2000/svg"
-             >
-               <rect width="13" height="13" fill="black" />
-             </svg>
-             <hr />
-           </div>
+          {!mobile && (
+            <div className="title">
+              <h1>TECHNOLOGY CURATOR </h1>
+              <svg
+                width="13"
+                height="13"
+                viewBox="0 0 13 13"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="13" height="13" fill="black" />
+              </svg>
+              <hr />
+            </div>
           )}
           <motion.div
             className="content"
@@ -256,11 +256,11 @@ export default function Home() {
             initial="hiddenY"
             whileInView="visibleY"
             viewport={{ once: isOnce }}
-            transition= {{
+            transition={{
               delay: delayP,
-                type: "spring",
-                stiffness: 50,
-              }}
+              type: "spring",
+              stiffness: 50,
+            }}
           >
             <h1>Why go wireless?</h1>
             <p>Simply Park and Charge</p>
@@ -297,14 +297,14 @@ export default function Home() {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
               variants={animationVariant}
-     initial="hidden"
-     whileInView="visible"
-     viewport={{ once: isOnce }}
-     transition= {{
-      delay: delayP,
-         type: "spring",
-         stiffness: 50,
-       }}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: isOnce }}
+              transition={{
+                delay: delayP,
+                type: "spring",
+                stiffness: 50,
+              }}
             >
               <path
                 d="M58.5438 16.2755C59.2888 15.6795 59.9727 15.1267 60.6626 14.5798C61.1707 14.179 61.6624 14.1567 62.0215 14.5068C62.3806 14.857 62.3761 15.3472 61.9723 15.8612C61.3242 16.6867 60.6462 17.4883 60.0234 18.3332C59.9484 18.4431 59.8979 18.5678 59.8753 18.6989C59.8527 18.83 59.8585 18.9644 59.8923 19.0931C62.5572 25.4965 63.0225 32.603 61.2154 39.2992C61.0664 39.8654 60.7311 40.1232 60.1277 40.1217C55.2568 40.1097 50.3845 40.1217 45.5121 40.1217C44.7299 40.1217 44.4304 39.7805 44.4572 38.9803C44.4691 38.6331 44.4572 38.286 44.4572 37.8092C43.97 38.4052 43.5632 38.9267 43.137 39.4318C42.617 40.0516 42.1223 40.074 41.5442 39.4988C40.0393 38.0088 38.5394 36.5094 37.0444 35.0005C36.4588 34.4045 36.499 33.8949 37.1591 33.3615C39.0753 31.8268 40.9944 30.2965 42.991 28.7007C42.6126 27.8305 42.2728 26.935 41.8377 26.0872C41.5397 25.4912 41.574 25.0099 41.9018 24.4482C44.8928 19.2997 47.8728 14.1452 50.8419 8.98483C51.42 7.98354 51.9207 7.92095 52.7566 8.72109C54.9082 10.7897 56.7509 13.1573 58.2279 15.751C58.3233 15.9104 58.4201 16.0698 58.5438 16.2755ZM59.6047 38.3396C61.1141 32.2082 60.7162 26.2452 58.4559 20.3536C58.3846 20.4029 58.3173 20.4577 58.2547 20.5175C54.3231 25.4386 50.3929 30.3606 46.4642 35.2836C46.3607 35.3855 46.2892 35.5155 46.2586 35.6576C46.2407 36.5516 46.2497 37.4456 46.2497 38.3396H59.6047ZM52.0294 10.5195C49.1984 15.4262 46.4181 20.2315 43.6496 25.0427C43.5688 25.1769 43.5432 25.3371 43.5781 25.4897C43.8493 26.1558 44.1547 26.8069 44.4721 27.5132L57.1044 17.4213C55.7624 14.8839 54.0522 12.5592 52.0294 10.5225V10.5195ZM55.236 21.4175L55.1212 21.3073L38.9635 34.2212L42.325 37.5827L55.236 21.4175Z"
@@ -356,16 +356,18 @@ export default function Home() {
               />
             </motion.svg>
 
-            <motion.div className="content"
-            variants={animationVariant}
-            initial="hiddenR"
-            whileInView="visibleR"
-            viewport={{ once: isOnce }}
-            transition= {{
-              delay: delayP,
+            <motion.div
+              className="content"
+              variants={animationVariant}
+              initial="hiddenR"
+              whileInView="visibleR"
+              viewport={{ once: isOnce }}
+              transition={{
+                delay: delayP,
                 type: "spring",
                 stiffness: 50,
-              }}>
+              }}
+            >
               <h1>FASTER</h1>
               <p>
                 Experience rapid charging with our autonomous charger that gives
@@ -373,8 +375,6 @@ export default function Home() {
               </p>
             </motion.div>
           </div>
-
-
 
           <div
             className="tile"
@@ -387,11 +387,11 @@ export default function Home() {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
               variants={animationVariant}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: isOnce }}
-            transition= {{
-              delay: delayP,
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: isOnce }}
+              transition={{
+                delay: delayP,
                 type: "spring",
                 stiffness: 50,
               }}
@@ -402,16 +402,18 @@ export default function Home() {
               />
             </motion.svg>
 
-            <motion.div className="content"
-            variants={animationVariant}
-            initial="hiddenR"
-            whileInView="visibleR"
-            viewport={{ once: isOnce }}
-            transition= {{
-              delay: delayP,
+            <motion.div
+              className="content"
+              variants={animationVariant}
+              initial="hiddenR"
+              whileInView="visibleR"
+              viewport={{ once: isOnce }}
+              transition={{
+                delay: delayP,
                 type: "spring",
                 stiffness: 50,
-              }}>
+              }}
+            >
               <h1>Versatile</h1>
               <p>
                 No specific parking orientation is required. System works in any
@@ -419,9 +421,7 @@ export default function Home() {
               </p>
             </motion.div>
           </div>
-          <div
-            className="tile"
-          >
+          <div className="tile">
             <motion.svg
               width="58"
               height="48"
@@ -429,11 +429,11 @@ export default function Home() {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
               variants={animationVariant}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: isOnce }}
-            transition= {{
-              delay: delayP,
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: isOnce }}
+              transition={{
+                delay: delayP,
                 type: "spring",
                 stiffness: 50,
               }}
@@ -455,16 +455,18 @@ export default function Home() {
                 fill="#870507"
               />
             </motion.svg>
-            <motion.div className="content"
-            variants={animationVariant}
-            initial="hiddenR"
-            whileInView="visibleR"
-            viewport={{ once: isOnce }}
-            transition= {{
-              delay: delayP,
+            <motion.div
+              className="content"
+              variants={animationVariant}
+              initial="hiddenR"
+              whileInView="visibleR"
+              viewport={{ once: isOnce }}
+              transition={{
+                delay: delayP,
                 type: "spring",
                 stiffness: 50,
-              }}>
+              }}
+            >
               <h1>Safety - FOREIGN OBJECT DETECTION</h1>
               <p>
                 Through the proximity sensors and thermal sensors incorporated
@@ -473,9 +475,7 @@ export default function Home() {
               </p>
             </motion.div>
           </div>
-          <div
-            className="tile"
-          >
+          <div className="tile">
             <motion.svg
               width="78"
               height="43"
@@ -483,11 +483,11 @@ export default function Home() {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
               variants={animationVariant}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: isOnce }}
-            transition= {{
-              delay: delayP,
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: isOnce }}
+              transition={{
+                delay: delayP,
                 type: "spring",
                 stiffness: 50,
               }}
@@ -589,16 +589,18 @@ export default function Home() {
               />
             </motion.svg>
 
-            <motion.div className="content"
-            variants={animationVariant}
-            initial="hiddenR"
-            whileInView="visibleR"
-            viewport={{ once: isOnce }}
-            transition= {{
-              delay: delayP,
+            <motion.div
+              className="content"
+              variants={animationVariant}
+              initial="hiddenR"
+              whileInView="visibleR"
+              viewport={{ once: isOnce }}
+              transition={{
+                delay: delayP,
                 type: "spring",
                 stiffness: 50,
-              }}>
+              }}
+            >
               <h1>Future - Dynamic Charging</h1>
               <p>
                 Future roads - energy highways, charging EVs on the move,
@@ -608,8 +610,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-
 
       <div className="features">
         <div className="title">
@@ -729,9 +729,6 @@ export default function Home() {
         </div>
       </div>
       <div className="go_wireless">
-        <br />
-        <br />
-        <br />
         <div ref={wirelessRef} className="title">
           <motion.div
             className="title_h"
@@ -769,7 +766,7 @@ export default function Home() {
           <ReactPlayer
             url="https://www.youtube.com/watch?v=Lmt_CGlEQ-4&start=14&end=62"
             width="85%"
-            height={mobile?"20%":"80%"}
+            height={mobile ? "20%" : "80%"}
             playing={myElementIsVisible}
             muted={true}
             playbackRate={1.25}
@@ -777,45 +774,40 @@ export default function Home() {
             loop={true}
           />
         </div>
-        
-                  <br />
-                <br />
+
         {!mobile && (
-        <motion.div
-          className="end_line"
-          variants={wirelessVariants}
-          initial="hiddenEnd"
-          whileInView="visibleEnd"
-        >
-          <svg
-            width="13"
-            height="13"
-            viewBox="0 0 13 13"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+          <motion.div
+            className="end_line"
+            variants={wirelessVariants}
+            initial="hiddenEnd"
+            whileInView="visibleEnd"
           >
-            <rect
+            <svg
               width="13"
               height="13"
-              transform="matrix(1 0 0 -1 0 13)"
-              fill="black"
-            />
-          </svg>
+              viewBox="0 0 13 13"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                width="13"
+                height="13"
+                transform="matrix(1 0 0 -1 0 13)"
+                fill="black"
+              />
+            </svg>
 
-          <svg
-            width="870"
-            height="2"
-            viewBox="0 0 870 2"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M0 1L911 0.99992" stroke="black" />
-          </svg>
-        </motion.div>
+            <svg
+              width="870"
+              height="2"
+              viewBox="0 0 870 2"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M0 1L911 0.99992" stroke="black" />
+            </svg>
+          </motion.div>
         )}
-        <br />
-        <br />
-        <br />
       </div>
       <div className="product">
         <div className="title">
@@ -853,7 +845,11 @@ export default function Home() {
           </motion.div>
           <button>Learn More</button>
         </div>
-        <img src="../assets/Home/home_production.png" alt="" />
+        {mobile ? (
+          <img src="../assets/Home/homw_prod_mobile.png" alt="" />
+        ) : (
+          <img src="../assets/Home/home_production.png" alt="" />
+        )}
         <div className="second">
           <h1>
             Take advantage of wireless charging to really differentiate your EVs
@@ -869,16 +865,18 @@ export default function Home() {
         </div>
         <div className="third">
           <div className="left">
-            <motion.div className="innr"
-            variants={animationVariant}
-            initial="hiddenL"
-            whileInView="visibleL"
-            viewport={{ once: isOnce }}
-            transition= {{
-              delay: delayP,
+            <motion.div
+              className="innr"
+              variants={animationVariant}
+              initial="hiddenL"
+              whileInView="visibleL"
+              viewport={{ once: isOnce }}
+              transition={{
+                delay: delayP,
                 type: "spring",
                 stiffness: 50,
-              }}>
+              }}
+            >
               <div className="">
                 <svg
                   width="80"
@@ -903,16 +901,18 @@ export default function Home() {
                 worldwide.
               </p>
             </motion.div>
-            <motion.div className="innr"
-            variants={animationVariant}
-            initial="hiddenL"
-            whileInView="visibleL"
-            viewport={{ once: isOnce }}
-            transition= {{
-              delay: delayP,
+            <motion.div
+              className="innr"
+              variants={animationVariant}
+              initial="hiddenL"
+              whileInView="visibleL"
+              viewport={{ once: isOnce }}
+              transition={{
+                delay: delayP,
                 type: "spring",
                 stiffness: 50,
-              }}>
+              }}
+            >
               <div className="">
                 <svg
                   width="80"
@@ -948,16 +948,18 @@ export default function Home() {
                 demonstrates their performance in real-world conditions.
               </p>
             </motion.div>
-            <motion.div className="innr"
-            variants={animationVariant}
-            initial="hiddenL"
-            whileInView="visibleL"
-            viewport={{ once: isOnce }}
-            transition= {{
-              delay: delayP,
+            <motion.div
+              className="innr"
+              variants={animationVariant}
+              initial="hiddenL"
+              whileInView="visibleL"
+              viewport={{ once: isOnce }}
+              transition={{
+                delay: delayP,
                 type: "spring",
                 stiffness: 50,
-              }}>
+              }}
+            >
               <div className="">
                 <svg
                   width="69"
@@ -1000,12 +1002,15 @@ export default function Home() {
             </motion.div>
           </div>
           <div className="right">
-            <img src="../assets/Home/home_product_4.png" alt="" />
+            {mobile ? (
+              <img src="../assets/Home/home_product_4_mobile.png" alt="" />
+            ) : (
+              <img src="../assets/Home/home_product_4.png" alt="" />
+            )}
           </div>
         </div>
       </div>
 
-      
       <div class="use_case">
         <div className="title">
           <motion.div
@@ -1077,6 +1082,10 @@ export default function Home() {
         <div className="one">
           <div className="left">
             <h1>The advantages of wireless charging for electric fleets.</h1>
+            {mobile && (
+              <img src="../assets/Home/home_wireless_2_mobile.png" alt="" />
+            )}
+
             <ul>
               <li>
                 <svg
@@ -1214,22 +1223,34 @@ export default function Home() {
               </li>
             </ul>
           </div>
-          <div className="right">
-            <img src="../assets/Home/home_wireless_2.png" alt="" />
-          </div>
+          {!mobile && (
+            <div className="right">
+              <img src="../assets/Home/home_wireless_2.png" alt="" />
+            </div>
+          )}
         </div>
         <div className="two">
           <img src="../assets/Home/home_advantages_2.png" alt="" />
-          <h1>Why invest in a luxury brand if wireless charging isn't part of the package?</h1>
-          <p>Explore the most recent studies on the desire for wireless electric vehicle (EV) charging among affluent car enthusiasts.</p>
-          <p><span>Download full report: Luxury EV Buyers Demand Latest Technology </span></p>
+          <h1>
+            Why invest in a luxury brand if wireless charging isn't part of the
+            package?
+          </h1>
+          <p>
+            Explore the most recent studies on the desire for wireless electric
+            vehicle (EV) charging among affluent car enthusiasts.
+          </p>
+          <p>
+            <span>
+              Download full report: Luxury EV Buyers Demand Latest Technology{" "}
+            </span>
+          </p>
         </div>
         <div className="three">
           <div className="left">
             <div className="">
-            <h1>We are hiring!</h1>
-            <p>See yourself working with us? Check out our open roles.</p>
-            <button>Career</button>
+              <h1>We are hiring!</h1>
+              <p>See yourself working with us? Check out our open roles.</p>
+              <button>Career</button>
             </div>
           </div>
           <div className="right">
@@ -1307,13 +1328,12 @@ export default function Home() {
         </div>
         <div className="container">
           <div className="lft">
-          <button onClick={() => slider?.current?.slickPrev()}>
-          <img className="arrow" src="../assets/Home/left.png" alt="prev" />
-          </button>
+            <button onClick={() => slider?.current?.slickPrev()}>
+              <img className="arrow" src="../assets/Home/left.png" alt="prev" />
+            </button>
           </div>
           <div className="parteners_li">
             <Slider ref={slider} {...settings} className="carouselKaItem">
-            
               <motion.img
                 src="../assets/Home/partner_1.png"
                 alt=""
@@ -1362,9 +1382,13 @@ export default function Home() {
             </Slider>
           </div>
           <div className="rght">
-          <button onClick={() => slider?.current?.slickNext()}>
-          <img className="arrow" src="../assets/Home/right.png" alt="next" />
-          </button>
+            <button onClick={() => slider?.current?.slickNext()}>
+              <img
+                className="arrow"
+                src="../assets/Home/right.png"
+                alt="next"
+              />
+            </button>
           </div>
         </div>
 

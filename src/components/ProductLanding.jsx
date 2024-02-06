@@ -17,8 +17,6 @@ export default function ProductLanding(){
   return (
     <motion.div ref={landingRef} style={{opacity, scale}}>
     <Landing> 
-        <h1>DESIGNED TO REDEFINE POSSIBILITIES AND ELEVATE EXPERIENCES</h1>
-        <img src="../assets/products/product_charger.png"/>
       </Landing>
       </motion.div>
   )

@@ -3965,25 +3965,16 @@
 
 #product {
   .Landing {
+    margin-top: 5%;
+    // background-position: 1% 1%;
     background-image: url(../public/assets/products/Product_home.png);
-    position: relative;
-
-    h1 {
-      position: absolute;
-      top: 243px;
-      left: 197px;
-      width: 800px;
-      color: white;
-      font-size: 48px;
+    // position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media screen and (max-width: 540px) {
+      height: 40vh;
+      width: 100vw;
     }
-    img {
-      overflow: visible;
-      position: absolute;
-      bottom: -2%;
-      height: 477px;
-      left: 880px;
-    }
-    overflow: hidden;
   }
 
     .sec_1{

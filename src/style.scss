@@ -365,7 +365,7 @@
         h1 {
           overflow: hidden;
           font-family: "artifakt", sans-serif;
-          // margin: 20px;
+          margin-right: 20px;
           font-size: 2rem;
           font-weight: 400;
         }
@@ -384,7 +384,7 @@
         overflow: visible;
         margin: 0px 20px;
         max-width: 40vw;
-        background-color: white;
+        // background-color: white;
         @media screen and (max-width: 500px) {
           max-width: 100vw;
           width: 100vw;
@@ -524,6 +524,9 @@
         display: flex;
         margin-right: 20px;
         align-items: center;
+        rect {
+          border-radius: 10px;
+        }
         @media screen and (max-width: 540px) {
           margin-right: 10px;
           margin-left: -70px;
@@ -607,6 +610,13 @@
         span {
           font-weight: 600;
           margin: 10px;
+        }
+        @media screen and (max-width: 540px) {
+          font-size: 1.2rem;
+          text-wrap: nowrap;
+          span {
+            margin: 5px;
+          }
         }
       }
       hr {
@@ -724,7 +734,16 @@
       }
     }
   }
-
+  .numbers {
+    .title_h {
+      h1 {
+        margin-left: 5px;
+      }
+      svg {
+        margin-right: -50px;
+      }
+    }
+  }
   .speedometerS {
     gap: 10vw;
     height: 50vh;
@@ -732,7 +751,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    // @media screen and (max-width: 540px) {
+    //   flex-direction: column;
+    // }
     .subDiv {
       overflow: hidden;
       display: flex;
@@ -1149,6 +1170,10 @@
         align-items: center;
         min-width: 10vw;
         height: 40vh;
+        @media screen and (max-width: 540px) {
+          height: 100px;
+          margin-top: 0px;
+        }
         .arrow {
           width: 2.5rem;
           height: 2.5rem;
@@ -1171,6 +1196,10 @@
           overflow: visible;
           width: 80vw;
           height: 30vh;
+          @media screen and (max-width: 540px) {
+            height: max-content;
+            margin-top: 0px;
+          }
           .slick-dots {
             // overflow: visible;
           }
@@ -1656,7 +1685,7 @@
 
       @media screen and (max-width: 540px) {
         padding: 0;
-        margin-bottom: 100px;
+        margin-bottom: 150px;
       }
       .tnc_1 a {
         display: block;
@@ -1900,6 +1929,11 @@
       grid-template-rows: repeat(1, 240vh);
       justify-items: center;
       gap: 5px;
+      @media screen and (max-width: 540px) {
+        margin-top: 0px;
+        display: grid;
+        grid-template-columns: 1fr;
+      }
 
       img {
         max-width: 100%; /* Set the maximum width of the image to 100% of the container */
@@ -1921,6 +1955,9 @@
         display: flex;
         flex-direction: column;
         gap: 5vh;
+        @media screen and (max-width: 540px) {
+          width: 100%;
+        }
       }
 
       .scndCol {
@@ -2151,7 +2188,9 @@
       justify-content: space-evenly;
       align-items: center;
       @media screen and (max-width: 540px) {
-        height: auto;
+        &.odd {
+          height: fit-content;
+        }
         width: 90vw;
       }
       button {
@@ -2229,23 +2268,41 @@
       );
       @media screen and (max-width: 540px) {
         height: auto;
-        width: 90vw;
+        width: 95vw;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 30px 0;
       }
       .contact {
         h1.main {
           font-family: "artifakt", sans-serif;
           font-size: 3rem;
           font-weight: 600;
+          @media screen and (max-width: 540px) {
+            font-size: 1.4rem;
+          }
         }
         h1 {
           font-family: "artifakt", sans-serif;
           font-weight: 600;
+          @media screen and (max-width: 540px) {
+            font-size: 0.5rem;
+          }
         }
         .c {
           font-family: "artifakt", sans-serif;
           display: flex;
           gap: 0.5em;
           align-items: center;
+          @media screen and (max-width: 540px) {
+            margin: 10px 0;
+            svg {
+              height: 12px;
+            }
+            p {
+              font-size: 0.5rem;
+            }
+          }
         }
       }
       form.form {
@@ -2255,15 +2312,25 @@
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        @media screen and (max-width: 540px) {
+          padding: 0px 5px;
+          width: 40vw;
+        }
         h1 {
           font-family: "artifakt", sans-serif;
           text-align: end;
           margin: 30px 0px;
+          @media screen and (max-width: 540px) {
+            margin-top: 0px;
+          }
         }
         p {
           font-family: "artifakt", sans-serif;
           font-size: 1.4rem;
           font-weight: 500;
+          @media screen and (max-width: 540px) {
+            font-size: 0.6rem;
+          }
         }
         input {
           font-family: "artifakt", sans-serif;
@@ -2271,12 +2338,19 @@
           background-color: transparent;
           border-bottom: 1px solid black;
           margin: 10px 0px;
+          @media screen and (max-width: 540px) {
+            font-size: 0.6rem;
+            margin-top: 0px;
+          }
         }
         .share {
           font-family: "artifakt", sans-serif;
           display: flex;
           justify-content: space-between;
           align-items: center;
+          button {
+            font-size: 0.7rem;
+          }
           .socials {
             font-family: "artifakt", sans-serif;
             display: flex;
@@ -2293,6 +2367,10 @@
     box-shadow: 0 5px 5px grey;
     padding: 30px 60px;
     border-radius: 10px;
+    @media screen and (max-width: 540px) {
+      padding: 10px;
+      width: 80%;
+    }
     .link {
       display: flex;
       justify-content: end;
@@ -2311,6 +2389,10 @@
         padding: 10px 20px;
         font-weight: 600;
         border-radius: 20px;
+        @media screen and (max-width: 540px) {
+          font-size: 0.7rem;
+          padding: 5px 10px;
+        }
       }
     }
     .qna-item {
@@ -2324,6 +2406,10 @@
         width: 500px;
         padding: 10px 20px;
         cursor: pointer;
+        @media screen and (max-width: 540px) {
+          width: 100%;
+          font-size: 0.6rem;
+        }
       }
 
       .qna-answer {
@@ -2333,6 +2419,15 @@
         &.expanded {
           height: auto !important;
           padding: 10px 20px;
+        }
+        @media screen and (max-width: 540px) {
+          width: 100%;
+          font-size: 0.6rem;
+          text-align: center;
+          &.expanded {
+            height: auto !important;
+            padding: 5px 5px;
+          }
         }
       }
     }
@@ -3253,7 +3348,7 @@
       height: 40vh;
       width: 100vw;
     }
-    
+
     h1 {
       width: 100%;
       font-family: "artifakt";
@@ -4181,6 +4276,9 @@
           font-weight: 600;
           display: flex;
           gap: 10px;
+          @media screen and (max-width: 540px) {
+            // margin-top: 0px;
+          }
         }
         .socials {
           font-family: "artifakt", sans-serif;
@@ -4374,153 +4472,162 @@
     overflow: hidden;
   }
 
-    .sec_1{
-      height: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 3%;
-      // justify-content: center;
-      align-items: center;
-      background: linear-gradient(180deg, rgba(255, 0, 0, 0) -23.99%, #FFFFFF 4.39%, rgba(255, 218, 218, 0.605739) 57.24%, rgba(255, 255, 255, 0) 92.91%, rgba(255, 255, 255, 0) 121.76%);
-      .head {
-        margin-top: 3%;
-      
-        width: 40%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-  
-  box-sizing: border-box;
-  
-  // position: absolute;
-  
-  background: rgba(255, 255, 255, 0.4);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 5px 4px rgba(217, 217, 217, 0.5);
-  backdrop-filter: blur(2px);
-  /* Note: backdrop-filter has minimal browser support */
-  border-radius: 34px;
-  
-  
-  /* Our product is as wide as our range. */
-  
-  
-  font-family: 'Artifakt Element';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 34px;
-  text-align: center;
-  
-  color: #000000;
-  
-  // border: 0.2px solid #000000;
-  
-        .subHeading {
-          width: 100%;
-          height: auto;
-    
-          font-family: "Artifakt";
-          font-style: normal;
-          font-weight: 800;
-          font-size: 28px;
-          text-align: center;
-    
-          color: #000000;
-          border: 0.5px solid #ffffff;
-          border-radius: 50px;
-    
-          margin-top: 10vh;
-          padding-top: 10px;
-          padding-bottom: 10px;
-          margin-bottom: 10px;
-    
-          /* Add the box shadow */
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adjust values as needed */
-        }
-      }
-      .ttt{
-        margin-top: 3%;
-        width: 75%;
-font-family: 'Artifakt Element';
-font-style: normal;
-font-weight: 400;
-font-size: 1.5rem;
-/* or 30px */
-text-align: center;
-
-color: #000000;
-
-      }
-
-      img{
-        margin-top: 3%;
-        width: 75%;
-        height: auto;
-      }
-    }
-
-    .sec_2{
+  .sec_1 {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3%;
+    // justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 0, 0, 0) -23.99%,
+      #ffffff 4.39%,
+      rgba(255, 218, 218, 0.605739) 57.24%,
+      rgba(255, 255, 255, 0) 92.91%,
+      rgba(255, 255, 255, 0) 121.76%
+    );
+    .head {
       margin-top: 3%;
+
+      width: 40%;
       display: flex;
-      flex-direction: row;
       justify-content: center;
       align-items: center;
-      gap: 5%;
-      background: linear-gradient(0deg, #7D0407, #7D0407),
-linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 78.75%);
 
-h1, img{
-  margin: 2%;
-}
+      box-sizing: border-box;
 
-h1{
-  font-size: 1.5rem;
-  font-family: 'Artifakt Element';
-font-style: normal;
-font-weight: 500;
-color: #FFFFFF;
+      // position: absolute;
 
-}
+      background: rgba(255, 255, 255, 0.4);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+        inset 0px 5px 4px rgba(217, 217, 217, 0.5);
+      backdrop-filter: blur(2px);
+      /* Note: backdrop-filter has minimal browser support */
+      border-radius: 34px;
 
-img{
-  // margin: 2%;
-  width: 10%;
-  height: auto;
-}
+      /* Our product is as wide as our range. */
 
-    }
+      font-family: "Artifakt Element";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 34px;
+      text-align: center;
 
-    @keyframes animatedGradient {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
-    }
+      color: #000000;
 
-    .sec_3{
-      background: linear-gradient(180deg, rgba(255, 0, 0, 0) -23.99%, #FFFFFF 4.39%, rgba(255, 218, 218, 0.605739) 57.24%, rgba(255, 255, 255, 0) 92.91%, rgba(255, 255, 255, 0) 121.76%);
-  background-size: 300% 300%; /* Adjust size as needed */
-  animation: animatedGradient 4s ease infinite; 
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      // gap: 7%;
+      // border: 0.2px solid #000000;
 
-      img{
-        margin-bottom: 2%;
-        margin-top: 2%;
-        width: 70%;
+      .subHeading {
+        width: 100%;
         height: auto;
+
+        font-family: "Artifakt";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 28px;
+        text-align: center;
+
+        color: #000000;
+        border: 0.5px solid #ffffff;
+        border-radius: 50px;
+
+        margin-top: 10vh;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+
+        /* Add the box shadow */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adjust values as needed */
       }
     }
+    .ttt {
+      margin-top: 3%;
+      width: 75%;
+      font-family: "Artifakt Element";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.5rem;
+      /* or 30px */
+      text-align: center;
 
-    
+      color: #000000;
+    }
+
+    img {
+      margin-top: 3%;
+      width: 75%;
+      height: auto;
+    }
+  }
+
+  .sec_2 {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    background: linear-gradient(0deg, #7d0407, #7d0407),
+      linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 78.75%);
+
+    h1,
+    img {
+      margin: 2%;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-family: "Artifakt Element";
+      font-style: normal;
+      font-weight: 500;
+      color: #ffffff;
+    }
+
+    img {
+      // margin: 2%;
+      width: 10%;
+      height: auto;
+    }
+  }
+
+  @keyframes animatedGradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .sec_3 {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 0, 0, 0) -23.99%,
+      #ffffff 4.39%,
+      rgba(255, 218, 218, 0.605739) 57.24%,
+      rgba(255, 255, 255, 0) 92.91%,
+      rgba(255, 255, 255, 0) 121.76%
+    );
+    background-size: 300% 300%; /* Adjust size as needed */
+    animation: animatedGradient 4s ease infinite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // gap: 7%;
+
+    img {
+      margin-bottom: 2%;
+      margin-top: 2%;
+      width: 70%;
+      height: auto;
+    }
+  }
 }
 
 #Market {
@@ -4558,11 +4665,6 @@ img{
     // }
     // overflow: visible;
   }
-
-
-
-
-
 
   .body {
     width: 100vw;
@@ -4825,6 +4927,7 @@ img{
       @media screen and (max-width: 540px) {
         // height: 40vh;
         font-size: 1.2rem;
+        margin: 20px 0;
         width: 90vw;
       }
     }
@@ -4843,7 +4946,7 @@ img{
   }
   .div_3 {
     background-image: url(../public/assets/about/about_div_bg.png);
-    background-size: auto 90%; /* Adjust the width as needed */
+    background-size: contain; /* Adjust the width as needed */
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
@@ -4855,7 +4958,9 @@ img{
     flex-direction: column;
     @media screen and (max-width: 540px) {
       overflow: visible;
-      height: 40vh;
+      height: fit-content;
+      padding: 20px 0;
+      margin: 20px 0;
       width: 100vw;
     }
     h1 {
@@ -4867,35 +4972,26 @@ img{
       font-weight: 600;
       font-size: 2rem;
       @media screen and (max-width: 540px) {
-        font-size: 0.9rem;
+        width: 50%;
+        margin-bottom: 10px;
+        margin-left: 20px;
+        margin-top: -20px;
+        font-size: 0.7rem;
       }
     }
     .insideImg {
-      // height: 100%;
       overflow: hidden;
-
-      // position: relative;
-      // width: 90%;
-      // margin-top: 50px;
       .p1 {
         text-align: left;
-
-        // overflow: hidden;
-        // position: absolute;
-        // top: 27%;
-        // right: 20%;
         position: absolute;
         margin-top: 3%;
-        left: 50%;
+        left: 30%;
         font-weight: 600;
-        // font-size: medium;
-        // transform: translate(50%,-50%);
         width: 35%;
-        // margin-left: 10%;
-        // size: 10rem;
         @media screen and (max-width: 540px) {
-          font-size: 0.9rem;
-          width: 50%;
+          margin-top: 0%;
+          font-size: 0.6rem;
+          width: 70%;
         }
       }
       .p2 {
@@ -4904,19 +5000,14 @@ img{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        // position: absolute;
-        // transform: translate(-50%,50%);
-        // bottom: 20%;
-        // left: 10%;
-        // width: 40vw;
         @media screen and (max-width: 540px) {
-          // font-size: 18px;
+          margin-top: 30px;
           overflow: visible;
         }
         h1 {
           overflow: hidden;
           padding: 20px 0px;
-          border-bottom: 1px solid black;
+          border-bottom: 1px solid #000000;
           margin-bottom: 20px 0;
           font-family: "artifakt", sans-serif;
           padding-right: 50px;
@@ -4925,8 +5016,10 @@ img{
           margin-right: 0 !important;
           font-weight: 600;
           @media screen and (max-width: 540px) {
+            margin: 5px 5px;
+            padding: 5px 5px;
             padding-right: 0px;
-            font-size: 1.1rem;
+            font-size: 1rem;
           }
         }
         p {
@@ -4939,8 +5032,9 @@ img{
           padding-right: 50px;
           @media screen and (max-width: 540px) {
             padding-right: 0px;
-            font-size: 0.7rem;
-            width: 90%;
+            margin-left: 10px;
+            font-size: 0.5rem;
+            width: 95%;
           }
           // width:fit-content;
           // font-size: 24px;
@@ -4958,19 +5052,31 @@ img{
     margin: 20px 0px;
     position: relative;
     min-height: 110vh;
+    @media screen and (max-width: 540px) {
+      min-height: 250px;
+      // width: 100vw;
+    }
     img {
       height: 40vh;
       position: absolute;
       top: 50%;
       left: 30%;
       transform: translate(-50%, -50%);
-
+      @media screen and (max-width: 540px) {
+        height: auto;
+        width: 20%;
+        // width: 100vw;
+      }
       //   height: auto;
     }
     & > svg {
       position: absolute;
       left: 0%;
       bottom: 12%;
+      @media screen and (max-width: 540px) {
+        width: 55%;
+        bottom: 15%;
+      }
     }
     .content {
       display: flex;
@@ -4980,6 +5086,9 @@ img{
       top: 50%;
       transform: translate(-50%, -50%);
       gap: 10px;
+      @media screen and (max-width: 540px) {
+        gap: 10px;
+      }
       p {
         font-size: 1.5rem;
         display: flex;
@@ -4990,6 +5099,14 @@ img{
           display: inline;
           width: 60px;
           margin-right: 10px;
+        }
+        @media screen and (max-width: 540px) {
+          font-size: 0.6rem;
+          svg {
+            height: 20px !important;
+            max-width: 30px;
+            // height: auto;
+          }
         }
       }
     }

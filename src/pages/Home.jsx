@@ -35,7 +35,7 @@ function Number({ n }) {
   );
 }
 
-<<<<<<< HEAD
+// <<<<<<< HEAD
 // const CustomPrevArrow = (props) => {
 //   const { className, style, onClick } = props;
 //   return (
@@ -80,8 +80,8 @@ function Number({ n }) {
 //   );
 // }
 
-=======
->>>>>>> dba87d1b4386625048f443d490f1bb949ec90895
+// =======
+// >>>>>>> dba87d1b4386625048f443d490f1bb949ec90895
 const wirelessVariants = {
   hidden: {
     opacity: 0,
@@ -165,6 +165,15 @@ const animationVariant = {
 export default function Home() {
   const [myElementIsVisible, updateMyElementIsVisible] = useState();
   const myRef = useRef(null);
+  let [mobile, setMobile] = useState(false);
+
+  useEffect(() => {
+    if (isMobile) {
+      setMobile(true);
+    } else {
+      setMobile(false);
+    }
+  }, []);
   useEffect(() => {
     const observer = new IntersectionObserver((entries, observer) => {
       const entry = entries[0];
@@ -184,7 +193,7 @@ export default function Home() {
     arrows: true,
     autoplay: true,
     autoplaySpeed: 3000,
-    slidesToShow: 3,
+    slidesToShow: mobile ? 2 : 3,
     slidesToScroll: 1,
     // prevArrow: <CustomPrevArrow />,
     // nextArrow: <CustomNextArrow />
@@ -196,7 +205,6 @@ export default function Home() {
     target: techRef,
     offset: ["start end", "end start"],
   });
-
 
   const scndOpacity = useTransform(scrollYProgress, [0.3, 0.4], [0, 1]);
   const scndY = useTransform(scrollYProgress, [0.3, 0.4], ["80%", "0%"]);
@@ -212,15 +220,6 @@ export default function Home() {
     }
   }, [isWirelessInView]);
 
-  let [mobile, setMobile] = useState(false);
-
-  useEffect(() => {
-    if (isMobile) {
-      setMobile(true);
-    } else {
-      setMobile(false);
-    }
-  }, []);
   return (
     <div id="Home">
       <HomeLanding />
@@ -613,22 +612,16 @@ export default function Home() {
           >
             <div className="svg">
               <svg
-                width="101"
-                height="2"
-                viewBox="0 0 101 2"
+                width="120"
+                height="6"
+                viewBox="0 0 120 6"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path d="M-41 1L101 0.999988" stroke="black" />
-              </svg>
-              <svg
-                width="13"
-                height="13"
-                viewBox="0 0 13 13"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect width="13" height="13" fill="black" />
+                <path
+                  d="M114.333 2.99999C114.333 4.47275 115.527 5.66666 117 5.66666C118.473 5.66666 119.667 4.47275 119.667 2.99999C119.667 1.52723 118.473 0.333323 117 0.333323C115.527 0.333323 114.333 1.52723 114.333 2.99999ZM-1 3.5L117 3.49999L117 2.49999L-1 2.5L-1 3.5Z"
+                  fill="black"
+                />
               </svg>
             </div>
             <h1>
@@ -730,22 +723,16 @@ export default function Home() {
           >
             <div className="svg">
               <svg
-                width="101"
-                height="2"
-                viewBox="0 0 101 2"
+                width="120"
+                height="6"
+                viewBox="0 0 120 6"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path d="M-41 1L101 0.999988" stroke="black" />
-              </svg>
-              <svg
-                width="13"
-                height="13"
-                viewBox="0 0 13 13"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect width="13" height="13" fill="black" />
+                <path
+                  d="M114.333 2.99999C114.333 4.47275 115.527 5.66666 117 5.66666C118.473 5.66666 119.667 4.47275 119.667 2.99999C119.667 1.52723 118.473 0.333323 117 0.333323C115.527 0.333323 114.333 1.52723 114.333 2.99999ZM-1 3.5L117 3.49999L117 2.49999L-1 2.5L-1 3.5Z"
+                  fill="black"
+                />
               </svg>
             </div>
             <h1>
@@ -813,22 +800,16 @@ export default function Home() {
             <hr />
             <div className="svg">
               <svg
-                width="101"
-                height="2"
-                viewBox="0 0 101 2"
+                width="120"
+                height="6"
+                viewBox="0 0 120 6"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path d="M-41 1L101 0.999988" stroke="black" />
-              </svg>
-              <svg
-                width="13"
-                height="13"
-                viewBox="0 0 13 13"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect width="13" height="13" fill="black" />
+                <path
+                  d="M114.333 2.99999C114.333 4.47275 115.527 5.66666 117 5.66666C118.473 5.66666 119.667 4.47275 119.667 2.99999C119.667 1.52723 118.473 0.333323 117 0.333323C115.527 0.333323 114.333 1.52723 114.333 2.99999ZM-1 3.5L117 3.49999L117 2.49999L-1 2.5L-1 3.5Z"
+                  fill="black"
+                />
               </svg>
             </div>
             <h1>
@@ -1015,22 +996,16 @@ export default function Home() {
             <hr />
             <div className="svg">
               <svg
-                width="101"
-                height="2"
-                viewBox="0 0 101 2"
+                width="120"
+                height="6"
+                viewBox="0 0 120 6"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path d="M-41 1L101 0.999988" stroke="black" />
-              </svg>
-              <svg
-                width="13"
-                height="13"
-                viewBox="0 0 13 13"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect width="13" height="13" fill="black" />
+                <path
+                  d="M114.333 2.99999C114.333 4.47275 115.527 5.66666 117 5.66666C118.473 5.66666 119.667 4.47275 119.667 2.99999C119.667 1.52723 118.473 0.333323 117 0.333323C115.527 0.333323 114.333 1.52723 114.333 2.99999ZM-1 3.5L117 3.49999L117 2.49999L-1 2.5L-1 3.5Z"
+                  fill="black"
+                />
               </svg>
             </div>
             <h1>
@@ -1257,15 +1232,17 @@ export default function Home() {
               HOW ABOUT SOME<span>NUMBERS</span>
             </h1>
             <svg
-              width="13"
-              height="13"
-              viewBox="0 0 13 13"
+              width="auto"
+              height="30"
+              viewBox="0 0 164 6"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <rect width="13" height="13" fill="black" />
+              <path
+                d="M0.333333 3C0.333333 4.47276 1.52724 5.66667 3 5.66667C4.47276 5.66667 5.66667 4.47276 5.66667 3C5.66667 1.52724 4.47276 0.333333 3 0.333333C1.52724 0.333333 0.333333 1.52724 0.333333 3ZM164 3.50001C164.276 3.50001 164.5 3.27616 164.5 3.00001C164.5 2.72387 164.276 2.50001 164 2.50001L164 3.50001ZM3 3.5L164 3.50001L164 2.50001L3 2.5L3 3.5Z"
+                fill="black"
+              />
             </svg>
-            <hr />
           </div>
         </div>
 
@@ -1298,26 +1275,54 @@ export default function Home() {
         </div>
       </div>
       <div className="partners">
-        <div className="title t">
-          <div className="title_h">
-            <h1>
-              OUR<span>STRATEGIC PARTENERS</span>
-            </h1>
+        {!mobile ? (
+          <div className="">
+            <div className="title t">
+              <div className="title_h">
+                <h1>
+                  OUR <span>STRATEGIC PARTENERS</span>
+                </h1>
+              </div>
+              <button>Learn More</button>
+            </div>
+            <div className="top_devide">
+              <svg
+                width="120"
+                height="6"
+                viewBox="0 0 120 6"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M114.333 2.99999C114.333 4.47275 115.527 5.66666 117 5.66666C118.473 5.66666 119.667 4.47275 119.667 2.99999C119.667 1.52723 118.473 0.333323 117 0.333323C115.527 0.333323 114.333 1.52723 114.333 2.99999ZM-1 3.5L117 3.49999L117 2.49999L-1 2.5L-1 3.5Z"
+                  fill="black"
+                />
+              </svg>
+            </div>
           </div>
-          <button>Learn More</button>
-        </div>
-        <div className="top_devide">
-          <hr />
-          <svg
-            width="13"
-            height="13"
-            viewBox="0 0 13 13"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect width="13" height="13" fill="black" />
-          </svg>
-        </div>
+        ) : (
+          <div className="title">
+            <div className="title_h">
+              <div className="svg">
+                <svg
+                  width="120"
+                  height="6"
+                  viewBox="0 0 120 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M114.333 2.99999C114.333 4.47275 115.527 5.66666 117 5.66666C118.473 5.66666 119.667 4.47275 119.667 2.99999C119.667 1.52723 118.473 0.333323 117 0.333323C115.527 0.333323 114.333 1.52723 114.333 2.99999ZM-1 3.5L117 3.49999L117 2.49999L-1 2.5L-1 3.5Z"
+                    fill="black"
+                  />
+                </svg>
+              </div>
+              <h1>
+                OUR <span>STRATEGIC PARTENERS</span>
+              </h1>
+            </div>
+          </div>
+        )}
         <div className="container">
           <div className="lft">
             <button onClick={() => slider?.current?.slickPrev()}>
@@ -1383,19 +1388,20 @@ export default function Home() {
             </button>
           </div>
         </div>
-
-        <div className="bottom_devide">
-          <svg
-            width="13"
-            height="13"
-            viewBox="0 0 13 13"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect width="13" height="13" fill="black" />
-          </svg>
-          <hr />
-        </div>
+        {!mobile && (
+          <div className="bottom_devide">
+            <svg
+              width="13"
+              height="13"
+              viewBox="0 0 13 13"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="13" height="13" fill="black" />
+            </svg>
+            <hr />
+          </div>
+        )}
       </div>
     </div>
   );

@@ -2499,6 +2499,10 @@
     background-image: url(../public/assets/UseCase/usecase_bg.png);
     background-repeat: no-repeat;
     background-size: cover;
+    @media screen and (max-width: 540px) {
+      height: 40vh;
+      // margin-top: 0px;
+    }
     & > h1 {
       width: 80vw;
       font-family: "Artifakt";
@@ -2520,6 +2524,10 @@
       align-items: center;
 
       overflow: visible;
+      @media screen and (max-width: 540px) {
+        // margin-top: 0px;
+        width: 90vw;
+      }
       & > div {
         width: 100%;
         display: flex;
@@ -2527,9 +2535,15 @@
         align-items: center;
         overflow: visible;
         margin: 10px;
+        @media screen and (max-width: 540px) {
+          margin: 0px;
+        }
         a {
           overflow: visible;
           position: relative;
+          @media screen and (max-width: 540px) {
+            margin: 4px;
+          }
           p {
             position: absolute;
             bottom: 10px;
@@ -2540,6 +2554,10 @@
             width: 100%;
             text-align: center;
             color: white;
+            @media screen and (max-width: 540px) {
+              font-size: 0.7rem;
+              // margin-top: 0px;
+            }
           }
           img {
             border-radius: 30px;
@@ -2547,6 +2565,12 @@
             height: 30vh;
             padding: 0;
             z-index: 1;
+            @media screen and (max-width: 540px) {
+              border: 1px solid white;
+              // margin-top: 0px;
+              border-radius: 5px;
+              height: 30%;
+            }
           }
         }
         // .g2 {
@@ -2563,6 +2587,12 @@
     // line-height: 31px;
     margin: 20px 10px;
     text-align: center;
+    @media screen and (max-width: 540px) {
+      font-size: 1rem;
+      // line-height: 31px;
+      margin: 10px 5px;
+      // margin-top: 0px;
+    }
   }
 }
 
@@ -2779,6 +2809,13 @@
     height: 100vh;
     position: relative;
     background-color: transparent;
+    @media screen and (max-width: 540px) {
+      height: 40vh;
+      background-image: url(../public/assets/Blog/blog_landing_mobile.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
     h1 {
       position: absolute;
       top: 28%;
@@ -2789,6 +2826,9 @@
       width: 60%;
       z-index: 2;
       font-family: "monogram", sans-serif;
+      @media screen and (max-width: 540px) {
+        display: none;
+      }
     }
     img {
       height: 402px;
@@ -2799,6 +2839,9 @@
       left: 50%;
       transform: translate(-50%, -50%);
       object-fit: cover;
+      @media screen and (max-width: 540px) {
+        display: none;
+      }
     }
     .home_pg_div {
       height: 441px;
@@ -2813,6 +2856,9 @@
         #104c6e -8.96%,
         rgba(227, 232, 236, 0) 144.36%
       );
+      @media screen and (max-width: 540px) {
+        display: none;
+      }
     }
   }
   .content {
@@ -2824,6 +2870,9 @@
     align-items: center;
     height: 100%; /* Set the height of the parent container */
     overflow: hidden; /* Disable scrolling for the parent container */
+    @media screen and (max-width: 540px) {
+      flex-direction: column;
+    }
     .bg {
       position: absolute;
       width: auto;
@@ -2833,10 +2882,16 @@
       z-index: -1;
       justify-content: center;
       padding: 30px 20px;
+      @media screen and (max-width: 540px) {
+        padding-top: 60px;
+      }
     }
     h1 {
       font-size: 2rem;
       font-family: "artifakt", sans-serif;
+      @media screen and (max-width: 540px) {
+        font-size: 1.2rem;
+      }
     }
     hr {
       border: 0.5px solid black;
@@ -2845,10 +2900,16 @@
     p {
       font-family: "artifakt", sans-serif;
       text-align: justify;
+      @media screen and (max-width: 540px) {
+        font-size: 0.8rem;
+      }
     }
     img {
       padding: 40px;
       border-radius: 5px;
+      @media screen and (max-width: 540px) {
+        padding: 10px;
+      }
     }
     .btn {
       width: 100%;
@@ -2864,23 +2925,26 @@
     .left {
       width: 40vw;
       padding: 20px;
+      @media screen and (max-width: 540px) {
+        width: 90vw;
+      }
       .tile {
         padding: 30px 20px;
       }
     }
     .right {
       width: 40vw;
+      @media screen and (max-width: 540px) {
+        width: 90vw;
+      }
     }
   }
 }
 
 #Ev_users {
   .Landing {
-    // background: linear-gradient(180deg, rgba(205, 205, 205, 0.65) 0%, rgba(255, 255, 255, 0) 100%);
     font-family: "monogram", sans-serif;
     background-image: url(../public/assets/EV_users/Ev_user_home.png);
-    // background-position: center 50px;
-    // background-size: 80%;
     position: relative;
     h1 {
       top: 40%;
@@ -2890,6 +2954,9 @@
       width: 70%;
       transform: translate(-50%, -50%);
       z-index: 1;
+      @media screen and (max-width: 540px) {
+        font-size: 1rem;
+      }
     }
   }
   .content {
@@ -2905,23 +2972,45 @@
       justify-content: space-evenly;
       min-height: 90vh;
       align-items: center;
+      @media screen and (max-width: 540px) {
+        min-height: fit-content;
+        // margin-top: 0px;
+      }
       p {
         width: 100%;
         text-align: center;
         font-size: 1.2rem;
         font-weight: 500;
+        @media screen and (max-width: 540px) {
+          width: 90%;
+          font-size: 0.9rem;
+          font-weight: 600;
+          margin: 20px 0;
+          // margin-top: 0px;
+        }
       }
       .tiles {
         overflow: visible;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        width: 100%;
+        width: 60vw;
+        @media screen and (max-width: 540px) {
+          // margin-top: 0px;
+          flex-direction: column;
+          gap: 10px;
+        }
         .tile {
           position: relative;
           overflow: visible;
+          @media screen and (max-width: 540px) {
+          }
           svg {
             overflow: visible;
+            @media screen and (max-width: 540px) {
+              width: 40vw;
+              // margin-top: 0px;
+            }
           }
           p {
             position: absolute;
@@ -2930,6 +3019,12 @@
             font-size: 1.4rem;
             font-weight: 700 !important;
             text-align: left;
+            @media screen and (max-width: 540px) {
+              font-size: 0.9rem;
+              width: 80vw;
+              left: -10%;
+              // margin-top: 0px;
+            }
           }
         }
       }
@@ -2937,8 +3032,15 @@
     .part_2 {
       width: 100%;
       display: flex;
+      @media screen and (max-width: 540px) {
+        flex-direction: column;
+      }
       img {
         width: 60vw;
+        @media screen and (max-width: 540px) {
+          width: 100vw;
+          // margin-top: 0px;
+        }
       }
       .points {
         width: 100%;
@@ -2957,6 +3059,12 @@
           }
           h1 {
             font-size: 1.2rem;
+            @media screen and (max-width: 540px) {
+              // margin-top: 0px;
+              font-size: 1rem;
+              text-align: center;
+              margin: 20px 0;
+            }
           }
         }
       }
@@ -2970,6 +3078,14 @@
       h1 {
         font-size: 18px;
         font-weight: 700;
+        @media screen and (max-width: 540px) {
+          font-size: 0.9rem;
+          width: 70%;
+          font-weight: 700;
+          text-align: center;
+          margin: 10px 0;
+          // margin-top: 0px;
+        }
       }
       .tiles {
         overflow: hidden;
@@ -2978,13 +3094,27 @@
         justify-content: space-evenly;
         align-items: start;
         gap: 30px;
+        @media screen and (max-width: 540px) {
+          // margin-top: 0px;
+          flex-direction: column;
+          align-items: center;
+        }
         .tile {
           overflow: hidden;
-          img {
+          width: 100%;
+          svg {
             width: 30px;
             margin: 20px 5px;
+            @media screen and (max-width: 540px) {
+              margin: 20px auto;
+              // margin-top: 0px;
+            }
           }
           width: 20vw;
+          @media screen and (max-width: 540px) {
+            width: 90vw;
+            // margin-top: 0px;
+          }
           p {
             font-size: 1rem;
             text-align: justify;
@@ -4179,10 +4309,13 @@
       height: auto;
       display: flex;
 
-      img {
+      & > img {
         width: 30vw;
       }
-
+      @media screen and (max-width: 540px) {
+        margin-top: 20px;
+        // margin-top: 0px;
+      }
       .content {
         display: flex;
         flex-direction: column;
@@ -4191,17 +4324,35 @@
         // margin-top: 5vh;
         gap: 10vh;
         justify-content: center;
+        @media screen and (max-width: 540px) {
+          gap: 10px;
+          width: 95vw;
+          img {
+            width: 100%;
+          }
+          // margin-top: 0px;
+        }
 
         .head {
           font-family: "Artifakt";
           font-size: 1.1rem;
           font-weight: 600;
+          @media screen and (max-width: 540px) {
+            font-size: 0.8rem;
+            font-weight: 600;
+            // margin-top: 0px;
+          }
         }
 
         .downHead {
           font-family: "Artifakt";
           font-size: 1.1rem;
           font-weight: 500;
+          @media screen and (max-width: 540px) {
+            font-size: 0.8rem;
+            font-weight: 500;
+            // margin-top: 0px;
+          }
         }
       }
     }
@@ -4221,6 +4372,13 @@
       width: 70%;
       transform: translate(-50%, -50%);
       z-index: 1;
+      @media screen and (max-width: 540px) {
+        transform: translate(0%, -50%);
+        left: 10%;
+        font-size: 0.9rem !important;
+        font-weight: 600;
+        width: 80%;
+      }
     }
   }
   .Career_inner {
@@ -4233,19 +4391,50 @@
       flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
+      @media screen and (max-width: 540px) {
+        height: fit-content;
+        width: 100%;
+        padding: 20px;
+      }
       button {
         padding: 10px 30px;
-        border-radius: 10px;
-        border: 1px solid black;
+        border-radius: 40px;
         font-size: 1.2rem;
         font-weight: 600;
         font-family: "artifakt", sans-serif;
+
+        background: linear-gradient(
+            285.84deg,
+            #ffffff 16.64%,
+            rgba(255, 255, 255, 0.85) 77.79%
+          ),
+          linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.4),
+            rgba(255, 255, 255, 0.4)
+          );
+        border: 1px solid;
+        border-image-source: linear-gradient(
+          285.84deg,
+          #ffffff 16.64%,
+          rgba(255, 255, 255, 0.85) 77.79%
+        );
+        box-shadow: 0px 4px 4px 0px #00000040;
+        box-shadow: 0px 5px 4px 0px #d9d9d980 inset;
+        @media screen and (max-width: 540px) {
+          padding: 5px 10px;
+          font-size: 0.9rem;
+          width: 70%;
+        }
       }
       p {
         font-family: "artifakt", sans-serif;
         width: 60vw;
         font-size: 1.1rem;
         text-align: center;
+        @media screen and (max-width: 540px) {
+          display: none;
+        }
       }
     }
     .lets_Talk {
@@ -4258,6 +4447,11 @@
       border-radius: 10px;
       height: 60vh;
       box-shadow: 0px 2px 4px 0px #00000040;
+      @media screen and (max-width: 540px) {
+        height: fit-content;
+        flex-direction: column;
+        width: 90%;
+      }
       .contact {
         font-family: "artifakt", sans-serif;
         width: 45%;
@@ -4266,10 +4460,20 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: start;
+        @media screen and (max-width: 540px) {
+          align-items: center;
+          width: 100%;
+        }
         h1.main {
           font-family: "artifakt", sans-serif;
           font-size: 3rem;
           font-weight: 600;
+          @media screen and (max-width: 540px) {
+            font-size: 1rem;
+            margin: 10px;
+            width: 100%;
+            text-align: center;
+          }
         }
         h1 {
           font-family: "artifakt", sans-serif;
@@ -4277,7 +4481,8 @@
           display: flex;
           gap: 10px;
           @media screen and (max-width: 540px) {
-            // margin-top: 0px;
+            font-size: 0.8rem;
+            margin: 10px;
           }
         }
         .socials {
@@ -4286,6 +4491,11 @@
           gap: 1.2rem;
           justify-content: center;
           align-items: center;
+          @media screen and (max-width: 540px) {
+            justify-content: space-evenly;
+            margin: 10px;
+            width: 100%;
+          }
           svg {
             height: 20px;
           }
@@ -4298,6 +4508,11 @@
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        @media screen and (max-width: 540px) {
+          width: 100%;
+          padding: 0px 10px;
+          margin: 10px;
+        }
         h1 {
           text-align: end;
           margin: 30px 0px;
@@ -4371,11 +4586,18 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      @media screen and (max-width: 540px) {
+        min-height: fit-content;
+      }
       h1 {
         font-family: "artifakt", sans-serif;
         margin: 100px 0px;
         font-size: 1.4rem;
         font-weight: 600;
+        @media screen and (max-width: 540px) {
+          margin: 20px 0px;
+          font-size: 1.1rem;
+        }
       }
       .tiles {
         font-family: "artifakt", sans-serif;
@@ -4424,25 +4646,45 @@
       margin: 20px;
       padding: 20px;
       font-family: "artifakt", sans-serif;
+      @media screen and (max-width: 540px) {
+        margin: 10px;
+        padding: 10px;
+      }
       form.form {
         width: 100%;
         h1 {
           font-family: "artifakt", sans-serif;
           text-align: start;
           font-size: 2rem;
+          @media screen and (max-width: 540px) {
+            font-size: 1.3rem;
+            margin: 5px 0;
+            text-align: center;
+            font-weight: 600;
+          }
+        }
+        @media screen and (max-width: 540px) {
+          p {
+            font-size: 0.8rem;
+          }
+          input {
+            font-size: 0.8rem;
+          }
         }
         .MID {
           font-family: "artifakt", sans-serif;
           display: flex;
           gap: 30px;
-          div {
-            font-family: "artifakt", sans-serif;
-            width: 50%;
+          @media screen and (max-width: 540px) {
+            gap: 10px;
           }
         }
         .share {
           font-family: "artifakt", sans-serif;
           margin-top: 40px;
+          @media screen and (max-width: 540px) {
+            margin-top: 20px;
+          }
         }
       }
     }
@@ -4633,8 +4875,13 @@
 #Market {
   .Landing {
     background-image: url(../public/assets/market/landing.png);
-    background-position: 10px 10px;
-    background-size: cover;
+    background-position: 0px 0px;
+    @media screen and (max-width: 540px) {
+      background-image: url(../public/assets/market/market_landing_mobile.png);
+      background-position: center;
+      background-size: contain;
+      // margin-top: 0px;
+    }
     // background: linear-gradient(
     //   89.65deg,
     //   #e6cbd7 44.18%,
@@ -4687,18 +4934,25 @@
       font-family: "artifakt", sans-serif;
       position: absolute;
       top: 30%;
-      right: 40%;
+      right: 30%;
       transform: translate(50%, -50%);
       width: 20vw;
       font-weight: 600;
       font-size: 1.2rem;
+      @media screen and (max-width: 540px) {
+        width: 40vw;
+        font-size: 0.6rem;
+      }
     }
     .p2 {
       position: absolute;
       // transform: translate(-50%,50%);
-      bottom: 20%;
+      bottom: 12%;
       left: 5%;
       width: 60vw;
+      @media screen and (max-width: 540px) {
+        width: 70vw;
+      }
       h1 {
         font-family: "artifakt", sans-serif;
         padding: 20px 0px;
@@ -4706,22 +4960,36 @@
         margin-bottom: 20px;
         font-size: 1.9rem;
         font-weight: 500;
+        @media screen and (max-width: 540px) {
+          padding: 1px 0px;
+          margin-bottom: 1px;
+          font-size: 0.8rem;
+        }
       }
       p {
         font-family: "artifakt", sans-serif;
         font-size: 1.2rem;
         font-weight: 500;
         text-align: justify;
+        @media screen and (max-width: 540px) {
+          // margin-top: 0px;
+          font-size: 0.5rem;
+        }
       }
     }
   }
   p.div2 {
     font-family: "artifakt", sans-serif;
-    text-align: center;
+    text-align: justify;
     width: 70vw;
     margin: 10vh 0px;
     font-size: 1.1rem;
     // font-weight: 500;
+    @media screen and (max-width: 540px) {
+      width: 90vw;
+      margin: 40px 0px;
+      font-size: 0.9rem;
+    }
   }
   .tiles {
     display: flex;
@@ -4736,6 +5004,14 @@
       width: fit-content;
       box-shadow: 0 5px 10px gray;
       border-radius: 50px;
+      @media screen and (max-width: 540px) {
+        font-size: 1rem;
+        text-align: center;
+        width: 80%;
+        padding: 5px 15px;
+        margin: 15px 5px;
+        // margin-top: 0px;
+      }
     }
   }
   .content {
@@ -4749,11 +5025,25 @@
     .text {
       width: 30vw;
       padding: 20px;
+      @media screen and (max-width: 540px) {
+        width: 90vw;
+        // order: -1;
+        padding: 20px 0px;
+        img {
+          width: 100%;
+          height: auto;
+        }
+        // margin-top: 0px;
+      }
       p {
         margin: 20px 0;
         // width: 40vw;
         font-weight: 600;
         text-align: justify;
+        @media screen and (max-width: 540px) {
+          font-weight: 400;
+          // margin-top: 0px;
+        }
       }
     }
   }
@@ -5319,29 +5609,54 @@
       rgba(231, 235, 239, 0.57) 107.28%
     );
     font-family: "artifakt", sans-serif;
+    @media screen and (max-width: 540px) {
+      min-height: fit-content;
+    }
     h1 {
       margin: 30px 0px;
       font-size: 1.4rem;
       width: 70%;
       font-weight: 400;
+      @media screen and (max-width: 540px) {
+        margin: 20px 0px;
+        margin-top: 60px;
+        font-size: 1.2rem;
+        width: 90%;
+      }
     }
     .tiles {
       h1 {
         margin: 30px 0px;
         font-size: 1.4rem;
         font-weight: 600;
+        @media screen and (max-width: 540px) {
+          margin: 20px 0px;
+          font-size: 1.1rem;
+        }
       }
       width: 70vw;
+      @media screen and (max-width: 540px) {
+        width: 90vw;
+      }
       .row-1 {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        @media screen and (max-width: 540px) {
+          flex-direction: column;
+        }
         .b1 {
           width: 60%;
+          @media screen and (max-width: 540px) {
+            width: 100%;
+          }
         }
         .b2 {
           width: 35%;
+          @media screen and (max-width: 540px) {
+            width: 100%;
+          }
         }
       }
       .row-2 {
@@ -5349,14 +5664,26 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        @media screen and (max-width: 540px) {
+          flex-direction: column;
+        }
         .b1 {
           width: 25%;
+          @media screen and (max-width: 540px) {
+            width: 100%;
+          }
         }
         .b2 {
           width: 25%;
+          @media screen and (max-width: 540px) {
+            width: 100%;
+          }
         }
         .b3 {
           width: 40%;
+          @media screen and (max-width: 540px) {
+            width: 100%;
+          }
         }
       }
       .b {
@@ -5413,15 +5740,25 @@
     gap: 1rem;
     background-color: #e0e4ea;
     min-height: 100px;
+    @media screen and (max-width: 540px) {
+      flex-direction: column;
+    }
     p {
       padding: 10px 10px;
       font-size: 1rem;
       width: 20%;
+      @media screen and (max-width: 540px) {
+        width: 100%;
+      }
     }
     .line {
       width: 1px;
       height: 70px;
       background-color: #3f4042;
+      @media screen and (max-width: 540px) {
+        width: 80vw;
+        height: 1px;
+      }
     }
   }
 }
@@ -5432,8 +5769,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
   svg {
-    width: 5vw;
+    @media screen and (max-width: 540px) {
+      width: 20vw;
+    }
   }
 }

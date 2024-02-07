@@ -13,8 +13,8 @@ export default function HomeLanding() {
   });
 
   //LANDING PG ANIMATION
-  const opacity = useTransform(scrollYProgress, [0, 0.95], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.95], [1, 0.8]);
+  const opacity = useTransform(scrollYProgress, [0, 0.95], [1, isMobile ? 1:  0]);
+  const scale = useTransform(scrollYProgress, [0, 0.95], [1, isMobile ? 1:  0.8]);
 
   let [mobile, setMobile] = useState(false);
   

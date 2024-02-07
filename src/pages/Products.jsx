@@ -34,13 +34,23 @@ export default function Products() {
         </div>
 
         <div className="sec_3">
-          <img src="../assets/products/p1.png" alt="" />
-          <img src="../assets/products/p2.png" alt="" />
-          <img src="../assets/products/p3.png" alt="" />
-          <img src="../assets/products/p4.png" alt="" />
-          <img src="../assets/products/p5.png" alt="" />
-          <img src="../assets/products/p6.png" alt="" />
-          <img src="../assets/products/p7.png" alt="" />
+          <img className='web' src="../assets/products/p1.png" alt="" />
+          <img className='web' src="../assets/products/p2.png" alt="" />
+          <img className='web' src="../assets/products/p3.png" alt="" />
+          <img className='web' src="../assets/products/p4.png" alt="" />
+          <img className='web' src="../assets/products/p5.png" alt="" />
+          <img className='web' src="../assets/products/p6.png" alt="" />
+          <img className='web' src="../assets/products/p7.png" alt="" />
+
+
+          {/* //Mobile */}
+          <img className='mob' src="../assets/products/mp1.png" alt="" />
+          <img className='mob' src="../assets/products/mp2.png" alt="" />
+          <img className='mob' src="../assets/products/mp3.png" alt="" />
+          <img className='mob' src="../assets/products/mp4.png" alt="" />
+          <img className='mob' src="../assets/products/mp5.png" alt="" />
+          <img className='mob' src="../assets/products/mp6.png" alt="" />
+          <img className='mob' src="../assets/products/mp7.png" alt="" />
         </div>
 
     </div>

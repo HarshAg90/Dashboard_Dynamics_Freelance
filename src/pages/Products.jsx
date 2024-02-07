@@ -20,10 +20,11 @@ export default function Products() {
 
         <div className="sec_1">
         <div className="head">
-          <h1 className=''>Our product is as wide as our range</h1>
+          <h1 className='subHeading'>Our product is as wide as our range</h1>
           </div>
           <h1 className='ttt'>Dash Dynamic’s highly efficient and unbeatable EV Charging solutions comes up with more to explore. It provides wireless technology for drone towers, charging for laptop, and heavy duty commercial vehicles for industrial purpose. </h1>
-          <img src="../assets/products/range.png" alt="tyfhhhhhh" />
+          <img className='web' src="../assets/products/range.png" alt="tyfhhhhhh" />
+          <img className='mob' src="../assets/Home/homw_prod_mobile.png" alt="tyfhhhhhh" />
         </div>
 
         <div className="sec_2">

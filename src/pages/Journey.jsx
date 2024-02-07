@@ -62,6 +62,7 @@ export default function Journey(){
       strokeWidth="12"
       stroke="rgba(168, 168, 168, 1)"
       strokeLinecap="round"
+      class="grow"
     />
   </svg>
   <motion.img src="../assets/Journey/car.png" className='box'

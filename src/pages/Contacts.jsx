@@ -2,6 +2,7 @@ import React, { useEffect, useState, Component } from "react";
 import Landing from "../components/Landing";
 import GoogleMapReact from "google-map-react";
 import { async } from "q";
+import { isMobile } from "react-device-detect";
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 // https://developers.google.com/maps/documentation/javascript/adding-a-google-map#maps_add_map-html
@@ -103,6 +104,15 @@ const data = [
   },
 ];
 export default function Contacts() {
+  let [mobile, setMobile] = useState(false);
+
+  useEffect(() => {
+    if (isMobile) {
+      setMobile(true);
+    } else {
+      setMobile(false);
+    }
+  }, []);
   let [name, setName] = useState("");
   let [email, setEmail] = useState("");
   let [message, setMessage] = useState("");
@@ -199,9 +209,9 @@ export default function Contacts() {
           <div className="contact">
             <h1 className="main">LET'S TALK</h1>
             <h1>Contact us for further information</h1>
-            <br />
-            <br />
-            <br />
+            {!mobile && <br />}
+            {!mobile && <br />}
+            {!mobile && <br />}
             <div className="c">
               <svg
                 width="18"
@@ -215,8 +225,11 @@ export default function Contacts() {
                   fill="black"
                 />
               </svg>
-              <p>robin.singh@gmail.com |</p>
-              <p>shashank.sawai@gmail.com</p>
+              <p>
+                robin.singh@gmail.com <br />
+                shashank.sawai@gmail.com
+              </p>
+              {/* <p></p> */}
             </div>
             <div className="c">
               <svg
@@ -233,7 +246,7 @@ export default function Contacts() {
               </svg>
 
               <p> +91-8737237231</p>
-              <p> | +91-9560589782</p>
+              {!mobile && <p> | +91-9560589782</p>}
             </div>
           </div>
           <form className="form" onSubmit={sendEmail}>

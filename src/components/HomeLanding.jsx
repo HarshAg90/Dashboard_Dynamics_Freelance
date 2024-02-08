@@ -1,6 +1,7 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {motion, useScroll, useTransform} from "framer-motion";
 import Landing from './Landing';
+import { isMobile } from "react-device-detect";
 
 
 export default function HomeLanding() { 
@@ -12,14 +13,25 @@ export default function HomeLanding() {
   });
 
   //LANDING PG ANIMATION
-  const opacity = useTransform(scrollYProgress, [0, 0.95], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.95], [1, 0.8]);
+  const opacity = useTransform(scrollYProgress, [0, 0.95], [1, isMobile ? 1:  0]);
+  const scale = useTransform(scrollYProgress, [0, 0.95], [1, isMobile ? 1:  0.8]);
 
+  let [mobile, setMobile] = useState(false);
+  
+  useEffect(() => {
+    if (isMobile) {
+      setMobile(true);
+    } else {
+      setMobile(false);
+    }
+  }, []);
   return (
-    <motion.div ref={targetRef} className='basicLand landing'  style={{opacity, scale}}>
+    <motion.div ref={targetRef} className='basicLand landing' style={!mobile ? { opacity, scale } : {}}>
       <Landing Id="Home1">
         {/* <h1>SIMPLY PARK AND CHARGE</h1> */}
-        <h1>SIMPLY PARK <br /> AND CHARGE</h1>
+        {/* <div className=""> */}
+        <img src="../assets/Home/home_Heading.png" alt="" />
+        {/* </div> */}
         {/* <img src="../assets/Home/home_1.png" alt="" /> */}
       </Landing>
 

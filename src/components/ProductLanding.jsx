@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import {motion, useScroll, useTransform} from "framer-motion";
 import Landing from './Landing'
+import { isMobile } from "react-device-detect";
 
 export default function ProductLanding(){
 
@@ -11,14 +12,12 @@ export default function ProductLanding(){
   });
 
   //LANDING PG ANIMATION
-  const opacity = useTransform(scrollYProgress, [0, 0.95], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.95], [1, 0.9]);
+  const opacity = useTransform(scrollYProgress, [0, 0.95], [1, isMobile ? 1:  0]);
+  const scale = useTransform(scrollYProgress, [0, 0.95], [1, isMobile ? 1:  0.9]);
 
   return (
     <motion.div ref={landingRef} style={{opacity, scale}}>
     <Landing> 
-        <h1>DESIGNED TO REDEFINE POSSIBILITIES AND ELEVATE EXPERIENCES</h1>
-        <img src="../assets/products/product_charger.png"/>
       </Landing>
       </motion.div>
   )

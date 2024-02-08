@@ -9,4 +9,4 @@ export default function Charge() {
       <Charge_final/>
     </div>
   );
-}
+} 

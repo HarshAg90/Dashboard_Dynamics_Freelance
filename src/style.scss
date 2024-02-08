@@ -2518,23 +2518,22 @@
     background-image: url(../public/assets/Fleets/fleet_landing.png);
     font-family: "monogram", sans-serif;
     position: relative;
-    .gradient {
-      position: absolute;
-      width: 100%;
-      height: 70vh;
-      background: rgb(88, 116, 143);
-      background: linear-gradient(
-        180deg,
-        rgba(108, 144, 179, 0.7120098039215687) 12%,
-        rgba(255, 255, 255, 0) 65%
-      );
+    @media screen and (max-width: 540px) {
+      height: 40vh;
+      width: 100vw;
     }
     h1 {
-      top: 40%;
+      top: 80%;
       left: 50%;
       font-size: 3.2rem;
       font-weight: 400;
       width: 80%;
+      @media screen and (max-width: 540px) {
+        margin-top: 25%;
+        width: 100%;
+        font-size: 0.85rem;
+        top: 40%;
+      }
 
       transform: translate(-50%, -50%);
       background: rgb(0, 0, 0);
@@ -2544,25 +2543,54 @@
     }
   }
 
+
+  .web {
+    // display: none !important;
+    @media screen and (max-width: 540px) {
+      display: none !important;
+    }
+  }
+
+  .mob {
+    @media screen and (min-width: 540px) {
+      display: none !important;
+      // width: 100vw !important;
+    }
+  }
+
   .nextPg {
-    max-width: 100%; /* Set the maximum width of the container */
-    max-height: 100%;
+    // max-width: 100%; /* Set the maximum width of the container */
+    // max-height: 100%;
     height: auto;
     overflow: hidden;
+    
     background: linear-gradient(
       0deg,
       #bca7b1 -26.12%,
       rgba(188, 167, 177, 0) 99.6%
     );
 
+    @media screen and (max-width: 540px) {
+      background-image: url(../public/assets/Fleets/fleetBg.png);
+      background-repeat: no-repeat;
+    background-size: cover;
+    }
+
     .txt {
-      z-index: 1;
+      z-index: 5;
       display: flex;
       gap: 5vw;
       margin: auto 7vw;
       margin-top: 5vh;
       font-family: "artifakt", sans-serif;
       overflow: visible;
+      margin-bottom: 10%;
+
+      @media screen and (max-width: 540px) {
+        flex-direction: column;
+        gap: 5vh;
+        margin-bottom: 70%;
+      }
 
       .head {
         z-index: 1;
@@ -2572,12 +2600,19 @@
         font-weight: 700;
         margin-bottom: 5vh;
         font-size: 1.15rem;
+        @media screen and (max-width: 540px) {
+          font-size: 1rem;
+          margin-bottom: 1%;
+        }
       }
 
       .subHead {
         text-align: justify;
         font-size: 16px;
         z-index: 1;
+        @media screen and (max-width: 540px) {
+          font-size: 0.8rem;
+        }
       }
       .thd {
         overflow: visible;

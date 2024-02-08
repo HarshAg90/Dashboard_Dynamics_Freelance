@@ -1211,10 +1211,10 @@
         #ffffff 0%,
         rgba(217, 217, 217, 0) 100%
       );
-      // @media screen and (max-width: 540px) {
-      //   height: 40vh !important;
-      //   width: 100vw !important;
-      // }
+      @media screen and (max-width: 540px) {
+        height: 40vh !important;
+        width: 100vw !important;
+      }
     }
 
     @media screen and (max-width: 540px) {
@@ -4359,6 +4359,10 @@
   .landing {
     background-image: url(../public/assets/Board_members/landing.png);
     color: #000;
+    @media screen and (max-width: 540px) {
+      height: 40vh;
+      width: 100vw;
+    }
     h1 {
       width: 100%;
       text-align: center;
@@ -4368,8 +4372,14 @@
       align-items: center;
       font-family: "artifakt";
       margin-top: 40vh;
-
       color: #525050;
+      @media screen and (max-width: 540px) {
+        margin-top: 25%;
+        width: 100%;
+        font-size: 0.85rem;
+        top: 40%;
+        font-weight: 500;
+      }
     }
   }
 
@@ -4395,13 +4405,17 @@
         text-align: center;
 
         color: #000000;
-        border: 0.5px solid #000000;
+        // border: 0.5px solid #000000;
         border-radius: 50px;
 
         margin-top: 10vh;
         padding-top: 10px;
         padding-bottom: 10px;
         margin-bottom: 10px;
+        @media screen and (max-width: 540px) {
+          width: 80%;
+          font-size: 0.9rem;
+        }
 
         /* Add the box shadow */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adjust values as needed */
@@ -4422,6 +4436,10 @@
 
         img {
           width: 28vw;
+          @media screen and (max-width: 540px) {
+            width: 47vw;
+            // font-size: 0.85rem;
+          }
         }
 
         .member {
@@ -4444,6 +4462,10 @@
             font-size: 1.8rem;
             align-self: flex-end;
             transform: translate(-140%, -270%);
+            @media screen and (max-width: 540px) {
+              // width: 47vw;
+              font-size: 0.85rem;
+            }
           }
         }
       }
@@ -4465,8 +4487,38 @@
         align-items: start;
         gap: 5vw;
 
+        @media screen and (max-width: 540px) {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          grid-column-gap: 0px;
+          grid-row-gap: 0px;
+        }
+
+        .m1{
+          @media screen and (max-width: 540px) {
+            grid-area: 1 / 1 / 2 / 2;
+          }
+        }
+
+        .m2{
+          @media screen and (max-width: 540px) {
+            grid-area: 1 / 2 / 2 / 3;
+          }
+        }
+
+        .m3{
+          @media screen and (max-width: 540px) {
+            grid-area: 2 / 1 / 3 / 2;
+          }
+        }
+
         img {
           width: 28vw;
+          @media screen and (max-width: 540px) {
+            width: 47vw;
+            // font-size: 0.85rem;
+          }
         }
 
         .member {
@@ -4489,6 +4541,10 @@
             font-size: 1.8rem;
             align-self: flex-end;
             transform: translate(-140%, -270%);
+            @media screen and (max-width: 540px) {
+              // width: 47vw;
+              font-size: 0.85rem;
+            }
           }
         }
       }
@@ -4501,98 +4557,58 @@
   }
 
   .partners {
-    height: 100vh;
-    .heading {
-      width: 35vw;
-      height: auto;
-
-      font-family: "Artifakt";
-      font-style: normal;
-      font-weight: 900;
-      font-size: 28px;
-      // line-height: 31px;
-      text-align: center;
-
-      color: #000000;
-      border: 2px solid #8e8787;
-      border-radius: 5px;
-
-      margin-top: 10vh;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      margin-left: 50vw;
-    }
-
-    .fstLine {
-      height: 5vh;
-      margin-top: 15vh;
+    height: auto;
+    .head {
+      width: 100%;
       display: flex;
+      justify-content: center;
       align-items: center;
-      justify-content: flex-end;
-      hr {
-        height: 3px;
-        width: 70%;
-        border: none; /* Removes the default border */
-        border-top: 3px solid #000000; /* Sets the top border to a solid line */
-      }
-      .sqr {
-        height: 14px;
-        width: 13px;
-        background-color: #000000;
-      }
-    }
+      .subHeading {
+        width: 40%;
+        height: auto;
 
-    .container {
-      width: 100vw;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      .lft,
-      .rght {
-        min-width: 10vw;
-        height: 40vh;
-        background-color: #f9f9f9;
-      }
-      .parteners_li {
-        min-width: 80vw;
-        overflow: visible;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        img {
-          overflow: hidden !important;
-          height: 100%;
-          width: 100%;
-          margin: 20px;
-          padding: 20px;
+        font-family: "Artifakt";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 28px;
+        text-align: center;
+
+        color: #000000;
+        // border: 0.5px solid #000000;
+        border-radius: 50px;
+
+        margin-top: 10vh;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        @media screen and (max-width: 540px) {
+          width: 80%;
+          font-size: 0.9rem;
         }
-        .carouselKaItem {
-          overflow: visible;
-          width: 80vw;
-          height: 30vh;
-          .slick-dots {
-            // overflow: visible;
-          }
-        }
+
+        /* Add the box shadow */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adjust values as needed */
       }
     }
 
-    .lstLine {
-      height: 5vh;
-      margin-top: 5vh;
+    .web {
+      // display: none !important;
+      @media screen and (max-width: 540px) {
+        display: none !important;
+      }
       display: flex;
       align-items: center;
-      justify-content: flex-start;
-      hr {
-        height: 3px;
+      justify-content: center;
+      img{
+        margin-top: 5%;
         width: 70%;
-        border: none; /* Removes the default border */
-        border-top: 3px solid #000000; /* Sets the top border to a solid line */
       }
-      .sqr {
-        height: 14px;
-        width: 13px;
-        background-color: #000000;
+    }
+
+    .mob {
+      @media screen and (min-width: 540px) {
+        display: none !important;
+        // width: 100vw !important;
       }
     }
   }

@@ -109,7 +109,7 @@ export default function BoardMembers(){
           </div>
             <div className="advisorGrid">
                 <div className="grid fst">
-                <div className="member2 member">
+                <div className="member2 member m1">
                         <motion.img src="../assets/Board_members/Pani.png" alt="Robin Singh"
                         initial={{
                           scale: 1
@@ -125,7 +125,7 @@ export default function BoardMembers(){
                         {/* <h1>A highly successful electrical engineer with 7 years of entrepreneurial experience, founder of Tron Fire Protection Pvt Ltd, known for innovative solutions in transformer fire safety, and COVID initiatives.
 </h1> */}
                     </div>
-                    <div className="member1 member">
+                    <div className="member1 member m2">
                         <motion.img src="../assets/Board_members/Sanjeev.png" alt="Shashank Sawai"
                             initial={{
                               scale: 1
@@ -142,7 +142,7 @@ export default function BoardMembers(){
                         
                         {/* <h1>An M.Tech professional with 7 years of experience, excelling in electrical & telecommunications project management.</h1> */}
                     </div>     
-                    <div className="member2 member">
+                    <div className="member2 member m3">
                         <motion.img src="../assets/Board_members/Erik.png" alt="Shashank Sawai"
                             initial={{
                               scale: 1
@@ -164,54 +164,14 @@ export default function BoardMembers(){
         </div>
 
         <div className="partners"> 
-            <h1 className='heading'>STRATEGIC PARTNERS</h1>
-            <div className="fstLine">
-                <div className="sqr"/>
-                <hr/>
+        <div className="head">
+          <h1 className='subHeading'>Strategic Partner and Investor</h1>
+          </div>
+            <img className='mob' src="../assets/Board_members/partAndInves.png" alt="" />
+            <div className="web">
+              <img src="../assets/Board_members/webInvest.png" alt="" />
             </div>
-            <div className="container">
-        <div className="lft"/>
-        <div className="parteners_li"> 
-        <Slider {...settings} className='carouselKaItem'>
-          <motion.img src="../assets/Home/partner_1.png" alt="" 
-            whileHover={{scale: 1.15}}
-            transition={{
-              type: "spring",
-              stiffness: 60,
-            }}
-          />
-          <motion.img src="../assets/Home/partner_2.png" alt=""
-          whileHover={{scale: 1.15}}
-          transition={{
-            type: "spring",
-            stiffness: 60,
-          }}/>
-          <motion.img src="../assets/Home/partner_3.png" alt=""
-          whileHover={{scale: 1.15}}
-          transition={{
-            type: "spring",
-            stiffness: 60,
-          }}/>
-          <motion.img src="../assets/Home/partner_4.png" alt=""
-          whileHover={{scale: 1.15}}
-          transition={{
-            type: "spring",
-            stiffness: 60,
-          }}/>
-          <motion.img src="../assets/Home/partner_5.png" alt=""
-          whileHover={{scale: 1.15}}
-          transition={{
-            type: "spring",
-            stiffness: 60,
-          }}/>
-        </Slider>          
-        </div>
-        <div className="rght"/>
-        </div>
-            <div className="lstLine">
-                <hr/>
-                <div className="sqr"/>
-            </div>
+            
         </div>
 
     </div>

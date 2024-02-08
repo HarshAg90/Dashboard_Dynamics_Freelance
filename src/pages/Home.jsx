@@ -35,53 +35,7 @@ function Number({ n }) {
   );
 }
 
-// <<<<<<< HEAD
-// const CustomPrevArrow = (props) => {
-//   const { className, style, onClick } = props;
-//   return (
-//     <div
-//       className={className}
-//       style={{ ...style, width: '50px', height: '50px', color: "black"}}
-//       onClick={onClick}
-//     />
-//   );
-// }
 
-// const CustomNextArrow = (props) => {
-//   const { className, style, onClick } = props;
-//   return (
-//     <div
-//       className={className}
-//       style={{ ...style, width: '50px', height: '50px', backgroundImage: `url(${nextArrow})`}}
-//       onClick={onClick}
-//     />
-//   );
-// }
-
-// function SampleNextArrow(props) {
-//   const { className, style, onClick } = props;
-//   return (
-//     <div
-//       className={className}
-//       style={{ ...style, display: "block", background: "black" }}
-//       onClick={onClick}
-//     />
-//   );
-// }
-
-// function SamplePrevArrow(props) {
-//   const { className, style, onClick } = props;
-//   return (
-//     <div
-//       className={className}
-//       style={{ ...style, display: "block", background: "green" }}
-//       onClick={onClick}
-//     />
-//   );
-// }
-
-// =======
-// >>>>>>> dba87d1b4386625048f443d490f1bb949ec90895
 const wirelessVariants = {
   hidden: {
     opacity: 0,
@@ -190,7 +144,7 @@ export default function Home() {
     dots: true,
     infinite: true,
     speed: 500,
-    arrows: true,
+    arrows: false,
     autoplay: true,
     autoplaySpeed: 3000,
     slidesToShow: mobile ? 2 : 3,

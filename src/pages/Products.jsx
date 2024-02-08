@@ -20,10 +20,11 @@ export default function Products() {
 
         <div className="sec_1">
         <div className="head">
-          <h1 className=''>Our product is as wide as our range</h1>
+          <h1 className='subHeading'>Our product is as wide as our range</h1>
           </div>
           <h1 className='ttt'>Dash Dynamic’s highly efficient and unbeatable EV Charging solutions comes up with more to explore. It provides wireless technology for drone towers, charging for laptop, and heavy duty commercial vehicles for industrial purpose. </h1>
-          <img src="../assets/products/range.png" alt="tyfhhhhhh" />
+          <img className='web' src="../assets/products/range.png" alt="tyfhhhhhh" />
+          <img className='mob' src="../assets/Home/homw_prod_mobile.png" alt="tyfhhhhhh" />
         </div>
 
         <div className="sec_2">
@@ -33,13 +34,23 @@ export default function Products() {
         </div>
 
         <div className="sec_3">
-          <img src="../assets/products/p1.png" alt="" />
-          <img src="../assets/products/p2.png" alt="" />
-          <img src="../assets/products/p3.png" alt="" />
-          <img src="../assets/products/p4.png" alt="" />
-          <img src="../assets/products/p5.png" alt="" />
-          <img src="../assets/products/p6.png" alt="" />
-          <img src="../assets/products/p7.png" alt="" />
+          <img className='web' src="../assets/products/p1.png" alt="" />
+          <img className='web' src="../assets/products/p2.png" alt="" />
+          <img className='web' src="../assets/products/p3.png" alt="" />
+          <img className='web' src="../assets/products/p4.png" alt="" />
+          <img className='web' src="../assets/products/p5.png" alt="" />
+          <img className='web' src="../assets/products/p6.png" alt="" />
+          <img className='web' src="../assets/products/p7.png" alt="" />
+
+
+          {/* //Mobile */}
+          <img className='mob' src="../assets/products/mp1.png" alt="" />
+          <img className='mob' src="../assets/products/mp2.png" alt="" />
+          <img className='mob' src="../assets/products/mp3.png" alt="" />
+          <img className='mob' src="../assets/products/mp4.png" alt="" />
+          <img className='mob' src="../assets/products/mp5.png" alt="" />
+          <img className='mob' src="../assets/products/mp6.png" alt="" />
+          <img className='mob' src="../assets/products/mp7.png" alt="" />
         </div>
 
     </div>

@@ -4733,28 +4733,43 @@
 
 #EV_Manufacturer {
   #EV_manuLanding {
-    .overlay {
-      background: linear-gradient(
-        180deg,
-        #ffffff 0%,
-        rgba(217, 217, 217, 0) 100%
-      );
-      z-index: 1;
-      height: 100vh;
-      width: 100vw;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
+    // .overlay {
+    //   background: linear-gradient(
+    //     180deg,
+    //     #ffffff 0%,
+    //     rgba(217, 217, 217, 0) 100%
+    //   );
+    //   z-index: 0;
+    //   height: 100vh;
+    //   width: 100vw;
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   @media screen and (max-width: 540px) {
+    //     height: 40vh;
+    //     width: 100vw;
+    //   }
+    // }
     .landing {
       background-image: url(../public/assets/EV_manufacturer/landing.png);
       text-align: left;
+      @media screen and (max-width: 540px) {
+        height: 40vh;
+        width: 100vw;
+      }
       h1 {
-        z-index: 2;
+        z-index: 1;
         position: absolute;
         top: 20vh;
         left: 30vw;
         color: #000000;
+        font-family: "artifakt";
+        @media screen and (max-width: 540px) {
+          font-size: 1.1rem;
+          top: 40%;
+          left: 10%;
+          font-weight: 600;
+        }
       }
     }
   }
@@ -4764,6 +4779,25 @@
     text-align: center;
     overflow: hidden;
     height: 100vh;
+    @media screen and (max-width: 540px) {
+      height: auto;
+      background-image: none;
+    }
+    .web {
+      // display: none !important;
+      @media screen and (max-width: 540px) {
+        display: none !important;
+      }
+    }
+
+    .mob {
+      @media screen and (min-width: 540px) {
+        display: none !important;
+        // width: 100vw !important;
+      }
+      // margin-top: 5%;
+      width: 100%;
+    }
 
     .col {
       overflow: hidden;
@@ -4791,8 +4825,9 @@
 
       h2 {
         font-family: "Artifakt";
-        font-size: 1.1rem;
-        font-weight: 500;
+        font-size: 1.2rem;
+        font-weight: 600;
+        width: 70%;
       }
     }
 

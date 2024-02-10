@@ -35,7 +35,6 @@ function Number({ n }) {
   );
 }
 
-
 const wirelessVariants = {
   hidden: {
     opacity: 0,
@@ -184,15 +183,19 @@ export default function Home() {
             <div className="title">
               <h1>TECHNOLOGY CURATOR </h1>
               <svg
-                width="13"
-                height="13"
-                viewBox="0 0 13 13"
+                width="494"
+                height="6"
+                viewBox="0 0 494 6"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <rect width="13" height="13" fill="black" />
+                <path
+                  d="M0.333333 3C0.333333 4.47276 1.52724 5.66667 3 5.66667C4.47276 5.66667 5.66667 4.47276 5.66667 3C5.66667 1.52724 4.47276 0.333333 3 0.333333C1.52724 0.333333 0.333333 1.52724 0.333333 3ZM3 3.5L494 3.49996L494 2.49996L3 2.5L3 3.5Z"
+                  fill="black"
+                />
               </svg>
-              <hr />
+
+              {/* <hr /> */}
             </div>
           )}
           <motion.div
@@ -707,40 +710,6 @@ export default function Home() {
             loop={true}
           />
         </div>
-
-        {!mobile && (
-          <motion.div
-            className="end_line"
-            variants={wirelessVariants}
-            initial="hiddenEnd"
-            whileInView="visibleEnd"
-          >
-            <svg
-              width="13"
-              height="13"
-              viewBox="0 0 13 13"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                width="13"
-                height="13"
-                transform="matrix(1 0 0 -1 0 13)"
-                fill="black"
-              />
-            </svg>
-
-            <svg
-              width="870"
-              height="2"
-              viewBox="0 0 870 2"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M0 1L911 0.99992" stroke="black" />
-            </svg>
-          </motion.div>
-        )}
       </div>
       <div className="product">
         <div className="title">
@@ -1186,14 +1155,14 @@ export default function Home() {
               HOW ABOUT SOME<span>NUMBERS</span>
             </h1>
             <svg
-              width="auto"
-              height="30"
-              viewBox="0 0 164 6"
+              width="953"
+              height="6"
+              viewBox="0 0 953 6"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M0.333333 3C0.333333 4.47276 1.52724 5.66667 3 5.66667C4.47276 5.66667 5.66667 4.47276 5.66667 3C5.66667 1.52724 4.47276 0.333333 3 0.333333C1.52724 0.333333 0.333333 1.52724 0.333333 3ZM164 3.50001C164.276 3.50001 164.5 3.27616 164.5 3.00001C164.5 2.72387 164.276 2.50001 164 2.50001L164 3.50001ZM3 3.5L164 3.50001L164 2.50001L3 2.5L3 3.5Z"
+                d="M0.333333 3C0.333333 4.47276 1.52724 5.66667 3 5.66667C4.47276 5.66667 5.66667 4.47276 5.66667 3C5.66667 1.52724 4.47276 0.333333 3 0.333333C1.52724 0.333333 0.333333 1.52724 0.333333 3ZM962 3.50008C962.276 3.50008 962.5 3.27623 962.5 3.00008C962.5 2.72394 962.276 2.50008 962 2.50008L962 3.50008ZM3 3.5L962 3.50008L962 2.50008L3 2.5L3 3.5Z"
                 fill="black"
               />
             </svg>

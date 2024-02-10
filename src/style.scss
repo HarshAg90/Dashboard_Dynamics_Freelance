@@ -347,8 +347,9 @@
           overflow: hidden;
           font-family: "artifakt", sans-serif;
           // margin: 20px;
-          font-size: 2rem;
-          font-weight: 400;
+          font-size: 1.8rem;
+          font-weight: 600;
+          margin-right: 10px;
         }
         hr {
           overflow: hidden;
@@ -380,7 +381,7 @@
           color: #bc0000;
           margin: 10px 0;
           font-size: 2rem;
-          font-weight: 400;
+          font-weight: 600;
         }
         p {
           overflow: hidden;
@@ -474,7 +475,7 @@
           h1 {
             overflow: hidden;
             font-size: 1.2rem;
-            font-weight: 700;
+            font-weight: 800;
             margin-bottom: 1em;
           }
         }
@@ -650,8 +651,9 @@
   .features {
     overflow: visible;
     font-family: "artifakt", sans-serif;
+    margin-bottom: 10vh;
     .title {
-      margin-bottom: 20vh;
+      margin-bottom: 5vh;
       @media screen and (max-width: 540px) {
         margin: 0;
       }
@@ -851,7 +853,7 @@
     }
   }
   .use_case {
-    margin-top: 20vh;
+    margin-top: 5vh;
     // background-image: url('../public/assets/Home/home_usecase_bg.png');
 
     @media screen and (max-width: 540px) {
@@ -1199,7 +1201,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
+
     .overlay {
       width: 100vw;
       height: 60vh;
@@ -1257,7 +1259,11 @@
   #Charge_page {
     height: 500vh;
     width: 100%;
-    background: linear-gradient(180deg, rgba(196, 199, 209, 0) 0%, #C4C7D1 100%);
+    background: linear-gradient(
+      180deg,
+      rgba(196, 199, 209, 0) 0%,
+      #c4c7d1 100%
+    );
 
     overflow: hidden;
 
@@ -1329,7 +1335,7 @@
       }
     }
 
-    .carMob{
+    .carMob {
       margin-top: 10%;
       display: flex;
       justify-content: center;
@@ -1382,7 +1388,7 @@
     @media screen and (max-width: 540px) {
       flex-direction: column;
     }
-    
+
     .image {
       overflow: hidden;
       width: 30vw;
@@ -1428,7 +1434,7 @@
           // height: auto;
         }
 
-        .chakr{
+        .chakr {
           width: 25%;
           @media screen and (max-width: 540px) {
             width: 15%;
@@ -1441,7 +1447,6 @@
             text-align: justify;
             font-size: 0.9rem;
           }
-          
         }
       }
     }
@@ -1449,7 +1454,7 @@
 }
 
 #Footer {
-  height: 900px;
+  height: 700px;
   position: relative;
   font-family: "artifakt", sans-serif;
   .data {
@@ -2409,6 +2414,7 @@
         border-bottom: 1px solid black;
         width: 500px;
         padding: 10px 20px;
+        font-weight: 600;
         cursor: pointer;
       }
 
@@ -2617,7 +2623,6 @@
     }
   }
 
-
   .web {
     // display: none !important;
     @media screen and (max-width: 540px) {
@@ -2637,7 +2642,7 @@
     // max-height: 100%;
     height: auto;
     overflow: hidden;
-    
+
     background: linear-gradient(
       0deg,
       #bca7b1 -26.12%,
@@ -2647,7 +2652,7 @@
     @media screen and (max-width: 540px) {
       background-image: url(../public/assets/Fleets/fleetBg.png);
       background-repeat: no-repeat;
-    background-size: cover;
+      background-size: cover;
     }
 
     .txt {
@@ -4495,19 +4500,19 @@
           grid-row-gap: 0px;
         }
 
-        .m1{
+        .m1 {
           @media screen and (max-width: 540px) {
             grid-area: 1 / 1 / 2 / 2;
           }
         }
 
-        .m2{
+        .m2 {
           @media screen and (max-width: 540px) {
             grid-area: 1 / 2 / 2 / 3;
           }
         }
 
-        .m3{
+        .m3 {
           @media screen and (max-width: 540px) {
             grid-area: 2 / 1 / 3 / 2;
           }
@@ -4599,7 +4604,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      img{
+      img {
         margin-top: 5%;
         width: 70%;
       }
@@ -5717,10 +5722,10 @@
     }
   }
   .div_2 {
-    height: 55vh;
+    height: 30vh;
     overflow: hidden;
     display: flex;
-    padding: 50px 0px;
+    padding: 30px 0px;
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
@@ -5882,7 +5887,7 @@
     align-items: center;
     margin: 20px 0px;
     position: relative;
-    min-height: 110vh;
+    min-height: 90vh;
     img {
       height: 40vh;
       position: absolute;

@@ -964,17 +964,16 @@ export default function About() {
       <div className="div_heading">
         <motion.div className="head">
           <motion.svg
-            width="704"
-            height="18"
-            viewBox="0 0 704 18"
+            width="716"
+            height="28"
+            viewBox="0 0 716 28"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            variants={lftRightVariant}
-            initial="hidden"
-            whileInView="visible"
           >
-            <path d="M-123 9L702 8.99993" stroke="#CD222A" stroke-width="5" />
-            <rect x="683" width="21" height="18" fill="#CD222A" />
+            <path
+              d="M688.667 13.9999C688.667 21.3637 694.636 27.3333 702 27.3333C709.364 27.3333 715.333 21.3637 715.333 13.9999C715.333 6.63613 709.364 0.666594 702 0.666595C694.636 0.666596 688.667 6.63613 688.667 13.9999ZM-123 16.5L702 16.4999L702 11.4999L-123 11.5L-123 16.5Z"
+              fill="#CD222A"
+            />
           </motion.svg>
 
           <h1>WIRELESS CHARGING NETWORK STATIONS</h1>
@@ -1008,20 +1007,14 @@ export default function About() {
         <div className="head odd">
           <h1>DRONE TOWERS</h1>
           <motion.svg
-            width="834"
-            height="18"
-            viewBox="0 0 834 18"
+            width="750"
+            height="28"
+            viewBox="0 0 750 28"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            variants={rightLftVariant}
-            initial="hidden"
-            whileInView="visible"
           >
-            <path d="M898 9L2 9" stroke="#CD222A" stroke-width="5" />
-            <rect
-              width="21"
-              height="18"
-              transform="matrix(-1 0 0 1 21 0)"
+            <path
+              d="M27.3333 14C27.3333 6.6362 21.3638 0.666667 14 0.666667C6.63623 0.666667 0.666687 6.6362 0.666687 14C0.666687 21.3638 6.63623 27.3333 14 27.3333C21.3638 27.3333 27.3333 21.3638 27.3333 14ZM910 11.5L14 11.5V16.5L910 16.5V11.5Z"
               fill="#CD222A"
             />
           </motion.svg>
@@ -1052,17 +1045,16 @@ export default function About() {
       <div className="div_heading">
         <div className="head">
           <motion.svg
-            width="704"
-            height="18"
-            viewBox="0 0 704 18"
+            width="716"
+            height="28"
+            viewBox="0 0 716 28"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            variants={lftRightVariant}
-            initial="hidden"
-            whileInView="visible"
           >
-            <path d="M-123 9L702 8.99993" stroke="#CD222A" stroke-width="5" />
-            <rect x="683" width="21" height="18" fill="#CD222A" />
+            <path
+              d="M688.667 13.9999C688.667 21.3637 694.636 27.3333 702 27.3333C709.364 27.3333 715.333 21.3637 715.333 13.9999C715.333 6.63613 709.364 0.666594 702 0.666595C694.636 0.666596 688.667 6.63613 688.667 13.9999ZM-123 16.5L702 16.4999L702 11.4999L-123 11.5L-123 16.5Z"
+              fill="#CD222A"
+            />
           </motion.svg>
 
           <h1>SUSTAINABLE FUTURE</h1>

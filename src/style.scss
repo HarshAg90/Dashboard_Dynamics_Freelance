@@ -239,25 +239,6 @@
   }
 }
 
-// #Charge_landing {
-//   background-image: url(../public/assets/charge/charge_landing.png);
-
-//   h1 {
-//     background: rgb(0, 0, 0);
-//     background: linear-gradient(
-//       180deg,
-//       rgba(0, 0, 0, 1) 37%,
-//       rgba(116, 116, 116, 1) 91%
-//     );
-//     -webkit-background-clip: text;
-//     -webkit-text-fill-color: transparent;
-//     top: 40%;
-//     left: 40%;
-//     font-size: 2.7rem;
-//     font-weight: 400;
-//     transform: translate(-50%, -50%);
-//   }
-// }
 #Home {
   position: relative;
   border-top: 1px solid black;
@@ -366,8 +347,9 @@
           overflow: hidden;
           font-family: "artifakt", sans-serif;
           // margin: 20px;
-          font-size: 2rem;
-          font-weight: 400;
+          font-size: 1.8rem;
+          font-weight: 600;
+          margin-right: 10px;
         }
         hr {
           overflow: hidden;
@@ -399,7 +381,7 @@
           color: #bc0000;
           margin: 10px 0;
           font-size: 2rem;
-          font-weight: 400;
+          font-weight: 600;
         }
         p {
           overflow: hidden;
@@ -493,7 +475,7 @@
           h1 {
             overflow: hidden;
             font-size: 1.2rem;
-            font-weight: 700;
+            font-weight: 800;
             margin-bottom: 1em;
           }
         }
@@ -669,8 +651,9 @@
   .features {
     overflow: visible;
     font-family: "artifakt", sans-serif;
+    margin-bottom: 10vh;
     .title {
-      margin-bottom: 20vh;
+      margin-bottom: 5vh;
       @media screen and (max-width: 540px) {
         margin: 0;
       }
@@ -870,7 +853,7 @@
     }
   }
   .use_case {
-    margin-top: 20vh;
+    margin-top: 5vh;
     // background-image: url('../public/assets/Home/home_usecase_bg.png');
 
     @media screen and (max-width: 540px) {
@@ -1213,11 +1196,12 @@
   overflow: hidden;
   #Charge_landing {
     background-image: url(../public/assets/charge/charge_landing.png);
-    min-height: 100vh;
+    height: 100%;
     position: relative;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
     .overlay {
       width: 100vw;
       height: 60vh;
@@ -1229,6 +1213,15 @@
         #ffffff 0%,
         rgba(217, 217, 217, 0) 100%
       );
+      @media screen and (max-width: 540px) {
+        height: 40vh !important;
+        width: 100vw !important;
+      }
+    }
+
+    @media screen and (max-width: 540px) {
+      height: 40vh !important;
+      width: 100vw !important;
     }
     h1 {
       position: absolute;
@@ -1238,18 +1231,45 @@
       font-size: 2.7rem;
       font-weight: 400;
       width: 70vw;
-      // transform: translate(-50%, -50%);
       color: black;
       line-gap-override: 10px;
-      // background-color: #000;
+      @media screen and (max-width: 540px) {
+        margin-top: 25%;
+        width: 100%;
+        font-size: 0.85rem;
+        top: 40%;
+        left: 5%;
+        font-weight: 500;
+      }
+    }
+  }
+  .web {
+    // display: none !important;
+    @media screen and (max-width: 540px) {
+      display: none !important;
     }
   }
 
+  .mob {
+    @media screen and (min-width: 540px) {
+      display: none !important;
+      // width: 100vw !important;
+    }
+  }
   #Charge_page {
     height: 500vh;
     width: 100%;
-    background-color: #c4c7d1;
+    background: linear-gradient(
+      180deg,
+      rgba(196, 199, 209, 0) 0%,
+      #c4c7d1 100%
+    );
+
     overflow: hidden;
+
+    @media screen and (max-width: 540px) {
+      height: 70vh;
+    }
 
     .carSection {
       transition: transform 0.2s ease;
@@ -1289,6 +1309,11 @@
       );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+
+      @media screen and (max-width: 540px) {
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
     }
     .subHeading {
       overflow: visible;
@@ -1299,6 +1324,23 @@
       margin-top: 4.5vh;
       font-weight: 400;
       font-size: 1.2rem;
+      @media screen and (max-width: 540px) {
+        font-size: 0.9rem;
+        text-align: justify;
+        margin-top: 2%;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        // white-space: nowrap;
+      }
+    }
+
+    .carMob {
+      margin-top: 10%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 5%;
     }
 
     .cars {
@@ -1342,6 +1384,11 @@
       rgba(211, 213, 222, 1) 1%,
       rgba(255, 255, 255, 1) 39%
     );
+
+    @media screen and (max-width: 540px) {
+      flex-direction: column;
+    }
+
     .image {
       overflow: hidden;
       width: 30vw;
@@ -1349,10 +1396,24 @@
       margin: 10px;
       img {
         height: 500px;
+        @media screen and (max-width: 540px) {
+          height: auto;
+        }
+      }
+
+      @media screen and (max-width: 540px) {
+        margin-top: 5%;
+        width: 40%;
+        padding: 0;
+        margin: 0;
+        height: 10% !important;
       }
     }
     .about {
       width: 60vw;
+      @media screen and (max-width: 540px) {
+        width: 100%;
+      }
       .content {
         display: flex;
         justify-content: center;
@@ -1360,14 +1421,32 @@
         margin: 20px 10px;
         margin-top: 50px;
         margin-bottom: 70px;
+        @media screen and (max-width: 540px) {
+          flex-direction: column;
+          align-items: center;
+        }
         img {
           margin: 5px 10px;
-          width: 10vw;
+          width: 40%;
+          @media screen and (max-width: 540px) {
+            width: 25%;
+          }
           // height: auto;
+        }
+
+        .chakr {
+          width: 25%;
+          @media screen and (max-width: 540px) {
+            width: 15%;
+          }
         }
         p {
           font-size: 1.2rem;
           font-family: "artifakt", sans-serif;
+          @media screen and (max-width: 540px) {
+            text-align: justify;
+            font-size: 0.9rem;
+          }
         }
       }
     }
@@ -1375,7 +1454,7 @@
 }
 
 #Footer {
-  height: 900px;
+  height: 700px;
   position: relative;
   font-family: "artifakt", sans-serif;
   .data {
@@ -2335,6 +2414,7 @@
         border-bottom: 1px solid black;
         width: 500px;
         padding: 10px 20px;
+        font-weight: 600;
         cursor: pointer;
       }
 
@@ -2518,23 +2598,22 @@
     background-image: url(../public/assets/Fleets/fleet_landing.png);
     font-family: "monogram", sans-serif;
     position: relative;
-    .gradient {
-      position: absolute;
-      width: 100%;
-      height: 70vh;
-      background: rgb(88, 116, 143);
-      background: linear-gradient(
-        180deg,
-        rgba(108, 144, 179, 0.7120098039215687) 12%,
-        rgba(255, 255, 255, 0) 65%
-      );
+    @media screen and (max-width: 540px) {
+      height: 40vh;
+      width: 100vw;
     }
     h1 {
-      top: 40%;
+      top: 80%;
       left: 50%;
       font-size: 3.2rem;
       font-weight: 400;
       width: 80%;
+      @media screen and (max-width: 540px) {
+        margin-top: 25%;
+        width: 100%;
+        font-size: 0.85rem;
+        top: 40%;
+      }
 
       transform: translate(-50%, -50%);
       background: rgb(0, 0, 0);
@@ -2544,25 +2623,53 @@
     }
   }
 
+  .web {
+    // display: none !important;
+    @media screen and (max-width: 540px) {
+      display: none !important;
+    }
+  }
+
+  .mob {
+    @media screen and (min-width: 540px) {
+      display: none !important;
+      // width: 100vw !important;
+    }
+  }
+
   .nextPg {
-    max-width: 100%; /* Set the maximum width of the container */
-    max-height: 100%;
+    // max-width: 100%; /* Set the maximum width of the container */
+    // max-height: 100%;
     height: auto;
     overflow: hidden;
+
     background: linear-gradient(
       0deg,
       #bca7b1 -26.12%,
       rgba(188, 167, 177, 0) 99.6%
     );
 
+    @media screen and (max-width: 540px) {
+      background-image: url(../public/assets/Fleets/fleetBg.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
     .txt {
-      z-index: 1;
+      z-index: 5;
       display: flex;
       gap: 5vw;
       margin: auto 7vw;
       margin-top: 5vh;
       font-family: "artifakt", sans-serif;
       overflow: visible;
+      margin-bottom: 10%;
+
+      @media screen and (max-width: 540px) {
+        flex-direction: column;
+        gap: 5vh;
+        margin-bottom: 70%;
+      }
 
       .head {
         z-index: 1;
@@ -2572,12 +2679,19 @@
         font-weight: 700;
         margin-bottom: 5vh;
         font-size: 1.15rem;
+        @media screen and (max-width: 540px) {
+          font-size: 1rem;
+          margin-bottom: 1%;
+        }
       }
 
       .subHead {
         text-align: justify;
         font-size: 16px;
         z-index: 1;
+        @media screen and (max-width: 540px) {
+          font-size: 0.8rem;
+        }
       }
       .thd {
         overflow: visible;
@@ -4250,6 +4364,10 @@
   .landing {
     background-image: url(../public/assets/Board_members/landing.png);
     color: #000;
+    @media screen and (max-width: 540px) {
+      height: 40vh;
+      width: 100vw;
+    }
     h1 {
       width: 100%;
       text-align: center;
@@ -4259,8 +4377,14 @@
       align-items: center;
       font-family: "artifakt";
       margin-top: 40vh;
-
       color: #525050;
+      @media screen and (max-width: 540px) {
+        margin-top: 25%;
+        width: 100%;
+        font-size: 0.85rem;
+        top: 40%;
+        font-weight: 500;
+      }
     }
   }
 
@@ -4286,13 +4410,17 @@
         text-align: center;
 
         color: #000000;
-        border: 0.5px solid #000000;
+        // border: 0.5px solid #000000;
         border-radius: 50px;
 
         margin-top: 10vh;
         padding-top: 10px;
         padding-bottom: 10px;
         margin-bottom: 10px;
+        @media screen and (max-width: 540px) {
+          width: 80%;
+          font-size: 0.9rem;
+        }
 
         /* Add the box shadow */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adjust values as needed */
@@ -4313,6 +4441,10 @@
 
         img {
           width: 28vw;
+          @media screen and (max-width: 540px) {
+            width: 47vw;
+            // font-size: 0.85rem;
+          }
         }
 
         .member {
@@ -4335,6 +4467,10 @@
             font-size: 1.8rem;
             align-self: flex-end;
             transform: translate(-140%, -270%);
+            @media screen and (max-width: 540px) {
+              // width: 47vw;
+              font-size: 0.85rem;
+            }
           }
         }
       }
@@ -4356,8 +4492,38 @@
         align-items: start;
         gap: 5vw;
 
+        @media screen and (max-width: 540px) {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          grid-column-gap: 0px;
+          grid-row-gap: 0px;
+        }
+
+        .m1 {
+          @media screen and (max-width: 540px) {
+            grid-area: 1 / 1 / 2 / 2;
+          }
+        }
+
+        .m2 {
+          @media screen and (max-width: 540px) {
+            grid-area: 1 / 2 / 2 / 3;
+          }
+        }
+
+        .m3 {
+          @media screen and (max-width: 540px) {
+            grid-area: 2 / 1 / 3 / 2;
+          }
+        }
+
         img {
           width: 28vw;
+          @media screen and (max-width: 540px) {
+            width: 47vw;
+            // font-size: 0.85rem;
+          }
         }
 
         .member {
@@ -4380,6 +4546,10 @@
             font-size: 1.8rem;
             align-self: flex-end;
             transform: translate(-140%, -270%);
+            @media screen and (max-width: 540px) {
+              // width: 47vw;
+              font-size: 0.85rem;
+            }
           }
         }
       }
@@ -4392,98 +4562,58 @@
   }
 
   .partners {
-    height: 100vh;
-    .heading {
-      width: 35vw;
-      height: auto;
-
-      font-family: "Artifakt";
-      font-style: normal;
-      font-weight: 900;
-      font-size: 28px;
-      // line-height: 31px;
-      text-align: center;
-
-      color: #000000;
-      border: 2px solid #8e8787;
-      border-radius: 5px;
-
-      margin-top: 10vh;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      margin-left: 50vw;
-    }
-
-    .fstLine {
-      height: 5vh;
-      margin-top: 15vh;
+    height: auto;
+    .head {
+      width: 100%;
       display: flex;
+      justify-content: center;
       align-items: center;
-      justify-content: flex-end;
-      hr {
-        height: 3px;
-        width: 70%;
-        border: none; /* Removes the default border */
-        border-top: 3px solid #000000; /* Sets the top border to a solid line */
-      }
-      .sqr {
-        height: 14px;
-        width: 13px;
-        background-color: #000000;
-      }
-    }
+      .subHeading {
+        width: 40%;
+        height: auto;
 
-    .container {
-      width: 100vw;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      .lft,
-      .rght {
-        min-width: 10vw;
-        height: 40vh;
-        background-color: #f9f9f9;
-      }
-      .parteners_li {
-        min-width: 80vw;
-        overflow: visible;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        img {
-          overflow: hidden !important;
-          height: 100%;
-          width: 100%;
-          margin: 20px;
-          padding: 20px;
+        font-family: "Artifakt";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 28px;
+        text-align: center;
+
+        color: #000000;
+        // border: 0.5px solid #000000;
+        border-radius: 50px;
+
+        margin-top: 10vh;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        @media screen and (max-width: 540px) {
+          width: 80%;
+          font-size: 0.9rem;
         }
-        .carouselKaItem {
-          overflow: visible;
-          width: 80vw;
-          height: 30vh;
-          .slick-dots {
-            // overflow: visible;
-          }
-        }
+
+        /* Add the box shadow */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adjust values as needed */
       }
     }
 
-    .lstLine {
-      height: 5vh;
-      margin-top: 5vh;
+    .web {
+      // display: none !important;
+      @media screen and (max-width: 540px) {
+        display: none !important;
+      }
       display: flex;
       align-items: center;
-      justify-content: flex-start;
-      hr {
-        height: 3px;
+      justify-content: center;
+      img {
+        margin-top: 5%;
         width: 70%;
-        border: none; /* Removes the default border */
-        border-top: 3px solid #000000; /* Sets the top border to a solid line */
       }
-      .sqr {
-        height: 14px;
-        width: 13px;
-        background-color: #000000;
+    }
+
+    .mob {
+      @media screen and (min-width: 540px) {
+        display: none !important;
+        // width: 100vw !important;
       }
     }
   }
@@ -4608,28 +4738,26 @@
 
 #EV_Manufacturer {
   #EV_manuLanding {
-    .overlay {
-      background: linear-gradient(
-        180deg,
-        #ffffff 0%,
-        rgba(217, 217, 217, 0) 100%
-      );
-      z-index: 1;
-      height: 100vh;
-      width: 100vw;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
     .landing {
       background-image: url(../public/assets/EV_manufacturer/landing.png);
       text-align: left;
+      @media screen and (max-width: 540px) {
+        height: 40vh;
+        width: 100vw;
+      }
       h1 {
-        z-index: 2;
+        z-index: 1;
         position: absolute;
         top: 20vh;
         left: 30vw;
         color: #000000;
+        font-family: "artifakt";
+        @media screen and (max-width: 540px) {
+          font-size: 1.1rem;
+          top: 40%;
+          left: 10%;
+          font-weight: 600;
+        }
       }
     }
   }
@@ -4639,6 +4767,25 @@
     text-align: center;
     overflow: hidden;
     height: 100vh;
+    @media screen and (max-width: 540px) {
+      height: auto;
+      background-image: none;
+    }
+    .web {
+      // display: none !important;
+      @media screen and (max-width: 540px) {
+        display: none !important;
+      }
+    }
+
+    .mob {
+      @media screen and (min-width: 540px) {
+        display: none !important;
+        // width: 100vw !important;
+      }
+      // margin-top: 5%;
+      width: 100%;
+    }
 
     .col {
       overflow: hidden;
@@ -4666,8 +4813,9 @@
 
       h2 {
         font-family: "Artifakt";
-        font-size: 1.1rem;
-        font-weight: 500;
+        font-size: 1.2rem;
+        font-weight: 600;
+        width: 70%;
       }
     }
 
@@ -5574,10 +5722,10 @@
     }
   }
   .div_2 {
-    height: 55vh;
+    height: 30vh;
     overflow: hidden;
     display: flex;
-    padding: 50px 0px;
+    padding: 30px 0px;
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
@@ -5739,7 +5887,7 @@
     align-items: center;
     margin: 20px 0px;
     position: relative;
-    min-height: 110vh;
+    min-height: 90vh;
     img {
       height: 40vh;
       position: absolute;

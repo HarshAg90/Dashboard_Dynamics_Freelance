@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import {motion, useScroll, useTransform} from "framer-motion";
 // import Sticky from 'react-stickynode';
 import Sticky from 'react-sticky-el';
+import { isMobile } from "react-device-detect";
 
 
 
@@ -12,7 +13,7 @@ export default function Charge_final (){
     target: targetRef,
     offset: ["start end", "end start"],
   });
-
+ 
   //CAR ANIMATION
   const carInitialX = useTransform(scrollYProgress, [0, 0.18, 0.28, 0.37], ["80%", "0%", "0%", "-70%"]);
   const carFinalY = useTransform(scrollYProgress, [0.28, 0.37, 0.6, 0.8 ], ["0%","45%", "45%", "170%"]);
@@ -41,71 +42,111 @@ export default function Charge_final (){
     
     <motion.div ref={targetRef} id='Charge_page' >
 
-      <Sticky  Sticky enabled={true} bottomBoundary="#Charge_page" innerZ={2}> 
+    {!isMobile ? (
+        <Sticky  Sticky enabled={true} bottomBoundary="#Charge_page" innerZ={2}> 
       
-            <motion.div className="carSection" style={{opacity: pgOpacity, scale: pgScale}}>
+        <motion.div className="carSection" style={{opacity: pgOpacity, scale: pgScale}}>
 
-            <div className="heading">
-        <h1>CHARGE POINT OPERATORS</h1>
-      </div>
-      <div className="subHeading">
-        <h5>
-        Unlock the full potential of your charging infrastructure with Dash Dynamic. Our comprehensive wireless charging<br/>solution enhances operational efficiency and user experience, empowering Charge Point Operators (CPOs) to stay ahead<br/>in the evolving EV market.
-        </h5>
-      </div>
+        <div className="heading">
+    <h1>CHARGE POINT OPERATORS</h1>
+  </div>
+  <div className="subHeading">
+    <h5>
+    Unlock the full potential of your charging infrastructure with Dash Dynamic. Our comprehensive wireless charging {!isMobile ? (
+    <br/>
+  ) : null} solution enhances operational efficiency and user experience, empowering Charge Point Operators (CPOs) to stay ahead{!isMobile ? (
+    <br/>
+  ) : null}in the evolving EV market.
+    </h5>
+  </div>
+
+  <img className='mob carMob' src="../assets/charge/carMob.png" alt="" />
+
+  
+
+  <div className="web cars">
+  <motion.img src="../assets/charge/chargerTopFull.png" alt="" className="charger" style={{opacity: chargerOpacity}}/>
+
+  <motion.img src="../assets/charge/car.png" alt="" className="car"
+style={{x: carInitialX, rotate: carRotation, y: carFinalY, opacity: carFinalOpacity, scale: carScale}}/>
+
+  <motion.img src='../assets/charge/initLine.png' className='initLine' style={{opacity}}></motion.img> 
+
+  <motion.img src='../assets/charge/finalLine.png' className='finalLine' style={{opacity: opacityFinal, x: xLineFinal}}></motion.img> 
+  </div>
+
+</motion.div>
+</Sticky>
+      ) : 
+      <motion.div className="carSection" style={{opacity: pgOpacity, scale: pgScale}}>
+
+        <div className="heading">
+    <h1>CHARGE POINT OPERATORS</h1>
+  </div>
+  <div className="subHeading">
+    <h5>
+    Unlock the full potential of your charging infrastructure with Dash Dynamic. Our comprehensive wireless charging {!isMobile ? (
+    <br/>
+  ) : null} solution enhances operational efficiency and user experience, empowering Charge Point Operators (CPOs) to stay ahead{!isMobile ? (
+    <br/>
+  ) : null}in the evolving EV market.
+    </h5>
+  </div>
+
+  <img className='mob carMob' src="../assets/charge/carMob.png" alt="" />
+
+  
+
+  <div className="web cars">
+  <motion.img src="../assets/charge/chargerTopFull.png" alt="" className="charger" style={{opacity: chargerOpacity}}/>
+
+  <motion.img src="../assets/charge/car.png" alt="" className="car"
+style={{x: carInitialX, rotate: carRotation, y: carFinalY, opacity: carFinalOpacity, scale: carScale}}/>
+
+  <motion.img src='../assets/charge/initLine.png' className='initLine' style={{opacity}}></motion.img> 
+
+  <motion.img src='../assets/charge/finalLine.png' className='finalLine' style={{opacity: opacityFinal, x: xLineFinal}}></motion.img> 
+  </div>
+
+</motion.div>}
 
       
-
-      <div className="cars">
-      <motion.img src="../assets/charge/chargerTopFull.png" alt="" className="charger" style={{opacity: chargerOpacity}}/>
-
-      <motion.img src="../assets/charge/car.png" alt="" className="car"
-    style={{x: carInitialX, rotate: carRotation, y: carFinalY, opacity: carFinalOpacity, scale: carScale}}/>
-
-      <motion.img src='../assets/charge/initLine.png' className='initLine' style={{opacity}}></motion.img> 
-
-      <motion.img src='../assets/charge/finalLine.png' className='finalLine' style={{opacity: opacityFinal, x: xLineFinal}}></motion.img> 
-      </div>
-
-    </motion.div>
-    </Sticky>
       </motion.div>
     
-    
-      
-
-    
-
-
     {/* //CHARGE ABOUT */}
 
     <div id="Charge_about">
       <div className="image">
-      <motion.img src="../assets/product.png" alt=""
-          whileHover={{
-            scale: 1.2
-          }}
-          whileTap={{
-            scale: 1
-          }}
-          whileInView={{
-            x: 0,
-            opacity: 1
-          }}
-            initial={{
-              x: -90,
-              scale: 1.05,
-              opacity: 0
-            }}
-            transition={{
-              type: "spring",
-              stiffness: 50,
-            }}
-        />
+      {!isMobile ? (
+    <motion.img src="../assets/product.png" alt=""
+    whileHover={{
+      scale: 1.2
+    }}
+    whileTap={{
+      scale: 1
+    }}
+    whileInView={{
+      x: 0,
+      opacity: 1
+    }}
+      initial={{
+        x: -90,
+        scale: 1.05,
+        opacity: 0
+      }}
+      transition={{
+        type: "spring",
+        stiffness: 50,
+      }}
+  />
+  ) : 
+      <img src="../assets/product.png" alt="" />
+  }
+      
       </div>
       <div className="about">
       <motion.div className="content">
-          <img src="../assets/bullet_pic.png" alt="" className="bullet"/>
+          <img src="../assets/charge/l1.png" alt="" className="bullet"/>
           <motion.p
           whileInView={{
             x: 0,
@@ -126,7 +167,7 @@ This enables operators to increase their revenue potential by serving a larger c
         </motion.div>
         <motion.div className="content"
         >
-          <img src="../assets/bullet_pic.png" alt="" className="bullet" />
+          <img src="../assets/charge/l2.png" alt="" className="bullet" />
           <motion.p
           whileInView={{
             x: 0,
@@ -146,7 +187,7 @@ The wireless charging technology is designed to be user-friendly, so it streamli
           </motion.p>
         </motion.div>
         <motion.div className="content" >
-        <img src="../assets/bullet_pic.png" alt="" className="bullet" />
+        <img src="../assets/charge/l3.png" alt="" className="bullet chakr" />
           <motion.p
           whileInView={{
             x: 0,

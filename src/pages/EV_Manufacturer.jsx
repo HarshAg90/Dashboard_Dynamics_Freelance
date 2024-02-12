@@ -28,8 +28,9 @@ export default function EV_Manufacturer() {
     <div id="EV_Manufacturer">
       <EV_manuLanding />
 
-      <div ref={heroRef} className="hero basicLand">
+      <div ref={heroRef} className="hero">
         <svg
+        className="web"
           width="874"
           height="632"
           viewBox="0 0 874 632"
@@ -73,17 +74,19 @@ export default function EV_Manufacturer() {
             </linearGradient>
           </defs>
         </svg>
-        <div className="col">
+        <div className="col web">
           <h2>
-            Retrofitting existing EV models with wireless charging technology
-            poses challenges for manufacturers, leading to delays <br /> in
-            product launches and potential disruptions in the pricing structure.
+          At the forefront of EV innovation, addressing the challenge of integrating wireless charging technology into EV systems,
+          we offer a definitive solution, while optimizing infrastructure and extending battery life. We empower manufacturers
+          to drive the EV revolution.
           </h2>
           <img src="../assets/EV_manufacturer/car.png" alt="CAR" />
           <h2 className="downHead">
             A Retrofitted Accessary for your electric.
           </h2>
         </div>
+
+        <img className="mob" src="../assets/EV_manufacturer/mobManu.png" alt="edehjfeuj" />
       </div>
 
       <div className="scndPg">

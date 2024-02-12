@@ -9,7 +9,7 @@ export default function Charge_landing() {
     target: targetRef,
     offset: ["end end", "end start"],
   });
-
+ 
 
   //LANDING PG ANIMATION
   const opacity = useTransform(scrollYProgress, [0, 0.95], [1, isMobile ? 1:  0]);

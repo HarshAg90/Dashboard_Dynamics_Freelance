@@ -14,6 +14,23 @@
   overflow-x: hidden;
 }
 
+
+
+// .video-responsive {
+//   overflow: visible;
+//   padding-bottom: 56.25%;
+//   position: relative;
+//   height: 0;
+// }
+
+// .video-responsive iframe {
+//   left: 0;
+//   top: 0;
+//   height: 100%;
+//   width: 100%;
+//   position: absolute;
+// }
+
 #speedometer {
   font-family: "artifakt";
 
@@ -443,6 +460,7 @@
       @media screen and (max-width: 500px) {
         width: 100vw;
         height: fit-content;
+        margin-bottom: 5%;
         // flex-direction: column;
       }
       .tile {
@@ -625,17 +643,45 @@
       align-items: center;
     }
 
-    .videoWrapper {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: 115vh;
+    .embedVideo iframe{
+      height: 100%;
+      width: 10%;
+      position: absolute;
       @media screen and (max-width: 500px) {
-        width: 100vw;
-        height: fit-content !important;
-      }
+        //     width: 100%;
+        //     height: fit-content !important;
+          }
     }
+
+    // .videoWrapper {
+    //   display: flex;
+    //   justify-content: center;
+    //   align-items: center;
+    //   width: 100%;
+    //   height: 115vh;
+    //   border: none;
+    //   padding: 0;
+    //   margin: 0;
+    //   @media screen and (max-width: 500px) {
+    //     width: 100%;
+    //     height: fit-content !important;
+    //   }
+    // }
+
+    // .video-responsive {
+    //   overflow: visible;
+    //   padding-bottom: 56.25%;
+    //   position: relative;
+    //   height: 0;
+    // }
+    
+    // .video-responsive iframe {
+    //   left: 0;
+    //   top: 0;
+    //   height: 100%;
+    //   width: 100%;
+    //   position: absolute;
+    // }
 
     @media (min-width: 1800px) {
       .videoWrapper {
@@ -651,11 +697,12 @@
   .features {
     overflow: visible;
     font-family: "artifakt", sans-serif;
-    margin-bottom: 10vh;
+    margin-bottom: 2%;
     .title {
       margin-bottom: 5vh;
       @media screen and (max-width: 540px) {
         margin: 0;
+        margin-bottom: 5%;
       }
       // margin: 20vh 0px;
       font-family: "artifakt", sans-serif;
@@ -689,10 +736,19 @@
           overflow: visible;
           height: 70px;
           @media screen and (max-width: 540px) {
-            width: 40px;
+            width: 20%;
             height: auto;
-            max-height: 40px;
-            margin-right: 20px;
+            // max-height: 40px;
+            margin-right: 5%;
+          }
+        }
+        .smallIt{
+          @media screen and (max-width: 540px) {
+            width: 13%;
+            height: auto;
+            // max-height: 40px;
+            margin-right: 10%;
+            margin-left: 2%;
           }
         }
         p {
@@ -822,6 +878,14 @@
           width: 100vw;
           height: fit-content;
         }
+        .bigIt{
+          svg{
+            @media screen and (max-width: 540px) {
+              width: 25% !important;
+              // margin-right: 2%;
+            }
+          }
+        }
         .innr {
           height: 15rem;
         }
@@ -869,7 +933,7 @@
 
       @media screen and (max-width: 540px) {
         height: auto;
-        margin-bottom: 10vh;
+        margin-bottom: 3%;
         gap: 5px;
       }
       .part {
@@ -1161,6 +1225,10 @@
           width: 100%;
           margin: 20px;
           padding: 20px;
+          @media screen and (max-width: 540px) {
+            margin: 0;
+            padding: 0;
+          }
         }
         .carouselKaItem {
           overflow: visible;

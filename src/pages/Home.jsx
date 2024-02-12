@@ -6,6 +6,7 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
+import YoutubeEmbed from "../components/YoutubeEmbed"
 import HomeLanding from "../components/HomeLanding";
 import Speedometer1 from "../components/speedometer_One";
 import Speedometer2 from "../components/speedometer_Two";
@@ -127,15 +128,15 @@ export default function Home() {
       setMobile(false);
     }
   }, []);
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries, observer) => {
-      const entry = entries[0];
-      console.log("entry", entry);
-      console.log("entry.isIntersecting", entry.isIntersecting);
-      updateMyElementIsVisible(entry.isIntersecting);
-    });
-    observer.observe(myRef.current);
-  }, []);
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver((entries, observer) => {
+  //     const entry = entries[0];
+  //     console.log("entry", entry);
+  //     console.log("entry.isIntersecting", entry.isIntersecting);
+  //     updateMyElementIsVisible(entry.isIntersecting);
+  //   });
+  //   observer.observe(myRef.current);
+  // }, []);
 
   const slider = React.useRef(null);
 
@@ -146,7 +147,7 @@ export default function Home() {
     arrows: false,
     autoplay: true,
     autoplaySpeed: 3000,
-    slidesToShow: mobile ? 2 : 3,
+    slidesToShow: mobile ? 1 : 3,
     slidesToScroll: 1,
     // prevArrow: <CustomPrevArrow />,
     // nextArrow: <CustomNextArrow />
@@ -601,7 +602,7 @@ export default function Home() {
               stiffness: 60,
             }}
           >
-            <img src="../assets/Home/home_3_1.png" alt="" />
+            <img className="smallIt" src="../assets/Home/home_3_1.png" alt="" />
             <p>Mobile-operated</p>
           </motion.div>
           <motion.div
@@ -698,7 +699,9 @@ export default function Home() {
           </motion.div>
           <button>Dive In</button>
         </div>
-        <div ref={myRef} className="videoWrapper">
+
+        <YoutubeEmbed className="embedVideo" embedId="Lmt_CGlEQ-4?si=YtgSOdfmSPiWzwSR&amp;start=14" />
+        {/* <div ref={myRef} className="videoWrapper">
           <ReactPlayer
             url="https://www.youtube.com/watch?v=Lmt_CGlEQ-4&start=14&end=62"
             width="85%"
@@ -708,8 +711,9 @@ export default function Home() {
             playbackRate={1.25}
             controls={false}
             loop={true}
+            style={{ border: "none", padding: 0, margin: 0 }}
           />
-        </div>
+        </div> */}
       </div>
       <div className="product">
         <div className="title">
@@ -856,7 +860,7 @@ export default function Home() {
                 stiffness: 50,
               }}
             >
-              <div className="">
+              <div className="bigIt">
                 <svg
                   width="69"
                   height="64"

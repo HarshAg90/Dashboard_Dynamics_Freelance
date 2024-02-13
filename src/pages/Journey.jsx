@@ -35,6 +35,15 @@ export default function Journey(){
     offset: ["start end", "end start"], 
   });
 
+  // const journeyRefMob = useRef(null);
+  // const { scrollYProgressMob } = useScroll({
+  //   target: journeyRefMob,
+  //   offset: ["start end", "end start"], 
+  // });
+
+  const caroffSetMob = useTransform(scrollYProgress, [0.125, 0.15, 0.30, 0.45, 0.6, 0.75, 0.95], ["0%", "0%", "20%", "40%", "60%", "80%", "100%"]);
+  
+
 
   const caroffSet = useTransform(scrollYProgress, [0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.87, 0.98], ["0%", "12.3%", "25%", "38%", "50%", "62%", "75%", "87%", "100%"]);
   const stMicro_Opacity = useTransform(scrollYProgress, [0, 0.1, 0.125], ["0%", "25%", "100%"]);
@@ -258,10 +267,16 @@ Incubated, Batch <br/> of Cohort 14</motion.h1>
     <div className="head">
           <h1 className='subHeading'>MILESTONES</h1>
           </div>
-    <div className="container">
+    <div ref={journeyRef} className="container">
 
 
-  <svg xmlns="http://www.w3.org/2000/svg" width="auto" height="4004">
+    <svg width="334" height="1199" viewBox="0 0 334 1199" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.35519 1H249.472C295.104 1.0001 332.64 25.3656 332.64 85.6651C332.64 164.486 285.095 173.177 249.472 173.177L98.5932 176.924C69.4968 176.174 3.35519 186.304 3.35519 259.191C3.35519 332.078 44.8654 345.355 98.5932 345.355L249.472 349.551C277.195 347.852 329.776 371.654 332.64 427.772C336.173 497.003 277.195 512.687 249.472 514.385L98.5932 519.93C69.4968 520.579 1 524.575 1 605.644C1 671.278 57.868 685.813 86.9644 684.764L249.472 691.058C288.186 691.058 332.64 705.663 332.64 776.323C332.64 837.312 280.973 856.492 249.472 856.492L86.9644 862.187C32.0591 862.187 1 881.967 1 947.901C1 1013.83 61.4499 1027.37 86.9644 1027.02L249.472 1032.57C277.195 1034.46 338.234 1047.85 332.64 1128.02C328.243 1191.04 283.034 1193.05 249.472 1198H1" stroke="#A4A4A4" stroke-width="2"/>
+</svg>
+
+
+
+  {/* <svg xmlns="http://www.w3.org/2000/svg" width="auto" height="4004">
     <path
       d="M0 5H947C1041.17 15.3333 1229.5 86.3 1229.5 287.5C1229.5 550.5 1041.17 566 947 579.5L434.5 592C335.667 589.5 111 643 111 851C111 1094.2 252 1154 434.5 1154L947 1168C1041.17 1162.33 1219.77 1241.75 1229.5 1429C1241.5 1660 1041.17 1712.33 947 1718L434.5 1736.5C335.667 1738.67 80.9653 1764.9 103 2034.5C120 2242.5 296.167 2290 395 2286.5L947 2307.5C1041.17 2310.33 1229.5 2366.73 1229.5 2602.5C1229.5 2795.5 1041.17 2865.17 947 2859.5L395 2878.5C291 2878.5 87.5 2948 103 3164.5C118.5 3381 308.333 3429.67 395 3428.5L947 3447C1041.17 3453.33 1248.5 3498 1229.5 3765.5C1214.56 3975.77 1061 3982.5 947 3999H103"
       fill="transparent"
@@ -270,7 +285,15 @@ Incubated, Batch <br/> of Cohort 14</motion.h1>
       strokeLinecap="round"
       class="grow"
     />
-  </svg>
+  </svg> */}
+
+  <motion.img src="../assets/Journey/car.png" className='boxMob'
+    // initial={{offsetDistance: "0%"}}
+    // whileInView={{offsetDistance: "100%"}}
+    // transition={{delay: 5,
+    // duration: 5}}
+    style={{offsetDistance: caroffSetMob}}
+    />
 
 <div className="milestonesRow">
     <div className="partnerSet">

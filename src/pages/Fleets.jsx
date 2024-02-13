@@ -99,7 +99,51 @@ const Fleets = () => {
                 <h1 className="head">Dynamic Charging for Continuous Operations</h1>
                 <h1 className="subHead">Retrofitting short sections of the road, we embed charging infrastructure that delivers continuous power to your fleet during transit. This eliminates the need for extended charging stops, extends range, and reduces downtime.</h1>
             </div>     
+
+            
             </div>
+
+            <div className="mob carMob">
+            <motion.div className='carContainer1Mob'
+                    initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      transition={{ duration: 2 }}
+      variants={{
+        visible: { opacity: 0, y: "-65%" },
+        hidden: { opacity: 1, y: "10%" }
+      }}
+                >
+                    <img src="../assets/Fleets/leftCar.png" alt="Left-car" className='car1'/>
+                    </motion.div>
+                    <motion.div className="carContainer2Mob"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    transition={{ duration: 1 }}
+                    variants={{
+                      visible: { opacity: 0, y: "-95%" },
+                      hidden: { opacity: 1, y: "0%" }
+                    }}
+                        
+                    >
+                    <img src="../assets/Fleets/midCar.png" alt="Mid-car" className='car2' />
+                    </motion.div>
+                    <motion.div className="carContainer3Mob"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        transition={{ duration: 2.1 }}
+                        variants={{
+                          visible: { opacity: 0, y: "-40%" },
+                          hidden: { opacity: 1, y: "0%" }
+                        }}
+                    >
+                    <img src="../assets/Fleets/rightCar.png" alt="Right-car" className='car3'/>
+                    </motion.div> 
+            </div>
+
+
 
             <div className='web road'>
             <div className="left outerContainer">
@@ -131,11 +175,6 @@ const Fleets = () => {
                     <img src="../assets/Fleets/midCar.png" alt="Mid-car" className='car2' />
                     </motion.div>                    
                 </div>
-
-                {/* <svg width="177" height="857" viewBox="0 0 177 857" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path opacity="0.15" d="M2 857V208.125C2.71166 145.812 38.508 17.3487 176 2" stroke="#7E757E" stroke-width="3" stroke-dasharray="10 10"/>
-</svg> */}
-
 
                 <div className="right outerContainer">
                 <motion.div className="carContainer3"

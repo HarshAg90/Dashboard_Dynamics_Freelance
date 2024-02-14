@@ -1921,30 +1921,10 @@
 #Technology {
   #TechLanding {
     .landing {
-      .fg_img {
-        // width: 100%;
-        // position: absolute;
-        // top: 0;
-        // left: 0;
-        // height: fit-content;
-        // background-color: black;
-        // animation: colapse 5s forwards 1.5s;
-        // background-image: url(../public/assets/Technology/landing2.png);
-        // background-size:100vw;
-        // background-repeat: no-repeat;
-        // @keyframes colapse {
-        //     0%{
-        //         height: 100%;
-        //         width: 0%;
-        //     }
-        //     100%{
-        //         height: 100%;
-        //         width: 100%;
-        //     }
-
-        // }
+      video{
+        width: 100%;
+        height: auto;
       }
-      // background-image: url(../public/assets/Technology/initBg.png);
     }
   }
 
@@ -2341,15 +2321,37 @@
       padding: 0;
       min-width: 65vw;
       // background-color: #C2747B;
-      display: grid;
-      justify-items: stretch;
-      grid-template-rows: repeat(3, 20vw);
-      grid-template-columns: 1fr 1fr 1fr;
+      display: flex;
+      flex-direction: column;
+      justify-items: flex-end;
+      align-items: flex-end;
+      // grid-template-rows: repeat(3, 20vw);
+      // grid-template-columns: 1fr 1fr 1fr;
       gap: 20px;
-      grid-row-gap: 0px;
-      margin-right: 100px;
-      align-content: space-evenly;
+      // grid-row-gap: 0px;
+      // margin-right: 100px;
+      // align-content: space-evenly;
       overflow-x: visible;
+
+      .r1{
+        display: flex;
+        width: 50%;
+        gap: 5%;
+        overflow: visible;
+      }
+      .r2{
+        display: flex;
+        width: 70%;
+        gap: 5%;
+        overflow: visible;
+      }
+      .r3{
+        display: flex;
+        width: 85%;
+        height: auto;
+        gap: 5%;
+        overflow: visible;
+      }
       @media screen and (max-width: 540px) {
         margin-right: 0;
         gap: 5px;

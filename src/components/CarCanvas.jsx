@@ -4,20 +4,20 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF("./porshe_taycan/scene.gltf");
+  const computer = useGLTF("./porshe_taycan/dashCar.gltf");
 
   return (
     <mesh>
-      <hemisphereLight intensity={5} groundColor='black' />
+      <hemisphereLight intensity={5} groundColor='white' />
       <spotLight
-        position={[-20, 50, 10]}
+        position={[-20, 100, 10]}
         angle={0.12}
         penumbra={1} 
-        intensity={1}
+        intensity={5}
         castShadow
         shadow-mapSize={1024}
       />
-      <pointLight intensity={1} />
+      <pointLight intensity={100} />
       <primitive
         object={computer.scene}
         scale={isMobile ? 2 : 2.5}
@@ -63,7 +63,7 @@ const CarCanvas = () => {
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
-          enableZoom={false}
+          enableZoom={true}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />

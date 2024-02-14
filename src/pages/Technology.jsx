@@ -53,7 +53,7 @@ export default function Technology() {
       </div>
 
       <div className="carCanvas">
-        <div className="imageCar">
+        {/* <div className="imageCar">
           <motion.img
             className="left"
             src="../assets/Technology/productLeft.png"
@@ -76,8 +76,8 @@ export default function Technology() {
               delay: 0.5,
             }}
           />
-        </div>
-        {/* <CarCanvas/> */}
+        </div> */}
+        <CarCanvas/>
       </div>
 
       {/* WORKING */}
@@ -435,7 +435,111 @@ export default function Technology() {
           <h1>H</h1>
         </div>
         <div className="picGrid">
+          <div className="r1">
           <motion.img
+            src="../assets/Technology/p1.png"
+            className="g1"
+            whileHover={{
+              scale: 1.1,
+            }}
+            whileTap={{
+              scale: 0.95,
+            }}
+            transition={{
+              type: "spring",
+              stiffness: 60,
+            }}
+          />
+          <motion.img
+            src="../assets/Technology/p2.png"
+            className="g1"
+            whileHover={{
+              scale: 1.1,
+            }}
+            whileTap={{
+              scale: 0.95,
+            }}
+            transition={{
+              type: "spring",
+              stiffness: 60,
+            }}
+          />
+          </div>
+          <div className="r2">
+          <motion.img
+            src="../assets/Technology/p3.png"
+            className="g1"
+            whileHover={{
+              scale: 1.1,
+            }}
+            whileTap={{
+              scale: 0.95,
+            }}
+            transition={{
+              type: "spring",
+              stiffness: 60,
+            }}
+          />
+          <motion.img
+            src="../assets/Technology/p4.png"
+            className="g1"
+            whileHover={{
+              scale: 1.1,
+            }}
+            whileTap={{
+              scale: 0.95,
+            }}
+            transition={{
+              type: "spring",
+              stiffness: 60,
+            }}
+          />
+          </div>
+          <div className="r3">
+          <motion.img
+            src="../assets/Technology/p5.png"
+            className="g1"
+            whileHover={{
+              scale: 1.1,
+            }}
+            whileTap={{
+              scale: 0.95,
+            }}
+            transition={{
+              type: "spring",
+              stiffness: 60,
+            }}
+          />
+          <motion.img
+            src="../assets/Technology/p6.png"
+            className="g1"
+            whileHover={{
+              scale: 1.1,
+            }}
+            whileTap={{
+              scale: 0.95,
+            }}
+            transition={{
+              type: "spring",
+              stiffness: 60,
+            }}
+          />
+          <motion.img
+            src="../assets/Technology/p7.png"
+            className="g1"
+            whileHover={{
+              scale: 1.1,
+            }}
+            whileTap={{
+              scale: 0.95,
+            }}
+            transition={{
+              type: "spring",
+              stiffness: 60,
+            }}
+          />
+          </div>
+          {/* <motion.img
             src="../assets/Technology/Grids/Grid1.png"
             className="g1"
             whileHover={{
@@ -532,7 +636,7 @@ export default function Technology() {
               type: "spring",
               stiffness: 60,
             }}
-          />
+          /> */}
         </div>
       </div>
     </div>

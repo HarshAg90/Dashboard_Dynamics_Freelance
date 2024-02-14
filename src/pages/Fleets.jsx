@@ -110,7 +110,7 @@ const Fleets = () => {
       viewport={{ once: true }}
       transition={{ duration: 2 }}
       variants={{
-        visible: { opacity: 0, y: "-65%" },
+        visible: { opacity: 0, y: "-125%" },
         hidden: { opacity: 1, y: "10%" }
       }}
                 >
@@ -122,7 +122,7 @@ const Fleets = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 1 }}
                     variants={{
-                      visible: { opacity: 0, y: "-95%" },
+                      visible: { opacity: 0, y: "-190%" },
                       hidden: { opacity: 1, y: "0%" }
                     }}
                         
@@ -135,7 +135,7 @@ const Fleets = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 2.1 }}
                         variants={{
-                          visible: { opacity: 0, y: "-40%" },
+                          visible: { opacity: 0, y: "-95%" },
                           hidden: { opacity: 1, y: "0%" }
                         }}
                     >

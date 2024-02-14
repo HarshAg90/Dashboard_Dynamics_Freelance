@@ -46,8 +46,19 @@ export default function Technology() {
       {/* PRODUCT PAGE */}
       <div className="product">
         <div className="productHead">
-          <hr />
-          <div className="sqr" />
+          <svg
+            width="35"
+            height="6"
+            viewBox="0 0 35 6"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M29.3333 3C29.3333 4.47276 30.5272 5.66667 32 5.66667C33.4728 5.66667 34.6667 4.47276 34.6667 3C34.6667 1.52724 33.4728 0.333336 32 0.333336C30.5272 0.333336 29.3333 1.52724 29.3333 3ZM-4.37114e-08 3.5L32 3.5L32 2.5L4.37114e-08 2.5L-4.37114e-08 3.5Z"
+              fill="#CD222A"
+            />
+          </svg>
+
           <h1 className="heading">Product</h1>
         </div>
       </div>
@@ -87,8 +98,18 @@ export default function Technology() {
           <h1 className="heading">
             HOW DOES IT <span>WORK</span>
           </h1>
-          <div className="sqr" />
-          <hr />
+          <svg
+            width="152"
+            height="6"
+            viewBox="0 0 152 6"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5.66666 3C5.66666 1.52724 4.47275 0.333333 3 0.333333C1.52724 0.333333 0.333328 1.52724 0.333328 3C0.333328 4.47276 1.52724 5.66667 3 5.66667C4.47275 5.66667 5.66666 4.47276 5.66666 3ZM155 2.5L3 2.5V3.5L155 3.5V2.5Z"
+              fill="#CD222A"
+            />
+          </svg>
         </div>
         {!mobile && (
           <div ref={targetRef} className="explanation">

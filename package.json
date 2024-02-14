@@ -35,6 +35,8 @@
     "scss": "^0.2.4",
     "slick-carousel": "^1.8.1",
     "three": "^0.155.0",
+    "three-obj-mtl-loader": "^1.0.3",
+    "three-orbitcontrols": "^2.110.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

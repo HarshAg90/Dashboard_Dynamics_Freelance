@@ -4,16 +4,16 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF("./porshe_taycan/GLTF File for web.gltf");
+  const computer = useGLTF("./porshe_taycan/dashCar.gltf");
 
   return (
     <mesh>
-      <hemisphereLight intensity={1} groundColor='white' />
+      <hemisphereLight intensity={100} groundColor='white' />
       <spotLight
         position={[0, 0, 0]}
         angle={0.12}
         penumbra={1} 
-        intensity={300}
+        intensity={100}
         castShadow
         shadow-mapSize={2048}
       />
@@ -21,7 +21,7 @@ const Computers = ({ isMobile }) => {
         position={[10, 0, 10]}
         angle={180}
         penumbra={1} 
-        intensity={300}
+        intensity={1000}
         castShadow
         shadow-mapSize={1024}
       />
@@ -29,7 +29,7 @@ const Computers = ({ isMobile }) => {
         position={[10, 10, -10]}
         angle={180}
         penumbra={1} 
-        intensity={300}
+        intensity={1000}
         castShadow
         shadow-mapSize={1024}
       />
@@ -37,7 +37,7 @@ const Computers = ({ isMobile }) => {
         position={[50, 10, -10]}
         angle={180}
         penumbra={1} 
-        intensity={300}
+        intensity={1000}
         castShadow
         shadow-mapSize={1024}
       />
@@ -45,7 +45,7 @@ const Computers = ({ isMobile }) => {
         position={[0, 20, 0]}
         angle={180}
         penumbra={1} 
-        intensity={300}
+        intensity={1000}
         castShadow
         shadow-mapSize={1024}
       />
@@ -53,7 +53,7 @@ const Computers = ({ isMobile }) => {
         position={[-10, 15, 0]}
         angle={180}
         penumbra={1} 
-        intensity={300}
+        intensity={3000}
         castShadow
         shadow-mapSize={1024}
       />
@@ -61,7 +61,7 @@ const Computers = ({ isMobile }) => {
         position={[0, 15, 0]}
         angle={180}
         penumbra={1} 
-        intensity={300}
+        intensity={3000}
         castShadow
         shadow-mapSize={1024}
       />
@@ -69,11 +69,11 @@ const Computers = ({ isMobile }) => {
         position={[0, -15, 0]}
         angle={180}
         penumbra={1} 
-        intensity={300}
+        intensity={3000}
         castShadow
         shadow-mapSize={1024}
       />
-      <pointLight intensity={10} />
+      <pointLight intensity={100} />
       <primitive
         object={computer.scene}
         scale={isMobile ? 2 : 3}

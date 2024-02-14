@@ -11,7 +11,10 @@ export default function Nav() {
       key: "1",
       label: (
         <Link
-          onClick={() => set_red_btn(5)}
+          onClick={() => {
+            set_red_btn(5);
+            toggleMenu();
+          }}
           rel="noopener noreferrer"
           to="/Ev_users"
         >
@@ -23,7 +26,10 @@ export default function Nav() {
       key: "2",
       label: (
         <Link
-          onClick={() => set_red_btn(5)}
+          onClick={() => {
+            set_red_btn(5);
+            toggleMenu();
+          }}
           rel="noopener noreferrer"
           to="/ev_manufacturer"
         >
@@ -35,7 +41,10 @@ export default function Nav() {
       key: "3",
       label: (
         <Link
-          onClick={() => set_red_btn(5)}
+          onClick={() => {
+            set_red_btn(5);
+            toggleMenu();
+          }}
           rel="noopener noreferrer"
           to="/fleets"
         >
@@ -58,7 +67,10 @@ export default function Nav() {
       key: "1",
       label: (
         <Link
-          onClick={() => set_red_btn(3)}
+          onClick={() => {
+            set_red_btn(3);
+            toggleMenu();
+          }}
           rel="noopener noreferrer"
           to="/Technology"
         >
@@ -70,7 +82,10 @@ export default function Nav() {
       key: "2",
       label: (
         <Link
-          onClick={() => set_red_btn(3)}
+          onClick={() => {
+            set_red_btn(3);
+            toggleMenu();
+          }}
           rel="noopener noreferrer"
           to="/market"
         >
@@ -85,7 +100,10 @@ export default function Nav() {
       key: "1",
       label: (
         <Link
-          onClick={() => set_red_btn(2)}
+          onClick={() => {
+            set_red_btn(2);
+            toggleMenu();
+          }}
           rel="noopener noreferrer"
           to="/about"
         >
@@ -97,7 +115,10 @@ export default function Nav() {
       key: "2",
       label: (
         <Link
-          onClick={() => set_red_btn(2)}
+          onClick={() => {
+            set_red_btn(2);
+            toggleMenu();
+          }}
           rel="noopener noreferrer"
           to="/team"
         >
@@ -109,7 +130,10 @@ export default function Nav() {
       key: "3",
       label: (
         <Link
-          onClick={() => set_red_btn(2)}
+          onClick={() => {
+            set_red_btn(2);
+            toggleMenu();
+          }}
           rel="noopener noreferrer"
           to="/journey"
         >
@@ -121,7 +145,10 @@ export default function Nav() {
       key: "4",
       label: (
         <Link
-          onClick={() => set_red_btn(2)}
+          onClick={() => {
+            set_red_btn(2);
+            toggleMenu();
+          }}
           rel="noopener noreferrer"
           to="/board_members"
         >
@@ -136,7 +163,10 @@ export default function Nav() {
       key: "1",
       label: (
         <Link
-          onClick={() => set_red_btn(7)}
+          onClick={() => {
+            set_red_btn(7);
+            toggleMenu();
+          }}
           rel="noopener noreferrer"
           to="/News_room"
         >
@@ -148,7 +178,10 @@ export default function Nav() {
       key: "2",
       label: (
         <Link
-          onClick={() => set_red_btn(7)}
+          onClick={() => {
+            set_red_btn(7);
+            toggleMenu();
+          }}
           rel="noopener noreferrer"
           to="/Blogs"
         >
@@ -159,7 +192,7 @@ export default function Nav() {
   ];
 
   let [mobile, setMobile] = useState(false);
-  
+
   useEffect(() => {
     if (isMobile) {
       setMobile(true);
@@ -222,11 +255,14 @@ export default function Nav() {
           <div className="bar"></div>
         </div>
       )}
-      <ul className={`${mobile && "mobile"} ${isActive?'show':'hide'}`}>
+      <ul className={`${mobile && "mobile"} ${isActive ? "show" : "hide"}`}>
         <Link
           to="/"
           className={`a1 ${red_btn === 1 ? "red" : ""}`}
-          onClick={() => set_red_btn(1)}
+          onClick={() => {
+            set_red_btn(1);
+            toggleMenu();
+          }}
         >
           <li className="a1 nav_elements">Home</li>
         </Link>
@@ -264,7 +300,10 @@ export default function Nav() {
         <Link
           to="/Products"
           className={`a4 ${red_btn === 4 ? "red" : ""}`}
-          onClick={() => set_red_btn(4)}
+          onClick={() => {
+            set_red_btn(4);
+            toggleMenu();
+          }}
         >
           <li className="nav_elements">Our Products</li>
         </Link>
@@ -280,7 +319,10 @@ export default function Nav() {
               <Link
                 to="/Use_case"
                 className={`a5 ${red_btn === 5 ? "red" : ""}`}
-                onClick={() => set_red_btn(5)}
+                onClick={() => {
+                  set_red_btn(5);
+                  // toggleMenu();
+                }}
               >
                 <li className="nav_elements">Use cases</li>
               </Link>
@@ -291,7 +333,10 @@ export default function Nav() {
         <Link
           to="/Contacts"
           className={`a6 ${red_btn === 6 ? "red" : ""}`}
-          onClick={() => set_red_btn(6)}
+          onClick={() => {
+            set_red_btn(6);
+            toggleMenu();
+          }}
         >
           <li className="nav_elements">Contact</li>
         </Link>
@@ -315,7 +360,10 @@ export default function Nav() {
         <Link
           to="/Careers"
           className={`a8 ${red_btn === 8 ? "red" : ""}`}
-          onClick={() => set_red_btn(8)}
+          onClick={() => {
+            set_red_btn(8);
+            toggleMenu();
+          }}
         >
           <li className="nav_elements">Career</li>
         </Link>

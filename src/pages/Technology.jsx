@@ -46,38 +46,52 @@ export default function Technology() {
       {/* PRODUCT PAGE */}
       <div className="product">
         <div className="productHead">
-          <hr />
-          <div className="sqr" />
+          <svg
+            width="35"
+            height="6"
+            viewBox="0 0 35 6"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M29.3333 3C29.3333 4.47276 30.5272 5.66667 32 5.66667C33.4728 5.66667 34.6667 4.47276 34.6667 3C34.6667 1.52724 33.4728 0.333336 32 0.333336C30.5272 0.333336 29.3333 1.52724 29.3333 3ZM-4.37114e-08 3.5L32 3.5L32 2.5L4.37114e-08 2.5L-4.37114e-08 3.5Z"
+              fill="#CD222A"
+            />
+          </svg>
+
           <h1 className="heading">Product</h1>
         </div>
       </div>
 
       <div className="carCanvas">
-        <div className="imageCar">
-          <motion.img
-            className="left"
-            src="../assets/Technology/productLeft.png"
-            initial={{ x: "-15%", opacity: 0.5 }}
-            whileInView={{ x: "0%", opacity: 1 }}
-            transition={{
-              type: "spring",
-              stiffness: 25,
-            }}
-          />
-          <img className="car" src="../assets/Technology/2dCar.png" alt="" />
-          <motion.img
-            className="right"
-            src="../assets/Technology/productRight.png"
-            initial={{ x: "15%", opacity: 0.5 }}
-            whileInView={{ x: "0%", opacity: 1 }}
-            transition={{
-              type: "spring",
-              stiffness: 25,
-              delay: 0.5,
-            }}
-          />
-        </div>
-        {/* <CarCanvas/> */}
+        {mobile ? (
+          <div className="imageCar">
+            <motion.img
+              className="left"
+              src="../assets/Technology/productLeft.png"
+              initial={{ x: "-15%", opacity: 0.5 }}
+              whileInView={{ x: "0%", opacity: 1 }}
+              transition={{
+                type: "spring",
+                stiffness: 25,
+              }}
+            />
+            <img className="car" src="../assets/Technology/2dCar.png" alt="" />
+            <motion.img
+              className="right"
+              src="../assets/Technology/productRight.png"
+              initial={{ x: "15%", opacity: 0.5 }}
+              whileInView={{ x: "0%", opacity: 1 }}
+              transition={{
+                type: "spring",
+                stiffness: 25,
+                delay: 0.5,
+              }}
+            />
+          </div>
+        ) : (
+          <CarCanvas />
+        )}
       </div>
 
       {/* WORKING */}
@@ -87,8 +101,18 @@ export default function Technology() {
           <h1 className="heading">
             HOW DOES IT <span>WORK</span>
           </h1>
-          <div className="sqr" />
-          <hr />
+          <svg
+            width="152"
+            height="6"
+            viewBox="0 0 152 6"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5.66666 3C5.66666 1.52724 4.47275 0.333333 3 0.333333C1.52724 0.333333 0.333328 1.52724 0.333328 3C0.333328 4.47276 1.52724 5.66667 3 5.66667C4.47275 5.66667 5.66666 4.47276 5.66666 3ZM155 2.5L3 2.5V3.5L155 3.5V2.5Z"
+              fill="#CD222A"
+            />
+          </svg>
         </div>
         {!mobile && (
           <div ref={targetRef} className="explanation">
@@ -434,8 +458,117 @@ export default function Technology() {
           <h1>S</h1>
           <h1>H</h1>
         </div>
+        <img
+          src="../assets/about/about_charger.png"
+          alt=""
+          className="charger"
+        />
         <div className="picGrid">
-          <motion.img
+          <div className="r1">
+            <motion.img
+              src="../assets/Technology/p1.png"
+              className="g1"
+              whileHover={{
+                scale: 1.1,
+              }}
+              whileTap={{
+                scale: 0.95,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 60,
+              }}
+            />
+            <motion.img
+              src="../assets/Technology/p2.png"
+              className="g1"
+              whileHover={{
+                scale: 1.1,
+              }}
+              whileTap={{
+                scale: 0.95,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 60,
+              }}
+            />
+          </div>
+          <div className="r2">
+            <motion.img
+              src="../assets/Technology/p3.png"
+              className="g1"
+              whileHover={{
+                scale: 1.1,
+              }}
+              whileTap={{
+                scale: 0.95,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 60,
+              }}
+            />
+            <motion.img
+              src="../assets/Technology/p4.png"
+              className="g1"
+              whileHover={{
+                scale: 1.1,
+              }}
+              whileTap={{
+                scale: 0.95,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 60,
+              }}
+            />
+          </div>
+          <div className="r3">
+            <motion.img
+              src="../assets/Technology/p5.png"
+              className="g1"
+              whileHover={{
+                scale: 1.1,
+              }}
+              whileTap={{
+                scale: 0.95,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 60,
+              }}
+            />
+            <motion.img
+              src="../assets/Technology/p6.png"
+              className="g1"
+              whileHover={{
+                scale: 1.1,
+              }}
+              whileTap={{
+                scale: 0.95,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 60,
+              }}
+            />
+            <motion.img
+              src="../assets/Technology/p7.png"
+              className="g1"
+              whileHover={{
+                scale: 1.1,
+              }}
+              whileTap={{
+                scale: 0.95,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 60,
+              }}
+            />
+          </div>
+          {/* <motion.img
             src="../assets/Technology/Grids/Grid1.png"
             className="g1"
             whileHover={{
@@ -532,7 +665,7 @@ export default function Technology() {
               type: "spring",
               stiffness: 60,
             }}
-          />
+          /> */}
         </div>
       </div>
     </div>

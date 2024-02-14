@@ -539,28 +539,6 @@ export default function About() {
       </div>
       <div className="div_4">
         <img src="../assets/about/about_charger.png" alt="" />
-
-        {/* <h1 ref={valuesRef}
-        >Values</h1> */}
-        {/* <motion.p
-        variants={valueVariant}
-        initial="hidden" animate={valueAnimationControls}
-        transition={{
-          delay: 2.75,
-          type: "spring",
-          stiffness: 25,
-        }}>
-          Revolutionize smart mobility
-          <br />
-          <br />
-          Sustainable solutions
-          <br />
-          <br />
-          Connection
-          <br />
-          <br />
-          Dynamic charging
-        </motion.p> */}
         <div className="content">
           <p>
             <svg

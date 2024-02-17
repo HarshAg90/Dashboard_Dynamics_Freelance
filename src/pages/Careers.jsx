@@ -5,6 +5,44 @@ export default function Careers() {
   const [inputValue, setInputValue] = useState("");
   const [suggestions, setSuggestions] = useState([]);
 
+  const sampleSuggestions = [
+    "Researcher",
+    "Product Designer",
+    "Graphic Designer",
+    "Systems Analyst",
+    "Software Engineer/Developer",
+    "UX/UI Designer",
+    "Product Manager",
+    "Project Manager",
+    "Quality Assurance Engineer",
+    "Cybersecurity Analyst",
+    "Network Administrator",
+    "IT Support Specialist",
+    "Data Engineer",
+    "Cloud Architect",
+    "Sales Engineer",
+    "Technical Writer",
+    "Business Development Manager",
+    "Operations Manager",
+    "Strategy Analyst/Consultant",
+    "Marketing Manager",
+    "Financial Analyst/Manager",
+    "Corporate Development Manager",
+    "Human Resources Manager",
+    "Hardware Engineer",
+    "Embedded Systems Engineer",
+    "Analog Design Engineer",
+    "Power Electronics Engineer",
+    "Control Systems Engineer",
+    "Test Engineer",
+    "Systems Engineer",
+    "Research and Development Engineer",
+    "Field Application Engineer",
+    "Manufacturing Engineer",
+    "Technical Sales Engineer",
+    "Quality Assurance Engineer",
+    "Digital Design Engineer",
+  ];
   const handleInputChange = (event) => {
     const value = event.target.value;
     setInputValue(value);
@@ -131,7 +169,12 @@ export default function Careers() {
           </div>
           <form className="form">
             <input type="text" placeholder="Keywords" name="" id="" />
-            <input
+            <select name="" id="">
+              {sampleSuggestions.map((suggestion, index) => (
+                <option value={suggestion}>{suggestion}</option>
+              ))}
+            </select>
+            {/* <input
               type="text"
               value={inputValue}
               onChange={handleInputChange}
@@ -146,7 +189,7 @@ export default function Careers() {
                   {suggestion}
                 </li>
               ))}
-            </ul>
+            </ul> */}
             <input type="text" placeholder="Locations" name="" id="" />
             <div className="share">
               <button type="submit">Submit</button>

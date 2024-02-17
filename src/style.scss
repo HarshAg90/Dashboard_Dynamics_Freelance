@@ -5356,15 +5356,14 @@
           margin-bottom: 20px;
           padding: 5px;
         }
-        ul {
-          box-shadow: 0px 2px 4px 0px #00000040;
-          border-radius: 10px;
-          max-height: 200px;
-          padding: 10px;
-          li {
-            border-bottom: 1px solid black;
-            padding: 5px;
-          }
+        select {
+          font-family: "artifakt", sans-serif;
+          border: none;
+          width: 100%;
+          background-color: transparent;
+          border-bottom: 1px solid black;
+          margin-bottom: 20px;
+          padding: 5px;
         }
         .share {
           font-family: "artifakt", sans-serif;
@@ -5499,6 +5498,10 @@
           font-family: "artifakt", sans-serif;
           display: flex;
           gap: 30px;
+          .L,
+          .R {
+            width: 100%;
+          }
           @media screen and (max-width: 540px) {
             gap: 10px;
           }

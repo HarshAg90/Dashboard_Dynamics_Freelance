@@ -47,7 +47,7 @@ export default function UseCase() {
                   stiffness: 60,
                 }}
               />
-              <p>Residental</p>
+              <p>Residential</p>
             </a>
             <a href="">
               <motion.img
@@ -81,7 +81,7 @@ export default function UseCase() {
                   stiffness: 60,
                 }}
               />
-              <p>Manifacture</p>
+              <p>Manufacturer</p>
             </a>
           </div>
           <div>
@@ -134,7 +134,7 @@ export default function UseCase() {
                   stiffness: 60,
                 }}
               />
-              <p>Fleet</p>
+              <p>Fleets</p>
             </a>
           </div>
         </div>

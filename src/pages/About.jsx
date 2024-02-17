@@ -939,6 +939,8 @@ export default function About() {
           </div>
         </div>
       </div>
+
+      <div className="radGrad">
       <div className="div_heading">
         <motion.div className="head">
           <motion.svg
@@ -1053,6 +1055,8 @@ export default function About() {
           </div>
         </div>
       </div>
+      </div>
+      
     </div>
   );
 }

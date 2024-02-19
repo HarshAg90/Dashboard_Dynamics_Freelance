@@ -40,19 +40,21 @@ export default function Journey(){
 
 
   const controls = useAnimation();
+  // controls.start({ scale: isMobile? 0.35: 1 });
 
 
   function upfun() {
     controls.start({ rotate: -180});
-    controls.start({ scale: 0.35 });
+    controls.start({ scale: isMobile? 0.35: 1 });
   }
 
   function downfun() {
     controls.start({ rotate: 0});
-    controls.start({ scale: 0.35 });
+    controls.start({ scale: isMobile? 0.35: 1 });
   }
 
   useEffect(() => {
+    controls.start({ scale: isMobile? 0.35: 1 });
     // Initialize instance and attach event listeners inside useEffect
     const instance = new detectScroll(window, {
       events: {

@@ -1,9 +1,10 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import JourneyLanding from '../components/JourneyLanding';
-import {motion, useScroll, useTransform} from "framer-motion";
+import {motion, useScroll, useTransform, useAnimation} from "framer-motion";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { isMobile } from "react-device-detect";
+import detectScroll from '@egstad/detect-scroll'
 
 const delayP = "0.1";
 
@@ -34,6 +35,64 @@ export default function Journey(){
     target: journeyRef,
     offset: ["start end", "end start"], 
   });
+
+
+
+
+  const controls = useAnimation();
+
+
+  function upfun() {
+    controls.start({ rotate: -180});
+    controls.start({ scale: 0.35 });
+  }
+
+  function downfun() {
+    controls.start({ rotate: 0});
+    controls.start({ scale: 0.35 });
+  }
+
+  useEffect(() => {
+    // Initialize instance and attach event listeners inside useEffect
+    const instance = new detectScroll(window, {
+      events: {
+        scrollUp: upfun,
+        scrollDown: downfun,
+      },
+    });
+  })
+
+ 
+
+
+
+  // const [scrollY, setScrollY] = useState(0);
+  // const [prevScrollY, setPrevScrollY] = useState(0);
+  
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setScrollY(window.scrollY);
+  //   };
+
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
+
+  // useEffect(() => {
+  //   // Detect the direction of scrolling
+  //   if (scrollY > prevScrollY) {
+  //     // Downward scroll
+  //     controls.start({ rotate: 180 }); // For example, animate something when scrolling down
+  //   } else {
+  //     // Upward scroll
+  //     controls.start({ rotate: 180 }); // For example, animate something when scrolling up
+  //   }
+
+  //   setPrevScrollY(scrollY);
+  // }, [scrollY, prevScrollY, controls]);
 
   // const journeyRefMob = useRef(null);
   // const { scrollYProgressMob } = useScroll({
@@ -76,7 +135,8 @@ export default function Journey(){
     />
   </svg>
   <motion.img src="../assets/Journey/car.png" className='box'
-  style={{offsetDistance: caroffSet}} />
+  style={{offsetDistance: caroffSet}}
+  animate={controls} />
   
   <div className="milestonesRow">
     <div className="partnerSet">
@@ -293,6 +353,7 @@ Incubated, Batch <br/> of Cohort 14</motion.h1>
     // transition={{delay: 5,
     // duration: 5}}
     style={{offsetDistance: caroffSetMob}}
+    animate={controls}
     />
 
 <div className="milestonesRow">

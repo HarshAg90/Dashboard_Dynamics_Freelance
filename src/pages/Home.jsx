@@ -1599,15 +1599,17 @@ export default function Home() {
         {!mobile && (
           <div className="bottom_devide">
             <svg
-              width="13"
-              height="13"
-              viewBox="0 0 13 13"
+              width="983"
+              height="6"
+              viewBox="0 0 983 6"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <rect width="13" height="13" fill="black" />
+              <path
+                d="M0.333333 3C0.333333 4.47276 1.52724 5.66667 3 5.66667C4.47276 5.66667 5.66667 4.47276 5.66667 3C5.66667 1.52724 4.47276 0.333333 3 0.333333C1.52724 0.333333 0.333333 1.52724 0.333333 3ZM3 3.5H983V2.5H3V3.5Z"
+                fill="black"
+              />
             </svg>
-            <hr />
           </div>
         )}
       </div>

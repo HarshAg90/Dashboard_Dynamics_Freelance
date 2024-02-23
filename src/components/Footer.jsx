@@ -58,7 +58,6 @@ export default function Footer() {
             <div className="contact_p">
               <div className="contact">
                 <Link to="/Careers">Careers</Link>
-                <Link to="/">Contact with Us</Link>
                 <Link to="/Technology">Technology</Link>
                 <Link to="/Blogs">Blog</Link>
               </div>
@@ -191,7 +190,7 @@ export default function Footer() {
             <div className="contact_p">
               <div className="contact">
                 <Link to="/Careers">Careers</Link>
-                <Link to="/">Contact with Us</Link>
+                <Link to="/Contacts">Contact</Link>
                 <Link to="/Technology">Technology</Link>
                 <Link to="/Blogs">Blog</Link>
               </div>

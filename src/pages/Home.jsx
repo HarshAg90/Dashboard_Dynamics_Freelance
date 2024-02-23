@@ -1483,7 +1483,7 @@ export default function Home() {
         </div>
       </div>
       <div className="partners">
-        {!mobile ? (
+        {mobile ? (
           <div className="">
             <div className="title t">
               <div className="title_h">

@@ -4,7 +4,7 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF("./porshe_taycan/dashCar.gltf");
+  const computer = useGLTF("./porshe_taycan/New car for dash dynamic.glb");
 
   return (
     <mesh>

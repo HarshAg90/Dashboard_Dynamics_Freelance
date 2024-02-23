@@ -1,5 +1,6 @@
 import "./style.scss";
-import "./styles.css"
+import "./styles.css";
+import React, { useRef, useEffect, useState } from 'react';
 import Nav from "./components/nav";
 import Footer from "./components/Footer";
 import Charge from "./components/Charge";
@@ -24,12 +25,45 @@ import BoardMembers from "./pages/Board_members"
 import Journey from "./pages/Journey";
 
 
+function Preloader() {
+  return (
+    <div id="preloader">
+      <img src="../load.svg"/>
+    </div>
+  );
+}
+
+
 function App() {
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading delay
+    const timeout = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // Adjust the timeout value as needed
+
+    // Clear timeout when component unmounts
+    return () => clearTimeout(timeout);
+  }, []);
 
   // if (isMobile) {
   //   window.location.replace('https://md.dashdynamic.in/');
   // }
 
+
+  return (
+    <div className="App">
+      {isLoading ? <Preloader /> : <MainContent />}
+    </div>
+  );
+
+  
+}
+
+
+function MainContent() {
   return (
     <BrowserRouter className="App"> 
       <Nav />

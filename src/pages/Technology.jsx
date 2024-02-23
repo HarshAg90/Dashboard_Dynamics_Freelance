@@ -64,7 +64,7 @@ export default function Technology() {
       </div>
 
       <div className="carCanvas">
-        {mobile ? (
+        {/* {mobile ? (
           <div className="imageCar">
             <motion.img
               className="left"
@@ -91,7 +91,8 @@ export default function Technology() {
           </div>
         ) : (
           <CarCanvas />
-        )}
+        )} */}
+        <CarCanvas />
       </div>
 
       {/* WORKING */}

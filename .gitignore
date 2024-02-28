@@ -6,8 +6,10 @@
 .pnp.js
 
 /backend
+/src
 # testing
 /coverage
+App.js
 
 # production
 /build

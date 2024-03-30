@@ -1,10 +1,15 @@
 import "./style.scss";
 import "./styles.css";
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState } from "react";
 import Nav from "./components/nav";
 import Footer from "./components/Footer";
 import Charge from "./components/Charge";
-import { BrowserRouter as Router,BrowserRouter, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  BrowserRouter,
+  Route,
+  Routes,
+} from "react-router-dom";
 import Home from "./pages/Home";
 import Technology from "./pages/Technology";
 import Products from "./pages/Products";
@@ -20,22 +25,27 @@ import Team from "./pages/Team";
 import Careers from "./pages/Careers";
 import About from "./pages/About";
 import Market from "./pages/Market";
-import {isMobile} from 'react-device-detect';
-import BoardMembers from "./pages/Board_members"
+import { isMobile } from "react-device-detect";
+import BoardMembers from "./pages/Board_members";
 import Journey from "./pages/Journey";
-
 
 function Preloader() {
   return (
     <div id="preloader">
-      <img src="../load.svg"/>
+      {/* <img src="../load.svg" /> */}
+      <iframe
+        src="https://giphy.com/embed/9U100arhSkONMI6zo0"
+        width="480"
+        height="360"
+        frameBorder="0"
+        class="giphy-embed"
+        allowFullScreen
+      ></iframe>
     </div>
   );
 }
 
-
 function App() {
-
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -52,20 +62,14 @@ function App() {
   //   window.location.replace('https://md.dashdynamic.in/');
   // }
 
-
   return (
-    <div className="App">
-      {isLoading ? <Preloader /> : <MainContent />}
-    </div>
+    <div className="App">{isLoading ? <Preloader /> : <MainContent />}</div>
   );
-
-  
 }
-
 
 function MainContent() {
   return (
-    <BrowserRouter className="App"> 
+    <BrowserRouter className="App">
       <Nav />
       <ScrollToTop /> {/* Add the ScrollToTop component here */}
       <Routes>
@@ -98,7 +102,7 @@ function MainContent() {
         {/* DONE */}
         <Route exact path="/team" element={<Team />} />
         {/* SCOOTY PENDING */}
-        <Route exact path="/market" element={<Market />} />        
+        <Route exact path="/market" element={<Market />} />
 
         <Route path="/board_members" element={<BoardMembers />} />
         <Route path="/journey" element={<Journey />} />

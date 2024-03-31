@@ -32,7 +32,7 @@ export default function UseCase() {
 
         <div className="useCaseGrid">
           <div>
-            <a href="">
+            <a href="" className="a1">
               <motion.img
                 src="../assets/Home/home_usecase_1.png"
                 className="g1"
@@ -49,7 +49,7 @@ export default function UseCase() {
               />
               <p>Residential</p>
             </a>
-            <a href="">
+            <a href="" className="a2">
               <motion.img
                 src="../assets/Home/home_usecase_2.png"
                 className="g2"
@@ -66,7 +66,7 @@ export default function UseCase() {
               />
               <p>Multidevice</p>
             </a>
-            <a href="/ev_manufacturer">
+            <a href="/ev_manufacturer" className="a3">
               <motion.img
                 src="../assets/Home/home_usecase_3.png"
                 className="g3"
@@ -85,7 +85,7 @@ export default function UseCase() {
             </a>
           </div>
           <div>
-            <a href="">
+            <a href="" className="a4">
               <motion.img
                 src="../assets/Home/home_usecase_4.png"
                 className="g4"
@@ -102,7 +102,7 @@ export default function UseCase() {
               />
               <p>Drone</p>
             </a>
-            <a href="/Charge">
+            <a href="/Charge" className="a5">
               <motion.img
                 src="../assets/UseCase/grid5.png"
                 className="g5"
@@ -119,7 +119,7 @@ export default function UseCase() {
               />
               <p>Charge Point Opperator</p>
             </a>
-            <a href="/Fleets">
+            <a href="/Fleets" className="a6">
               <motion.img
                 src="../assets/Home/home_usecase_6.png"
                 className="g6"

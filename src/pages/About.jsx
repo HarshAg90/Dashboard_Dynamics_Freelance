@@ -472,33 +472,35 @@ export default function About() {
           <img src="../assets/about/about_1.png" alt="" />
         </div>
       </div>
-      <div className="div_2">
-        <motion.h1
-          initial={{ x: "-5%", opacity: 0.5 }}
-          whileInView={{ x: "0%", opacity: 1 }}
-          transition={{
-            type: "spring",
-            stiffness: 25,
-          }}
-        >
-          The Canon moment
-        </motion.h1>
-        <motion.p
-          initial={{ y: "20%", opacity: 0.5 }}
-          whileInView={{ y: "0%", opacity: 1 }}
-          transition={{
-            type: "spring",
-            stiffness: 25,
-          }}
-        >
-          Founded by Shashank Sawai and Robin Singh in 2020, Dash Dynamic
-          provides seamless and efficient charging solutions for electric
-          automobiles. To Revolutionize the electric vehicle (EV) industry with
-          our wireless charging technology, Dash Dynamic attempts to make
-          charging accessible and convenient for all. It provides an ideal
-          opportunity for users to charge their vehicles dynamically.
-        </motion.p>
-      </div>
+      {!mobile && (
+        <div className="div_2">
+          <motion.h1
+            initial={{ x: "-5%", opacity: 0.5 }}
+            whileInView={{ x: "0%", opacity: 1 }}
+            transition={{
+              type: "spring",
+              stiffness: 25,
+            }}
+          >
+            The Canon moment
+          </motion.h1>
+          <motion.p
+            initial={{ y: "20%", opacity: 0.5 }}
+            whileInView={{ y: "0%", opacity: 1 }}
+            transition={{
+              type: "spring",
+              stiffness: 25,
+            }}
+          >
+            Founded by Shashank Sawai and Robin Singh in 2020, Dash Dynamic
+            provides seamless and efficient charging solutions for electric
+            automobiles. To Revolutionize the electric vehicle (EV) industry
+            with our wireless charging technology, Dash Dynamic attempts to make
+            charging accessible and convenient for all. It provides an ideal
+            opportunity for users to charge their vehicles dynamically.
+          </motion.p>
+        </div>
+      )}
       <div className="div_3">
         <h1>We founded Dash with a desire to make EVs more convenient</h1>
         <div className="insideImg">
@@ -903,30 +905,32 @@ export default function About() {
           </svg>
         )}
       </div>
-      <div className="div_2">
-        <motion.h1
-          initial={{ y: "-15%", opacity: 0.5 }}
-          whileInView={{ y: "0%", opacity: 1 }}
-          transition={{
-            type: "spring",
-            stiffness: 25,
-          }}
-        >
-          The aim
-        </motion.h1>
-        <motion.p
-          initial={{ x: "10%", opacity: 0.5 }}
-          whileInView={{ x: "0%", opacity: 1 }}
-          transition={{
-            type: "spring",
-            stiffness: 25,
-          }}
-        >
-          “Revolutionize smart mobility with sustainable solutions and wireless
-          charging technology, connecting the world in a smarter way.”
-        </motion.p>
-      </div>
+      {/* <div className="div_2 a"></div> */}
       <div className="div_5">
+        <div className="t">
+          <motion.h1
+            initial={{ y: "-15%", opacity: 0.5 }}
+            whileInView={{ y: "0%", opacity: 1 }}
+            transition={{
+              type: "spring",
+              stiffness: 25,
+            }}
+          >
+            The aim
+          </motion.h1>
+          <motion.p
+            initial={{ x: "10%", opacity: 0.5 }}
+            whileInView={{ x: "0%", opacity: 1 }}
+            transition={{
+              type: "spring",
+              stiffness: 25,
+            }}
+          >
+            “Revolutionize smart mobility with sustainable solutions and
+            wireless charging technology, connecting the world in a smarter
+            way.”
+          </motion.p>
+        </div>
         <div className="img">
           <img src="../assets/about/about_5.png" alt="" />
           <div className="text">

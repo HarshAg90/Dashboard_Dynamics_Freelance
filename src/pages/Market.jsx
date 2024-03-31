@@ -91,18 +91,18 @@ export default function Market() {
           <div className="content">
             <div className="text">
               <p>
-                During this process, electric vehicles (EVs) can rapidly acquire
-                their initial charge, while power snacking becomes a viable
-                solution to alleviate range concerns for both commercial and
-                residential users.
+                Semi-dynamic charging refers to a scenario where vehicles
+                operate in a cyclic pattern, with regular intervals of starting
+                and stopping along a predetermined route.
               </p>
               {mobile && (
                 <img src="../assets/market/market_tile_2.png" alt="" />
               )}
               <p>
-                Semi-dynamic charging refers to a scenario where vehicles
-                operate in a cyclic pattern, with regular intervals of starting
-                and stopping along a predetermined route.
+                During this process, electric vehicles (EVs) can rapidly acquire
+                their initial charge, while power snacking becomes a viable
+                solution to alleviate range concerns for both commercial and
+                residential users.
               </p>
             </div>
             {!mobile && <img src="../assets/market/market_tile_2.png" alt="" />}

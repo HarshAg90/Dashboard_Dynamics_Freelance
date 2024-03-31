@@ -161,8 +161,7 @@ style={{x: carInitialX, rotate: carRotation, y: carFinalY, opacity: carFinalOpac
               stiffness: 25,
               delay: 0.1
             }}>
-          Our wireless charging solution reduces maintenance costs by eliminating physical connectors and cables, resulting in savings on repairs and labor. It eliminates the need for manual vehicle connection, minimizing downtime between charging sessions and allowing for the accommodation of more EVs.<br></br> 
-This enables operators to increase their revenue potential by serving a larger customer base without incurring additional infrastructure costs.
+              We ensure seamless integration of our system with existing charging infrastructure. With no requirement for manual vehicle connection, downtime between charging sessions is minimized, accommodating more EVs. Our system enables operators to increase their revenue potential by serving a larger customer base without incurring additional infrastructure costs, cutting down on installation, physical components, and labor expenses.
           </motion.p>
         </motion.div>
         <motion.div className="content"
@@ -182,8 +181,8 @@ This enables operators to increase their revenue potential by serving a larger c
               stiffness: 20,
               delay: 0.25
             }}>
-          We ensure seamless integration of our system with existing charging infrastructure. We guarantee efficient and reliable power transfer. The charging infrastructure including access to real-time data on power transfer efficiency, temperature, and fault detection can be monitored remotely with features like proactive maintenance and troubleshooting.<br/> 
-The wireless charging technology is designed to be user-friendly, so it streamlines operations and reduces complexities for charge point operators for CPOs.
+           The wireless charging technology is designed to be user-friendly, streamlining operations, and reducing complexities for charge point operators. With no moving parts, it increases operational life by 6 times. The application of foreign object detection, helps remove disruptions and ensures efficient and smooth power transfer, providing a reliable charging experience.
+
           </motion.p>
         </motion.div>
         <motion.div className="content" >
@@ -203,7 +202,8 @@ The wireless charging technology is designed to be user-friendly, so it streamli
               delay: 0.4
             }}
             >
-          We provide all type of protection features that is necessary for safety. Also by eliminating the need for physical cables and connectors, the risk of accidents, such as trips, falls, or electric shock, is significantly reduced. We ensure a safe working environment for the management staff.
+              Our technology adheres to the highest safety standards, following SAE specifications. With non-contact, robust, waterproof, and lightweight features, it mitigates the risk of accidents like electrocution and the fear of handling large wires. We ensure a safe working environment for management staff and provide customers with a secure and easy-to-handle charging option, with the flexibility to choose between plug-in and wireless charging.
+
           </motion.p>
         </motion.div>
       </div>

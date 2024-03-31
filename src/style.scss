@@ -1340,9 +1340,9 @@
       font-family: "monogram", sans-serif;
       top: 20%;
       left: 10%;
-      font-size: 2.7rem;
+      font-size: 2.2rem;
       font-weight: 400;
-      width: 70vw;
+      width: 60vw;
       color: black;
       line-gap-override: 10px;
       @media screen and (max-width: 540px) {
@@ -1490,12 +1490,15 @@
     justify-content: space-around;
     min-height: 100vh;
     align-items: center;
-    background: rgb(211, 213, 222);
-    background: linear-gradient(
-      90deg,
-      rgba(211, 213, 222, 1) 1%,
-      rgba(255, 255, 255, 1) 39%
-    );
+    // background: rgb(211, 213, 222);
+    // background: linear-gradient(
+    //   90deg,
+    //   rgba(211, 213, 222, 1) 1%,
+    //   rgba(255, 255, 255, 1) 39%
+    // );
+    background-image: url(../public/assets/charge/aboutBg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 
     @media screen and (max-width: 540px) {
       flex-direction: column;
@@ -1529,17 +1532,20 @@
       .content {
         display: flex;
         justify-content: center;
-        align-items: start;
-        margin: 20px 10px;
-        margin-top: 50px;
-        margin-bottom: 70px;
+        align-items: center;
+        margin: 5% 0%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        // margin: 20px 10px;
+        // margin-top: 50px;
+        // margin-bottom: 70px;
         @media screen and (max-width: 540px) {
           flex-direction: column;
           align-items: center;
         }
         img {
           margin: 5px 10px;
-          width: 40%;
+          width: 35%;
           @media screen and (max-width: 540px) {
             width: 25%;
           }
@@ -1553,7 +1559,7 @@
           }
         }
         p {
-          font-size: 1.2rem;
+          font-size: 1.1rem;
           font-family: "artifakt", sans-serif;
           @media screen and (max-width: 540px) {
             text-align: justify;
@@ -5136,11 +5142,12 @@
 
     svg {
       overflow: hidden;
-      width: 100%;
+      width: 60% !important;
+      height: auto !important;
       z-index: 0;
       position: absolute;
-      margin-left: 3%;
-      margin-top: 5vh;
+      margin-left: 25% !important;
+      margin-top: 1% !important;
     }
   }
 

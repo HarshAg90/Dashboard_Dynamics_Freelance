@@ -56,6 +56,7 @@ function App() {
 
     // Clear timeout when component unmounts
     return () => clearTimeout(timeout);
+    
   }, []);
 
   // if (isMobile) {

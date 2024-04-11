@@ -130,25 +130,6 @@ export default function EV_Manufacturer() {
                 alt="Car"
               />
             )}
-            {/* <div className="para2">
-              <h1 className="head">Maximizing Cost Efficiency</h1>
-              <br />
-              <motion.h1
-                className="downHead"
-                initial={{ x: "20%", opacity: 0 }}
-                whileInView={{ x: "0%", opacity: 1 }}
-                transition={{
-                  type: "spring",
-                  stiffness: 20,
-                }}
-              >
-                We reduce EV manufacturers' maintenance costs by minimizing
-                battery degradation, simplifying powertrain maintenance,
-                streamlining infrastructure support, and enhancing reliability.
-                This improves cost efficiency and enhances the ownership
-                experience.
-              </motion.h1>
-            </div> */}
             <div className="para3">
               <h1 className="head">Battery Excellence Solutions</h1>
               <br />

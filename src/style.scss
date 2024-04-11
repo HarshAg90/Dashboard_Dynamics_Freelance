@@ -1433,7 +1433,7 @@
   #Charge_landing {
     background-image: url(../public/assets/charge/charge_landing.png);
     width: 100% !important;
-    height: 100vh !important;
+    height: 100vh;
 
     // position: relative;
     // background-position: center;
@@ -1472,12 +1472,12 @@
       color: black;
       line-gap-override: 10px;
       @media screen and (max-width: 540px) {
-        margin-top: 25%;
-        width: 100%;
-        font-size: 0.85rem;
-        top: 40%;
-        left: 5%;
-        font-weight: 500;
+        // margin-top: 25%;
+        width: 80%;
+        font-size: 3vw;
+        top: 30%;
+        left: 10%;
+        font-weight: 600;
       }
     }
   }
@@ -1643,7 +1643,7 @@
         margin-top: 5%;
         width: 40%;
         padding: 0;
-        margin: 0;
+        margin: 20px;
         height: 10% !important;
       }
     }
@@ -2919,6 +2919,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     @media screen and (max-width: 540px) {
+      margin-top: 10vw;
       height: 40vh;
       // margin-top: 0px;
     }
@@ -2957,7 +2958,7 @@
         overflow: visible;
         margin: 5px;
         @media screen and (max-width: 540px) {
-          margin: 0px;
+          margin: 5px;
         }
         a {
           overflow: visible;
@@ -2980,9 +2981,6 @@
           &.a6 {
             width: 33%;
           }
-          @media screen and (max-width: 540px) {
-            margin: 4px;
-          }
           p {
             position: absolute;
             bottom: 10px;
@@ -3001,6 +2999,11 @@
           border: 2px solid white;
           border-radius: 20px;
 
+          @media screen and (max-width: 540px) {
+            border-radius: 5px;
+            height: 100%;
+            // margin: 4px;
+          }
           overflow: hidden;
           img {
             width: 100%;
@@ -3011,7 +3014,7 @@
               border: 1px solid white;
               // margin-top: 0px;
               border-radius: 5px;
-              height: 30%;
+              height: 100%;
             }
           }
         }
@@ -3024,7 +3027,7 @@
 
   .downHeading {
     font-family: "Artifakt";
-    font-style: normal;
+    font-style: bold;
     font-size: 20px;
     // line-height: 31px;
     margin: 20px 10px;
@@ -3032,7 +3035,8 @@
     color: black;
     font-weight: 500;
     @media screen and (max-width: 540px) {
-      font-size: 1rem;
+      font-size: 2.5vw;
+      font-weight: 600 !important;
       // line-height: 31px;
       margin: 10px 5px;
       // margin-top: 0px;
@@ -3294,6 +3298,12 @@
     #bcc6d2 -25.46%,
     rgba(227, 232, 236, 0.19) 79.4%
   );
+  @media screen and (max-width: 540px) {
+    background: white;
+    hr {
+      display: none;
+    }
+  }
   position: relative;
   .top {
     height: 100vh;
@@ -3301,6 +3311,7 @@
     background-color: transparent;
     @media screen and (max-width: 540px) {
       height: 40vh;
+      margin-top: 7vh;
       background-image: url(../public/assets/Blog/blog_landing_mobile.png);
       background-size: contain;
       background-repeat: no-repeat;
@@ -3382,6 +3393,7 @@
       font-family: "artifakt", sans-serif;
       @media screen and (max-width: 540px) {
         font-size: 1.2rem;
+        font-weight: 600;
       }
     }
     hr {
@@ -3393,7 +3405,9 @@
       text-align: justify;
       font-size: 1.2vw;
       @media screen and (max-width: 540px) {
-        font-size: 0.8vw;
+        font-size: 3.5vw;
+        font-style: bold;
+        font-weight: 500;
       }
     }
     img {
@@ -3448,7 +3462,11 @@
       z-index: 1;
       @media screen and (max-width: 540px) {
         font-size: 1rem;
+        color: white;
       }
+    }
+    @media screen and (max-width: 540px) {
+      margin-top: 5vh;
     }
   }
   .content {
@@ -3466,6 +3484,7 @@
       align-items: center;
       @media screen and (max-width: 540px) {
         min-height: fit-content;
+        background: white;
         // margin-top: 0px;
       }
       p {
@@ -3491,6 +3510,7 @@
           // margin-top: 0px;
           flex-direction: column;
           gap: 10px;
+          margin: 20px 0;
         }
         .tile {
           position: relative;
@@ -3501,7 +3521,9 @@
           svg {
             overflow: visible;
             @media screen and (max-width: 540px) {
-              width: 40vw;
+              // width: 40vw;
+              height: 20vh;
+              width: auto;
               // margin-top: 0px;
             }
           }
@@ -3514,8 +3536,10 @@
             text-align: left;
             @media screen and (max-width: 540px) {
               font-size: 0.9rem;
+              font-weight: 700 !important;
               width: 80vw;
-              left: -10%;
+              font-style: bold;
+              left: -20%;
               // margin-top: 0px;
             }
           }
@@ -3572,8 +3596,8 @@
         font-size: 18px;
         font-weight: 700;
         @media screen and (max-width: 540px) {
-          font-size: 0.9rem;
-          width: 70%;
+          font-size: 4vw;
+          width: 80%;
           font-weight: 700;
           text-align: center;
           margin: 10px 0;
@@ -5306,6 +5330,7 @@
       }
       @media screen and (max-width: 540px) {
         margin-top: 20px;
+        width: 100%;
         // margin-top: 0px;
       }
       .content {
@@ -5317,8 +5342,12 @@
         gap: 10vh;
         justify-content: center;
         @media screen and (max-width: 540px) {
+          margin-left: 0;
           gap: 5%;
-          width: 95vw;
+          width: 100vw;
+          & > div {
+            margin: 20px 10px;
+          }
           img {
             width: 100%;
           }
@@ -5329,8 +5358,10 @@
           font-family: "Artifakt";
           font-size: 1.1rem;
           font-weight: 600;
+          font-style: bold;
+          text-align: center;
           @media screen and (max-width: 540px) {
-            font-size: 0.8rem;
+            font-size: 4.5vw;
             font-weight: 600;
             // margin-top: 0px;
           }
@@ -5341,7 +5372,9 @@
           font-size: 1.1rem;
           font-weight: 500;
           @media screen and (max-width: 540px) {
-            font-size: 0.8rem;
+            font-size: 3vw;
+            // width: 90%;
+            // margin: 0 auto;
             font-weight: 500;
             // margin-top: 0px;
           }
@@ -5384,9 +5417,9 @@
       justify-content: space-evenly;
       align-items: center;
       @media screen and (max-width: 540px) {
-        height: fit-content;
-        width: 100%;
-        padding: 20px;
+        height: max-content;
+        width: 50vw;
+        padding: 20px 5px;
       }
       button {
         padding: 10px 30px;
@@ -5416,7 +5449,7 @@
         @media screen and (max-width: 540px) {
           padding: 5px 10px;
           font-size: 0.9rem;
-          width: 70%;
+          width: 100%;
         }
       }
       p {
@@ -5511,6 +5544,21 @@
           padding: 0px 10px;
           margin: 10px;
         }
+        .socials {
+          font-family: "artifakt", sans-serif;
+          display: flex;
+          gap: 1.2rem;
+          justify-content: center;
+          align-items: center;
+          @media screen and (max-width: 540px) {
+            justify-content: space-evenly;
+            margin: 10px;
+            width: 100%;
+          }
+          svg {
+            height: 20px;
+          }
+        }
         h1 {
           text-align: end;
           margin: 30px 0px;
@@ -5541,6 +5589,14 @@
         }
         .share {
           font-family: "artifakt", sans-serif;
+          @media screen and (max-width: 540px) {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+          }
+
           button {
             font-family: "artifakt", sans-serif;
             padding: 5px 30px;
@@ -5561,7 +5617,7 @@
             font-family: "artifakt", sans-serif;
             display: flex;
             gap: 1rem;
-            justify-content: center;
+            justify-content: space-evenly;
             align-items: center;
           }
         }
@@ -5608,6 +5664,7 @@
           flex-direction: column;
           justify-content: center;
           align-items: center;
+
           .icon {
             font-family: "artifakt", sans-serif;
             height: 150px;
@@ -5620,6 +5677,19 @@
             position: relative;
             border-radius: 10px;
             overflow: visible;
+            @media screen and (max-width: 540px) {
+              margin: 20px 10px;
+              flex-direction: column;
+              background: linear-gradient(
+                0deg,
+                rgba(225, 225, 225, 0.5) 0%,
+                rgba(255, 255, 255, 0) 100%
+              );
+              p {
+                font-size: 4vw;
+                text-align: center;
+              }
+            }
             svg {
               height: 50px;
             }
@@ -5686,6 +5756,9 @@
           @media screen and (max-width: 540px) {
             margin-top: 20px;
           }
+          button {
+            background-color: #b53232;
+          }
         }
       }
     }
@@ -5701,6 +5774,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     @media screen and (max-width: 540px) {
+      background-size: contain;
       height: 40vh;
       width: 100vw;
     }
@@ -5761,10 +5835,8 @@
         @media screen and (max-width: 540px) {
           width: 80%;
           font-size: 0.85rem;
-          margin-top: 5%;
-          padding-top: 4%;
-          padding-bottom: 4%;
-          margin-bottom: 5%;
+          padding: 5px 10px;
+          margin: 5px 10px;
         }
 
         /* Add the box shadow */
@@ -5783,9 +5855,9 @@
 
       color: #000000;
       @media screen and (max-width: 540px) {
-        width: 95%;
+        width: 90%;
         font-weight: 600;
-        font-size: 0.6rem;
+        font-size: 2vw;
       }
     }
 
@@ -5889,7 +5961,7 @@
       margin-top: 2%;
       width: 70%;
       @media screen and (max-width: 540px) {
-        width: 70%;
+        width: 95%;
       }
       height: auto;
     }

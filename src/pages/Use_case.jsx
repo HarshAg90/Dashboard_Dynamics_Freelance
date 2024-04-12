@@ -141,8 +141,8 @@ export default function UseCase() {
       </div>
       <h1 className="downHeading">
         From fueling commercial fleets to supporting charge point operators,
-        Dash’s wireless charging <br /> technology serves its purpose in
-        multiple zones.
+        Dash’s wireless charging {!mobile && <br />} technology serves its
+        purpose in multiple zones.
       </h1>
     </div>
   );

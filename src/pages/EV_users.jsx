@@ -284,13 +284,13 @@ export default function EV_users() {
           <img src="../assets/EV_users/ev_user_1.png" alt="" />
           <div className="points">
             <div className="text">
-              <h1>Simplifying Charging with Cable Management</h1>
+              <h1>Remote-enabled Charging</h1>
             </div>
             <div className="text odd">
               <h1>Eliminating Range Anxiety</h1>
             </div>
             <div className="text">
-              <h1>Streamlined Cost Management</h1>
+              <h1>Affordable and Efficient</h1>
             </div>
           </div>
         </div>
@@ -337,7 +337,7 @@ export default function EV_users() {
                 and monitor their charging sessions remotely, using our mobile
                 app, ensuring a reliable and accessible charging routine.
               </p>
-              <a href="">...more</a>
+              {/* <a href="">...more</a> */}
             </motion.div>
             <motion.div
               className="tile"
@@ -372,7 +372,7 @@ export default function EV_users() {
                 status updates, and recommends fast-charging stations,
                 alleviating range anxiety for EV users.
               </p>
-              <a href="">...more</a>
+              {/* <a href="">...more</a> */}
             </motion.div>
             <motion.div
               className="tile"
@@ -412,7 +412,7 @@ export default function EV_users() {
                 minimizes electricity costs, offering affordable and efficient
                 charging for electric vehicle owners.
               </p>
-              <a href="">...more</a>
+              {/* <a href="">...more</a> */}
             </motion.div>
           </div>
         </div>

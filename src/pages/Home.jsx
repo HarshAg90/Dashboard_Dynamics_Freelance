@@ -1345,7 +1345,7 @@ export default function Home() {
               <img src="../assets/Home/home_wireless_2_mobile.png" alt="" />
             )}
 
-            <ul>
+            <ul className="adPoints">
               <li>
                 <svg
                   width="57"
@@ -1537,18 +1537,10 @@ export default function Home() {
                 />
               </svg>
             ) : (
-              <svg
-                width="953"
-                height="6"
-                viewBox="0 0 953 6"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M0.333333 3C0.333333 4.47276 1.52724 5.66667 3 5.66667C4.47276 5.66667 5.66667 4.47276 5.66667 3C5.66667 1.52724 4.47276 0.333333 3 0.333333C1.52724 0.333333 0.333333 1.52724 0.333333 3ZM962 3.50008C962.276 3.50008 962.5 3.27623 962.5 3.00008C962.5 2.72394 962.276 2.50008 962 2.50008L962 3.50008ZM3 3.5L962 3.50008L962 2.50008L3 2.5L3 3.5Z"
-                  fill="black"
-                />
-              </svg>
+              <svg width="953" height="6" viewBox="0 0 953 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.333333 3C0.333333 4.47276 1.52724 5.66667 3 5.66667C4.47276 5.66667 5.66667 4.47276 5.66667 3C5.66667 1.52724 4.47276 0.333333 3 0.333333C1.52724 0.333333 0.333333 1.52724 0.333333 3ZM962 3.50008C962.276 3.50008 962.5 3.27623 962.5 3.00008C962.5 2.72394 962.276 2.50008 962 2.50008L962 3.50008ZM3 3.5L962 3.50008L962 2.50008L3 2.5L3 3.5Z" fill="black"/>
+</svg>
+
             )}
           </div>
         </div>
@@ -1561,15 +1553,6 @@ export default function Home() {
               <Number n={247} />{" "}
             </h1>
             <h1 className="subHead">EV stations in India</h1>
-          </div>
-
-          <div className="subDiv">
-            <Speedometer2 Rate={52} />
-            <h1 className="num2">
-              {" "}
-              <Number n={52} />{" "}
-            </h1>
-            <h1 className="subHead">Mishappenings around EV hardware</h1>
           </div>
 
           <div className="subDiv">
@@ -1630,7 +1613,9 @@ export default function Home() {
             </div>
           </div>
         )}
-        <div className="container">
+
+        {/* DON't DELETE THESE LINES. LET THEM BE A COMMENT */}
+        {/* <div className="container">
           <div className="lft">
             <button onClick={() => slider?.current?.slickPrev()}>
               <img className="arrow" src="../assets/Home/left.png" alt="prev" />
@@ -1694,6 +1679,44 @@ export default function Home() {
               />
             </button>
           </div>
+        </div> */}
+        <div className="partnerImg">
+          <motion.img src="./assets/Home/p1.png" 
+          whileHover={{
+            scale: 1.2,
+          }}
+          transition={{
+            type: "spring",
+            stiffness: 60,
+          }} />
+          <motion.img src="./assets/Home/p2.png"whileHover={{
+            scale: 1.2,
+          }}
+          transition={{
+            type: "spring",
+            stiffness: 60,
+          }}/>
+          <motion.img src="./assets/Home/p3.png" whileHover={{
+            scale: 1.2,
+          }}
+          transition={{
+            type: "spring",
+            stiffness: 60,
+          }} />
+          <motion.img className="sm" src="./assets/Home/p4.png" whileHover={{
+            scale: 1.2,
+          }}
+          transition={{
+            type: "spring",
+            stiffness: 60,
+          }}/>
+          <motion.img className="sm" src="./assets/Home/p5.png" whileHover={{
+            scale: 1.2,
+          }}
+          transition={{
+            type: "spring",
+            stiffness: 60,
+          }} />
         </div>
         {!mobile && (
           <div className="bottom_devide">

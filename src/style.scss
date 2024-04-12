@@ -254,21 +254,7 @@
   position: relative;
   border-top: 1px solid black;
   font-family: "artifakt", sans-serif !important;
-  // background: linear-gradient(
-  //   179.99deg,
-  //   rgba(255, 255, 255, 0.33) 0.01%,
-  //   rgba(197, 197, 197, 0.33) 15.86%,
-  //   rgba(197, 197, 197, 0.29) 79.27%,
-  //   rgba(255, 255, 255, 0.29) 101.03%
-  // );
   background-color: #fff;
-  // background: linear-gradient(
-  //   90deg,
-  //   rgba(255, 255, 255, 0.33) 0.01%,
-  //   rgba(197, 197, 197, 0.33) 15.86%,
-  //   rgba(197, 197, 197, 0.29) 79.27%,
-  //   rgba(255, 255, 255, 0.29) 101.03%
-  // );
   .Landing {
     font-family: "monogram", sans-serif;
     background-image: url(../public/assets/Home/home_new.png) !important;
@@ -487,7 +473,8 @@
       overflow: hidden;
       font-family: "artifakt", sans-serif !important;
       width: 45%;
-      background-color: #f0f2f3;
+      background: linear-gradient(180deg, #EBEBEB 0%, rgba(235, 235, 235, 0) 100%);
+
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
@@ -498,6 +485,7 @@
         margin-bottom: 5%;
         // flex-direction: column;
       }
+
       .tile {
         overflow: hidden;
         padding: 20px 40px;
@@ -1005,8 +993,13 @@
     }
   }
   .use_case {
-    margin-top: 5vh;
-    // background-image: url('../public/assets/Home/home_usecase_bg.png');
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    background-image: url('../public/assets/Home/useCase.png');
+    // background-color: #525050;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
 
     @media screen and (max-width: 540px) {
       margin-top: 0;
@@ -1075,6 +1068,7 @@
     // }
     .use_case_grid {
       margin: 20px auto;
+      margin-top: 10vh;
       width: 65vw;
       display: flex;
       flex-direction: column;
@@ -2267,6 +2261,7 @@
         width: 40vw;
         font-size: 1.2rem;
         min-height: 30vh;
+        font-weight: 600;
         @media screen and (max-width: 540px) {
           width: 90vw;
         }
@@ -2419,7 +2414,8 @@
   }
   .part_2 {
     .container {
-      width: 40vw;
+      font-family: "artifakt";
+      width: 55%;
       padding: 20px;
       box-shadow: 0 5px 10px gray;
       margin: 20px;
@@ -2428,6 +2424,24 @@
       transform: translateY(40px);
       background-color: rgba(243, 243, 243, 0.396);
       margin-bottom: -100px;
+      /* Rectangle 320 */
+
+      background: rgba(255, 255, 255, 0.6);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(255, 255, 255, 0.25);
+backdrop-filter: blur(2px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 20px;
+
+box-sizing: border-box;
+
+// position: absolute;
+// width: 1022px;
+// height: 376px !important;
+// left: 200px;
+// top: 3504px;
+
+
+
       @media screen and (max-width: 540px) {
         font-size: 0.6rem;
         padding: 5px;
@@ -2436,6 +2450,7 @@
         width: 80vw;
       }
       h1 {
+        font-weight: 600;
         font-size: 2rem;
         text-align: center;
         @media screen and (max-width: 540px) {
@@ -2443,8 +2458,12 @@
         }
       }
       p {
-        font-size: 1.6rem;
-        text-align: center;
+        font-size: 1.7rem;
+        text-align: justify;
+        padding-top: 2%;
+        padding-left: 7%;
+        padding-right: 7%;
+        font-weight: 600;
         @media screen and (max-width: 540px) {
           font-size: 0.6rem;
         }
@@ -2467,10 +2486,12 @@
     }
     .charger {
       position: absolute;
-      left: 30%;
+      left: 45%;
       transform: translate(-50%, 0%);
-      bottom: 0px;
-      height: 60vh;
+      bottom: 8%;
+      width: 15%;
+      z-index: 2;
+      height: auto;
       @media screen and (max-width: 540px) {
         height: 150px;
       }
@@ -2515,7 +2536,7 @@
 
       .r1 {
         display: flex;
-        width: 50%;
+        width: 60%;
         gap: 5%;
         overflow: visible;
         height: 30%;
@@ -2525,12 +2546,12 @@
         width: 70%;
         gap: 5%;
         overflow: visible;
-        height: 30%;
+        height: 25%;
       }
       .r3 {
         display: flex;
-        width: 85%;
-        height: 30%;
+        width: 80%;
+        height: 25%;
         gap: 5%;
         overflow: visible;
       }

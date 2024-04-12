@@ -2,6 +2,35 @@ import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
+import styled from "styled-components";
+
+// Styled components for the button
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+`;
+
+const LoadModelButton = styled.button`
+  background-color: #000000;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #000000;
+  }
+`;
 
 // Component to render the 3D model with lights
 const Computers = ({ isMobile, loadModel }) => {
@@ -129,7 +158,13 @@ const CarCanvas = () => {
   return (
     <>
       {/* Button to load the 3D model */}
-      <button onClick={() => setLoadModel(true)}>Load Model</button>
+      {!loadModel && (
+        <ButtonContainer>
+          <LoadModelButton onClick={() => setLoadModel(true)}>
+            Load Model
+          </LoadModelButton>
+        </ButtonContainer>
+      )}
 
       {/* Canvas for rendering the 3D scene */}
       <Canvas

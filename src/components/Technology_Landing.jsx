@@ -22,7 +22,7 @@ export default function TechnologyLanding() {
     <div  id='TechLanding'>
       <motion.div ref={targetRef} className='basicLand landing'  style={{opacity, scale}}>
       <div className="fg_img"/>
-      <video src="../assets/Technology/dddd2.mov" autoPlay muted></video>
+      <video src="../assets/Technology/dddd.mov" autoPlay muted></video>
     </motion.div>
 
     </div>

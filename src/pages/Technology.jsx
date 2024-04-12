@@ -510,6 +510,7 @@ export default function Technology() {
             />
           </div>
           <div className="r3">
+
             <motion.img
               src="../assets/Technology/p5.png"
               className="g1"

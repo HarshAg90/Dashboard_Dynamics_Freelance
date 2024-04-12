@@ -1004,7 +1004,7 @@
 
     @media screen and (max-width: 540px) {
       margin-top: 0;
-      height: 100% !important;
+      height: 70% !important;
     }
     // .use_case_grid {
     //   display: flex;
@@ -1079,7 +1079,7 @@
 
       overflow: visible;
       @media screen and (max-width: 540px) {
-        // margin-top: 0px;
+        margin-top: -4%;
         width: 90vw;
       }
       & > div {
@@ -2170,6 +2170,7 @@
     padding-bottom: 5%;
     background-color: #fcfcfc;
     @media screen and (max-width: 540px) {
+      height: 70% !important;
       & {
         height: fit-content;
       }

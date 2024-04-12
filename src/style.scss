@@ -2126,11 +2126,12 @@
   }
 
   .carCanvas {
-    height: 60vh;
+    height: 100vh;
     width: 90%;
     margin: 10px auto;
     overflow: visible;
-    // background-color: #d9d9d9;
+    padding-bottom: 5%;
+    background-color: #fcfcfc;
     @media screen and (max-width: 540px) {
       & {
         height: fit-content;

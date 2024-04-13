@@ -171,8 +171,7 @@ export default function Home() {
 
       <div ref={techRef} className="tech">
         <div className="left">
-          {!mobile && (
-            <div className="title">
+        <div className="title">
               <h1>TECHNOLOGY CURATOR </h1>
               <svg
                 width="494"
@@ -189,7 +188,6 @@ export default function Home() {
 
               {/* <hr /> */}
             </div>
-          )}
           <motion.div
             className="content"
             variants={animationVariant}
@@ -921,7 +919,7 @@ export default function Home() {
               stiffness: 60,
             }}
           >
-            <img src="../assets/Home/home_3_5.png" alt="" />
+            <img className="technoFeature" src="../assets/Home/home_3_5.png" alt="" />
             <p>Techno- economical</p>
           </motion.div>
         </div>
@@ -1001,7 +999,7 @@ export default function Home() {
               <span>OUR PRODUCTS</span>
             </h1>
           </motion.div>
-          <button>Learn More</button>
+          <button>Explore</button>
         </div>
         {mobile ? (
           <img src="../assets/Home/homw_prod_mobile.png" alt="" />
@@ -1566,15 +1564,7 @@ export default function Home() {
       </div>
       <div className="partners">
         {mobile ? (
-          <div className="">
-            <div className="title t">
-              <div className="title_h">
-                <h1>
-                  OUR <span>STRATEGIC PARTENERS</span>
-                </h1>
-              </div>
-              <button>Learn More</button>
-            </div>
+          <div className="mobDivide">
             <div className="top_devide">
               <svg
                 width="120"
@@ -1589,6 +1579,14 @@ export default function Home() {
                 />
               </svg>
             </div>
+            <div className="title t">
+              <div className="title_h">
+                <h1>
+                  OUR <span>STRATEGIC PARTENERS</span>
+                </h1>
+              </div>
+            </div>
+            
           </div>
         ) : (
           <div className="title">
@@ -1613,6 +1611,7 @@ export default function Home() {
             </div>
           </div>
         )}
+
 
         {/* DON't DELETE THESE LINES. LET THEM BE A COMMENT */}
         {/* <div className="container">
@@ -1680,7 +1679,13 @@ export default function Home() {
             </button>
           </div>
         </div> */}
-        <div className="partnerImg">
+
+{mobile ? (
+  <div className="mobPartner">
+  <img src="./assets/Home/mobPartners.png"  />
+</div>
+        ) : (
+          <div className="partnerImg">
           <motion.img src="./assets/Home/p1.png" 
           whileHover={{
             scale: 1.2,
@@ -1718,6 +1723,10 @@ export default function Home() {
             stiffness: 60,
           }} />
         </div>
+        )}
+
+
+        
         {!mobile && (
           <div className="bottom_devide">
             <svg

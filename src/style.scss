@@ -334,9 +334,11 @@
     display: flex;
     min-height: 100vh;
     overflow: hidden;
+    overflow-x: hidden !important;
     @media screen and (max-width: 500px) {
       flex-direction: column;
-      overflow-x: hidden;
+      overflow: hidden;
+      overflow-x: hidden !important;
     }
     .left {
       width: 55%;
@@ -976,7 +978,7 @@
           }
         }
         .innr {
-          min-height: 200px;
+          min-height: 220px;
           background: linear-gradient(
             180deg,
             rgba(196, 196, 196, 0.27) 0%,
@@ -1007,11 +1009,11 @@
       }
       .right img {
         height: 100%;
-        background: linear-gradient(
-          180deg,
-          rgba(196, 196, 196, 0.27) 0%,
-          rgba(255, 255, 255, 0) 100%
-        );
+        // background: linear-gradient(
+        //   180deg,
+        //   rgba(196, 196, 196, 0.27) 0%,
+        //   rgba(255, 255, 255, 0) 100%
+        // );
       }
     }
   }
@@ -4214,6 +4216,10 @@ box-sizing: border-box;
   }
 
   .container {
+    // width: 100%;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
     @media screen and (max-width: 540px) {
       transform: scale(0.8);
       // padding-top: 0%;

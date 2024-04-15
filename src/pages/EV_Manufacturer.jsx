@@ -29,7 +29,22 @@ export default function EV_Manufacturer() {
       <EV_manuLanding />
 
       <div ref={heroRef} className="hero">
-        <svg
+      <svg className="web" width="874" height="632" viewBox="0 0 874 632" fill="none" xmlns="http://www.w3.org/2000/svg">
+<motion.path style={{ pathLength: pathLen1 }} d="M1 0V504.5H336.5" stroke="url(#paint0_linear_0_1)" stroke-dasharray="10 5"/>
+<motion.path style={{ pathLength: pathLen2 }} d="M485 506H873V631H194" stroke="url(#paint1_linear_0_1)" stroke-dasharray="10 5"/>
+<defs>
+<linearGradient id="paint0_linear_0_1" x1="75.5" y1="505" x2="75.5" y2="-108.5" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-color="white" stop-opacity="0.39"/>
+</linearGradient>
+<linearGradient id="paint1_linear_0_1" x1="911.016" y1="631.371" x2="194" y2="631.371" gradientUnits="userSpaceOnUse">
+<stop offset="0.0637246"/>
+<stop offset="1" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
+
+        {/* <svg
           className="web"
           width="874"
           height="632"
@@ -73,7 +88,7 @@ export default function EV_Manufacturer() {
               <stop offset="1" stop-opacity="0" />
             </linearGradient>
           </defs>
-        </svg>
+        </svg> */}
         <div className="col web">
           <h2>
             At the forefront of EV innovation, addressing the challenge of

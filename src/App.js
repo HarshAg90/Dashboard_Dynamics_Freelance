@@ -32,15 +32,15 @@ import Journey from "./pages/Journey";
 function Preloader() {
   return (
     <div id="preloader">
-      {/* <img src="../load.svg" /> */}
-      <iframe
+      <img src="../load2.gif" />
+      {/* <iframe
         src="https://giphy.com/embed/9U100arhSkONMI6zo0"
         width="480"
         height="360"
         frameBorder="0"
         class="giphy-embed"
         allowFullScreen
-      ></iframe>
+      ></iframe> */}
     </div>
   );
 }
@@ -56,6 +56,7 @@ function App() {
 
     // Clear timeout when component unmounts
     return () => clearTimeout(timeout);
+    
   }, []);
 
   // if (isMobile) {

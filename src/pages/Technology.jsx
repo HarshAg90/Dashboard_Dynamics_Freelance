@@ -59,7 +59,7 @@ export default function Technology() {
             />
           </svg>
 
-          <h1 className="heading">Product</h1>
+          <h1 className="heading">Overview</h1>
         </div>
       </div>
 
@@ -162,7 +162,7 @@ export default function Technology() {
             </div>
 
             <div className="scndCol">
-              <div className="svgs">
+              {/* <div className="svgs">
                 <svg
                   width="8"
                   height="2500"
@@ -191,23 +191,12 @@ export default function Technology() {
                     </linearGradient>
                   </defs>
                 </svg>
-              </div>
+              </div> */}
 
-              <svg
-                className="bg"
-                width="8"
-                height="1416"
-                viewBox="0 0 8 1416"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4 4L3.99994 1412"
-                  stroke="#D9D8D8"
-                  stroke-width="8"
-                  stroke-linecap="round"
-                />
-              </svg>
+              <svg width="10" height="1599" viewBox="0 0 10 1599" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4L5.10333 1595" stroke="#D9D8D8" stroke-width="8" stroke-linecap="round"/>
+</svg>
+
             </div>
 
             <div className="thdCol">
@@ -428,11 +417,6 @@ export default function Technology() {
           </div> */}
           </div>
         )}
-        <div className="btn">
-          <button>
-            <span> Learn more about the existing technology</span>
-          </button>
-        </div>
       </div>
 
       <div className="part_2">
@@ -526,6 +510,7 @@ export default function Technology() {
             />
           </div>
           <div className="r3">
+
             <motion.img
               src="../assets/Technology/p5.png"
               className="g1"

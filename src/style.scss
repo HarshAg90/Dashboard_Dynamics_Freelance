@@ -2708,6 +2708,27 @@ box-sizing: border-box;
       height: 40%;
       transform: translate(-50%, -50%);
       width: 50vw;
+      border-radius: 5px;
+      overflow-x: hidden;
+      &::-webkit-scrollbar-track {
+        background: rgba(
+          255,
+          255,
+          255,
+          0.163
+        ); /* Make scrollbar track invisible */
+      }
+
+      /* Define scrollbar width */
+      &::-webkit-scrollbar {
+        width: 5px; /* Set scrollbar width */
+      }
+
+      /* Define scrollbar thumb */
+      &::-webkit-scrollbar-thumb {
+        background-color: #888; /* Color of the thumb */
+        border-radius: 10px; /* Roundness of the thumb */
+      }
       @media screen and (max-width: 540px) {
         width: 80vw;
       }

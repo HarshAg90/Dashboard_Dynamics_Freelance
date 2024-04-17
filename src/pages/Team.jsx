@@ -35,7 +35,7 @@ export default function Team(){
         <TeamLanding/>
         <div className="teamMembers">
         <div className="head">
-          <h1 className='subHeading'>Founders</h1>
+          <h1 className='subHeading'>OUR TEAM</h1>
           </div>
             <div className="teamGrid">
                 <div className="grid fst">
